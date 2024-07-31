@@ -1,0 +1,12 @@
+.slide {
+    display: none; /* Oculta todos os slides inicialmente */
+    width: 100%; /* Ajuste conforme necessário */
+    height: 300px; /* Ajuste conforme necessário */
+}
+.slide:checked + .content {
+    display: block; /* Exibe o slide que estiver marcado */
+}
+
+li img {
+    width: 300px;
+}
