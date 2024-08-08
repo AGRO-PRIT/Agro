@@ -1,13 +1,12 @@
 @import
 url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-margin: 0;
-font-family: var(--fonteprincipal);
-}
+/*começo css */
 
-html {
-    width: 100vw;
+* {
+margin: 0px;
+padding: 0px;
+font-family: var(--fonteprincipal);
 }
 
 :root {
@@ -19,17 +18,18 @@ html {
 
 body{
 background-color: var(--backgroundcolor);
-header {
+}
+header{
     background-color: var(--corprincipal);
-    display: flex;
+    display:flex;
     align-items: center;
     height:80px;
     }
-    .logoagrocolere {
+.logoAgroBox{
     height: 80px;
     margin: 15px 50px 15px 70px;
     }
-    .barradepesquisa {
+.barradepesquisa {
     background-color: var(--cortexto);
     border-radius:10px;
     width:250px;
@@ -39,7 +39,7 @@ header {
     justify-content: left;
     margin: 0px 80px 0px 50px;
     }
-    .textobarra {
+.textobarra {
     float:left;
     border: 0;
     background-color:transparent;
@@ -47,159 +47,158 @@ header {
     font-size:14px;
     width: 100%;
     }
-border:none;
-height:32px;
-width:1050px;
-box-shadow: 0 0 0 0;
-outline: 0;
-font-family: var(--fonteprincipal);
-}
+
+.menulogin  {
+    border:none;
+    height:32px;
+    width:1050px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    font-family: var(--fonteprincipal);
+    }
+
 .lupa {
-/* width: 30px ; */
-padding: 0px 15px;
-}
+    width: 30px;
+    padding: 0px 15px;
+    }
+
 .iconheader {
-width: 50px;
-margin-right: 5px;
-}
+    width: 50px;
+    margin-right: 5px;
+    }
 .entrar {
-background: transparent;
-border: none;
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(--cortexto);
-text-decoration: none;
-}
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cortexto);
+    text-decoration: none;
+    }
 .entrarbotao{
-    background-color: transparent;
-border: none;
-display: flex;
-flex-direction: row;
-align-items: center;
-color: white;
-font-size: 16px;
-}
+        background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    }
 .entrar a {
-text-decoration: none;
-}
+    text-decoration: none;
+    }
 .carrinho {
-background: transparent;
-border: none;
-/* display: flex;
-align-items: center;
-justify-content: center; */
-color: var(--cortexto);
-text-align: left;
-font-size: 16px;
-text-decoration: none;
-font-family: var(--fonteprincipal);
-}
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: var(--cortexto);
+    text-align: left;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: var(--fonteprincipal);
+    }
 
 .compra {
-    /* height: 100%; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 75px;
-}
+        /* height: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 75px;
+    }
 
 .compra span {
-    color: white;
-}
+        color: white;
+    }
 
 nav {
-background-color: var(--cortexto);
-color: var(--corprincipal);
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-}
+    background-color: var(--cortexto);
+    color: var(--corprincipal);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+    }
 nav ul {
-display: flex;
-}
+    display: flex;
+    }
 nav ul li {
-list-style-type: none;
-padding-right: 100px;
-text-decoration: none;
-}
+    list-style-type: none;
+    padding-right: 100px;
+    text-decoration: none;
+    }
 nav ul li a {
-text-decoration: none;
-color: var(--corprincipal );
-}
+    text-decoration: none;
+    color: var(--corprincipal );
+    }
 nav ul li a:hover {
-color: #305b00;
-}
+    color: #305b00;
+    }
 .dropdown-menu{
-margin-top: 5px;
-position: absolute;
-background-color: white;
-padding: 10px 50px 25px 15px;
-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-display: none;
-border-radius: 5%;
-}
+    margin-top: 5px;
+    position: absolute;
+    background-color: white;
+    padding: 10px 50px 25px 15px;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+    display: none;
+    border-radius: 5%;
+    }
 .dropdown-menu a{
-display: block;
-color: black;
-padding-top: 15px
-}
+    display: block;
+    color: black;
+    padding-top: 15px
+    }
 .dropdown-menu a:hover{
-text-decoration: underline;
-}
+    text-decoration: underline;
+    }
 .dropdown:hover .dropdown-menu{
-display: block;
-}
+    display: block;
+    }
 .menulogin {
-margin-top: 5px;
-position: absolute;
-background-color: white;
-padding: 5px 45px 15px 0px;
-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-border-radius: 10px;
-display: none;
-}
+    margin-top: 5px;
+    position: absolute;
+    background-color: white;
+    padding: 5px 45px 15px 0px;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: none;
+    }
 .menulogin a {
-display: block;
-color: black;
-padding-top: 5px;
-text-decoration: none;
-}
+    display: block;
+    color: black;
+    padding-top: 5px;
+    text-decoration: none;
+    }
 .menulogin ul li {
-list-style-type: none;
-padding-top: 5px;
-}
+    list-style-type: none;
+    padding-top: 5px;
+    }
 .menulogin ul li a:hover {
-color: #4e850f;
-text-decoration: underline;
-}
+    color: #4e850f;
+    text-decoration: underline;
+    }
 .sessaoentrar:hover .menulogin {
-display: block;
-}
+    display: block;
+    }
 footer {
-background-color: var(--corprincipal);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-footer section {
-margin-top: 15px;
-}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        color: var(--branco);
+        background-color: var(--verde_especial);
+        padding: 0 20px;
+    }
+
+footer h2, footer h3 {
+        color: var(--branco);
+        margin: 0;
+    }
+     
 footer img {
-height: 77px;
-}
-footer ul {
-display: flex;
-flex-direction: row;
-}
-footer ul li {
-list-style-type: none;
-}
-footer ul li > a {
-margin-right: 50px;
-text-decoration: none;
-color: white;
-}
+        max-width: 100px;
+        height: 100px;
+        margin-left: 200px;
+    }
