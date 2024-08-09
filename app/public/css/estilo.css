@@ -28,7 +28,7 @@ header{
     padding: 10px 0;
 }
 
-/*NAV BAR */
+/*NAV BAR*/ 
 
 .navbar {
     text-align: center;
@@ -38,7 +38,8 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* SUB NAV */
@@ -61,7 +62,7 @@ header{
 
 /* BARRA DE PESQUISA*/
 
-.LU {
+.barradepesquisa {
     background-color: var(--cortexto);
     border-radius:10px;
     width:250px;
@@ -95,7 +96,7 @@ header{
     
 }
 
-/* LUPA DA BARRA DE PESQUISA*/
+/* LUPA DA BARRA DE PESQUISA */
 
 .lupa {
     width: 30px;
@@ -109,7 +110,7 @@ header{
     margin-right: 5px;
 }
 
-/*Entrar
+/*Entrar*/
 
 .entrar {
     background: transparent;
@@ -147,7 +148,7 @@ header{
     text-decoration: none;
     font-family: var(--fonteprincipal);
 }
-/*
+
 .compra {
         
         display: flex;
@@ -245,14 +246,14 @@ header{
 }
 
 .fixarRodape {
-        background-color: var(--corprincipal);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100px;
-        color: var(--branco);
-        background-color: var(--corprincipal);
-        padding: 0 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--corprincipal);
+    color: white;
+    text-align: center;
+  
 }
 
 .fixarRodape footer h2, footer h3 {
