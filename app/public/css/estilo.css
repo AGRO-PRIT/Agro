@@ -31,9 +31,10 @@ header{
 /*NAV BAR */
 
 .navbar {
+    text-align: center;
     position: absolute;
     top: 0;
-    background-color: var(--verde_especial);
+    background-color: var(--corprincipal);  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,7 +50,7 @@ header{
     padding: 0px;
     justify-content: center;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--corprincipal);
     top: 73px;  
 }
 
@@ -60,7 +61,7 @@ header{
 
 /* BARRA DE PESQUISA*/
 
-.barradepesquisa {
+.LU {
     background-color: var(--cortexto);
     border-radius:10px;
     width:250px;
@@ -108,7 +109,7 @@ header{
     margin-right: 5px;
 }
 
-/*Entrar*/
+/*Entrar
 
 .entrar {
     background: transparent;
@@ -158,7 +159,7 @@ header{
 .compra span {
         color: white;
 }
-*/
+
 .menu {
     background-color: var(--cortexto);
     color: var(--corprincipal);
@@ -250,7 +251,7 @@ header{
         align-items: center;
         height: 100px;
         color: var(--branco);
-        background-color: var(--verde_especial);
+        background-color: var(--corprincipal);
         padding: 0 20px;
 }
 
