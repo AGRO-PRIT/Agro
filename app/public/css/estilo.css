@@ -1,34 +1,65 @@
-@import
+/* @import
 url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*começo css */
 
 * {
-margin: 0px;
-padding: 0px;
-font-family: var(--fonteprincipal);
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonteprincipal);
 }
 
 :root {
---backgroundcolor: #fcf2e6;
---corprincipal: #5aa403;
---cortexto: rgb(255, 255, 255);
---fonteprincipal: "Montserrat", sans-serif;
+    --backgroundcolor: #fcf2e6;
+    --corprincipal: #5aa403;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
 }
 
 body{
-background-color: var(--backgroundcolor);
+    background-color: var(--backgroundcolor);
 }
+
 header{
     background-color: var(--corprincipal);
     display:flex;
     align-items: center;
-    height:80px;
-    }
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*NAV BAR */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    background-color: var(--verde_especial);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* SUB NAV */
+
+.subnav {
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 73px;  
+}
+
 .logoAgroBox{
     height: 80px;
     margin: 15px 50px 15px 70px;
-    }
+}
+
+/* BARRA DE PESQUISA*/
+
 .barradepesquisa {
     background-color: var(--cortexto);
     border-radius:10px;
@@ -38,34 +69,47 @@ header{
     align-items: center;
     justify-content: left;
     margin: 0px 80px 0px 50px;
-    }
-.textobarra {
+}
+
+/* TEXTO BARRA DE PESQUISA*/
+
+.textobarrapesquisa {
     float:left;
     border: 0;
     background-color:transparent;
     font-style:italic;
     font-size:14px;
     width: 100%;
-    }
+}
+
+/* MENU BARRA DE PESQUISA */
 
 .menulogin  {
+    font-family: var(--fonteprincipal);
     border:none;
     height:32px;
     width:1050px;
     box-shadow: 0 0 0 0;
     outline: 0;
-    font-family: var(--fonteprincipal);
-    }
+    
+}
+
+/* LUPA DA BARRA DE PESQUISA*/
 
 .lupa {
     width: 30px;
     padding: 0px 15px;
-    }
+}
+
+/*ICONE DO CADASTRO DA BARRA DE PESQUISA*/
 
 .iconheader {
     width: 50px;
     margin-right: 5px;
-    }
+}
+
+/*Entrar*/
+
 .entrar {
     background: transparent;
     border: none;
@@ -74,7 +118,8 @@ header{
     justify-content: center;
     color: var(--cortexto);
     text-decoration: none;
-    }
+}
+
 .entrarbotao{
         background-color: transparent;
     border: none;
@@ -83,10 +128,12 @@ header{
     align-items: center;
     color: white;
     font-size: 16px;
-    }
+}
+
 .entrar a {
     text-decoration: none;
-    }
+}
+
 .carrinho {
     background: transparent;
     border: none;
@@ -98,21 +145,21 @@ header{
     font-size: 16px;
     text-decoration: none;
     font-family: var(--fonteprincipal);
-    }
-
+}
+/*
 .compra {
-        /* height: 100%; */
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-right: 75px;
-    }
+}
 
 .compra span {
         color: white;
-    }
-
-nav {
+}
+*/
+.menu {
     background-color: var(--cortexto);
     color: var(--corprincipal);
     height: 40px;
@@ -121,21 +168,26 @@ nav {
     justify-content: center;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     }
-nav ul {
+
+.menu ul {
     display: flex;
-    }
-nav ul li {
+}
+
+.menu ul li {
     list-style-type: none;
     padding-right: 100px;
     text-decoration: none;
-    }
-nav ul li a {
+}
+
+.menu ul li a {
     text-decoration: none;
     color: var(--corprincipal );
-    }
-nav ul li a:hover {
+}
+
+.menu ul li a:hover {
     color: #305b00;
-    }
+}
+
 .dropdown-menu{
     margin-top: 5px;
     position: absolute;
@@ -144,18 +196,22 @@ nav ul li a:hover {
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     display: none;
     border-radius: 5%;
-    }
+}
+
 .dropdown-menu a{
     display: block;
     color: black;
     padding-top: 15px
-    }
+}
+
 .dropdown-menu a:hover{
     text-decoration: underline;
-    }
+}
+
 .dropdown:hover .dropdown-menu{
     display: block;
-    }
+}
+
 .menulogin {
     margin-top: 5px;
     position: absolute;
@@ -164,25 +220,31 @@ nav ul li a:hover {
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     border-radius: 10px;
     display: none;
-    }
+}
+
 .menulogin a {
     display: block;
     color: black;
     padding-top: 5px;
     text-decoration: none;
-    }
+}
+
 .menulogin ul li {
     list-style-type: none;
     padding-top: 5px;
-    }
+}
+
 .menulogin ul li a:hover {
     color: #4e850f;
     text-decoration: underline;
-    }
+}
+
 .sessaoentrar:hover .menulogin {
     display: block;
-    }
-footer {
+}
+
+.fixarRodape {
+        background-color: var(--corprincipal);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -190,15 +252,15 @@ footer {
         color: var(--branco);
         background-color: var(--verde_especial);
         padding: 0 20px;
-    }
+}
 
-footer h2, footer h3 {
+.fixarRodape footer h2, footer h3 {
         color: var(--branco);
         margin: 0;
-    }
+}
      
-footer img {
+.fixarRodape img {
         max-width: 100px;
         height: 100px;
         margin-left: 200px;
-    }
+} 

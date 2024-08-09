@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -9,60 +9,9 @@
 </head>
 
 <body>  
-<!-- Logo AgroBox -->
-    <header>
-        <a href="index.ejs">
-        <img src="imagens/logo.png", class="logoAgroBox" alt="Logo da AgroBox, 4 folhas com cores verde e marrom.">
-    </a>
-                    <!-- INICIO SECTIONS -->
-<!-- Barra de Pesquisa --> 
-    <section class="barradepesquisa">
-        <img src="imagens/icone-busca.png" class="lupa" alt="icone de uma lupa">
-        <input type="text" class="textobarra" placeholder="Busque pela AgroBox">
-    </section>
-
-<!-- Botão Login e Cadastro/Perfil -->
-    <section class="sessaoentrar">
-        <a class="entrar" href="pagina3.html">
-        <img src="imagens/icon_conta.png" class="iconheader" alt="Icone de usuario" width="15" height="40">
-        <span> Minha conta</span>
-        </a>
-
-<!-- Menu Login -->
-    <section class="menulogin">
-        <ul>
-        <li> <a href="#"> Entrar</a> </li>
-        <li> <a href="#"> Cadastrar</a> </li>
-        </ul>
-    </section>
-
-<!-- Botão Carrinho -->
-    <section class="compra">
-        <a class="carrinho" href="pagina2.html">
-        <img src="imagens/icon_carrinho.png" class="carrinho" alt="Icone de usuario" width="30" height="28">
-        </a>
-        <span> Carrinho </span>
-    </section>
-<!-- NAVEGAÇAO -->
-    <nav>
-        <ul>
-        <li> <a href="#">Início</a></li>
-        <li class="dropdown">
-        <a href="">Produtos</a>
-        <section class="dropdown-menu">
-            <a href="#">Frutas</a>
-            <a href="#">Legumes</a>
-            <a href="#">Cereais</a>
-            <a href="#">Verduras</a>
-        </section>
-            </li>
-            <li> <a href="#">Premium</a> </li>
-            <li> <a href="#">Promoções</a> </li>
-            <li> <a href="#">Eventos</a> </li>
-            </ul>
-    </nav>
-
+    <%- include('../partials/navbar'); %>
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
+    
 </body>
 </html>
