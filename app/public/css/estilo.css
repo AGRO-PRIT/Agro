@@ -4,8 +4,8 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,
 /*começo css */
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: var(--fonteprincipal);
 }
 
@@ -16,253 +16,76 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,
     --fonteprincipal: "Montserrat", sans-serif;
 }
 
-body{
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+body {
     background-color: var(--backgroundcolor);
 }
 
-header{
-    background-color: var(--corprincipal);
-    display:flex;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/*NAV BAR*/ 
-
-.navbar {
-    text-align: center;
-    position: absolute;
-    top: 0;
-    background-color: var(--corprincipal);  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* SUB NAV */
-
-.subnav {
-    position: absolute;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    justify-content: center;
-    display: flex;
-    background-color: var(--corprincipal);
-    top: 73px;  
-}
-
-.logoAgroBox{
+.logo img{
     height: 80px;
-    margin: 15px 50px 15px 70px;
+    margin: 20px 50px 20px 90px;
 }
 
-/* BARRA DE PESQUISA*/
+/* <!-- COMEÇO NAV BAR -->  */
 
-.barradepesquisa {
-    background-color: var(--cortexto);
-    border-radius:10px;
-    width:250px;
-    height:50px;
+.navbar{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: left;
-    margin: 0px 80px 0px 50px;
-}
-
-/* TEXTO BARRA DE PESQUISA*/
-
-.textobarrapesquisa {
-    float:left;
-    border: 0;
-    background-color:transparent;
-    font-style:italic;
-    font-size:14px;
-    width: 100%;
-}
-
-/* MENU BARRA DE PESQUISA */
-
-.menulogin  {
     font-family: var(--fonteprincipal);
-    border:none;
-    height:32px;
-    width:1050px;
-    box-shadow: 0 0 0 0;
-    outline: 0;
-    
-}
-
-/* LUPA DA BARRA DE PESQUISA */
-
-.lupa {
-    width: 30px;
-    padding: 0px 15px;
-}
-
-/*ICONE DO CADASTRO DA BARRA DE PESQUISA*/
-
-.iconheader {
-    width: 50px;
-    margin-right: 5px;
-}
-
-/*Entrar*/
-
-.entrar {
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cortexto);
-    text-decoration: none;
-}
-
-.entrarbotao{
-        background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-}
-
-.entrar a {
-    text-decoration: none;
-}
-
-.carrinho {
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    color: var(--cortexto);
-    text-align: left;
-    font-size: 16px;
-    text-decoration: none;
-    font-family: var(--fonteprincipal);
-}
-
-.compra {
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-right: 75px;
-}
-
-.compra span {
-        color: white;
-}
-
-.menu {
-    background-color: var(--cortexto);
-    color: var(--corprincipal);
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-    }
-
-.menu ul {
-    display: flex;
-}
-
-.menu ul li {
-    list-style-type: none;
-    padding-right: 100px;
-    text-decoration: none;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: var(--corprincipal );
-}
-
-.menu ul li a:hover {
-    color: #305b00;
-}
-
-.dropdown-menu{
-    margin-top: 5px;
-    position: absolute;
-    background-color: white;
-    padding: 10px 50px 25px 15px;
-    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-    display: none;
-    border-radius: 5%;
-}
-
-.dropdown-menu a{
-    display: block;
-    color: black;
-    padding-top: 15px
-}
-
-.dropdown-menu a:hover{
-    text-decoration: underline;
-}
-
-.dropdown:hover .dropdown-menu{
-    display: block;
-}
-
-.menulogin {
-    margin-top: 5px;
-    position: absolute;
-    background-color: white;
-    padding: 5px 45px 15px 0px;
-    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    display: none;
-}
-
-.menulogin a {
-    display: block;
-    color: black;
-    padding-top: 5px;
-    text-decoration: none;
-}
-
-.menulogin ul li {
-    list-style-type: none;
-    padding-top: 5px;
-}
-
-.menulogin ul li a:hover {
-    color: #4e850f;
-    text-decoration: underline;
-}
-
-.sessaoentrar:hover .menulogin {
-    display: block;
-}
-
-.fixarRodape {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: var(--corprincipal);
-    color: white;
-    text-align: center;
-  
+    height: 12.5vh;
+    box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
 }
 
-.fixarRodape footer h2, footer h3 {
-        color: var(--branco);
-        margin: 0;
+.barradepesquisa{
+    background-color: #ffffff;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    height: 50px;
+    width: 500px;
 }
-     
+.barradepesquisa text {
+    margin-left: auto;
+}
+.barradepesquisa img {
+    height: 30px;
+    margin: 20px 60px 20px 90%;
+    box-sizing: border-box;
+}
+
+.compra img {
+    height: 47px;
+}
+
+.entrar img {
+    height: 43px;
+}
+
+/* <!-- COMEÇO SUBNAV -->  */
+
+
+.subnav-list {
+    list-style: none;
+    display: flex;
+}
+.subnav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* <!-- COMEÇO RODAPÉ -->  */
+
 .fixarRodape img {
-        max-width: 100px;
-        height: 100px;
-        margin-left: 200px;
-} 
+    height: 80px;
+}
