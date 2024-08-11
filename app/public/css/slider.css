@@ -1,12 +1,26 @@
-.slide {
-    display: none; /* Oculta todos os slides inicialmente */
-    width: 100%; /* Ajuste conforme necessário */
-    height: 300px; /* Ajuste conforme necessário */
-}
-.slide:checked + .content {
-    display: block; /* Exibe o slide que estiver marcado */
-}
+ /*inicio css slider*/
 
-li img {
-    width: 300px;
-}
+ /*passagem dos sliders*/
+ .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /*imagens do slider*/
+  .slide img {
+    min-width: 100%;
+    box-sizing: border-box;
+    width: 1484px;
+    height: 233px;
+    padding: 2px 2px 2px 2px;
+    line-height: normal;
+  }
+
+  
+  
