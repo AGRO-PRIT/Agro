@@ -1,7 +1,9 @@
 /* @import
 url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-            /*COMEÇO CSS*/
+                    /* COMEÇO CSS */
+
+            /* CSS FIXO PARA NAV, SUBNAV E FOOTER */
 
 * {
     margin: 0;
@@ -51,14 +53,15 @@ body {
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
 
 .barradepesquisa {
+    align-items: center center;
+    text-align: center;
+    display: flex;
     background: #ffffff;
+    border-radius: 10px;
     height: 31px;
     padding: 10px;
-    border-radius: 10px;
-    display: flex;
     justify-content: space-between;
-    align-items: center center;
-    margin: 0px 87px 0px 180px;
+    margin-left: 155px;/*modificar posicionamento da barra */
 }
 
  .barradepesquisa img {
@@ -85,12 +88,14 @@ body {
     border-radius: 50%;
 }
 
+
 /* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
 
 
 .carrinho{
     align-items: center;
     display: flex;
+
 }
 
 .text-carrinho {
@@ -98,15 +103,18 @@ body {
     font-size: 15px;
     color: #ffff;
     text-align: center;
-    margin-right: 70px;
 }
 
 .carrinho img {
     height: 47px;
-    margin-right: 7px;
+    margin-right: 3px;
 }
 
+
+
 /* <!-- COMEÇO PERFIL -->  */
+
+
 
 .perfil{
     align-items: center;
@@ -127,10 +135,14 @@ body {
 }
 
 
+
+
 /* <!-- COMEÇO SUBNAV -->  */
 
+
+
 .subnav {
-    background-color: black;
+    background-color: #fff;
     height: 6vh;
     display: flex;
     align-items: center;
@@ -139,7 +151,7 @@ body {
 }
 
 .subnav a {
-    padding: 0px 20px;
+    padding: 0px 19px;
 }
 
 .subnav ul {
@@ -147,24 +159,28 @@ body {
     display: flex;
 }
 
-.subnav ul li a {
+.subnav a {
     text-decoration: none;
-    color: var(--corprincipal );
+    color: #5aa504;
 }
 
 .subnav li {
-    
-    margin-left: 0px;  /* arrumar */
+    margin-left: 21px;  /* arrumar */
     list-style-type: none;
     text-decoration: none;
-}z
+    font-size: 14px;
+}
 
 .dropdown-menu{
     margin-top: 5px;
     position: absolute;
-    background-color: white;
-    padding: 10px 5px 0px 0px;
+    background-color: var(--corprincipal);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
     letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 2;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     display: none;
     border-radius: 5%;
@@ -172,10 +188,11 @@ body {
 
 .dropdown-menu a {
     display: block;
+    color: #fff;
 }
 
 .dropdown-menu a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .subnav-list:hover .dropdown-menu {
@@ -186,13 +203,53 @@ body {
 
 /* <!-- COMEÇO RODAPÉ -->  */
 
+.fixarRodape {
+    background-color: var(--corprincipal);
+    color: var(--cortexto);
+    text-align: center;
+    padding: 20px;  
+}
+
+ .blocos-do-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.blocos {
+    flex: 1;
+    margin: 10px 10px;
+}
+
+.blocos h2{
+    margin-bottom: 10px;
+}
+
+.fixarRodape ul {
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+}
+
 .fixarRodape img {
     height: 80px;
 }
 
+.logo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.creditos {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 
+            /* COMEÇO CARROSEL */
 
 
 /* .menulogin {
