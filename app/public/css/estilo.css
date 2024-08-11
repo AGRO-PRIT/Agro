@@ -150,18 +150,9 @@ body {
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
 }
 
-.subnav a {
-    padding: 0px 19px;
-}
-
 .subnav ul {
     list-style: none;
     display: flex;
-}
-
-.subnav a {
-    text-decoration: none;
-    color: #5aa504;
 }
 
 .subnav li {
@@ -169,6 +160,16 @@ body {
     list-style-type: none;
     text-decoration: none;
     font-size: 14px;
+}
+
+.subnav a {
+    padding: 0px 19px;
+    text-decoration: none;
+    color: #5aa504;
+}
+
+.subnav-list:hover .dropdown-menu {
+    display: block;
 }
 
 .dropdown-menu{
@@ -184,6 +185,7 @@ body {
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     display: none;
     border-radius: 5%;
+    z-index: 1000;
 }
 
 .dropdown-menu a {
@@ -195,9 +197,7 @@ body {
     text-decoration: none;
 }
 
-.subnav-list:hover .dropdown-menu {
-    display: block;
-}
+
 
 
 
