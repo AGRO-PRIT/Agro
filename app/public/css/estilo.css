@@ -166,6 +166,7 @@ body {
     padding: 0px 19px;
     text-decoration: none;
     color: #5aa504;
+    padding: 12px 16px;
 }
 
 .subnav-list:hover .dropdown-menu {
