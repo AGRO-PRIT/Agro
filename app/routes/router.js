@@ -2,32 +2,36 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-    res.render('pages/perfil');
+    res.render('pages/home');
 });
 
-router.get('/', function(req, res) {
+router.get('/carrinho', function(req, res) {
     res.render('pages/carrinho');
 });
 
 /* subnav */
 
-router.get('/', function(req, res) {
+router.get('/home', function(req, res) {
     res.render('pages/home');
 });
 
-router.get('/', function(req, res) {
+router.get('/perfil', function(req, res) {
+    res.render('pages/perfil');
+});
+
+router.get('/produtos', function(req, res) {
     res.render('pages/produtos');
 });
 
-router.get('/', function(req, res) {
+router.get('/box', function(req, res) {
     res.render('pages/box');
 });
 
-router.get('/', function(req, res) {
+router.get('/premium', function(req, res) {
     res.render('pages/premium');
 });
 
-router.get('/', function(req, res) {
+router.get('/eventos', function(req, res) {
     res.render('pages/eventos');
 });
 
