@@ -1,5 +1,6 @@
-/* @import
-url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
                     /* COMEÇO CSS */
 
@@ -8,7 +9,7 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,
 * {
     margin: 0;
     padding: 0;
-    font-family: var(--fonteprincipal);
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -40,7 +41,7 @@ body {
 
 /* <!-- COMEÇO NAV BAR -->  */
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,7 +97,7 @@ body {
 .carrinho{
     align-items: center;
     display: flex;
-
+    margin-right: 30px;
 }
 
 .text-carrinho {
@@ -104,13 +105,13 @@ body {
     font-size: 15px;
     color: #ffff;
     text-align: center;
+    margin-left: 3px;
 }
 
 .carrinho img {
     height: 47px;
     margin-right: 3px;
 }
-
 
 
 /* <!-- COMEÇO PERFIL -->  */

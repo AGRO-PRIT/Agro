@@ -15,8 +15,8 @@ router.get('/home', function(req, res) {
     res.render('pages/home');
 });
 
-router.get('/perfil', function(req, res) {
-    res.render('pages/perfil');
+router.get('/singup', function(req, res) {
+    res.render('pages/singup');
 });
 
 router.get('/produtos', function(req, res) {
