@@ -1,27 +1,231 @@
  /*inicio css slider*/
 
  /*passagem dos sliders*/
- .slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  /*imagens do slider*/
-  .slide img {
-    min-width: 100%;
-    box-sizing: border-box;
-    width: 1484px;
-    height: 233px;
-    padding: 2px 2px 2px 2px;
-    line-height: normal;
-  }
 
+:root {
+  --backgroundcolor: #fcf2e6;
+  --corprincipal: #5aa403;
+  --cortexto: rgb(255, 255, 255);
+  --fonteprincipal: "Montserrat", sans-serif;
+}
+
+ .slider {
+  max-width: 100vw;
+  overflow: hidden;
+  height: 230px;
+  margin: 0 auto;
+  box-sizing: border-box;
   
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
   
+}
+
+.slides input{
+  display: none;
+}
+
+/*imagens do slider*/
+.slide img {
+  margin: auto;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 230px;
+  line-height: normal;
+  object-fit: cover;
+  
+}
+
+
+
+    /* COMEÇO CARROSÉIS */
+
+
+
+
+        /* CAROSSEL 1 */
+
+.carrosel{
+
+
+}
+
+.radios{
+
+
+}
+.radios {
+    display: block;
+    height: 850px;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;    
+}
+.radios li {
+    list-style: none;
+    position: absolute;
+ 
+}
+.radios img {
+    margin:auto;
+    height: 350px;
+    width: 800px;
+    vertical-align: top;
+}
+.radios input {
+    display: none;
+}
+.radios label {
+    background-color: black;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+ 
+}
+.radios li:nth-child(1) label {
+    left: 10px;
+}
+.radios li:nth-child(2) label {
+    left: 40px;
+}
+.radios li:nth-child(3) label {
+    left: 70px;
+}
+.radios img {
+    opacity: 0;
+    visibility: visible;    
+}
+.radios li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+
+      /* BANNER PROMOÇÃO ASSINATURA */
+
+      
+
+
+.agro-assinatura {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #056934; /* Cor de fundo verde */
+  padding: 20px;
+  color: white;
+}
+
+.agro-content {
+  max-width: 60%; /* Limita o espaço ocupado pelo texto */
+}
+
+.agro-content h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.agro-content h2 span {
+  color: #7E9D01; /* Cor verde diferente para a palavra Agro+ */
+}
+
+.agro-content ul {
+  list-style-type: disc; /* Bolinhas antes dos itens */
+  padding-left: 20px;
+}
+
+.agro-content ul li {
+  margin-bottom: 10px; /* Espaçamento entre as linhas */
+  font-size: 1.2em;
+}
+
+.agro-imagem {
+  max-width: 35%; /* Limita a largura da imagem */
+}
+
+.agro-imagem img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+
+    /* CAROSSEL 2 */
+
+
+    
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card-list{
+  font-size: 17px;
+  color:  #493a31;
+
+}
+.card-list .card-item { 
+  width: 1068px;
+  height: 259px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(30px); /*não faço ideia */
+  background: #fff;
+}
+
+.card-list .card-item .user-image {
+  width: 170px;
+  height: 170px;
+  margin: center;
+  margin-left: 80px;
+}
+
+.card-list .card-item .user-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.15rem;
+  color: #333333;
+  font-weight: 500;
+  margin: 14px 0 30px; /*14 de margem 0 para ambos os lados e 40 de borda inferior*/
+}
+
+.card-list .card-item .message-button {
+  font-size: 18px;
+  padding: 10px 35px;
+  color: #308467;
+  border-radius: 6px;
+  font-weight: 500;
+ 
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button.message-button:hover{
+  background: #308467;
+  border: 1px solid #fff;
+  color: var(--cortexto);
+}

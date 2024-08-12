@@ -6,6 +6,7 @@
     <title>AgroBox</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/slider.css">
+    
 </head>
 
 <body>  
@@ -15,12 +16,124 @@
     <!--Carrosel-->
 
     <section class="slider">
+
         <ul class="slides">
-            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide1"></li>
-            <li class="slide"><img src="imagens/Rural.jpg" alt="slide2"></li>
-            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide3"></li>
+            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide1"> </li>
+            <li class="slide"><img src="imagens/Rural.jpg" alt="slide2"> </li>
+            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide3"> </li>
         </ul>
+
     </section>
+
+    <!--Carrosel 2-->
+
+    <section class="carrosel">
+            <ul class="radios">
+    
+                <li>
+                    <input type="radio" id="slide1" name="radios" checked>
+                    <label for="radio1"></label>
+                    <img src="imagens/maça.png">
+                </li>
+                <li>
+                    <input type="radio" id="radio2" name="radios">
+                    <label for="radio2"></label>
+                    <img src="imagens/laranja.png">
+                </li>
+                <li>
+                    <input type="radio" id="radio3" name="radios">
+                    <label for="radio3"></label>
+                    <img src="imagens/abacaxi.png">
+                </li>
+
+            </ul>
+    </section>
+
+    <section class="carrosel">
+        <ul class="radios">
+
+            <li>
+                <input type="radio" id="slide1" name="radios" checked>
+                <label for="radio1"></label>
+                <img src="imagens/beterraba.png">
+            </li>
+            <li>
+                <input type="radio" id="radio2" name="radios">
+                <label for="radio2"></label>
+                <img src="imagens/cenoura.png">
+            </li>
+            <li>
+                <input type="radio" id="radio3" name="radios">
+                <label for="radio3"></label>
+                <img src="imagens/batata.jpg">
+            </li>
+
+        </ul>
+</section>
+
+        <!-- Assinatura Agro -->
+
+    <section class="agro-assinatura">
+
+        <section class="agro-content"></section>
+            <h1> Assine o <span> Agro+ </span> </h1>
+                <ul>
+                    <li> Monte sua cesta de entrega semanal ou mensal </li>
+                    <li> Ganhe alguma coisa ae </li>
+                    <li> Receba frete grátis </li>
+                    <li> Promoçoes exclusivas </li>
+                </ul>
+        </section>
+
+        <section class="agro-imagem">
+            <img src="imagens/mulher-agro.png" alt="Imagem da assinatura premium">
+        </section>
+
+    </section>
+
+    <!-- Agricultores em Destaques -->
+
+    <section class="container">
+        
+        <section class="slider-wrapper">
+
+            <section class="card-list">
+                <h2 class="user-name"> Agricultores Destaques </h2> 
+                <section class="card-item">
+                    
+                    <img src="imagens/jesus.png" alt="user image" class="user-image">
+                    <p class="user-profession"> Jesus Cristo </p>
+                    <p class="user-profession"> Jesus se destacou pela otima qualidade dos produtos e velocidade na <br> entrega. </p>
+                    <button class="message-button"> Veja seu perfil </button>
+                
+                </section>
+
+            </section>  
+            
+        </section>  
+
+    </section>
+    
+        <!-- Sobre Agrobox -->
+
+        <section class="sobre-agrobox">
+
+            <section class="content-Agrobox">
+
+                <h1> Quem é Agrobox? </h1>
+                    <p>AgroColere é uma plataforma inovadora e abrangente dedicada ao mundo da agricultura, 
+                        reunindo pequenos agricultores e até os maiores_ espalhados pelo Brasil para publicar 
+                        seus produtos e garantir a eles uma plataforma de auxulio para venda desses produtos.
+                    </p>
+                <span> Leia mais </span>
+
+            </section>
+    
+            <section class="agrobox-imagem">
+                <img src="imagens/velinha-plantando.jpg" alt="Imagem de uma agricultora">
+            </section>
+    
+        </section>
 
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
@@ -28,32 +141,9 @@
 </body>
 </html>
 
-<script>
+        <!-- Script -->
+<script src="js/index.js"> </script>
 
-/*Slider JS*/
 
-let slideIndex = 0;
 
-/*funçao para exibir o slide*/
 
-function showSlides() {
-  const slides = document.querySelectorAll('.slide');
-  slideIndex++;
-
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-
-  /*movimento dos slides*/
-  const offset = slideIndex * -100;
-  document.querySelector('.slides').style.transform = `translateX(-${slideIndex * 100}%)`;
-
-  /* Looping a cada 3 segundos */
-
-  setTimeout(showSlides, 3000);
-}
-
-/*inicialização dos slides*/
-showSlides();
-
-</script>
