@@ -24,3 +24,6 @@
 
 /*inicialização dos slides*/
     showSlides();
+
+
+/*Carrosel JS*/

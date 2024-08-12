@@ -29,6 +29,7 @@
 }
 
 /*imagens do slider*/
+
 .slide img {
   margin: auto;
   width: 100vw;
@@ -42,69 +43,110 @@
 
 
 
-    /* COMEÇO CARROSÉIS */
 
+    /* COMEÇO CARROSÉIS */
 
 
 
         /* CAROSSEL 1 */
 
+
 .carrosel{
-
-
+  max-width: 60vw;
+  height: 60vh;
+  box-sizing: border-box;
+  background-color: #ddf0e6; /* Cor de fundo verde */
 }
 
-.radios{
-
-
-}
-.radios {
-    display: block;
-    height: 850px;
-    width: 85%;
-    margin: auto;
-    margin-top: 20px;
-    position: relative;    
-}
 .radios li {
-    list-style: none;
-    position: absolute;
- 
+  list-style: none;
 }
 .radios img {
     margin:auto;
-    height: 350px;
-    width: 800px;
-    vertical-align: top;
+    height: 200x;
+    width: 600px;
+    opacity: 0;
+    visibility: visible;    
+   
 }
 .radios input {
     display: none;
 }
 .radios label {
-    background-color: black;
-    bottom: 10px;
+    background-color: #519575;
+    bottom: 15px;
+    height: 15px;
+    width: 15px;
     cursor: pointer;
-    display: block;
-    height: 10px;
     position: absolute;
-    width: 10px;
-    z-index: 10;
- 
+    border-radius: 50%;
 }
+
 .radios li:nth-child(1) label {
-    left: 10px;
+    left: 30px;
 }
+
 .radios li:nth-child(2) label {
-    left: 40px;
+    left: 30px;
 }
+
 .radios li:nth-child(3) label {
-    left: 70px;
+   left: 30px;
 }
-.radios img {
+
+.radios li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+  /* CAROSSEL 2 */
+ 
+.carrosel-2 {
+  max-width: 60vw;
+  height: 60vh;
+  box-sizing: border-box;
+  background-color: #ddf0e6; /* Cor de fundo verde */
+}
+
+.auto-radios li {
+  list-style: none;
+}
+.auto-radios img {
+    margin:auto;
+    height: 200x;
+    width: 600px;
     opacity: 0;
     visibility: visible;    
+   
 }
-.radios li input:checked ~ img {
+.auto-radios input {
+    display: none;
+}
+.auto-radios label {
+    background-color: #519575;
+    bottom: 15px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.auto-radios li:nth-child(1) label {
+    left: 30px;
+}
+
+.auto-radios li:nth-child(2) label {
+    left: 30px;
+}
+
+.auto-radios li:nth-child(3) label {
+   left: 30px;
+}
+
+.auto-radios li input:checked ~ img {
     opacity: 1;
     visibility: visible;
     z-index: 10;
@@ -115,8 +157,6 @@
       /* BANNER PROMOÇÃO ASSINATURA */
 
       
-
-
 .agro-assinatura {
   display: flex;
   justify-content: space-between;
@@ -124,34 +164,39 @@
   background-color: #056934; /* Cor de fundo verde */
   padding: 20px;
   color: white;
+  margin-top: 70px;
 }
 
 .agro-content {
+  
+  padding-left: 100px;
   max-width: 60%; /* Limita o espaço ocupado pelo texto */
 }
 
-.agro-content h2 {
-  font-size: 2.5em;
+.agro-content h1 {
+  font-size: 3.0em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+ 
 }
 
-.agro-content h2 span {
-  color: #7E9D01; /* Cor verde diferente para a palavra Agro+ */
+.agro-content h1 span {
+  color: var(--corprincipal) /* Cor verde diferente para a palavra Agro+ */
 }
 
 .agro-content ul {
   list-style-type: disc; /* Bolinhas antes dos itens */
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .agro-content ul li {
-  margin-bottom: 10px; /* Espaçamento entre as linhas */
-  font-size: 1.2em;
+  margin-bottom: 5px; /* Espaçamento entre as linhas */
+  font-size: 1.35em;
 }
 
 .agro-imagem {
-  max-width: 35%; /* Limita a largura da imagem */
+ justify-content: center;
+  
 }
 
 .agro-imagem img {
@@ -164,11 +209,10 @@
 
 
 
-    /* CAROSSEL 2 */
+    /* CAROSSEL 3 */
 
 
     
-
 .container {
     margin: 0;
     padding: 0;
@@ -176,7 +220,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .card-list{
@@ -229,3 +273,76 @@
   border: 1px solid #fff;
   color: var(--cortexto);
 }
+
+
+
+
+    /*  SOBRE AGROBOX  */
+
+
+.sobre-agrobox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #056934; /* Cor de fundo verde */
+  padding: 20px;
+  margin-bottom: 70px;
+  color: white;
+}
+
+.content-Agrobox {
+  padding-left: 100px;
+  max-width: 60%; /* Limita o espaço ocupado pelo texto */
+}
+
+.content-Agrobox h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+}
+
+.content-Agrobox h1 span {
+  color: var(--corprincipal) /* Cor verde diferente para a palavra Agro+ */
+}
+
+.content-Agrobox ul {
+  list-style-type: disc; /* Bolinhas antes dos itens */
+  padding-left: 50px;
+}
+
+.content-Agrobox ul li {
+  margin-bottom: 5px; /* Espaçamento entre as linhas */
+  font-size: 1.35em;
+}
+
+.agrobox-imagem {
+justify-content: center;
+
+  
+}
+
+.agrobox-imagem img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 13px;
+}
+      
+.message-button-agrobox {
+  font-size: 18px;
+  padding: 10px 35px;
+  color:  #71b21e;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+ .message-button-agrobox.message-button-agrobox:hover{
+  background: #308467;
+  border: 1px solid #fff;
+  color: var(--cortexto);
+}
+
