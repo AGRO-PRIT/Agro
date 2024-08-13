@@ -42,118 +42,6 @@
 }
 
 
-
-
-    /* COMEÇO CARROSÉIS */
-
-
-
-        /* CAROSSEL 1 */
-
-
-.carrosel{
-  max-width: 60vw;
-  height: 60vh;
-  box-sizing: border-box;
-  background-color: #ddf0e6; /* Cor de fundo verde */
-}
-
-.radios li {
-  list-style: none;
-}
-.radios img {
-    margin:auto;
-    height: 200x;
-    width: 600px;
-    opacity: 0;
-    visibility: visible;    
-   
-}
-.radios input {
-    display: none;
-}
-.radios label {
-    background-color: #519575;
-    bottom: 15px;
-    height: 15px;
-    width: 15px;
-    cursor: pointer;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.radios li:nth-child(1) label {
-    left: 30px;
-}
-
-.radios li:nth-child(2) label {
-    left: 30px;
-}
-
-.radios li:nth-child(3) label {
-   left: 30px;
-}
-
-.radios li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-
-  /* CAROSSEL 2 */
- 
-.carrosel-2 {
-  max-width: 60vw;
-  height: 60vh;
-  box-sizing: border-box;
-  background-color: #ddf0e6; /* Cor de fundo verde */
-}
-
-.auto-radios li {
-  list-style: none;
-}
-.auto-radios img {
-    margin:auto;
-    height: 200x;
-    width: 600px;
-    opacity: 0;
-    visibility: visible;    
-   
-}
-.auto-radios input {
-    display: none;
-}
-.auto-radios label {
-    background-color: #519575;
-    bottom: 15px;
-    height: 15px;
-    width: 15px;
-    cursor: pointer;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.auto-radios li:nth-child(1) label {
-    left: 30px;
-}
-
-.auto-radios li:nth-child(2) label {
-    left: 30px;
-}
-
-.auto-radios li:nth-child(3) label {
-   left: 30px;
-}
-
-.auto-radios li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-
-
       /* BANNER PROMOÇÃO ASSINATURA */
 
       
@@ -209,7 +97,7 @@
 
 
 
-    /* CAROSSEL 3 */
+    /* CAROSSEL 03*/
 
 
     
@@ -236,6 +124,7 @@
   justify-content: center;
   backdrop-filter: blur(30px); /*não faço ideia */
   background: #fff;
+  border-radius: 10px;
 }
 
 .card-list .card-item .user-image {
