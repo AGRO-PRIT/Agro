@@ -29,6 +29,7 @@ router.get('/box', function(req, res) {
 
 router.get('/premium', function(req, res) {
     res.render('pages/premium');
+    
 });
 
 router.get('/eventos', function(req, res) {
