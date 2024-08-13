@@ -1,0 +1,71 @@
+    /* começo carroseis */
+
+/* carrosel 01 */
+
+.carrosel-margin{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50vh;
+}
+
+
+.carrosel-interno {
+    font-size: 17px;
+    color:  #493a31;
+}
+
+.carrosel-interno .carrosel-itens {
+  width: 1068px;
+  height: 259px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(30px); /*não faço ideia */
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+.carrosel-interno .carrosel-itens .carrosel-img{
+  width: 170px;
+  height: 170px;
+  margin: center;
+  margin-left: 80px;
+}
+
+
+
+
+
+
+.carrosel-interno .carrosel-itens .user-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.15rem;
+  color: #333333;
+  font-weight: 500;
+  margin: 14px 0 30px; /*14 de margem 0 para ambos os lados e 40 de borda inferior*/
+}
+
+.carrosel-interno .carrosel-itens .botao-add {
+  font-size: 18px;
+  padding: 10px 35px;
+  color: #308467;
+  border-radius: 6px;
+  font-weight: 500;
+ 
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.carrosel-interno .carrosel-itens .botao-add.botao-add:hover{
+  background: #e41e1e;
+  border: 1px solid #fff;
+  color: var(--cortexto);
+}
