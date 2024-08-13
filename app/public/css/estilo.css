@@ -98,6 +98,7 @@ body {
     align-items: center;
     display: flex;
     margin-right: 30px;
+    margin-right: 40px;
 }
 
 .text-carrinho {
@@ -109,8 +110,8 @@ body {
 }
 
 .carrinho img {
-    height: 47px;
-    margin-right: 3px;
+    height: 35px;
+    margin-right: 10px;
 }
 
 
@@ -132,7 +133,7 @@ body {
 }
 
 .perfil img {
-    height: 43px;
+    height: 35px;
     margin-right: 7px;
 }
 
@@ -162,6 +163,10 @@ body {
     list-style-type: none;
     text-decoration: none;
     font-size: 14px;
+}
+
+.subnav .box {
+    font-weight: bold;
 }
 
 .subnav a {
