@@ -12,7 +12,7 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,
 }
 
 :root {
-    --backgroundcolor: #fcf2e6;
+    --backgroundcolor: rgba(252,242,230,255);
     --corprincipal: #5aa403;
     --cortexto: rgb(255, 255, 255);
     --fonteprincipal: "Montserrat", sans-serif;
