@@ -1,7 +1,7 @@
 let currentIndex = 0;
 
 function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
+    const slides = document.querySelectorAll('.carrosel-itens');
     const dots = document.querySelectorAll('.dot');
     
     if (index >= slides.length) {
@@ -12,8 +12,8 @@ function showSlide(index) {
         currentIndex = index;
     }
     
-    const offset = -currentIndex * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    const offset = -currentIndex * 10;
+    document.querySelector('.carrosel-interno').style.transform = `translateX(${offset}%)`;
     
     dots.forEach(dot => dot.classList.remove('active'));
     dots[currentIndex].classList.add('active');
@@ -30,5 +30,5 @@ function nextSlide() {
 function currentSlide(index) {
     showSlide(index - 1);
 }
-
+    
 showSlide(currentIndex);
