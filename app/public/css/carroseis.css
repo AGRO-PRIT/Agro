@@ -3,69 +3,116 @@
 /* carrosel 01 */
 
 .carrosel-margin{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 50vh;
+    
+    padding: 20px;     /*margin de todo o conteúdo (bloco) */
 }
 
+.carrosel-container{
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    background-color:#fff;
+    border-radius: 10px; /* container de todo o conteúdo */
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
 
 .carrosel-interno {
-    font-size: 17px;
-    color:  #493a31;
+    display: flex;
 }
 
-.carrosel-interno .carrosel-itens {
-  width: 1068px;
-  height: 259px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(30px); /*não faço ideia */
-  background: #f2f2f2;
-  border-radius: 10px;
+.carrosel-margin .nome-fruta{
+    margin-left: 300px;
+    font-size: 30px;
+    color:  #493a31; 
 }
 
-.carrosel-interno .carrosel-itens .carrosel-img{
-  width: 170px;
-  height: 170px;
-  margin: center;
-  margin-left: 80px;
+.carrosel-itens{
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 10px;
+  line-height: 1.5;
 }
 
-
-
-
-
-
-.carrosel-interno .carrosel-itens .user-profession {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.15rem;
-  color: #333333;
-  font-weight: 500;
-  margin: 14px 0 30px; /*14 de margem 0 para ambos os lados e 40 de borda inferior*/
+.carrosel-itens img {
+  max-width: 140px;
+  height: auto;
+  padding: 20px;
 }
 
-.carrosel-interno .carrosel-itens .botao-add {
-  font-size: 18px;
-  padding: 10px 35px;
-  color: #308467;
-  border-radius: 6px;
-  font-weight: 500;
- 
+.desconto {
+  background-color: #f5a83c;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.preco{
+  font-size: 19px;
+  color: #006837;
+  font-weight: bold;
+}
+
+.botao-add {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  color: #006837;
+  border: 2px solid #006837;
+  font-weight: bold;
   cursor: pointer;
-  background: #fff;
-  border: 1px solid transparent;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid ;
   transition: 0.2s ease;
 }
 
-.carrosel-interno .carrosel-itens .botao-add.botao-add:hover{
-  background: #e41e1e;
-  border: 1px solid #fff;
+.botao-add:hover{
+  background: #006837;
   color: var(--cortexto);
+}
+
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #493a31;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  text-align: center;
+  padding: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #2e7d32;
 }

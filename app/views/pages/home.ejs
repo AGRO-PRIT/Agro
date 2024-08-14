@@ -1,5 +1,6 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,158 +8,172 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/carroseis.css">
-    
+
 </head>
 
-<body>  
-     <!-- NavBar -->
+<body>
+    <!-- NavBar -->
     <%- include('../partials/navbar'); %>
 
-    <!--Carrosel-->
+        <!--Carrosel-->
 
-    <section class="slider">
+        <section class="slider">
 
-        <ul class="slides">
-            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide1"> </li>
-            <li class="slide"><img src="imagens/Rural.jpg" alt="slide2"> </li>
-            <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide3"> </li>
-        </ul>
+            <ul class="slides">
+                <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide1"> </li>
+                <li class="slide"><img src="imagens/Rural.jpg" alt="slide2"> </li>
+                <li class="slide"><img src="imagens/pessoa-plantando.jpg" alt="slide3"> </li>
+            </ul>
 
-    </section>
+        </section>
 
-   _<!-- Carrosel 2 -->
+        _<!-- Carrosel 2 -->
 
-   <section class="carrosel-margin">
-    <section class="carrosel-container">
-      <section class="carrosel-interno">
+        <section class="carrosel-margin">
 
-        <h2 class="nome-fruta"> Frutas </h2>
+            <h2 class="nome-fruta"> Frutas </h2>
 
-          <section class="carrosel-itens">
+            <section class="carrosel-container">
 
-              <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
-              <h3> Maçã Fuji (300g) unidade </h3>
-              <p> Nome do Vendedor </p>
-              <p class="price"> R$ 00,00 </p>
-              <button class="botao-add"> Veja seu perfil </button>
-          </section>
+                <section class="carrosel-interno">
 
-          <section class="carrosel-itens">
-              <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
-              <span class="discount"> -10% OFF </span>
-              <h3> Maçã Fuji (300g) unidade </h3>
-              <p> Nome do Vendedor </p>
-              <p class="price"> R$ 00,00 </p>
-              <button class="botao-add"> Veja seu perfil </button>
-          </section>
+                    <section class="carrosel-itens">
+                        <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
+                        <h3> Maçã Fuji (300g) unidade </h3>
+                        <p> Nome do Vendedor </p>
+                        <p class="preco"> R$ 00,00 </p>
+                        <button class="botao-add"> Adicionar </button>
+                    </section>
 
-          <section class="carrosel-itens">
-            <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
-            <h3 class=""> Maçã Fuji (300g) unidade </h3>
-            <p class=""> Nome do Vendedor </p>
-            <p class="price"> R$ 00,00 </p>
-            <button class="botao-add"> Veja seu perfil </button>
-            <button class="botao-add"> Veja seu perfil </button>
-          </section>
-          
-          <section class="carrosel-itens">
-            <img src="imagens/maça.png" alt="imagem de uma maça" class="carrosel-img">
-            <span class="discount"> -10% OFF </span>
-            <h3> Maçã Fuji (300g) unidade </h3>
-            <p class=""> Nome do Vendedor </p>
-            <p class="price"> R$ 00,00 </p>
-          
-      </section>
-    </section>
-   </section>
+                    <section class="carrosel-itens">
+                        <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
+                        <span class="desconto"> -10% OFF </span>
+                        <h3> Maçã Fuji (300g) unidade </h3>
+                        <p> Nome do Vendedor </p>
+                        <p class="preco"> R$ 00,00 </p>
+                        <button class="botao-add"> Adicionar </button>
+                    </section>
 
-       </section>
+                    <section class="carrosel-itens">
+                        <img src="imagens/maça.png" alt="imagem de uma maça" class="user-image">
+                        <h3 class=""> Maçã Fuji (300g) unidade </h3>
+                        <p class=""> Nome do Vendedor </p>
+                        <p class="preco"> R$ 00,00 </p>
+                        <button class="botao-add"> Adicionar </button>
 
-        
+                    </section>
+
+                    <section class="carrosel-itens">
+                        <img src="imagens/maça.png" alt="imagem de uma maça" class="carrosel-img">
+                        <span class="desconto"> -10% OFF </span>
+                        <h3> Maçã Fuji (300g) unidade </h3>
+                        <p class=""> Nome do Vendedor </p>
+                        <p class="preco"> R$ 00,00 </p>
+                        <button class="botao-add"> Adicionar </button>
+                    </section>
+
+                </section>
+
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                <div class="carousel-dots">
+
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                
+            </section>
+        </section>
+
+
 
         <!-- Assinatura Agro -->
 
 
-    <section class="agro-assinatura">
+        <section class="agro-assinatura">
 
-        <section class="agro-content">
-            <h1> Assine o <span> Agro+ </span> </h1>
+            <section class="agro-content">
+                <h1> Assine o <span> Agro+ </span> </h1>
                 <ul>
                     <li> Monte sua cesta de entrega semanal ou mensal </li>
                     <li> Ganhe alguma coisa ae </li>
                     <li> Receba frete grátis </li>
                     <li> Promoçoes exclusivas </li>
                 </ul>
+            </section>
+
+            <section class="agro-imagem">
+                <img src="imagens/mulher-agro.png" alt="Imagem da assinatura premium">
+            </section>
+
         </section>
 
-        <section class="agro-imagem">
-            <img src="imagens/mulher-agro.png" alt="Imagem da assinatura premium">
+
+        <!-- Agricultores em Destaques -->
+
+        <section class="container">
+
+            <section class="slider-wrapper">
+
+                <section class="card-list">
+
+                    <h2 class="user-name"> Agricultores Destaques </h2>
+
+                    <section class="card-item">
+
+                        <img src="imagens/jesus.png" alt="imagem do vendedor" class="user-image">
+                        <p class="user-profession"> Jesus Cristo </p>
+                        <p class="user-profession"> Jesus se destacou pela otima qualidade dos produtos e velocidade na
+                            <br> entrega. </p>
+                        <button class="message-button"> Veja seu perfil </button>
+
+                    </section>
+
+                </section>
+            </section>
         </section>
 
-    </section>
+        <section class="container">
 
+            <section class="slider-wrapper">
 
-    <!-- Agricultores em Destaques -->
+                <section class="card-list">
 
-    <section class="container">
+                    <h2 class="user-name"> Agricultores Destaques </h2>
 
-        <section class="slider-wrapper">
+                    <section class="card-item">
 
-            <section class="card-list">
+                        <img src="imagens/laura.png" alt="imagem do vendedor" class="user-image">
+                        <p class="user-profession"> Laura </p>
+                        <p class="user-profession"> Laura se destacou pela otima qualidade dos produtos e velocidade na
+                            <br> entrega. </p>
+                        <button class="message-button"> Veja seu perfil </button>
 
-              <h2 class="user-name"> Agricultores Destaques </h2> 
-
-                <section class="card-item">
-                    
-                    <img src="imagens/jesus.png" alt="imagem do vendedor" class="user-image">
-                    <p class="user-profession"> Jesus Cristo </p>
-                    <p class="user-profession"> Jesus se destacou pela otima qualidade dos produtos e velocidade na <br> entrega. </p>
-                    <button class="message-button"> Veja seu perfil </button>
-                
+                    </section>
                 </section>
-            </section>  
-        </section>  
-    </section>
-    
-    <section class="container">
-        
-      <section class="slider-wrapper">
+            </section>
+        </section>
 
-          <section class="card-list">
+        <section class="container">
 
-            <h2 class="user-name"> Agricultores Destaques </h2> 
+            <section class="slider-wrapper">
 
-              <section class="card-item">
-                  
-                  <img src="imagens/laura.png" alt="imagem do vendedor" class="user-image">
-                  <p class="user-profession"> Laura </p>
-                  <p class="user-profession"> Laura se destacou pela otima qualidade dos produtos e velocidade na <br> entrega. </p>
-                  <button class="message-button"> Veja seu perfil </button>
-              
-              </section>
-          </section>  
-      </section>  
-  </section>
-  
-    <section class="container">
-        
-        <section class="slider-wrapper">
+                <section class="card-list">
 
-            <section class="card-list">
+                    <h2 class="user-name"> Agricultores Destaques </h2>
 
-              <h2 class="user-name"> Agricultores Destaques </h2> 
+                    <section class="card-item">
 
-                <section class="card-item">
-                    
-                    <img src="imagens/kawan.png" alt="imagem do vendedor" class="user-image">
-                    <p class="user-profession"> Kawan Barreto </p>
-                    <p class="user-profession"> Kawan se destacou pela otima qualidade dos produtos e velocidade na <br> entrega. </p>
-                    <button class="message-button"> Veja seu perfil </button>
-                
+                        <img src="imagens/kawan.png" alt="imagem do vendedor" class="user-image">
+                        <p class="user-profession"> Kawan Barreto </p>
+                        <p class="user-profession"> Kawan se destacou pela otima qualidade dos produtos e velocidade na
+                            <br> entrega. </p>
+                        <button class="message-button"> Veja seu perfil </button>
+
+                    </section>
                 </section>
-            </section>  
-        </section>  
-    </section>
+            </section>
+        </section>
 
         <!-- Sobre Agrobox -->
 
@@ -166,33 +181,30 @@
 
             <section class="content-Agrobox">
                 <h1> Quem é Agrobox? </h1>
-                    <p>AgroColere é uma plataforma inovadora e abrangente dedicada <br>
-                        ao mundo da agricultura, reunindo pequenos agricultores e até <br>
-                        os maiores_ espalhados pelo Brasil para publicar seus produtos e<br>
-                         garantir a eles uma plataforma de auxulio para venda desses <br>
-                        produtos.
-                    </p>
-                    <button class="message-button-agrobox"> Veja seu perfil </button>
+                <p>AgroColere é uma plataforma inovadora e abrangente dedicada <br>
+                    ao mundo da agricultura, reunindo pequenos agricultores e até <br>
+                    os maiores_ espalhados pelo Brasil para publicar seus produtos e<br>
+                    garantir a eles uma plataforma de auxulio para venda desses <br>
+                    produtos.
+                </p>
+                <button class="message-button-agrobox"> Veja seu perfil </button>
 
             </section>
-    
+
             <section class="agrobox-imagem">
                 <img src="imagens/velinha-plantando.jpg" alt="Imagem de uma agricultora">
             </section>
-    
+
         </section>
 
-    <!-- Rodapé -->
-    <%- include('../partials/footer'); %>
-    
+        <!-- Rodapé -->
+        <%- include('../partials/footer'); %>
+
 </body>
+
 </html>
 
-        <!-- Script -->
-         
-<script src="slider.js"> </script>
+<!-- Script -->
+
+<script src="js/slider.js"> </script>
 <script src="js/index.js"> </script>
-
-
-
-
