@@ -12,7 +12,7 @@ function showSlide(index) {
         currentIndex = index;
     }
     
-    const offset = -currentIndex * 10;
+    const offset = -currentIndex * 95 ;
     document.querySelector('.carrosel-interno').style.transform = `translateX(${offset}%)`;
     
     dots.forEach(dot => dot.classList.remove('active'));

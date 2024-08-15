@@ -3,42 +3,45 @@
 /* carrosel 01 */
 
 .carrosel-margin{
-    
-    padding: 100px;     /*margin de todo o conteúdo (bloco) */
+  
+  padding: 100px;  /*margin de todo o conteúdo (bloco) */
 }
 
 .carrosel-container{
     position: relative;
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
     overflow: hidden;
-    background-color:#fff;
+    background-color:#f2f2f2;
     border-radius: 10px; /* container de todo o conteúdo */
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
-}
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  }
 
 .carrosel-interno {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .carrosel-margin .nome-fruta{
-    margin-left: 300px;
+    margin-left: 20px;
     font-size: 30px;
     color:  #493a31; 
 }
 
 .carrosel-itens{
   display: grid;
-  place-items: center;
+  padding-left: 62px;
   max-width: 100%;
   box-sizing: border-box;
   margin: 10px;
-  line-height: 1.5;
+  line-height: 1.0;
 }
 
 .carrosel-itens img {
   max-width: 140px;
   height: auto;
+  max-height: auto;
   padding: 20px;
 }
 
@@ -46,13 +49,15 @@
   background-color: #f5a83c;
   color: #ffffff;
   padding: 5px;
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  border-radius: 4px;
 }
 
 .preco{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
   font-size: 19px;
   color: #006837;
   font-weight: bold;
@@ -61,16 +66,18 @@
 .botao-add {
   display: block;
   width: 100%;
-  padding: 15px;
-  background-color: white;
+  padding: 10px;
+  background-color: #f2f2f2;
   color: #006837;
   border: 2px solid #006837;
   font-weight: bold;
-  cursor: pointer;
-  border-radius: 15px;
+  font-size: medium;
   text-align: center;
-  border: 1px solid ;
+  border-radius: 12px;
+  border: 2px solid ;
   transition: 0.2s ease;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .botao-add:hover{
@@ -83,6 +90,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: transparent;
   color: #493a31;
   border: none;
   padding: 10px;
@@ -100,19 +108,21 @@
 
 .carousel-dots {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  align-items: center;
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
+ 
+  height: 17px;
+  width: 17px;
+  margin: 0 4px;
+  background-color: rgba(81, 149, 117, 0.6);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: #2e7d32;
+  background-color: rgba(81, 149, 117, 0.99);
 }

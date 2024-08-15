@@ -13,9 +13,8 @@
   max-width: 100vw;
   overflow: hidden;
   height: 230px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  
+  margin: auto;
+  overflow: hidden;
 }
 
 .slides {
