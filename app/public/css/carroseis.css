@@ -7,7 +7,8 @@
   padding: 100px;  /*margin de todo o conteúdo (bloco) */
 }
 
-.carrosel-container{
+.carrosel-interno{
+    display: flex;
     position: relative;
     max-width: 1100px;
     margin: auto;
@@ -17,7 +18,7 @@
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
   }
 
-.carrosel-interno {
+.carrosel-itens {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +30,7 @@
     color:  #493a31; 
 }
 
-.carrosel-itens{
+.item{
   display: grid;
   padding-left: 62px;
   max-width: 100%;
@@ -38,7 +39,7 @@
   line-height: 1.0;
 }
 
-.carrosel-itens img {
+.item img {
   max-width: 140px;
   height: auto;
   max-height: auto;
@@ -48,6 +49,7 @@
 .desconto {
   background-color: #f5a83c;
   color: #ffffff;
+  
   padding: 5px;
   font-size: 12px;
   position: absolute;
