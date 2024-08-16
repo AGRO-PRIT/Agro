@@ -4,15 +4,13 @@
     --corprincipal: #5aa403;
     --cortexto: rgb(255, 255, 255);
     --fonteprincipal: "Montserrat", sans-serif;
+    --backgroundcolormaisclaro: #ffffff;
 }
 
 
 
-body{
-    background-color: red;
-}
 
-login-form{
+/* .login-form{
     position: relative;
     min-height: 100vh;
     z-index: 0;
@@ -23,4 +21,74 @@ login-form{
 
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+} */
+
+.bodydoPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 889px;
+    height: 473px;
+    background-color: var(--corprincipal);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 10px 12px 25px -6px rgba(0,0,0,0.66);
+}
+
+.banner{
+    font-size: 30px;
+    background-color: var(--backgroundcolormaisclaro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+    padding: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 19px 0px 0px 19px;
+}
+.banner img{
+    width: 250px;
+    height: 210px;
+}
+.cantinhoLogo{
+    width: 667px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cantinhoLogo h1{
+    font-size: 40px;
+}
+.input-group input {
+    height: 25px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.checagem{
+    display: flex;
+    margin: 10px;
+}
+.entrar{
+    background-color: var(--backgroundcolor);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    padding-right: 60px;
+    padding-left: 60px;
+    color: var(--corprincipal);
+    margin: 20px;
+    font-size: 18px;
+}
+
+@media (max-width:900px){
+
 }
