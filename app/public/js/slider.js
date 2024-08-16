@@ -15,7 +15,7 @@ function showSlide(index) {
     
     // Atualizar a posição do carrossel
     const offset = -currentIndex * 100; // 100% para cada slide
-    document.querySelector('.').style.transform = `translateX(${offset}%)`;
+    document.querySelector('.carrosel-itens').style.transform = `translateX(${offset}%)`;
     
     // Atualizar os pontos de navegação
     dots.forEach(dot => dot.classList.remove('active'));
