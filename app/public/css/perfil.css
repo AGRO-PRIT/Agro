@@ -1,0 +1,26 @@
+
+:root {
+    --backgroundcolor: #fcf2e6;
+    --corprincipal: #5aa403;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+}
+
+
+
+body{
+    background-color: red;
+}
+
+login-form{
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: var(--backgroundcolor);
+    padding: 40px;
+    justify-content: center;
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
