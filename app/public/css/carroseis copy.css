@@ -1,0 +1,130 @@
+
+       /* começo carroseis */
+   
+   /* carrosel 01 */
+   
+   .carrosel-margin{
+     
+     padding: 100px;  /*margin de todo o conteúdo (bloco) */
+   }
+   
+   .carrosel-container{
+       position: relative;
+       max-width: 1100px;
+       margin: auto;
+       overflow: hidden;
+       background-color:#f2f2f2;
+       border-radius: 10px; /* container de todo o conteúdo */
+       box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+     }
+   
+   .carrosel-interno {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .carrosel-margin .nome-fruta{
+       margin-left: 20px;
+       font-size: 30px;
+       color:  #493a31; 
+   }
+   
+   .carrosel-itens{
+     display: grid;
+     padding-left: 62px;
+     max-width: 100%;
+     box-sizing: border-box;
+     margin: 10px;
+     line-height: 1.0;
+   }
+   
+   .carrosel-itens img {
+     max-width: 140px;
+     height: auto;
+     max-height: auto;
+     padding: 20px;
+   }
+   
+   .desconto {
+     background-color: #f5a83c;
+     color: #ffffff;
+     padding: 5px;
+     font-size: 12px;
+     position: absolute;
+     border-radius: 4px;
+   }
+   
+   .preco{
+     margin-top: 10px;
+     margin-bottom: 10px;
+     text-align: left;
+     font-size: 19px;
+     color: #006837;
+     font-weight: bold;
+   }
+   
+   .botao-add {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     background-color: #f2f2f2;
+     color: #006837;
+     border: 2px solid #006837;
+     font-weight: bold;
+     font-size: medium;
+     text-align: center;
+     border-radius: 12px;
+     border: 2px solid ;
+     transition: 0.2s ease;
+     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+     cursor: pointer;
+   }
+   
+   .botao-add:hover{
+     background: #006837;
+     color: var(--cortexto);
+   }
+   
+   
+   .carousel-control {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background-color: transparent;
+     color: #493a31;
+     border: none;
+     padding: 10px;
+     cursor: pointer;
+     z-index: 1;
+   }
+   
+   .carousel-control.prev {
+     left: 10px;
+   }
+   
+   .carousel-control.next {
+     right: 10px;
+   }
+   
+   .carousel-dots {
+     text-align: center;
+     padding: 20px;
+     align-items: center;
+   }
+   
+   .dot {
+    
+     height: 17px;
+     width: 17px;
+     margin: 0 4px;
+     background-color: rgba(81, 149, 117, 0.6);
+     border-radius: 50%;
+     display: inline-block;
+     cursor: pointer;
+   }
+   
+   .dot.active {
+     background-color: rgba(81, 149, 117, 0.99);
+   }
+      
