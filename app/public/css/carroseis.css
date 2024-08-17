@@ -1,130 +1,256 @@
-    /* começo carroseis */
+ /*inicio css slider*/
 
-/* carrosel 01 */
+ /*passagem dos sliders*/
 
-.carrosel-margin{
-  
-  padding: 100px;  /*margin de todo o conteúdo (bloco) */
+ :root {
+  --backgroundcolor: #FCF2E6;
+  --corprincipal: #5AA504;
+  --cortexto: rgb(255, 255, 255);
+  --fonteprincipal: "Montserrat", sans-serif;
+  --verdeescuro: #006837;
+  --branco: #FFFFFF;
+  --laranja: #E68A00;
+  --marrom: #493A31;
+  --corlayouts: #f2f2f2;
 }
 
-.carrosel-interno{
-    display: flex;
-    position: relative;
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    background-color:#f2f2f2;
-    border-radius: 10px; /* container de todo o conteúdo */
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  }
+ .slider {
+  position: relative;
+   width: 100%;
+   overflow: hidden;
+   height: 230px;
+   margin: auto;
+ }
 
-.carrosel-itens {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ .slides {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+ }
+
+ .slides input {
+   display: none;
+ }
+
+ /*imagens do slider*/
+
+ .slide img {
+   margin: auto;
+   width: 100vw;
+   overflow: hidden;
+   box-sizing: border-box;
+   height: 230px;
+   line-height: normal;
+   object-fit: cover;
+
+ }
+
+ /* carrosel 02 */
+
+
+ .carrosel-margin {
+   padding: 100px;
+   /*margin de todo o conteúdo (bloco) */
+ }
+
+ .carrosel-interno {
+   display: flex;
+   position: relative;
+   max-width: 1100px;
+   margin: auto;
+   overflow: hidden;
+   background-color: #f2f2f2;
+   border-radius: 10px;
+   /* container de todo o conteúdo */
+   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+ }
+
+ .carrosel-itens {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .carrosel-margin .nome-fruta {
+   margin-left: 20px;
+   font-size: 30px;
+   color: #493a31;
+ }
+
+ .item {
+   display: grid;
+   padding-left: 62px;
+   max-width: 100%;
+   box-sizing: border-box;
+   margin: 10px;
+   line-height: 1.0;
+ }
+
+ .item img {
+   max-width: 140px;
+   height: auto;
+   max-height: auto;
+   padding: 20px;
+ }
+
+ .desconto {
+   background-color: #f5a83c;
+   color: #ffffff;
+
+   padding: 5px;
+   font-size: 12px;
+   position: absolute;
+   border-radius: 4px;
+ }
+
+ .preco {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   text-align: left;
+   font-size: 19px;
+   color: #006837;
+   font-weight: bold;
+ }
+
+ .botao-add {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   background-color: #f2f2f2;
+   color: #006837;
+   border: 2px solid #006837;
+   font-weight: bold;
+   font-size: medium;
+   text-align: center;
+   border-radius: 12px;
+   border: 2px solid;
+   transition: 0.2s ease;
+   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+   cursor: pointer;
+ }
+
+ .botao-add:hover {
+   background: #006837;
+   color: var(--cortexto);
+ }
+
+
+ .carousel-control {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: transparent;
+   color: #493a31;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   z-index: 1;
+ }
+
+ .carousel-control.prev {
+   left: 10px;
+ }
+
+ .carousel-control.next {
+   right: 10px;
+ }
+
+ .carousel-dots {
+   text-align: center;
+   padding: 20px;
+   align-items: center;
+ }
+
+ .dot {
+
+   height: 17px;
+   width: 17px;
+   margin: 0 4px;
+   background-color: rgba(81, 149, 117, 0.6);
+   border-radius: 50%;
+   display: inline-block;
+   cursor: pointer;
+ }
+
+ .dot.active {
+   background-color: rgba(81, 149, 117, 0.99);
+ }
+
+
+
+ /* CAROSSEL 03*/
+
+
+
+ .container {
+  padding: 60px;
 }
 
-.carrosel-margin .nome-fruta{
-    margin-left: 20px;
-    font-size: 30px;
-    color:  #493a31; 
-}
-
-.item{
-  display: grid;
-  padding-left: 62px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 10px;
-  line-height: 1.0;
-}
-
-.item img {
-  max-width: 140px;
-  height: auto;
-  max-height: auto;
-  padding: 20px;
-}
-
-.desconto {
-  background-color: #f5a83c;
-  color: #ffffff;
-  
-  padding: 5px;
-  font-size: 12px;
-  position: absolute;
-  border-radius: 4px;
-}
-
-.preco{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-  font-size: 19px;
-  color: #006837;
-  font-weight: bold;
-}
-
-.botao-add {
-  display: block;
-  width: 100%;
+.card-list {
   padding: 10px;
-  background-color: #f2f2f2;
-  color: #006837;
-  border: 2px solid #006837;
-  font-weight: bold;
-  font-size: medium;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid ;
-  transition: 0.2s ease;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  display: flex;
+  position: relative;
+  max-width: 1200px;
+  margin: auto; 
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;  
 }
 
-.botao-add:hover{
-  background: #006837;
+.user-name {
+  margin-left: 90px;
+  font-size: 30px;
+  color: #493a31;
+}
+
+.card-item {
+  border-radius: 10px;
+  width: 1068px;
+  height: 259px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(30px);
+  /*não faço ideia */
+  background: var(--corlayouts);
+  border-radius: 10px;
+}
+
+.card-list .card-item .user-image {
+  width: 170px;
+  height: 170px;
+  margin: center;
+  margin-left: 80px;
+}
+
+.card-list .card-item .user-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.15rem;
+  color: #333333;
+  font-weight: 500;
+  margin: 14px 0 30px;
+  /*14 de margem 0 para ambos os lados e 40 de borda inferior*/
+}
+
+.card-list .card-item .message-button {
+  font-size: 18px;
+  padding: 10px 35px;
+  color: #308467;
+  border-radius: 6px;
+  font-weight: 500;
+
+  cursor: pointer;
+  background: var(--corlayouts);
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button.message-button:hover {
+  background: #308467;
+  border: 1px solid #fff;
   color: var(--cortexto);
 }
 
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: #493a31;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.carousel-control.prev {
-  left: 10px;
-}
-
-.carousel-control.next {
-  right: 10px;
-}
-
-.carousel-dots {
-  text-align: center;
-  padding: 20px;
-  align-items: center;
-}
-
-.dot {
- 
-  height: 17px;
-  width: 17px;
-  margin: 0 4px;
-  background-color: rgba(81, 149, 117, 0.6);
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: rgba(81, 149, 117, 0.99);
-}

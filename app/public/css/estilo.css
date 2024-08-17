@@ -13,11 +13,16 @@
 }
 
 :root {
-    --backgroundcolor: #fcf2e6;
-    --corprincipal: #5aa403;
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
     --cortexto: rgb(255, 255, 255);
     --fonteprincipal: "Montserrat", sans-serif;
-}
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
 
 a {
     color: #fff;
