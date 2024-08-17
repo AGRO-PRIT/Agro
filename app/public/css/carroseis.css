@@ -44,140 +44,325 @@
 
  }
 
- /* carrosel 02 */
 
 
- .carrosel-margin {
-   padding: 100px;
-   /*margin de todo o conteúdo (bloco) */
- }
+  /* CAROSSEL 03 FRUTAS */
 
- .carrosel-interno {
-   display: flex;
-   position: relative;
-   max-width: 1100px;
-   margin: auto;
-   overflow: hidden;
-   background-color: #f2f2f2;
-   border-radius: 10px;
-   /* container de todo o conteúdo */
-   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
- }
 
- .carrosel-itens {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
- }
+ 
+ .frutas-section {
+  color: #333333;
+  text-align: left;
+  font-size: 14px;
+}
 
- .carrosel-margin .nome-fruta {
-   margin-left: 20px;
-   font-size: 30px;
-   color: #493a31;
- }
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 120px;
+  font-size: 30px;
+  color: #493a31;
+}
 
- .item {
-   display: grid;
-   padding-left: 62px;
-   max-width: 100%;
-   box-sizing: border-box;
-   margin: 10px;
-   line-height: 1.0;
- }
+.carousel-container {
+  background-color: var(--corlayouts);
+  border-radius: 15px;
+  position: relative;
+  max-width: 1100px;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
 
- .item img {
-   max-width: 140px;
-   height: auto;
-   max-height: auto;
-   padding: 20px;
- }
+.carousel {
+  margin-left: 50px;
+  display: flex;
+  transition: transform 0.5s ease;
+}
 
- .desconto {
-   background-color: #f5a83c;
-   color: #ffffff;
+.carousel-item {
+  flex: 0 0 50px; /* Tamanho fixo para cada item */
+  margin: 0 50px ;
+}
 
-   padding: 5px;
-   font-size: 12px;
-   position: absolute;
-   border-radius: 4px;
- }
+.product-image {
+  max-width: 140px;
+  height: 110px;
+  width: 130px;
+  max-height: auto;
+  padding: 10px;
+}
 
- .preco {
-   margin-top: 10px;
-   margin-bottom: 10px;
-   text-align: left;
-   font-size: 19px;
-   color: #006837;
-   font-weight: bold;
- }
+.product-info {
+  margin-top: 10px;
+}
 
- .botao-add {
-   display: block;
-   width: 100%;
-   padding: 10px;
-   background-color: #f2f2f2;
-   color: #006837;
-   border: 2px solid #006837;
-   font-weight: bold;
-   font-size: medium;
-   text-align: center;
-   border-radius: 12px;
-   border: 2px solid;
-   transition: 0.2s ease;
-   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-   cursor: pointer;
- }
+.product-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
 
- .botao-add:hover {
-   background: #006837;
+.seller-name {
+  font-size: 0.9em;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.desconto {
+  background-color: #f5a83c;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 10px;
+  margin-top: 15px;
+  width: 47px;
+  position: absolute;
+  border-radius: 4px;
+}
+
+
+.product-price {
+  font-size: 1.5em;
+  color: #006837;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-to-cart {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #006837;
+  border: 2px solid #006837;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid;
+  transition: 0.2s ease;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: var(--verdeescuro);
    color: var(--cortexto);
- }
+}
+
+.carousel-control {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--marrom);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  border: none;
+  width: 17px;
+  height: 17px;
+  background-color: rgba(81, 149, 117, 0.6);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;  
+  transition: 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--verdeescuro);
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+      flex: 0 0 200px; /* Ajusta para telas menores */
+  }
+  .add-to-cart {
+      padding: 8px 16px;
+  }
+}
 
 
- .carousel-control {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   background-color: transparent;
-   color: #493a31;
-   border: none;
-   padding: 10px;
-   cursor: pointer;
-   z-index: 1;
- }
 
- .carousel-control.prev {
-   left: 10px;
- }
 
- .carousel-control.next {
-   right: 10px;
- }
-
- .carousel-dots {
-   text-align: center;
-   padding: 20px;
-   align-items: center;
- }
-
- .dot {
-
-   height: 17px;
-   width: 17px;
-   margin: 0 4px;
-   background-color: rgba(81, 149, 117, 0.6);
-   border-radius: 50%;
-   display: inline-block;
-   cursor: pointer;
- }
-
- .dot.active {
-   background-color: rgba(81, 149, 117, 0.99);
- }
+  /* CAROSSEL 03 LEGUMES */
 
 
 
- /* CAROSSEL 03*/
+        
+  .frutas-section {
+    color: #333333;
+    text-align: left;
+    font-size: 14px;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 120px;
+  font-size: 30px;
+  color: #493a31;
+}
+
+.carousel-container2 {
+  background-color: var(--corlayouts);
+  border-radius: 15px;
+  position: relative;
+  max-width: 1100px;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+.carousel2 {
+  margin-left: 50px;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item2 {
+  flex: 0 0 50px; /* Tamanho fixo para cada item */
+  margin: 0 50px ;
+}
+
+.product-image2 {
+  max-width: 140px;
+  height: 110px;
+  width: 130px;
+  max-height: auto;
+  padding: 10px;
+}
+
+.product-info2 {
+  margin-top: 10px;
+}
+
+.product-name2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.seller-name2 {
+  font-size: 0.9em;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.desconto {
+  background-color: #f5a83c;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 10px;
+  margin-top: 15px;
+  width: 47px;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.product-price2 {
+  font-size: 1.5em;
+  color: #006837;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-to-cart2 {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #006837;
+  border: 2px solid #006837;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid;
+  transition: 0.2s ease;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart2:hover {
+  background: var(--verdeescuro);
+  color: var(--cortexto);
+}
+
+.carousel-control2 {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--marrom);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev2 {
+    left: 10px;
+}
+
+.next2 {
+    right: 10px;
+}
+
+.carousel-indicators2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.indicator2 {
+  border: none;
+  width: 17px;
+  height: 17px;
+  background-color: rgba(81, 149, 117, 0.6);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;  
+  transition: 0.3s ease;
+}
+
+.indicator2.active {
+  background-color: var(--verdeescuro);
+}
+
+@media (max-width: 600px) {
+    .carousel-item2 {
+        flex: 0 0 200px;
+    }
+    .add-to-cart2 {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+ /* CAROSSEL 04*/
 
 
 
@@ -253,4 +438,10 @@
   border: 1px solid #fff;
   color: var(--cortexto);
 }
+
+
+
+
+
+
 
