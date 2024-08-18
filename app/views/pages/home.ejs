@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroBox</title>
-    <link rel="icon" href="imagens/logo.png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="imagens/logo.png">   
     <link rel="stylesheet" href="css/agro.css">
     <link rel="stylesheet" href="css/carroseis.css">
 
@@ -28,13 +27,12 @@
 
         </section>
 
-        <!-- Carrosel 2 -->
+        <!-- Carrosel 2 FRUTAS -->
 
         <%- include('../partials/carroselFrutas'); %>
 
-
                     
-        <!-- Carrosel 3 -->
+        <!-- Carrosel 3 LEGUMES -->
       
         <%- include('../partials/carroselLegumes'); %>
 
@@ -60,36 +58,9 @@
         </section>
 
 
-        <!-- Agricultores em Destaques Carossel 4 -->
+        <!-- Carrosel 4 Agricultores em Destaques  -->
 
-        <section class="container">
-
-            <h2 class="user-name"> Agricultores Destaques </h2>
-
-                <section class="card-list">
-
-                    <section class="card-item">
-                        <img src="imagens/jesus.png" alt="imagem do vendedor" class="user-image">
-                        <p class="user-profession"> Jesus Cristo </p>
-                        <p class="user-profession"> Jesus se destacou pela otima qualidade dos produtos e velocidade na
-                        <br> entrega. </p>
-                        <button class="message-button"> Veja seu perfil </button>
-
-                        <section class="botoes">
-                            <input type="radio" name="carrosel" id="img-1">
-                            <input type="radio" name="carrosel" id="img-2">
-                            <input type="radio" name="carrosel" id="img-3">
-                        </section>
-
-                        <section class="dots">
-                            <label for="img-1"></label>
-                            <label for="img-2"></label>
-                            <label for="img-3"></label>
-                        </section>
-                    </section>
-
-                </section>
-        </section>
+        <%- include('../partials/agricultores'); %>
             
 
         

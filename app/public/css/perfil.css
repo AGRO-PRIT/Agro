@@ -1,12 +1,14 @@
-
 :root {
-    --backgroundcolor: #fcf2e6;
-    --corprincipal: #5aa403;
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
     --cortexto: rgb(255, 255, 255);
     --fonteprincipal: "Montserrat", sans-serif;
-    --backgroundcolormaisclaro: #ffffff;
-}
-
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
 
 
 
@@ -29,19 +31,21 @@
     justify-content: center;
 }
 
-.container{
+.container {
     width: 889px;
     height: 473px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
-    box-shadow: 10px 12px 25px -6px rgba(0,0,0,0.66);
+    box-shadow: 10px 12px 25px -6px rgba(0, 0, 0, 0.66);
 }
 
-.banner{
+.banner {
+    color: var(--marrom);
+    text-align: center;
     font-size: 30px;
-    background-color: var(--backgroundcolormaisclaro);
+    background-color: var(--branco);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,43 +56,74 @@
     padding-bottom: 35px;
     border-radius: 19px 0px 0px 19px;
 }
-.banner img{
-    width: 250px;
-    height: 210px;
-}
-.cantinhoLogo{
+
+.cantinhoLogo {
     width: 667px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cantinhoLogo h1{
-    font-size: 40px;
+.banner img {
+    width: 250px;
+    height: 210px;
 }
-.input-group input {
-    height: 25px;
-    width: 300px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.cantinhoLogo h1 {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: var(--cortexto);
+}
+
+.input-group input { 
+    outline: none;  
+    text-indent: 10px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    height: 35px;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border-color: #493a31;
+    border: 1px solid #493a31;
+}
+
+.cadastro-form h3 { 
+    margin-left: 20px;
+    font-size: 14px;
+    color: var(--cortexto);
+}
+
+.entrar {
+    background-color: var(--backgroundcolor);
+    border: none;
     border-radius: 5px;
+    padding: 10px;
+    width: 209px;
+    color: var(--corprincipal);
+    margin: 13px;
+    font-size: 14px;
 }
-.checagem{
+
+.cadastro-form .entrar{
+    margin-left: 90px;
+}
+
+.cadastro-form p{
+    color: var(--cortexto);
+    text-align: center;
+}
+
+.cadastro-form .text-cadastro{
+    font-weight: bold;
+    color: var(--laranja);
+}
+.checagem {
     display: flex;
     margin: 10px;
 }
-.entrar{
-    background-color: var(--backgroundcolor);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    padding-right: 60px;
-    padding-left: 60px;
-    color: var(--corprincipal);
-    margin: 20px;
-    font-size: 18px;
-}
 
-@media (max-width:900px){
-
+@media (max-width:900px) {
+    
 }

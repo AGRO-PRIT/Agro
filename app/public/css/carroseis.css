@@ -209,7 +209,7 @@
 
 
         
-  .frutas-section {
+.frutas-section {
     color: #333333;
     text-align: left;
     font-size: 14px;
@@ -366,77 +366,138 @@
 
 
 
- .container {
-  padding: 60px;
+.container {
+color: #333333;
+text-align: left;
+font-size: 14px;
 }
 
-.card-list {
-  padding: 10px;
-  display: flex;
-  position: relative;
-  max-width: 1200px;
-  margin: auto; 
-  overflow: hidden;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;  
+.user-name{
+margin-top: 40px;
+margin-bottom: 10px;
+margin-left: 120px;
+font-size: 30px;
+color: #493a31;
 }
 
-.user-name {
-  margin-left: 90px;
-  font-size: 30px;
-  color: #493a31;
+.carousel-container3 {
+background-color: var(--corlayouts);
+border-radius: 15px;
+position: relative;
+max-width: 1100px;
+overflow: hidden;
+box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+margin: auto;
 }
 
-.card-item {
-  border-radius: 10px;
-  width: 1068px;
-  height: 259px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(30px);
-  /*não faço ideia */
-  background: var(--corlayouts);
-  border-radius: 10px;
+.carousel3 {
+margin-left: 50px;
+display: flex;
+transition: transform 0.5s ease;
 }
 
-.card-list .card-item .user-image {
-  width: 170px;
-  height: 170px;
-  margin: center;
-  margin-left: 80px;
+.carousel-item3 {
+flex: 0 0 50px; /* Tamanho fixo para cada item */
+margin: 0 50px ;
 }
 
-.card-list .card-item .user-profession {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.15rem;
-  color: #333333;
-  font-weight: 500;
-  margin: 14px 0 30px;
-  /*14 de margem 0 para ambos os lados e 40 de borda inferior*/
+.perfil-image3 {
+max-width: 140px;
+height: 110px;
+width: 130px;
+max-height: auto;
+padding: 10px;
 }
 
-.card-list .card-item .message-button {
-  font-size: 18px;
-  padding: 10px 35px;
-  color: #308467;
-  border-radius: 6px;
-  font-weight: 500;
-
-  cursor: pointer;
-  background: var(--corlayouts);
-  border: 1px solid transparent;
-  transition: 0.2s ease;
+.profession-info3 {
+margin-top: 10px;
 }
 
-.card-list .card-item .message-button.message-button:hover {
-  background: #308467;
-  border: 1px solid #fff;
-  color: var(--cortexto);
+.user-profession {
+font-size: 1.2em;
+margin-bottom: 5px;
+}
+
+
+.user-profession {
+font-size: 1.5em;
+color: #006837;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.message-button {
+margin-bottom: 20px;
+width: 100%;
+padding: 10px;
+background-color: #f2f2f2;
+color: #006837;
+border: 2px solid #006837;
+font-weight: bold;
+font-size: medium;
+text-align: center;
+border-radius: 12px;
+border: 2px solid;
+transition: 0.2s ease;
+box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+background: var(--verdeescuro);
+color: var(--cortexto);
+}
+
+.carousel-control3 {
+font-size: 40px;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: transparent;
+color: var(--marrom);
+border: none;
+padding: 10px;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.prev3 {
+left: 10px;
+}
+
+.next3 {
+right: 10px;
+}
+
+.carousel-indicators3 {
+text-align: center;
+margin-top: 20px;
+}
+
+.indicator3 {
+border: none;
+width: 17px;
+height: 17px;
+background-color: rgba(81, 149, 117, 0.6);
+border-radius: 50%;
+display: inline-block;
+margin: 0 5px;
+cursor: pointer;  
+transition: 0.3s ease;
+}
+
+.indicator3.active {
+background-color: var(--verdeescuro);
+}
+
+@media (max-width: 600px) {
+.carousel-item3 {
+  flex: 0 0 200px;
+}
+.add-to-cart3 {
+  padding: 8px 16px;
+}
 }
 
 
