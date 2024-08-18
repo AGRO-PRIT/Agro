@@ -72,6 +72,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    
 }
 .checagem{
     display: flex;
@@ -92,3 +93,5 @@
 @media (max-width:900px){
 
 }
+
+
