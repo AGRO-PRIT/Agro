@@ -66,16 +66,19 @@
 
 
 .sobre-agrobox {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #056934; /* Cor de fundo verde */
   padding: 20px;
+  margin-top: 50px;
   margin-bottom: 120px;
   color: white;
 }
 
 .content-Agrobox {
+  
   padding-left: 100px;
   max-width: 60%; /* Limita o espaço ocupado pelo texto */
   letter-spacing: 1px;

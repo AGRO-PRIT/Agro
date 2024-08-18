@@ -1,4 +1,4 @@
-const carousel3 = document.querySelector('.carousel3');
+const carousel3 = document.querySelector('.carousel-container3');
 const indicators3 = document.querySelectorAll('.indicator3');
 const prevBtn3 = document.querySelector('.prev3');
 const nextBtn3 = document.querySelector('.next3');
@@ -6,12 +6,12 @@ const nextBtn3 = document.querySelector('.next3');
 let currentIndex3 = 0;
 
 function updateCarousel3() {
-    carousel3.style.transform = `translateX(-${currentIndex3 * 1000}px)`;
+    carousel3.style.transform = `translateX(-${currentIndex3 * 1695}px)`;
     indicators3.forEach((indicator3, index) => {
         if (index === currentIndex3) {
             indicator3.classList.add('active');
         } else {
-            indicator3.classList.remove('active');
+            indicator3.classList.remove('active');  
         }
     });
 }
