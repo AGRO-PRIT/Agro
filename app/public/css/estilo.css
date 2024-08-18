@@ -39,8 +39,12 @@ body {
     width: 100%;
 }
 
+.logo {
+    padding-top: 15px;
+}
+
 .logo img{
-    height: 77px;
+    height: 70px;
     margin: 22px 50px 20px 85px;
 }
 
@@ -60,18 +64,19 @@ body {
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
 
 .barradepesquisa {
-    align-items: center center;
+    align-items: center;
     text-align: center;
     display: flex;
     background: #ffffff;
-    border-radius: 19px;
-    height: 30px;
+    border-radius: 15px;
+    height: 20px;
     padding: 15px;
     justify-content: space-between;
-    margin-left: 155px;/*modificar posicionamento da barra */
+    margin-left: 90px;/*modificar posicionamento da barra */
 }
 
  .barradepesquisa img {
+    margin-top: 5px;
     height: 30px;
     width: 30px;
     box-sizing: border-box;
@@ -134,7 +139,7 @@ body {
     font-size: 15px;
     color: #ffff;
     text-align: center;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .perfil img {

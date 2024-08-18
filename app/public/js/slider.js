@@ -1,41 +1,17 @@
-let currentIndex = 0;
+var radio = document.querySelector('.dot')
+var cont = 1
+document.getElementById('radio1').checked = true
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carrosel-itens');
-    const dots = document.querySelectorAll('.dot');
-    
-    // Garantir que o índice esteja dentro dos limites
-    if (index >= slides.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = slides.length - 1;
-    } else {
-        currentIndex = index;
+setInterval(() => {
+    proximaImg()
+}, 3000)
+
+function proximaImg(){
+    cont++ 
+
+    if(cont > 3){
+        cont = 1
     }
-    
-    // Atualizar a posição do carrossel
-    const offset = -currentIndex * 100; // 100% para cada slide
-    document.querySelector('.carrosel-tudo').style.transform = `translateX(${offset}%)`;
-    
-    // Atualizar os pontos de navegação
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
+
+    document.getElementById('radio'+ cont ).checked = true
 }
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-// Inicializar o carrossel
-showSlide(currentIndex);
-
-// Adicionar eventos de clique aos pontos de navegação
-document.querySelectorAll('.dot').forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showSlide(index);
-    });
-});
