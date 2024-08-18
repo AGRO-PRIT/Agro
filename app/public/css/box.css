@@ -1,5 +1,12 @@
 /* primeiro banner box */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .titulo-box {
     width: 476px;
     background-color: rgba(255, 255, 255, 0);
@@ -60,26 +67,48 @@
     align-self: flex-start;
 }
 
-/* segundo banner box */
+.segundo-box {
+    
+    padding: 60px;
+    background-color: #006837;
+    box-sizing: border-box;
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: center; /* Centraliza os itens */
+}
 
 .imagem-segundo-box {
-    width: 516px;
-    height: 320px;
+    width: 616px;
+    height: 420px;
     box-sizing: border-box;
-    box-shadow: 12px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    margin-right: 100px; /* Espaço entre a imagem e a descrição */
+}
+
+.imagem-segundo-box img {
+    width: 100%; /* Ajusta a imagem para caber no contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .descricao-box2 {
     width: 474px;
-    height: 275px;
     background-color: rgba(255, 255, 255, 0);
     box-sizing: border-box;
     font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
     font-weight: 600;
-    color: #333333;
+    color: #ffffff;
     text-align: left;
     line-height: 25px;
     letter-spacing: 0.3px;
-  }
+}
 
+/* primeiro e segundo box */
 
+.ambos-box {
+    margin: 0;
+    padding: 0;
+}
+
+.primeiro-box,
+.segundo-box {
+    margin: 0;
+}
