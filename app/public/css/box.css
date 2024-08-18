@@ -1,3 +1,5 @@
+/* primeiro banner box */
+
 .titulo-box {
     width: 476px;
     background-color: rgba(255, 255, 255, 0);
@@ -57,5 +59,27 @@
     line-height: normal;
     align-self: flex-start;
 }
+
+/* segundo banner box */
+
+.imagem-segundo-box {
+    width: 516px;
+    height: 320px;
+    box-sizing: border-box;
+    box-shadow: 12px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.descricao-box2 {
+    width: 474px;
+    height: 275px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #333333;
+    text-align: left;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+  }
 
 
