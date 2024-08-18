@@ -392,7 +392,6 @@ margin: auto;
 
 .carousel3 {
 margin-left: 50px;
-display: flex;
 transition: transform 0.5s ease;
 }
 
@@ -437,7 +436,6 @@ font-weight: bold;
 font-size: medium;
 text-align: center;
 border-radius: 12px;
-border: 2px solid;
 transition: 0.2s ease;
 box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
 cursor: pointer;
