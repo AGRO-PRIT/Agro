@@ -15,9 +15,14 @@ router.get('/home', function(req, res) {
     res.render('pages/home');
 });
 
-router.get('/perfil', function(req, res) {
-    res.render('pages/perfil');
+router.get('/cadastre-se', function(req, res) {
+    res.render('pages/cadastre-se');
 });
+
+router.get('/login', function(req, res) {
+    res.render('pages/login');
+});
+
 
 router.get('/produtos', function(req, res) {
     res.render('pages/produtos');
