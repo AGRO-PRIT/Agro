@@ -121,61 +121,63 @@
     flex-direction: column;
     align-items: center;
     background-color: #FCF2E6;
-    padding: 20px;
+    padding: 150px;
+    margin-bottom: 150px;
 }
 
 .titulo-terceiro-box {
+    display: flex;
     font-family: "Cooper Black", "Cooper", sans-serif;
     font-weight: 900;
     color: #006837;
     text-align: center;
     letter-spacing: 8px;
-    margin-bottom: 20px;
-    font-size: 73px;
+    margin-bottom: 60px;
+    font-size: 83px;
 }
 
 .conteudo-premium {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: flex-start; /* Mantém os itens alinhados ao topo */
     width: 100%;
     max-width: 1000px; /* Defina uma largura máxima para a seção */
+    gap: 20px; /* Adiciona um espaço fixo entre os itens */
 }
 
 .descricao-terceiro-box {
-    width: 60%; /* Ajuste essa largura conforme necessário */
+    width: ; /* Ajuste conforme necessário */
     font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
     font-weight: 600;
     color: #493a31;
     line-height: 25px;
     letter-spacing: 0.3px;
-    font-size: 18px;
+    font-size: 22px;
+    margin-right: 200px; /* Adiciona espaço entre a descrição e a caixa premium */
 }
 
 .assine-agro-premium {
-    width: 35%;
-    padding: 20px;
+    width: 65%;
+    padding: 50px;
     border-radius: 47px;
     background-color: #006837;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens horizontalmente no centro */
 }
 
 .AGRO-PREMIUM  {
     color: #f2f2f2;
     font-size: 30px;
+    padding-bottom: 30px ;
 }
 
-.preco-premium {
-    color: #f2f2f2;
-    font-size: 30px;
-    margin: 50px;
-    
-}
 
 .assine-ja {
     width: 197px;
     height: 56px;
-    padding: 2px 2px 2px 2px;
+    padding: 2px;
     border-radius: 5px;
     background-color: #f5a83c;
     box-sizing: border-box;
@@ -187,13 +189,16 @@
 
   .topicos-premium {
     width: 200px;
-    height: 20px;
     background-color: rgba(255, 255, 255, 0);
-    box-sizing: border-box;
     font-family: "Montserrat Bold", "Montserrat", sans-serif;
     font-weight: 700;
     color: #f2f2f2;
     text-align: left;
-    line-height: normal;
-  }
+    margin-bottom: 20px; /* Espaço entre os tópicos e o preço */
+}
 
+.preco-premium {
+    color: #f2f2f2;
+    font-size: 30px;
+    margin-bottom: 20px; /* Espaço entre o preço e o botão */
+}
