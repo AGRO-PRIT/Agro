@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* COMEÇO CSS */
+
+/*  */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat'
+}
+
+:root {
+    --backgroundcolor: #534b41;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: 'Montserrat';
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+}
+
+.premium-container {
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.premium-verde {
+    height: 390px;
+    border-radius: 40px;
+    margin: 15px;
+    background-color: var(--laranja);
+}
+
+.premium-laranja {
+    height: 390px;
+    border-radius: 40px;        
+    margin: 15px;
+    background-color: var(--verdeescuro);
+}
+
+.text-premium {
+    font-size: 12px;
+    padding-top: 15px;
+    font-weight: bold;
+    color: var(--cortexto);
+    margin: 15px;
+}
+
+.text-premium .title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.text-premium h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.text-premium ul {
+    list-style-type: disc;
+    /* Bolinhas antes dos itens */
+    padding-left: 50px;
+}
+
+.text-premium ul li {
+    margin-bottom: 5px;
+    /* Espaçamento entre as linhas */
+    font-size: 1.05em;
+}
