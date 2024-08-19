@@ -64,6 +64,10 @@
     justify-content: center;
 }
 
+.banner h1{
+    padding-bottom: 10px;
+}
+
 .banner img {
     width: 250px;
     height: 210px;
@@ -96,6 +100,11 @@
 }
 
 .entrar {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold;
     background-color: var(--backgroundcolor);
     border: none;
     border-radius: 5px;
