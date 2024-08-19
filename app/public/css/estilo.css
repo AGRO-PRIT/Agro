@@ -169,6 +169,7 @@ body {
 }
 
 .subnav li {
+    font-weight: 500;
     margin-left: 21px;  /* arrumar */
     list-style-type: none;
     text-decoration: none;
