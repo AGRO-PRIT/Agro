@@ -52,6 +52,7 @@ body {
 
 .navbar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     font-family: var(--fonteprincipal);
@@ -59,6 +60,7 @@ body {
     height: 12.5vh;
     width: 100% ;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
@@ -154,13 +156,22 @@ body {
 
 
 
+
+
 .subnav {
     background-color: #fff;
     height: 6vh;
     display: flex;
+    position: fixed;
     align-items: center;
+    text-align: center;
+    top: 115px;
+    z-index: 1;
+    width: 100%;
+    padding-right: 250px;
     justify-content: center;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+
 }
 
 .subnav ul {
@@ -170,7 +181,7 @@ body {
 
 .subnav li {
     font-weight: 500;
-    margin-left: 21px;  /* arrumar */
+    margin-left: 20px;  /* arrumar */
     list-style-type: none;
     text-decoration: none;
     font-size: 14px;
@@ -267,3 +278,7 @@ body {
     margin-bottom: 20px;
 }
 
+
+.navbar-subnav {
+    margin: 10px;
+}

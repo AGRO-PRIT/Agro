@@ -17,8 +17,9 @@
     line-height: 79px;
     letter-spacing: 8px;
     font-size: 73px;
-    padding-left: 20px;
-} 
+    padding-left: 50px;
+}
+
 
 .descricao-box {
     width: 417px;
@@ -29,12 +30,17 @@
     text-align: left;
     font-size: 17px;
     margin-top: 10px; /* Ajuste de espaço entre título e descrição */
-    padding-left: 20px;
+    padding-left: 50px;
+}
+
+.strong {
+    color: #006837;
 }
 
 .imagem-primeiro-box img {
     max-width: 700px;
     height: auto;
+    margin-right: 150px;
 }
 
 .primeiro-box {
@@ -48,14 +54,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20px;
+    padding-left: 150px;
 }
 
 .FAÇA-SUA-BOX {
     margin-top: 20px; 
     width: 140px;
     height: 40px;
-    padding: 2px 2px 2px 2px;
+    margin-left: 50px;
     border-radius: 5px;
     background-color: #006837;
     box-sizing: border-box;
@@ -100,19 +106,6 @@
     line-height: 25px;
     letter-spacing: 0.3px;
 }
-
-/* primeiro e segundo box */
-
-.ambos-box {
-    margin: 0;
-    padding: 0;
-}
-
-.primeiro-box,
-.segundo-box {
-    margin: 0;
-}
-
 
 /* terceiro box */
 
