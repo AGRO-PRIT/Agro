@@ -6,7 +6,7 @@
     <title>AgroBox</title>
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/agro.css">
+    <link rel="stylesheet" href="css/produtos.css">
     
 </head>
 
@@ -14,8 +14,73 @@
      <!-- NavBar -->
     <%- include('../partials/navbar'); %>
 
+
+    <!-- PRODUTOS -->
+
    
 
+     <section class="tudo">
+
+    
+        <div class="filter-section">
+            <h2>Categorias</h2>
+            <form id="category-filters">
+                <label class="filter-option">
+                    <span>Legumes</span>
+                    <input type="checkbox" name="category" value="legumes">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="filter-option">
+                    <span>Verduras</span>
+                    <input type="checkbox" name="category" value="verduras">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="filter-option">
+                    <span>Frutas</span>
+                    <input type="checkbox" name="category" value="frutas">
+                    <span class="checkmark"></span>
+                </label>
+    
+                <!-- Adicione mais categorias conforme necessário -->
+                 
+            </form>
+    
+            <h2>Ordenar</h2>
+            <form id="sort-filters">
+                <label class="filter-option">
+                    <span>Mais vendidos</span>
+                    <input type="radio" name="sort" value="mais_vendidos">
+                    <span class="radiomark"></span>
+                </label>
+                <label class="filter-option">
+                    <span>Menor preço</span>
+                    <input type="radio" name="sort" value="menor_preco">
+                    <span class="radiomark"></span>
+                </label>
+                <label class="filter-option">
+                    <span>Maior preço</span>
+                    <input type="radio" name="sort" value="maior_preco">
+                    <span class="radiomark"></span>
+                </label>
+                <label class="filter-option">
+                    <span>Relevância</span>
+                    <input type="radio" name="sort" value="relevancia">
+                    <span class="radiomark"></span>
+                </label>
+                <!-- Adicione mais opções de ordenação conforme necessário -->
+            </form>
+            
+            <button type="submit" form="category-filters" class="apply-button">Aplicar</button>
+        </div>
+       
+       <section class="antes-produtos">
+        <h1 class="titulo">Todos os produtos</h1>
+        <%- include('../partials/produtospartial'); %>
+       </section>
+    
+
+    
+</section>
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
     

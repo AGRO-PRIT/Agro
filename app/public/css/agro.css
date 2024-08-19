@@ -131,7 +131,7 @@
 
  .message-button-agrobox.message-button-agrobox:hover{
   background: #308467;
-  border: 1px solid #fff;
+ 
   color: var(--cortexto);
 }
 

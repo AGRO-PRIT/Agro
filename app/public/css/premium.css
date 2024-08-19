@@ -32,6 +32,7 @@
 }
 
 .premium-verde {
+    width: 400px;
     height: 390px;
     border-radius: 40px;
     margin: 15px;
@@ -39,14 +40,16 @@
 }
 
 .premium-laranja {
+    width: 400px;
     height: 390px;
     border-radius: 40px;        
     margin: 15px;
     background-color: var(--verdeescuro);
 }
 
-.text-premium {
-    font-size: 12px;
+.text-premium ul {
+    line-height: 30px;
+    font-size: 17px;
     padding-top: 15px;
     font-weight: bold;
     color: var(--cortexto);
@@ -55,15 +58,15 @@
 
 .text-premium .title {
     text-align: center;
-    margin-top: 10px;
-    font-size: 1.8em;
+    margin-top: 30px;
+    font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
 }
 .text-premium h1{
+    color: var(--cortexto);
     text-align: center;
-    margin-top: 50px;
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
 }
