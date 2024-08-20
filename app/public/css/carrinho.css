@@ -13,9 +13,11 @@ body {
     padding: 0;
 }
 
-.container {
+.carrinho-container {
     width: 80%;
     margin: 40px auto;
+    align-items: left;
+    justify-content: left;
     align-items: left;
 }
 
@@ -61,7 +63,7 @@ body {
     cursor: pointer;
 }
 
-.order-summary {
+.resumo-pedido {
     background-color: #c52fac;
     padding: 15px;
     border-radius: 5px;
@@ -99,10 +101,11 @@ body {
 
 .shipping-calculator input {
     width: calc(100% - 100px);
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
 }
+
 
 .shipping-calculator button {
     padding: 5px 15px;
@@ -112,4 +115,3 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
