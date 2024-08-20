@@ -6,15 +6,54 @@
     <title>AgroBox</title>
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/eventos.css">
     
 </head>
 
 <body>  
+
      <!-- NavBar -->
     <%- include('../partials/navbar'); %>
 
-   
+
+
+    <article class="featured-events-section">
+        <h2 class="section-title">Eventos em Destaque</h2>
+        
+        <article class="featured-events-boxes">
+          <article class="event-box">
+            <img src="path-to-image" alt="Imagem do Evento" class="event-image">
+            <h3 class="event-title">Nome do Evento</h3>
+            <p class="event-date">12/12</p>
+            <p class="event-details">Detalhes do evento em destaque...</p>
+            <button class="event-button">Ver Evento</button>
+          </article>
+          <article class="event-box">
+            <img src="path-to-image" alt="Imagem do Evento" class="event-image">
+            <h3 class="event-title">Nome do Evento</h3>
+            <p class="event-date">12/12</p>
+            <p class="event-details">Detalhes do evento em destaque...</p>
+            <button class="event-button">Ver Evento</button>
+          </article>
+          <article class="event-box">
+            <img src="path-to-image" alt="Imagem do Evento" class="event-image">
+            <h3 class="event-title">Nome do Evento</h3>
+            <p class="event-date">12/12</p>
+            <p class="event-details">Detalhes do evento em destaque...</p>
+            <button class="event-button">Ver Evento</button>
+          </article>
+        </article>
+       
+        <article class="see-more">
+          <span>Veja mais eventos</span>
+          <i class="arrow-down"></i> <!-- Ícone de seta para baixo -->
+        </article>
+      </article>
+       
+    <%- include('../partials/eventos'); %>
+    <%- include('../partials/eventos'); %>
+    <%- include('../partials/eventos'); %>
+
 
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
@@ -24,7 +63,7 @@
 
         <!-- Script -->
 <script src="#"> </script>
-
+    
 
 
 

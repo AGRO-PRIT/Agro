@@ -61,6 +61,7 @@
     width: 140px;
     height: 40px;
     margin-left: 50px;
+    border: none;
     border-radius: 5px;
     background-color: #006837;
     box-sizing: border-box;
@@ -167,6 +168,7 @@
 
 
 .assine-ja {
+    border: none;
     width: 197px;
     height: 56px;
     padding: 2px;

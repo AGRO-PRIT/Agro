@@ -1,0 +1,140 @@
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
+  
+   
+  /* Seção de Eventos em Destaque */
+  .featured-events-section {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+   
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+   
+  .featured-events-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+   
+  .event-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+   
+  .event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+   
+  .event-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+   
+  .event-date {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+   
+  .event-details {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+   
+  .event-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+  .event-button:hover {
+    background-color: #0056b3;
+  }
+   
+  /* Seta e veja mais */
+  .see-more {
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+   
+  .arrow-down::before {
+    content: "↓";
+    display: block;
+    font-size: 1.5em;
+    margin-top: 5px;
+  }
+   
+  /* Seção de Eventos */
+  .events-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+   
+  .event-box-large {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+   
+  .event-image-large {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+  }
+   
+  .event-info {
+    margin-left: 20px;
+    text-align: left;
+  }
+   
+  .event-title-large {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+   
+  .event-date-large {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+   
+  .event-details-large {
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+   
+  .event-button-large {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+  .event-button-large:hover {
+    background-color: #0056b3;
+  }
