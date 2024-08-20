@@ -1,0 +1,127 @@
+
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: red;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #777;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.menu li a:hover {
+    color: #72a443;
+}
+
+/* PARTE MINHA CONTA */
+
+.content {
+    width: 65%;
+    margin: 40px;
+    background-color: var(--corlayouts);
+}
+
+.content-geral{
+    margin-top: 50px;
+    flex: 1;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #72a443;
+}
+
+.dados-pessoais, .dados-acesso {
+    margin: 30px;
+}
+
+.dados-pessoais h2, .dados-acesso h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+input sla oq {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input sla oq{
+    outline: none;
+    border-color: #72a443;
+}

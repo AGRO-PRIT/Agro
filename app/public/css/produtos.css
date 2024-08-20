@@ -20,7 +20,6 @@
     font-size: 30px;
     color: var(--marrom);
     text-align: left;
-    
 }
         
 .tudo{
@@ -137,8 +136,8 @@
     /*  ESTILIZAÇÃO GERAL PRODUTOS */
 
 .antes-produtos{
-    min-width: 70%;
-    margin: 20px;
+    
+    margin-right: 50px;
 }
 
 .todos-produtos {
