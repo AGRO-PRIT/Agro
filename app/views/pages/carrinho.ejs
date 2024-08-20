@@ -7,6 +7,7 @@
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/agro.css">
+    <link rel="stylesheet" href="css/carrinho.css">
     
 </head>
 
@@ -15,7 +16,86 @@
     <%- include('../partials/navbar'); %>
 
    
+    </header>
 
+    <body>
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+    
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Nome Do Produto">
+                <div class="cart-item-details">
+                    <p><strong>Nome Do Produto</strong></p>
+                    <p>Nome Do Vendedor</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button>-</button>
+                    <input type="text" value="1">
+                    <button>+</button>
+                </div>
+                <div class="cart-item-price">
+                    <p>R$000,00</p>
+                </div>
+                <div class="cart-item-remove">
+                    <p>Excluir</p>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Nome Do Produto">
+                <div class="cart-item-details">
+                    <p><strong>Nome Do Produto</strong></p>
+                    <p>Nome Do Vendedor</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button>-</button>
+                    <input type="text" value="1">
+                    <button>+</button>
+                </div>
+                <div class="cart-item-price">
+                    <p>R$000,00</p>
+                </div>
+                <div class="cart-item-remove">
+                    <p>Excluir</p>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Nome Do Produto">
+                <div class="cart-item-details">
+                    <p><strong>Nome Do Produto</strong></p>
+                    <p>Nome Do Vendedor</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button>-</button>
+                    <input type="text" value="1">
+                    <button>+</button>
+                </div>
+                <div class="cart-item-price">
+                    <p>R$000,00</p>
+                </div>
+                <div class="cart-item-remove">
+                    <p>Excluir</p>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Resumo do pedido</h2>   
+                <p>Produtos(2) <span>R$000,00</span></p>
+                <p>Frete <span>R$000,00</span></p>
+                <p>Inserir cupom de desconto <span>✏️</span></p>
+                <p class="total">Total : <span>R$000,00</span></p>
+                <input type="button" value="finalizar compra"></a>
+            </div>
+    
+            <div class="shipping-calculator">
+                <p>Calcular frete e prazo de entrega</p>
+                <input type="text" placeholder="Digite seu CEP">
+                <button>CALCULAR</button>
+            </div>
+        </div>
+    </body>
+    
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
     
@@ -26,5 +106,5 @@
 <script src="#"> </script>
 
 
-
+<!-- git config --global user.email "you@example.com" -->
 
