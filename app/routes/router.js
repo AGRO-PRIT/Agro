@@ -44,5 +44,11 @@ router.get('/eventos', function(req, res) {
     res.render('pages/eventos');
 });
 
+// box
+
+router.get('/faca-box', function(req, res) {
+    res.render('pages/faca-box');
+});
+
 
 module.exports = router;

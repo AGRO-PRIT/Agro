@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
+
+
+/* titilo e orientação*/
+
+.titulo-faca-box {
+        width: 707px;
+        height: 79px;
+        background-color: rgba(255, 255, 255, 0);
+        box-sizing: border-box;
+        font-family: "Cooper Black", "Cooper", sans-serif;
+        font-weight: 900;
+        color: #006837;
+        text-align: left;
+        line-height: 79px;
+        letter-spacing: 8px;
+}
+
+.orientação {
+        width: 447px;
+        height: 27px;
+        background-color: rgba(255, 255, 255, 0);
+        box-sizing: border-box;
+        font-family: "Montserrat Bold", "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #333333;
+        text-align: left;
+        line-height: normal;
+}
+
+.maximo-produtos{
+    width: 164px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Montserrat Light", "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #493a31;
+    text-align: left;
+    line-height: normal;
+  }
+
+ /* estilização produtos */
+
+  .antes-produtos{
+    margin-left: 100px;
+}
+
+.todos-produtos {
+    display: flex;
+    flex-direction: row; /* Alinha os filtros e os produtos lado a lado */
+    gap: 20px; /* Espaçamento entre filtros e produtos */
+}
+    
+
+.todos-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itens-produto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.box-produto {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
+
+}
+
+.box-produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Assegura que a imagem seja ajustada sem cortar */
+    margin-bottom: 15px;
+}
+
+.nome-produto {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.nome-vendedor {
+    text-align: left;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.valor-produto {
+    text-align: left;
+    color: #006400; /* Verde escuro */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.botao-adicionar {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--branco);
+    color: var(--verdeescuro);
+    border: 2px solid var(--verdeescuro);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.botao-adicionar:hover {
+    background-color: var(--verdeescuro);
+    color: var(--cortexto);
+}
+
+/* barra de pesquisa */
+
+.barradepesquisa {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    background: #ffffff;
+    border-radius: 15px;
+    height: 40px;
+    padding: 10px;  
+    margin-left: 20%;
+}
+
+ .barradepesquisa img {
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+} 
+
+.barra-texto-pesquisa{
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 7px;
+    color: #614a3d;
+    font-size: 13px;
+    line-height: 40px;
+    width: 500px;
+    font-family: var(--fonteprincipal)
+}
+
+.botao-pesquisa{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* botão */
+
+.button-faca-box {
+    width: 140px;
+    height: 40px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    background-color: #f5a83c;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    line-height: normal;
+}
