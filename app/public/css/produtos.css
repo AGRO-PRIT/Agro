@@ -89,7 +89,7 @@
     
 .filter-option .checkmark:after,
 .filter-option .radiomark:after {
-    content: "";
+
     position: absolute;
     display: none;
 }
