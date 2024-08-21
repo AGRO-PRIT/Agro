@@ -197,6 +197,7 @@
 /* botão */
 
 .button-faca-box {
+    cursor: pointer;
     margin-top: 30px;
     margin-bottom: 50px;
     justify-content: center;
@@ -205,11 +206,17 @@
     height: 50px;
     padding: 2px 2px 2px 2px;
     border-radius: 5px;
-    background-color: #f5a83c;
+    background-color: var(--laranja);
     margin-left: 44%;
     font-size: 18px;
     font-family: "Arial", sans-serif;
     color: #ffffff;
     text-align: center;
     line-height: normal;
+}
+
+.button-faca-box:hover{
+    background-color: rgba(243, 166, 22, 0.911);
+    color: var(--cortexto);
+    border: 2px solid var(--laranja);
 }

@@ -168,6 +168,7 @@
 
 
 .assine-ja {
+    cursor: pointer;
     border: none;
     width: 197px;
     height: 56px;
@@ -180,6 +181,12 @@
     text-align: center;
     line-height: normal;
   } 
+
+  .assine-ja:hover{
+    background-color: rgba(243, 166, 22, 0.911);
+    color: var(--cortexto);
+    border: 2px solid var(--laranja);
+  }
 
   .topicos-premium {
     width: 200px;

@@ -1,5 +1,6 @@
 
 :root {
+    --corNeutra:#493a31;
     --backgroundcolor: #FCF2E6;
     --corprincipal: #5AA504;
     --cortexto: rgb(255, 255, 255);
@@ -25,6 +26,7 @@
 }
 
 .profile {
+    display: flex;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -37,17 +39,20 @@
 }
 
 .profile h3 {
-    margin: 10px 0 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+   
     font-size: 18px;
     color: #333;
 }
 
-.profile p {
+.profile span {
     font-size: 14px;
     color: #777;
 }
 
 .menu {
+    margin-left: 25px;
     list-style-type: none;
     padding: 0;
 }
@@ -59,19 +64,21 @@
 }
 
 .menu li img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
 }
 
 .menu li a {
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    color: var(--marrom);
+    font-weight: 700;
+    font-size: 18px;
+
 }
 
 .menu li a:hover {
-    color: #72a443;
+    color: #71b21e
 }
 
 .edit-icon{
@@ -93,7 +100,7 @@
     margin-bottom: 20px;
     margin-left: 1%;
     font-size: 30px;
-    color:  #72a443;
+    color:  #71b21e 
 }
 
 /* Estilizar as caixas de dados pessoais e dados de acesso */
@@ -142,13 +149,15 @@
 /* Alinhamento de textos e espaçamentos */
 h3 {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--marrom);
+    font-weight: 700;   
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: gray;
+    color: #493a31;
+    line-height: normal;
 }
