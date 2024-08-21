@@ -4,26 +4,26 @@
         <!-- Seção de Perfil -->
         <aside class="sidebar">
             <article class="profile">
-                <img src="imagens/profile.png" alt="Imagem do perfil">
-                <h3>Usuario123</h3>
-                <p>Consumidor</p>
+                <img src="imagens/icon_user.png" alt="Imagem do perfil">
+                <h3>Usuario123<br><span>Consumidor </span> </h3>
+               
             </article>
 
             <ul class="menu">
                 <li>
-                    <img src="imagens/icon_conta.png" alt="Minha Conta">
+                    <img src="imagens/icon_user-consumidor.png" alt="Minha Conta">
                     <a href="#">Minha Conta</a>
                 </li>
                 <li>
-                    <img src="imagens/pedidos.png" alt="Pedidos">
+                    <img src="imagens/icon_pedidos.png" alt="Pedidos">
                     <a href="#">Pedidos</a>
                 </li>
                 <li>
-                    <img src="imagens/cartoes.png" alt="Cartões">
+                    <img src="imagens/icon_cartão.png" alt="Cartões">
                     <a href="#">Cartões</a>
                 </li>
                 <li>
-                    <img src="imagens/enderecos.png" alt="Endereços">
+                    <img src="imagens/icon_home.png" alt="Endereços">
                     <a href="#">Endereços</a>
                 </li>
                 <li>
@@ -34,30 +34,42 @@
         </aside>
 
         <!-- Seção de Conteúdo -->
-        <section class="content">
-            <h1>Minha Conta</h1>
-            <section class="content-geral">
+        <article class="page-container">
+            <h1>Minha Conta</h1> 
 
-            <article class="dados-pessoais">
-                <h2>Dados Pessoais</h2>
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Digite seu nome completo">
-
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" placeholder="Digite seu CPF">
-
-                <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" placeholder="Digite seu telefone">
+            <article class="box-container">
+                <article class="box-dados-pessoais">
+                    <h3>Dados Pessoais</h3>
+                    <article class="input-wrapper">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome completo">
+                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                    </article>
+                    <article class="input-wrapper">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="Digite seu CPF">
+                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                    </article>
+                    <article class="input-wrapper">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" placeholder="Digite seu telefone">
+                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                    </article>
+                </article>
+                
+                <article class="box-dados-acesso">
+                    <h3>Dados de Acesso</h3>
+                    <article class="input-wrapper">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Digite seu email">
+                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                    </article>
+                    <article class="input-wrapper">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                    </article>
+                </article>
             </article>
-
-            <article class="dados-acesso">
-                <h2>Dados de Acesso</h2>
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Digite seu email">
-
-                <label for="senha">Senha</label>
-                <input type="text" id="senha" placeholder="Digite sua senha">
-            </article>
-        </section>
-
+        </article>
     </article>
