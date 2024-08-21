@@ -73,6 +73,11 @@
     color: #72a443;
 }
 
+.edit-icon{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
 /* PARTE MINHA CONTA */
 /* Estilizar o container principal da página */
 .page-container {

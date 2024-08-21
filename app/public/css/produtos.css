@@ -43,12 +43,16 @@
 }
 
 .filter-section h2 {
-
     margin-bottom: 30px;
     color: var(--marrom);
 }
 
-.filter-section .ordernar{
+.filter-section .categorias{
+    font-size: 30px;
+}
+
+.filter-section .ordernar  {
+    font-size: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
     color: var(--marrom);
@@ -59,6 +63,7 @@
 }
 
 .filter-option {
+    font-size: 20px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -144,6 +149,7 @@
     /*  ESTILIZAÇÃO GERAL PRODUTOS */
 
 .antes-produtos{
+    margin-bottom: 60px;
     margin-left: 100px;
 }
 
@@ -157,64 +163,68 @@
 .todos-produtos {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .itens-produto {
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 30px;
 }
 
 .box-produto {
+    width: 250px;
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
     margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
 
 }
 
 .box-produto img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: contain; /* Assegura que a imagem seja ajustada sem cortar */
     margin-bottom: 15px;
 }
 
 .nome-produto {
+    color:  rgba(98, 78, 66, 0.99);
+    font-weight: 500;   
     text-align: left;
     font-weight: bold;
-    margin-bottom: 5px;
+   
 }
 
 .nome-vendedor {
     text-align: left;
     color: #777;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .valor-produto {
     text-align: left;
-    color: #006400; /* Verde escuro */
-    font-size: 1.2em;
+    color: var(--verdeescuro);
+    font-size: 1.4em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .botao-adicionar {
     width: 100%;
-    padding: 10px;
-    background-color: var(--branco);
+    padding: 15px;
+    background-color: var(--corlayouts);
     color: var(--verdeescuro);
     border: 2px solid var(--verdeescuro);
     font-weight: bold;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-bottom: 10px;
     transition: background-color 0.3s ease;
     border-radius: 10px;
 }
