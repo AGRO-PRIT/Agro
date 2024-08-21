@@ -14,11 +14,12 @@
 
 .container {
     display: flex;
+    margin-top: 60px;
 }
 
 .sidebar {
     width: 250px;
-    background-color: #FCF2E6;;
+    background-color: #FCF2E6;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -81,15 +82,24 @@
 /* PARTE MINHA CONTA */
 /* Estilizar o container principal da página */
 .page-container {
-    width: 100%;
-    padding: 40px;
-    background-color: #f4f4f4;
+    width: 70%;
+    padding: 30px;
+    background-color: white;
+    margin-bottom: 60px;
+}
+
+.page-container h1{
+    margin-bottom: 20px;
+    margin-left: 1%;
+    font-size: 30px;
+    color:  #72a443;
 }
 
 /* Estilizar as caixas de dados pessoais e dados de acesso */
 .box-container {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .box-dados-pessoais, .box-dados-acesso {
@@ -103,7 +113,7 @@
 
 /* Estilizar os inputs de texto */
 .input-wrapper input{
-    width: calc(100% - 40px); /* Espaço reservado para o ícone */
+    width: calc(80%); /* Espaço reservado para o ícone */
     padding: 12px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -122,6 +132,7 @@
 .input-wrapper .edit-icon {
     position: absolute;
     right: 10px;
+    margin-right: 110px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -131,11 +142,12 @@
 h3 {
     margin-bottom: 20px;
     font-size: 18px;
-    color: #4CAF50;
+    color: var(--marrom);
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: gray;
 }
