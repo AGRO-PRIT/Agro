@@ -86,12 +86,20 @@
     left: 0; /* Alinha os círculos à esquerda do texto */
     height: 20px;
     width: 20px;
-    background-color: var(--corlayouts);
+    background-color: var(--branco);
+    border: 1px solid ;
+    
+}
+.filter-option .radiomark{
+    position: absolute;
+    left: 0; /* Alinha os círculos à esquerda do texto */
+    height: 20px;
+    width: 20px;
+    background-color: var(--branco);
     border: 1px solid ;
     border-radius: 50%;
-
 }
-    
+
 .filter-option .checkmark:after,
 .filter-option .radiomark:after {
     content: "";

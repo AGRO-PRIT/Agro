@@ -12,20 +12,9 @@
 
 
 
-/* .login-form{
-    position: relative;
-    min-height: 100vh;
-    z-index: 0;
-    background: var(--backgroundcolor);
-    padding: 40px;
-    justify-content: center;
-    display: grid;
-
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-} */
 
 .bodydoPerfil {
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;

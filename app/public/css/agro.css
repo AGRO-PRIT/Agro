@@ -34,7 +34,7 @@
  
 }
 
-.agro-content h1 span {
+.agro-content h1 strong {
   color: var(--laranja);  /* Cor verde diferente para a palavra Agro+ */
 }
 
@@ -92,7 +92,7 @@
   
 }
 
-.content-Agrobox h1 span {
+.content-Agrobox h1 strong {
   color: var(--corprincipal); /* Cor verde diferente para a palavra Agro+ */
 }
 

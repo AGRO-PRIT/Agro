@@ -33,32 +33,29 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 h1 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--marrom);
 }
 
 .cart-item {
+    background-color: var(--corlayouts);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(124, 124, 124, 0.856);
     padding: 10px 0;
 }
 
-.cart-item input[type="checkbox"] {
-    margin-right: 10px;
-}
-
 .cart-item img {
-
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
+    width: 130px;
+    height: 100px;
     border-radius: 8px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 .cart-item .details {
@@ -68,7 +65,7 @@ h1 {
 .cart-item .details h3 {
     margin-top: 0;
     font-size: 1.2em;
-    color: #333;
+    color: var(--marrom)
 }
 
 .cart-item .details .vendor {
@@ -97,10 +94,11 @@ h1 {
 .cart-item .price {
     font-size: 1.5em;
     font-weight: bold;
-    color: #333;
+    color: var(--marrom);
 }
 
 .cart-item .remove {
+    margin: 5px;
     display: flex;
     align-items: center;
     color: #777;
@@ -112,28 +110,29 @@ h1 {
     font-size: 1.2em;
 }
 
-.summary {
+.resumo {
     background-color: #eee;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.summary h2 {
+.resumo h2 {
     font-size: 1.8em;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
 }
 
-.summary .item {
+.resumo .item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 1.1em;
 }
 
-.summary .total {
+.resumo .total {
+    margin: 5px;
     font-size: 1.6em;
     font-weight: bold;
     color: #333;
@@ -157,11 +156,11 @@ h1 {
     border: 2px solid var(--laranja);
 }
 
-.shipping-calculator {
+.finalizar-compra {
     margin-top: 20px;
 }
 
-.shipping-calculator input[type="text"] {
+.finalizar-compra input[type="text"] {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -169,7 +168,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.shipping-calculator button {
+.finalizar-compra button {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -181,7 +180,7 @@ h1 {
     cursor: pointer;
 }
 
-.shipping-calculator button:hover {
+.finalizar-compra button:hover {
     background-color: rgba(243, 166, 22, 0.911);
     color: var(--cortexto);
     border: 2px solid var(--laranja);

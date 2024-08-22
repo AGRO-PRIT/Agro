@@ -57,6 +57,7 @@
 }
 
 .FAÇA-SUA-BOX {
+    cursor: pointer;
     margin-top: 20px; 
     width: 140px;
     height: 40px;

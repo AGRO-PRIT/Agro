@@ -17,100 +17,107 @@
     <%- include('../partials/navbar'); %>
 
    
-    </header>
+</header>
+<body>
+    
 
-    <body>
+<main class="container">
+        <h1>Carrinho de Compras</h1>
+        
+    <section class="conteudo">
 
-        <script src="js/carrinho.js"> </script>
+        <article class="cart-itens">
+
+                <article class="cart-item">
+                    
+                    <img src="imagens/maça.png" alt="Produto 1">
+                    <article class="details">
+                        <h3>Nome Do Produto</h3>
+                        <p class="vendor">Nome Do Vendedor</p>
+                        <article class="quantity">
+                        <button>-</button>
+                        <input type="number" class="input-quantity" value="1" min="1">
+                        <button>+</button>
+                        </article>
+                    </article>
+                    <article class="price">R$000,00</article>
+                    <article class="remove">
+                        <i class="excluir"></i> Excluir
+                    </article>
+                </article>
 
         
-        <div class="container">
-            <h1>Carrinho de Compras</h1>
-    
-            <div class="cart-items">
-                <div class="cart-item">
-                    <input type="checkbox" id="item1">
-                    <img src="imagens/maça.png" alt="Produto 1">
-                    <div class="details">
-                        <h3>Nome Do Produto</h3>
-                        <p class="vendor">Nome Do Vendedor</p>
-                        <div class="quantity">
-                            <button>-</button>
-                            <input type="number" class="input-quantity" value="1" min="1">
-                            <button>+</button>
-                        </div>
-                    </div>
-                    <div class="price">R$000,00</div>
-                    <div class="remove">
-                        <i class="fas fa-trash-alt"></i> Excluir
-                    </div>
-                </div>
-    
-                <div class="cart-item">
-                    <input type="checkbox" id="item2">
+                <article class="cart-item">
+                    
                     <img src="imagens/maça.png" alt="Produto 2">
-                    <div class="details">
+                    <article class="details">
                         <h3>Nome Do Produto</h3>
                         <p class="vendor">Nome Do Vendedor</p>
-                        <div class="quantity">
+                        <article class="quantity">
                             <button>-</button>
                             <input type="number" class="input-quantity" value="1" min="1">
                             <button>+</button>
-                        </div>
-                    </div>
-                    <div class="price">R$000,00</div>
-                    <div class="remove">
-                        <i class="fas fa-trash-alt"></i> Excluir
-                    </div>
-                </div>
+                        </article>
+                    </article>
+                    <article class="price">R$000,00</article>
+                    <article class="remove">
+                        <i class="excluir"></i> Excluir
+                    </article>
+                </article>
     
-                <div class="cart-item">
-                    <input type="checkbox" id="item3">
+                <article class="cart-item">
+                   
                     <img src="imagens/maça.png" alt="Produto 3">
-                    <div class="details">
+                    <article class="details">
                         <h3>Nome Do Produto</h3>
                         <p class="vendor">Nome Do Vendedor</p>
-                        <div class="quantity">
+                        <article class="quantity">
                             <button>-</button>
                             <input type="number" class="input-quantity" value="1" min="1">
                             <button>+</button>
-                        </div>
-                    </div>
-                    <div class="price">R$000,00</div>
-                    <div class="remove">
-                        <i class="fas fa-trash-alt"></i> Excluir
-                    </div>
-                </div>
-            </div>
+                        </article>
+                    </article>
+                    <article class="price">R$000,00</article>
+                    <article class="remove">
+                        <i class="excluir"></i> Excluir
+                    </article>
+                </article>
+            
     
-            <div class="summary">
+            <article class="resumo">
                 <h2>Resumo do Pedido</h2>
-                <div class="item">
+                <article class="item">
                     Produtos(2)
-                    <span>R$000,00</span>
-                </div>
-                <div class="item">
+                    <strong>R$000,00</strong>
+                </article>
+                <article class="item">
                     Frete:
-                    <span>R$000,00</span>
-                </div>
-                <div class="item">
+                    <strong>R$000,00</strong>
+                </article>
+                <article class="item">
                     Inserir cupom de desconto
-                    <i class="fas fa-tag"></i>
-                </div>
-                <div class="total">
-                    Total: <span>R$000,00</span>
-                </div>
+                    <i class="cupom"></i>
+                </article>
+                <article class="total">
+                    Total: <strong>R$000,00</strong>
+                </article>
                 <button class="checkout-button">Finalizar Compra</button>
-            </div>
-    
-            <div class="shipping-calculator">
-                <h3>Calcular frete e prazo de entrega</h3>
-                <input type="text" placeholder="Digite seu CEP">
-                <button>CALCULAR</button>
-            </div>
-        </div>
-        <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+
+                <article class="finalizar-compra">
+                    <h3>Calcular frete e prazo de entrega</h3>
+                    <input type="text" placeholder="Digite seu CEP">
+                    <button>CALCULAR</button>
+                </article>
+
+        </article>
+    </section>
+</main>
+
+                    <!--          RODAPÉ            -->
+
         <%- include('../partials/footer'); %>
+
+
     </body>
 </html>
 
@@ -118,5 +125,4 @@
 <script src="#"> </script>
 
 
-<!-- git config --global user.email "you@example.com" -->
 
