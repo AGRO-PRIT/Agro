@@ -19,10 +19,16 @@ router.get('/cadastre-se', function(req, res) {
     res.render('pages/cadastre-se');
 });
 
-
+router.get('/cadastre-seV', function(req, res) {
+    res.render('pages/cadastre-seV');
+});
 
 router.get('/login', function(req, res) {
     res.render('pages/login');
+});
+
+router.get('/loginV', function(req, res) {
+    res.render('pages/loginV');
 });
 
 /* menudropDown */
@@ -100,6 +106,10 @@ router.get('/contaVendedor', function(req, res) {
 
 router.get('/contaEscolha', function(req, res) {
     res.render('pages/contaEscolha');
+});
+
+router.get('/detalhesVendedor', function(req, res) {
+    res.render('pages/detalhesVendedor');
 });
 
 router.get('/contaConsumidor', function(req, res) {

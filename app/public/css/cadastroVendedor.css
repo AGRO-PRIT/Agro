@@ -1,18 +1,17 @@
-
-  :root {
-    --corNeutra:#493a31;
+:root {
     --backgroundcolor: #FCF2E6;
     --corprincipal: #5AA504;
     --cortexto: rgb(255, 255, 255);
     --fonteprincipal: "Montserrat", sans-serif;
-    --verdeescuro: 
+    --verdeescuro: #006837;
     --branco: #FFFFFF;
     --laranja: #E68A00;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
   }
 
-/*     Cadastro Vendedor    */
+/*    Cadastro Conta Vendedor    */
+
 
 .bodydoPerfil {
     margin-top: 150px;
@@ -66,16 +65,16 @@
 .cantinhoLogo h1 {
     text-align: center;
     font-size: 35px;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
     color: var(--cortexto);
 }
 
 .input-group input { 
     outline: none;  
     text-indent: 10px;
-    margin-bottom: 8px;
-    margin-left: 20px;
-    height: 35px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    height: 30px;
     width: 350px;
     margin-top: 5px;
     border-radius: 8px;
@@ -101,38 +100,24 @@
     padding: 10px;
     width: 209px;
     color: var(--corprincipal);
-    margin: 10px;
+    margin: 13px;
     font-size: 14px;
 }
 
-.entrar strong {
-color: var(--marrom);
-}
-
 .cadastro-form .entrar{
-    margin-left: 170px;
+    margin-left: 90px;
 }
 
 .cadastro-form p{
-    margin: 8px;
-    font-size: 18px;
     color: var(--cortexto);
     text-align: center;
 }
 
-
 .cadastro-form .text-cadastro{
-
     font-weight: bold;
     color: var(--laranja);
-    margin-left: 175px;
-    font-size: 18px;
-    text-align: center;
 }
-
-
-/* 
-
-
- */
-
+.checagem {
+    display: flex;
+    margin: 10px;
+}

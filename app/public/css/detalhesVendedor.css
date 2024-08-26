@@ -1,5 +1,5 @@
 
-  :root {
+:root {
     --corNeutra:#493a31;
     --backgroundcolor: #FCF2E6;
     --corprincipal: #5AA504;
@@ -122,7 +122,6 @@ color: var(--marrom);
 
 
 .cadastro-form .text-cadastro{
-
     font-weight: bold;
     color: var(--laranja);
     margin-left: 175px;
