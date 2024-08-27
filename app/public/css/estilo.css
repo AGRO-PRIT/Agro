@@ -287,7 +287,55 @@ body {
 
 /* celulares */
 
-@media(max-width: 450px){
+@media(max-width: 768px){
+
+    /* footer */
+
+.fixarRodape{
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocos h2 {
+    font-size:medium;
+}
+
+a{
+    font-size: small;
+}
+
+    /* navbar */
+
+    
+.navbar{
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.logo img{
+    height: 55px;
+    width: 65px;
+    margin: 0;
+}
+
+.barradepesquisa{
+    margin: 0;
+    padding: 4px;
+}
+
+.barra-texto-pesquisa{
+    width: 100px;
+}
+
+.text-perfil{
+    display: none;
+}
+
+.text-carrinho{
+    display: none;
+}
+
+
 
 }
 
@@ -300,5 +348,5 @@ body {
 /* Orientação horizontal */
 
 @media (orientation: landscape){
-    
+
 }

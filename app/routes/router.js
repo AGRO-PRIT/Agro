@@ -1,6 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
+
+/* TESTES*/
+router.get('/testes', function(req, res) {
+    res.render('pages/testes');
+});
+
 router.get('/', function(req, res) {
     res.render('pages/home');
 });
