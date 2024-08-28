@@ -22,7 +22,7 @@
 
 .container {
     width: 889px;
-    height: 473px;
+    height: 530px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 85%;
+    height: auto;
     padding: 25px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -72,7 +72,6 @@
 .input-group input { 
     outline: none;  
     text-indent: 10px;
-    margin-bottom: 5px;
     margin-left: 15px;
     height: 30px;
     width: 350px;
@@ -83,8 +82,9 @@
 }
 
 .cadastro-form h3 { 
+    margin-top: 2px;
     margin-left: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--cortexto);
 }
 
@@ -100,7 +100,9 @@
     padding: 10px;
     width: 209px;
     color: var(--corprincipal);
-    margin: 13px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    margin-left: 13px;
     font-size: 14px;
 }
 
@@ -109,10 +111,16 @@
 }
 
 .cadastro-form p{
+    font-size: 14px;
     color: var(--cortexto);
     text-align: center;
 }
 
+.texto-final{
+    font-size: 30px;
+    color: var(--cortexto);
+    text-align: center;
+}
 .cadastro-form .text-cadastro{
     font-weight: bold;
     color: var(--laranja);

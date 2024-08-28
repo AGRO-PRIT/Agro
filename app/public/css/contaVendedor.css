@@ -23,7 +23,7 @@
 
 .container {
     width: 889px;
-    height: 473px;
+    height: 530px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 85%;
+    height: auto;
     padding: 25px;
     padding-top: 35px;
     padding-bottom: 35px;
