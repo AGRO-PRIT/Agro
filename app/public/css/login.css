@@ -8,10 +8,25 @@
     --laranja: #E68A00;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
-  }
+    --vermelho: #FF0000;
+
+}
 
 
+.error-message {
+  color: var(--vermelho);
+  display: none;
+}
 
+/* .email-error {
+    color: red;
+    display: none;
+}
+
+.password-error {
+    color: red;
+    display: none;
+} */
 
 .bodydoPerfil {
     margin-top: 150px;

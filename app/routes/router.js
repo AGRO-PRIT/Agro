@@ -107,6 +107,10 @@ router.get('/proteinas', function(req, res) {
 /* PERFIL*/
 
 router.get('/contaVendedor', function(req, res) {
+    res.redirect('/contaVendedor');
+});
+
+router.post('/contaVendedor', function(req, res) {
     res.render('pages/contaVendedor');
 });
 
@@ -121,4 +125,9 @@ router.get('/detalhesVendedor', function(req, res) {
 router.get('/contaConsumidor', function(req, res) {
     res.render('pages/contaConsumidor');
 });
+
+router.post('/contaConsumidor', function(req, res) {
+    res.redirect('/contaConsumidor');
+});
 module.exports = router;
+

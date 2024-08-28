@@ -8,9 +8,15 @@
     --laranja: #E68A00;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
+    --vermelho: #FF0000;
+
   }
 
 
+  .error-message {
+    color: var(--vermelho);
+    display: none;
+}
 
 
 .bodydoPerfil {

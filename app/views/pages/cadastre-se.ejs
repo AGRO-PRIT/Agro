@@ -8,53 +8,47 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/agro.css">
     <link rel="stylesheet" href="css/cadastre-se.css">
-
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
 </head>
-
 <body> 
-    
     <main class="bodydoPerfil">  
         <section class="container">
-                <section class="banner">
-                    <h1>Seja <br> Bem Vindo </h1>
-                    <img src="imagens/logo.png" alt="logosingup">
-                </section>
-                <section class="cantinhoLogo">
-                    <form class="cadastro-form">
-                        <h1>Cadastre-se</h1>
-                        
-                        <section class="input-group">
-                            <i class="fas far-enveloper"></i>
-                            <h3>Entre com seu e-mail </h3>
-                            <input type="email" placeholder="Ex: seuemail@gmail.com">
-                        </section>
-
-                        <section class="input-group">   
-                            <i class="fas far-lock"></i>
-                            <h3>Sua senha</h3>
-                            <input type="password" placeholder="Senha">
-                        </section>
-
-                        <section class="input-group">
-                            <i class="fas far-lock"></i>
-                            <h3>Confirmar senha</h3>
-                            <input type="" placeholder="Senha">
-                        </section>  
-
-                        <!-- <a href=""><img src="" alt="Imagem de icone do google"></a>
-                        <a href=""><img src="" alt="Imagem de icone da apple"></a> -->
-
-                        
-                        <a class="entrar" href="/login">Cadastrar</a>
-                        <p>Ja tem conta no AgroBox?<a class="text-cadastro" href="/login"> Acesse aqui!</a></p>
-                    </form>
+            <section class="banner">
+                <h1>Seja <br> Bem Vindo </h1>
+                <img src="imagens/logo.png" alt="logosingup">
             </section>
+            <section class="cantinhoLogo">
+                <form class="cadastro-form" action="/contaConsumidor" method="POST">
+                    <h1>Cadastre-se</h1>
+                    <section class="input-group">
+                        <i class="fas far-enveloper"></i>
+                        <h3>Entre com seu e-mail </h3>
+                        <input type="email" name="email" placeholder="Ex: seuemail@gmail.com">
+                        <p class="error-message" id="email-error">Por favor, insira um email válido.</p>
+                    </section>
+                    <section class="input-group">   
+                        <i class="fas far-lock"></i>
+                        <h3>Sua senha</h3>
+                        <input type="password" name="password" placeholder="Senha">
+                        <p class="error-message" id="password-error">A senha deve ter pelo menos 6 caracteres.</p>
+                    </section>
+                    <section class="input-group">
+                        <i class="fas far-lock"></i>
+                        <h3>Confirmar senha</h3>
+                        <input type="password" name="confirm-password" placeholder="Senha">
+                        <p class="error-message" id="confirm-password-error">As senhas não correspondem.</p>
+                    </section>  
+                    <button type="submit" class="entrar">Cadastrar</button>
+                    <p>Já tem conta no AgroBox?<a class="text-cadastro" href="/contaConsumidor"> Acesse aqui!</a></p>
+                </form>
             </section>
         </section>
     </main>
-    
+    <script src="js/validacaocadastro.js"></script>
 </body>
 </html>
-
-        <!-- Script -->
-<script src="singup.ejs"> </script>
