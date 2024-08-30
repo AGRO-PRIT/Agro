@@ -62,6 +62,21 @@ body {
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
 }
 
+
+/* <!-- Menu Responsivo -->  */
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox{
+    display: none;
+}
+
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
 
 .barradepesquisa {
@@ -101,30 +116,6 @@ body {
 }
 
 
-/* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
-
-
-.carrinho{
-    align-items: center;
-    display: flex;
-    margin-right: 30px;
-    margin-right: 40px;
-}
-
-.text-carrinho {
-    font-family: var(--fonteprincipal);
-    font-size: 17px;
-    color: #ffff;
-    text-align: center;
-    margin-left: 3px;
-}
-
-.carrinho img {
-    height: 45px;
-    margin-right: 10px;
-}
-
-
 /* <!-- COMEÇO PERFIL -->  */
 
 
@@ -146,6 +137,31 @@ body {
 .perfil img {
     height: 45px;
     margin-right: 7px;
+}
+
+
+
+/* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
+
+
+.carrinho{
+    align-items: center;
+    display: flex;
+    margin-right: 30px;
+    margin-right: 40px;
+}
+
+.text-carrinho {
+    font-family: var(--fonteprincipal);
+    font-size: 17px;
+    color: #ffff;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.carrinho img {
+    height: 45px;
+    margin-right: 10px;
 }
 
 
@@ -178,6 +194,9 @@ body {
     font-size: 17px;
 }
 
+.subnav ul li{
+    line-height: 80px;
+}
 
 .subnav .box {
     font-size: 21px;
@@ -196,15 +215,12 @@ body {
     padding: 12px 16px;
 }
 
-
-
-
 .subnav-list:hover .dropdown-menu {
     display: block;
 }
 
 .dropdown-menu{
-    margin-top: 5px;
+    margin-top: -20px;
     position: absolute;
     background-color: #006837;
     padding-top: 10px;
@@ -289,6 +305,7 @@ body {
 
 @media(max-width: 768px){
 
+
     /* footer */
 
 .fixarRodape{
@@ -304,13 +321,25 @@ a{
     font-size: small;
 }
 
+
     /* navbar */
 
-    
+
 .navbar{
     justify-content: space-between;
     padding: 10px 10px;
 }
+
+
+    /* menu responsivo */
+
+.checkbtn{
+    display: block;
+
+}
+
+
+    /* logo */
 
 .logo img{
     height: 55px;
@@ -318,8 +347,12 @@ a{
     margin: 0;
 }
 
+
+    /* barra de pesquisa */
+
 .barradepesquisa{
-    margin: 0;
+    margin-left: 10px;
+    
     padding: 4px;
 }
 
@@ -327,13 +360,42 @@ a{
     width: 100px;
 }
 
+
+    /* perfil */
+
+.perfil{
+    margin: 0;
+}
+
+.perfil img{
+   
+    margin: 0;
+}
+
 .text-perfil{
     display: none;
+}
+
+
+    /* carrinho */
+
+.carrinho img{
+    margin: 0 ;
 }
 
 .text-carrinho{
     display: none;
 }
+
+
+    /* subnav */
+
+.subnav li{
+    margin: 0;
+}
+
+
+
 
 
 
