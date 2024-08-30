@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\app\\public"
   ],
-  "SelectedNode": "\\C:\\Users\\amanda_089939\\Escola\\TCC-AGRO\\AGRO-PRIT\\Agro",
+  "SelectedNode": "\\app.js",
   "PreviewInSolutionExplorer": false
 }
