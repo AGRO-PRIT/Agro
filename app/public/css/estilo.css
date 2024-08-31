@@ -220,7 +220,7 @@ body {
 }
 
 .dropdown-menu{
-    margin-top: -20px;
+    margin-top: -15px;
     position: absolute;
     background-color: #006837;
     padding-top: 10px;
@@ -306,22 +306,31 @@ body {
 @media(max-width: 768px){
 
 
-
+*{
+    box-sizing: border-box; 
+}
     /* navbar */
+
 .navbar{
     justify-content: space-between;
 }
+
     /* menu responsivo */
+
 .checkbtn{
     display: block;
 }
+
     /* logo */
+
 .logo img{
     height: 55px;
     width: 65px;
     margin: 0;
 }
+
     /* barra de pesquisa */
+
 .barradepesquisa{
     margin-left: 10px;
     
@@ -330,7 +339,9 @@ body {
 .barra-texto-pesquisa{
     width: 100px;
 }
+
     /* perfil */
+
 .perfil{
     margin: 0;
 }
@@ -340,25 +351,34 @@ body {
 .text-perfil{
     display: none;
 }
+
     /* carrinho */
+
 .carrinho img{
     margin: 0 ;
 }
 .text-carrinho{
     display: none;
 }
+
     /* subnav */
+
 .subnav li{
     margin: 0;
 }
+
     /* carrosel Frutas */
+
 .carousel{
     margin-left: 70px;
 }
+
     /* carrosel Verduras */
+
 .carousel2{
     margin-left: 80px;
 }
+
     /* Agro-Assinatura */
 
 .agro-content{
@@ -379,19 +399,26 @@ body {
 }
 .agro-imagem{
     margin-right: 0;
+    padding: 1px;
 }
 .agro-imagem img{
-    max-width: 250px;
+    padding: 1px;
+    object-fit: contain;
+    width: 200px;
+    
 }
 
 /* carrosel Verduras */
+
 .container-section{
     width: 100%;
 }
 .container-section h2{
     font-size: 25px;
 }
+
 /* carrosel Agricultores */
+
 .carousel-container3 {
     margin: 0;
 }
@@ -423,7 +450,9 @@ body {
     padding: 1px;
     font-size: small;
 }
-/* carrosel Agricultores */
+
+/* Sobre Agricultores */
+
 .sobre-agrobox{
     margin-bottom: 80px;
     padding: 10px;
@@ -450,34 +479,23 @@ body {
     height: 110px
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* footer */
+.blocos{
+    margin: 0;
+}
 .fixarRodape{
     flex-direction: column;
     align-items: center;
 }
 .blocos h2 {
-    font-size:medium;
+    font-size: 14px;
 }
 a{
     font-size: small;
 }
-
+.fixarRodape img{
+    height: 70px;
+}
 }
 
 
