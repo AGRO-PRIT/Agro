@@ -333,7 +333,6 @@ body {
 
 .barradepesquisa{
     margin-left: 10px;
-    
     padding: 4px;
 }
 .barra-texto-pesquisa{
@@ -343,9 +342,10 @@ body {
     /* perfil */
 
 .perfil{
-    margin: 0;
+    margin-left: 0;
 }
 .perfil img{
+    height: 40px;
     margin: 0;
 }
 .text-perfil{
@@ -353,8 +353,12 @@ body {
 }
 
     /* carrinho */
-
+    
+.carrinho{
+    margin-right: 20px;
+}
 .carrinho img{
+    height: 40px;
     margin: 0 ;
 }
 .text-carrinho{
@@ -366,7 +370,10 @@ body {
 .subnav li{
     margin: 0;
 }
-
+.dropdown-menu{
+    font-size: 4px;
+    letter-spacing: 0;
+}
     /* carrosel Frutas */
 
 .carousel{
