@@ -172,16 +172,16 @@ body {
 
 
 .subnav {
- 
     background-color: #fff;
     height: 6vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
-.subnav ul {
+.subnav .links {
     list-style: none;
     display: flex;
 }
@@ -195,7 +195,7 @@ body {
 }
 
 .subnav ul li{
-    line-height: 80px;
+    line-height: 50px;
 }
 
 .subnav .box {
@@ -306,100 +306,182 @@ body {
 @media(max-width: 768px){
 
 
-    /* footer */
-
-.fixarRodape{
-    flex-direction: column;
-    align-items: center;
-}
-
-.blocos h2 {
-    font-size:medium;
-}
-
-a{
-    font-size: small;
-}
-
 
     /* navbar */
-
-
 .navbar{
     justify-content: space-between;
-    padding: 10px 10px;
 }
-
-
     /* menu responsivo */
-
 .checkbtn{
     display: block;
-
 }
-
-
     /* logo */
-
 .logo img{
     height: 55px;
     width: 65px;
     margin: 0;
 }
-
-
     /* barra de pesquisa */
-
 .barradepesquisa{
     margin-left: 10px;
     
     padding: 4px;
 }
-
 .barra-texto-pesquisa{
     width: 100px;
 }
-
-
     /* perfil */
-
 .perfil{
     margin: 0;
 }
-
 .perfil img{
-   
     margin: 0;
 }
-
 .text-perfil{
     display: none;
 }
-
-
     /* carrinho */
-
 .carrinho img{
     margin: 0 ;
 }
-
 .text-carrinho{
     display: none;
 }
-
-
     /* subnav */
-
 .subnav li{
     margin: 0;
 }
+    /* carrosel Frutas */
+.carousel{
+    margin-left: 70px;
+}
+    /* carrosel Verduras */
+.carousel2{
+    margin-left: 80px;
+}
+    /* Agro-Assinatura */
 
+.agro-content{
+    margin-left: 10px;
+}
+.agro-content ul{
+    padding-left: 10px;
+}
+.agro-content h1{
+    font-size: 1.3em;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.agro-content ul li{
+    margin-left: 30px;
+    font-size: 0.69em;
+}
+.agro-imagem{
+    margin-right: 0;
+}
+.agro-imagem img{
+    max-width: 250px;
+}
 
-
-
-
+/* carrosel Verduras */
+.container-section{
+    width: 100%;
+}
+.container-section h2{
+    font-size: 25px;
+}
+/* carrosel Agricultores */
+.carousel-container3 {
+    margin: 0;
+}
+.carousel-item3{
+    margin: 10px;
+    padding: 10px;
 
 }
+.perfil-image3{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    padding: 5px;
+}
+.user-profession-name{
+    font-size: 15px;
+}
+.user-profession-emoji{
+    font-size: 15px;
+}
+.user-profession-emoji strong {
+    font-size: 15px;
+}
+.user-profession{
+    font-size: 0.70em;
+}
+.message-button{
+    border-radius: 6px;
+    padding: 1px;
+    font-size: small;
+}
+/* carrosel Agricultores */
+.sobre-agrobox{
+    margin-bottom: 80px;
+    padding: 10px;
+}
+.content-Agrobox {
+    font-size: 0.5em;
+    padding-left: 10px;
+}
+.content-Agrobox h1{
+    margin-top: 10px;
+    font-size: 1.5em;
+    
+}
+.message-button-agrobox{
+    font-size: 12px;
+}
+.agrobox-imagem{
+    margin-left: 5px;
+    margin-right: 3px;
+    
+}
+.agrobox-imagem img{
+    width: auto;
+    height: 110px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.fixarRodape{
+    flex-direction: column;
+    align-items: center;
+}
+.blocos h2 {
+    font-size:medium;
+}
+a{
+    font-size: small;
+}
+
+}
+
+
+
 
 /* Tablets */
 
