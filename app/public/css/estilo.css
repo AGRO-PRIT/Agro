@@ -342,19 +342,23 @@ body {
 
 .barradepesquisa{
     margin-left: 10px;
-    padding: 4px;
+    padding: 3px;
 }
 .barra-texto-pesquisa{
-    width: 100px;
+    font-size: 12px;
+    width: 80px;
 }
-
+.barradepesquisa img{
+    height: 25px;
+    width: 25px;
+}
     /* perfil */
 
 .perfil{
     margin-left: 0;
 }
 .perfil img{
-    height: 40px;
+    height: 30px;
     margin: 0;
 }
 .text-perfil{
@@ -367,7 +371,7 @@ body {
     margin-right: 20px;
 }
 .carrinho img{
-    height: 40px;
+    height: 30px;
     margin: 0 ;
 }
 .text-carrinho{
@@ -389,28 +393,27 @@ body {
     margin-left: 40px;
 }
 
-.carousel{
-    margin-left: 70px;
-}
+
 
     /* carrosel Verduras */
 
-.carousel2{
-    margin-left: 80px;
-}
+
 
     /* Agro-Assinatura */
 
+.agro-assinatura{
+    height: auto;  
+}
 .agro-content{
     margin-left: 10px;
 }
 .agro-content ul{
+    margin-bottom: 10px;
     padding-left: 10px;
 }
 .agro-content h1{
     font-size: 1.3em;
     margin-left: 10px;
-    margin-top: 15px;
     margin-bottom: 10px;
 }
 .agro-content ul li{
@@ -419,14 +422,13 @@ body {
 }
 .agro-imagem{
     margin-right: 0;
-    padding: 1px;
+    margin-top: 30px;
 }
 .agro-imagem img{
     max-width: 100%;
-    padding: 1px;
+    height: auto;
     object-fit: contain;
-    width: 200px;
-    
+    width: auto;
 }
 
 /* carrosel Verduras */
@@ -468,11 +470,16 @@ body {
     font-size: 15px;
 }
 .user-profession{
-    font-size: 0.70em;
+    font-size: 0.80em;
+    margin-right: 3px;
 }
+.user-profession br {
+    display: none;
+  }
 .message-button{
     border-radius: 6px;
-    padding: 1px;
+    padding: 3px;
+    width: 180px;
     font-size: small;
 }
 
@@ -483,7 +490,8 @@ body {
     padding: 10px;
 }
 .content-Agrobox {
-    font-size: 0.5em;
+    
+    font-size: 0.6em;
     padding-left: 10px;
 }
 .content-Agrobox h1{
@@ -491,6 +499,12 @@ body {
     font-size: 1.8em;
     margin-bottom: 10px;
     
+}
+.content-Agrobox p{
+    margin-right: 30px;
+}
+.content-Agrobox p br{
+    display: none;
 }
 .message-button-agrobox{
     font-size: 12px;
@@ -516,7 +530,7 @@ body {
     align-items: center;
 }
 .blocos h2 {
-    font-size: 14px;
+    font-size: 0.78em;
 }
 a{
     font-size: small;
