@@ -1,3 +1,5 @@
+//linhas de codigos que provavelmente usaremos futuramente no projeto:
+
 //fazer upload de imagem enviada do formulario
 <form enctype="multipart/form-data">
 
