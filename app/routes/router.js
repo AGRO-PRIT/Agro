@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const path = require('path');
 
+// Rota para servir o arquivo JavaScript
+router.get('/js/menuMobile.js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../app/public/js/menuMobile.js'));
+});
 
 /* TESTES*/
 router.get('/testes', function(req, res) {

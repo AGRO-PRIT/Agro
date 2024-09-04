@@ -31,6 +31,14 @@ app.use(express.urlencoded({ extended: true }));
 //trabalhar com formulario
 //app.use(express.urlencoded({ extended: false })); 
 
+// Middleware para definir o tipo MIME correto
+app.use((req, res, next) => {
+  if (req.path.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+  }
+  next();
+});
+
 var rotas = require('./app/routes/router');
 app.use('/', rotas);
 
