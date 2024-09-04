@@ -1,17 +1,17 @@
-var radio = document.querySelector('.dot')
-var cont = 1
-document.getElementById('radio1').checked = true
+// var radio = document.querySelector('.dot')
+// var cont = 1
+// document.getElementById('radio1').checked = true;
 
-setInterval(() => {
-    proximaImg()
-}, 3000)
+// setInterval(() => {
+//     proximaImg()
+// }, 3000)
 
-function proximaImg(){
-    cont++ 
+// function proximaImg(){
+//     cont++ 
 
-    if(cont > 3){
-        cont = 1
-    }
+//     if(cont > 3){
+//         cont = 1
+//     }
 
-    document.getElementById('radio'+ cont ).checked = true
-}
+//     document.getElementById('radio'+ cont ).checked = true;
+// }
