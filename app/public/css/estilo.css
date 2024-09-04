@@ -39,6 +39,10 @@ body {
     width: 100%;
 }
 
+
+
+/* <!-- COMEÇO NAV BAR -->  */
+
 .logo {
     padding-top: 5px;
 }
@@ -48,8 +52,6 @@ body {
     margin-left: 80px;
     
 }
-
-/* <!-- COMEÇO NAV BAR -->  */
 
 .navbar {
     display: flex;
@@ -64,17 +66,56 @@ body {
 
 
 /* <!-- Menu Responsivo -->  */
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    margin-left: 10px;
+
+.mobile-menu-icon{
+    background-color: transparent;
+    margin-right: 15px;
     cursor: pointer;
     display: none;
 }
 
-#checkbox{
+.checkbtn{
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px;
+    color: white;
+}
+
+.mobile-menu-icon button{
+    border: none;
+    background-color: transparent;
+}
+
+.mobile-menu{
+    background-color: var(--branco);
     display: none;
+}
+
+.mobile-menu .mobile-links{
+    list-style: none;
+}
+
+.mobile-links .mobile-link{
+    line-height: 40px;
+}
+
+.mobile-link{
+    text-align: center;
+    color: #5aa504;
+    font-weight: 500;
+    margin-left: 21px;  
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.mobile-menu .box {
+    margin-left: 21px;  
+    text-align: center;
+    color: #5aa504;
+    font-size: 21px;
+    font-weight: bold;
+    font-weight: 850;
 }
 
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
@@ -166,7 +207,6 @@ body {
 
 
 
-
 /* <!-- COMEÇO SUBNAV -->  */
 
 
@@ -188,7 +228,7 @@ body {
 
 .subnav li {
     font-weight: 500;
-    margin-left: 21px;  /* arrumar */
+    margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
     font-size: 17px;
@@ -256,8 +296,6 @@ body {
 
 
 
-
-
 /* <!-- COMEÇO RODAPÉ -->  */
 
 .fixarRodape {
@@ -318,19 +356,48 @@ body {
 *{
     box-sizing: border-box; 
 }
-    /* navbar */
+
+/* Navbar */
 
 .navbar{
     justify-content: space-between;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
-    /* menu responsivo */
+/* Menu Responsivo */
+.mobile-list{
+    display: none;
+}
 
-.checkbtn{
+.mobile-menu-icon{
     display: block;
 }
 
-    /* logo */
+.mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.mobile-menu .mobile-list{
+    display: block;
+    padding-top: 1.2rem;
+}
+
+.mobile-menu .mobile-menu-icon {
+    width: 100%;
+}
+
+.open{
+    display: block;
+}
+
+/* logo */
+
+.logo{
+    margin-left: 10px;
+}
 
 .logo img{
     height: 55px;
@@ -338,68 +405,92 @@ body {
     margin: 0;
 }
 
-    /* barra de pesquisa */
+/* Barra de pesquisa */
 
 .barradepesquisa{
     margin-left: 10px;
     padding: 3px;
 }
+
 .barra-texto-pesquisa{
     font-size: 12px;
     width: 80px;
 }
+
 .barradepesquisa img{
     height: 25px;
     width: 25px;
 }
-    /* perfil */
+
+/* Perfil */
 
 .perfil{
     margin-left: 0;
 }
+
 .perfil img{
     height: 30px;
     margin: 0;
 }
+
 .text-perfil{
     display: none;
 }
 
-    /* carrinho */
+
+/* Carrinho */
     
 .carrinho{
-    margin-right: 20px;
+    margin-right: 0;
 }
+
 .carrinho img{
     height: 30px;
     margin: 0 ;
 }
+
 .text-carrinho{
     display: none;
 }
 
-    /* subnav */
+/* Subnav */
 
 .subnav li{
     margin: 0;
 }
+
+.subnav{
+    display: none;
+}
+
+.subnav .links {
+    display: none;
+}
+
 .dropdown-menu{
     font-size: 4px;
     letter-spacing: 0;
 }
-    /* carrosel Frutas */
+
+
+/* Carrosel Frutas */
 
 .section-title{
     margin-left: 40px;
 }
 
+/* Carrosel Verduras */
+
+.container-section{
+    width: 100%;
+}
+.container-section h2{
+    font-size: 25px;
+}
 
 
-    /* carrosel Verduras */
 
-
-
-    /* Agro-Assinatura */
+/* Agro-Assinatura */
 
 .agro-assinatura{
     height: auto;  
@@ -431,16 +522,8 @@ body {
     width: auto;
 }
 
-/* carrosel Verduras */
 
-.container-section{
-    width: 100%;
-}
-.container-section h2{
-    font-size: 25px;
-}
-
-/* carrosel Agricultores */
+/* Carrosel Agricultores */
 
 .carousel-container3{
     width: 100%;
@@ -522,6 +605,7 @@ body {
 }
 
 /* footer */
+
 .blocos{
     margin: 0;
 }

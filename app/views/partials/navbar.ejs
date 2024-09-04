@@ -1,19 +1,14 @@
-  
+    
+ 
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>  
     <link rel="stylesheet" href="css/estilo.css">
 
 
 <nav class="navbar">
 
-        <!-- Logo AgroBox -->
-
-        
-            
-         <input type="checkbox" id="checkbox">
-         <label for="checkbox" class="checkbtn"> 
-            <i class="fas fa-bars"></i>
-        </label>   
          
+          <!-- Logo AgroBox -->
+           
         <section class="logo">
             <a href="/home">
             <img src="imagens/logo.png" alt="Logo da AgroBox, 4 folhas com cores verde e marrom.">
@@ -46,39 +41,52 @@
             <a class="text-carrinho" href="/carrinho"> Carrinho </a>
             </a>
         </section>
-        
 
+        <!-- Botão Menu Responsivo Mobile -->
+
+        <article class="mobile-menu-icon">
+            <button onclick="menuShow()">  <label class="checkbtn"> <i class="fas fa-bars"> </i> </label> </button>  
+        </article>
+        
     </nav>
+
+        <article class="mobile-menu">   
+            <ul class="mobile-links">
+                <li class="mobile-list"> <a href="/home"    class="mobile-link"> Início </a> </li>
+                <li class="mobile-list"> <a href="/produtos"class="mobile-link"> Produtos </a> </li>
+                <li class="mobile-list"> <a href="/box"     class="box"> Box</a> </li>
+                <li class="mobile-list"> <a href="/premium" class="mobile-link">Premium</a> </li>
+                <li class="mobile-list"> <a href="/eventos" class="mobile-link">Eventos</a> </li>
+            </ul>
+        </article>
 
 
                 <!-- SUB NAVE-->
 
-                <main class="subnav">
+        <main class="subnav">
 
-                    <ul class="links">
-                        <li> <a href="/home"> Início </a> </li>
-                        <li class="subnav-list"> 
-                        <a class="produtos" href="/produtos"> Produtos </a> 
-            
-                    <section class="dropdown-menu">
-                        <a href="/legumes"> Legumes </a>
-                        <a href="/verduras"> Verduras </a>  
-                        <a href="/frutas"> Frutas </a>
-                        <a href="/cereais"> Cereais </a>
-                        <a href="/laticionios"> Latiocínios </a>
-                        <a href="/suplementos"> Suplementos </a>
-                        <a href="/graos"> Grãos </a>
-                        <a href="/chas"> Chás </a>
-                        <a href="/proteinas"> Proteínas </a>
-                    </section>
-                        </li>
-                        
-                        <li class="box"> <a href="/box">Box</a> </li>
-                        <li> <a href="/premium">Premium</a> </li>
-                        <li> <a href="/eventos">Eventos</a> </li>
-                    </ul>
+            <ul class="links">
+                <li> <a href="/home"> Início </a> </li>
+                <li class="subnav-list"> 
+                <a class="produtos" href="/produtos"> Produtos </a> 
+    
+            <section class="dropdown-menu">
+                <a href="/legumes"> Legumes </a>
+                <a href="/verduras"> Verduras </a>  
+                <a href="/frutas"> Frutas </a>
+                <a href="/cereais"> Cereais </a>
+                <a href="/laticionios"> Latiocínios </a>
+                <a href="/suplementos"> Suplementos </a>
+                <a href="/graos"> Grãos </a>
+                <a href="/chas"> Chás </a>
+                <a href="/proteinas"> Proteínas </a>
+            </section>
+                </li>
+                
+                <li class="box"> <a href="/box">Box</a> </li>
+                <li> <a href="/premium">Premium</a> </li>
+                <li> <a href="/eventos">Eventos</a> </li>
+            </ul>
 
                     
-                    
-            </main>
-  
+    </main>
