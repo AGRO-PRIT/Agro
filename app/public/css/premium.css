@@ -87,7 +87,7 @@
 
 .button-premium {
     cursor: pointer;
-   margin-top: 20px;
+    margin-top: 20px;
     margin-bottom: 30px;
     justify-content: center;
     border: none;
@@ -107,5 +107,5 @@
 
 .button-premium:hover{
     opacity: 0.60;
-    border: 2px solid black;
+ 
 }

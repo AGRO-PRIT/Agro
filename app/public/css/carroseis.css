@@ -503,8 +503,8 @@ margin-top: 20px;
 .indicator3 {
 border: none;
 width: 17px;
-height: 17px;
-background-color: rgba(81, 149, 117, 0.6);
+  height: 17px;
+  background-color: rgba(81, 149, 117, 0.6);
 border-radius: 50%;
 display: inline-block;
 margin: 0 5px;

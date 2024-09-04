@@ -137,7 +137,7 @@
 .apply-button {
     width: 100%;
     padding: 10px;
-    background-color: var(--branco);
+    background-color:  var(--branco);
     color: var(--verdeescuro);
     border: 2px solid var(--verdeescuro);
     font-weight: bold;
