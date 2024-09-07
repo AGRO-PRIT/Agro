@@ -109,14 +109,6 @@ body {
     font-size: 17px;
 }
 
-.mobile-menu .box {
-    margin-left: 21px;  
-    text-align: center;
-    color: #5aa504;
-    font-size: 21px;
-    font-weight: bold;
-    font-weight: 850;
-}
 
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
 
@@ -132,9 +124,8 @@ body {
 }
 
  .barradepesquisa img {
-    margin-top: 5px;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     box-sizing: border-box;
 } 
 
@@ -144,7 +135,7 @@ body {
     outline: none;
     padding: 0 7px;
     color: #614a3d;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 40px;
     width: 500px;
     font-family: var(--fonteprincipal)
@@ -164,12 +155,12 @@ body {
 .perfil{
     align-items: center;
     display: flex;
-    margin-left: 10%;
+    margin-left: 70px;
 }
 
 .text-perfil{
     font-family: var(--fonteprincipal);
-    font-size: 17px;
+    font-size: 19px;
     color: #ffff;
     text-align: center;
     margin-right: 10px;
@@ -188,13 +179,12 @@ body {
 .carrinho{
     align-items: center;
     display: flex;
-    margin-right: 30px;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 
 .text-carrinho {
     font-family: var(--fonteprincipal);
-    font-size: 17px;
+    font-size: 18px;
     color: #ffff;
     text-align: center;
     margin-left: 3px;
@@ -211,7 +201,7 @@ body {
 
 
 
-.subnav {
+.subnav {   
     background-color: #fff;
     height: 6vh;
     width: 100%;
@@ -219,6 +209,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    z-index: 100000; 
 }
 
 .subnav .links {
@@ -227,7 +218,7 @@ body {
 }
 
 .subnav li {
-    font-weight: 500;
+    font-weight: 600;
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
@@ -238,11 +229,7 @@ body {
     line-height: 50px;
 }
 
-.subnav .box {
-    font-size: 21px;
-    font-weight: bold;
-    font-weight: 850;
-}
+
 
 
 .subnav-list .produtos::after {
@@ -458,12 +445,15 @@ body {
 
 /* Subnav */
 
-.subnav li{
-    margin: 0;
-}
+
 
 .subnav{
     display: none;
+
+}
+
+.subnav li{
+    margin: 0;
 }
 
 .subnav .links {

@@ -23,8 +23,27 @@
     --corlayouts: #f2f2f2;
 }
 
+.container{
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    background-color: var(--branco);
+}
+ .titulo{
+    font-family: "Cooper Black", "Cooper", sans-serif;
+    letter-spacing: 10px;
+    font-size: 90px;
+    text-align: center;
+    padding-top: 90px;
+    margin-bottom: 30px;
+    color: var(--marrom);
+    text-transform: uppercase;
+}
 .premium-container {
-    padding: 70px;
+    padding-top: 80px;
+    color: white;
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,34 +51,42 @@
 }
 
 .premium-verde {
-    width: 400px;
-  
+    height: 500px;
+    width: 420px;
     border-radius: 40px;
-    margin: 15px;
-    background-color: var(--laranja);
-}
-
-.premium-laranja {
-    width: 400px;
-   
-    border-radius: 40px;        
     margin: 15px;
     background-color: var(--verdeescuro);
 }
 
+.premium-laranja {
+    height: 500px;
+    width: 420px;
+    border-radius: 40px;        
+    margin: 15px;
+    background-color: var(--laranja);
+}
+
+.text-lista{
+    margin-bottom: 30px;
+}
+
+ .price{
+    padding-top:  20px;
+}
+
 .text-premium ul {
     line-height: 30px;
-    font-size: 17px;
-    padding-top: 15px;
+    font-size: 19px;
+    padding-top: 20px;
+   
     font-weight: bold;
     color: var(--cortexto);
-    margin: 15px;
 }
 
 .text-premium .title {
     text-align: center;
-    margin-top: 30px;
-    font-size: 2em;
+    margin-top: 50px;
+    font-size: 2.3em;
     font-weight: bold;
     margin-bottom: 20px;
 }

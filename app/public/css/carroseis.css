@@ -357,9 +357,11 @@
 
 
 
- /* CAROSSEL 04 AGRICULTORES EM DESTAQUE */
+ /* CAROSSEL 04 AGRICULTORES  */
 
-
+.titulo{
+  margin-top: 60px;
+}
 
 .container-section{
   margin: 0 auto;
@@ -367,14 +369,13 @@
   width: 1300px; /* Defina a largura que desejar */
   overflow: hidden; /* Oculta os itens que estão fora da área visível */
   position: relative; /* Necessário para posicionar as setas */
-  margin-top: 60px;
+  
 }
-
 
 .user-name{
 margin-top: 40px;
-margin-bottom: 10px;
-margin-left: 50px;
+margin-bottom: 30px;
+margin-left: 120px;
 font-size: 30px;
 color: #493a31;
 }
@@ -414,8 +415,6 @@ margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
-
-
 
 .perfil-image3 {
 margin: 20px;

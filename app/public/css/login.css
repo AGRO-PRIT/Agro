@@ -5,7 +5,7 @@
     --fonteprincipal: "Montserrat", sans-serif;
     --verdeescuro: #006837;
     --branco: #FFFFFF;
-    --laranja: #E68A00;
+    --laranja: #f1a532;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
     --vermelho: #FF0000;
@@ -98,6 +98,7 @@
 }
 
 .cadastro-form h3 { 
+    margin-top: 5px;
     margin-left: 20px;
     font-size: 14px;
     color: var(--cortexto);
@@ -108,6 +109,8 @@
 }
 
 .img-login img{
+    background-color: var(--branco);
+    border-radius: 100%;
     margin-left: 5px;
     margin-right: 5px;
     height: 25px;
@@ -135,6 +138,8 @@
 }
 
 .cadastro-form p{
+    margin-top: 5px;
+    margin-bottom: 7px;
     color: var(--cortexto);
     text-align: center;
 }

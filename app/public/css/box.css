@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+}
 
 .titulo-box {
     width: 476px;
@@ -15,7 +26,7 @@
     text-align: left;
     line-height: 79px;
     letter-spacing: 8px;
-    font-size: 73px;
+    font-size: 75px;
     padding-left: 50px;
 }
 
@@ -27,7 +38,7 @@
     font-weight: 600;
     color: #333333;
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
     margin-top: 10px; /* Ajuste de espaço entre título e descrição */
     padding-left: 50px;
 }
@@ -37,8 +48,11 @@
 }
 
 .imagem-primeiro-box img {
-    max-width: 700px;
-    height: auto;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
     margin-right: 150px;
 }
 
@@ -46,7 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FCF2E6;
+   
 }
 
 .texto-box {
@@ -59,12 +73,13 @@
 .FAÇA-SUA-BOX {
     cursor: pointer;
     margin-top: 20px; 
-    width: 140px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     margin-left: 50px;
     border: none;
     border-radius: 5px;
     background-color: #006837;
+    font-size: 15px;
     box-sizing: border-box;
     font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
     font-weight: 600;
@@ -75,7 +90,6 @@
 }
 
 .segundo-box {
-    
     padding: 60px;
     background-color: #006837;
     box-sizing: border-box;
@@ -97,26 +111,30 @@
 }
 
 .descricao-box2 {
-    width: 474px;
+    width: 600px;
     background-color: rgba(255, 255, 255, 0);
     box-sizing: border-box;
     font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
     font-weight: 600;
     color: #ffffff;
     text-align: left;
-    line-height: 25px;
+    line-height: 32px;
+    font-size: 22px;
     letter-spacing: 0.3px;
 }
 
 /* terceiro box */
 
   .terceiro-box {
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FCF2E6;
-    padding: 150px;
-    margin-bottom: 150px;
+    background-color: #fffffff5;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-left: 130px;
+    margin-right: 130px;
 }
 
 .titulo-terceiro-box {
@@ -126,28 +144,29 @@
     color: #006837;
     text-align: center;
     letter-spacing: 8px;
+    margin-top: 60px;
     margin-bottom: 60px;
     font-size: 83px;
 }
 
 .conteudo-premium {
+    margin-bottom: 100px;
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: flex-start; /* Mantém os itens alinhados ao topo */
     width: 100%;
     max-width: 1000px; /* Defina uma largura máxima para a seção */
+    height: 100%;
     gap: 20px; /* Adiciona um espaço fixo entre os itens */
 }
 
 .descricao-terceiro-box {
-    
     font-family: "Montserrat SemiBold", "Montserrat", sans-serif;
     font-weight: 600;
     color: #493a31;
-    line-height: 25px;
-    letter-spacing: 0.3px;
-    font-size: 22px;
-    margin-right: 200px; /* Adiciona espaço entre a descrição e a caixa premium */
+    line-height: 30px;
+    letter-spacing: 0.7px;
+    font-size: 20px;
+    margin-right: 150px; /* Adiciona espaço entre a descrição e a caixa premium */
 }
 
 .assine-agro-premium {
@@ -178,7 +197,9 @@
     background-color: #f5a83c;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    color: #f2f2f2;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
     text-align: center;
     line-height: normal;
   } 

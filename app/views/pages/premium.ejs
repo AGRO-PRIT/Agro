@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroBox</title>
     <link rel="icon" href="imagens/logo.png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/premium.css">
     
 </head>
@@ -13,9 +13,12 @@
 <body>  
      <!-- NavBar -->
     <%- include('../partials/navbar'); %>
-
+    <h1 class="titulo"> Premium </h1>
+<section class="container">
+   
    <main class="premium-container">
-            <section class="premium-verde">
+  
+            <section class="premium-laranja">
                 <article class="text-premium">
                     <h1 class="title">AGRO PLUS</h1>
                     <ul class="text-lista">
@@ -25,12 +28,12 @@
                         <li>aaaaaaa</li>
                         <li>aaaaaaa</li>
                     </ul>
-                    <h1>R$99,99</h1>
+                    <h1 class="price">R$99,99</h1>
                     <button class="button-premium">PROXIMO</button>
                 </article>
             </section>
 
-            <section class="premium-laranja">
+            <section class="premium-verde">
                 <article class="text-premium">
                 <h1 class="title"> AGRO PREMIUM</h1>
                 
@@ -42,13 +45,13 @@
                     <li>aaaaaaa</li>
                     <li>aaaaaaa</li>
                 </ul>
-                <h1>R$99,99</h1> 
+                <h1 class="price">R$99,99</h1> 
                 <button class="button-premium">PROXIMO</button>
                 </article>
             </section>
             
    </main>
-
+</section>
 
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
