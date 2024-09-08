@@ -31,7 +31,7 @@
     background-color: var(--branco);
 }
  .titulo{
-    font-family: "Cooper Black", "Cooper", sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 10px;
     font-size: 90px;
     text-align: center;
@@ -54,7 +54,7 @@
     height: 500px;
     width: 420px;
     border-radius: 40px;
-    margin: 15px;
+    margin: 35px;
     background-color: var(--verdeescuro);
 }
 
@@ -62,7 +62,7 @@
     height: 500px;
     width: 420px;
     border-radius: 40px;        
-    margin: 15px;
+    margin: 35px;
     background-color: var(--laranja);
 }
 

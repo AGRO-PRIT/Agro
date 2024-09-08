@@ -55,10 +55,10 @@ h1 {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
-.cart-item img {
-    width: 180px;
+.cart-item .imagem-Maçã img{
+    width: 165px;
     height: 140px;
-    margin: 20px;
+    margin: 30px;
 }
 
 .total{
@@ -67,6 +67,17 @@ h1 {
 
 .cart-item .details {
     flex: 1;
+}
+
+
+.price{
+    flex-direction: column;
+}
+
+
+.remove img{
+    height: 30px;
+    width: 30px;
 }
 
 .cart-item .details h3 {
@@ -98,13 +109,20 @@ h1 {
 }
 
 .cart-item .price {
-    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.price h3{
     font-weight: bold;
     color: var(--marrom);
+    font-size: 30px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cart-item .remove {
-    margin: 5px;
+    margin-left: 30px;
     display: flex;
     align-items: center;
     color: var(--marrom);
@@ -113,8 +131,10 @@ h1 {
 }
 
 .cart-item .remove i {
-    margin-right: 30px;
-    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400; 
+    margin-left: 3px;
+    font-size: 20px;
 }
 
 .pedido-final{
@@ -123,35 +143,61 @@ h1 {
     margin-left: 180px;
 }
 
+.cupom{
+    display: block;
+}
+
+.cupom img{
+    height: 25px;
+    width: 25px;
+}
+
 .resumo {
     background-color: var(--branco);
     height: 391px;
     width: 400px;
     padding: 30px;
     border-radius: 15px;
-    
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 .resumo h2 {
-    font-size: 1.8em;
+    margin-left: 10px;
+    font-size: 2em;
     font-weight: bold;
-    color: #333;
+    color: var(--corprincipal);
     margin-bottom: 20px;
 }
 
 .resumo .item {
+    font-weight: bold;
+    color: #333;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 1.3em;
 }
 
-.resumo .total {
-    margin: 5px;
-    font-size: 1.6em;
+.item-cupom{
+    cursor: pointer;
+    color: var(--corprincipal);
     font-weight: bold;
-    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.total {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #5AA504;
 }
 
 .checkout-button {
@@ -160,6 +206,7 @@ h1 {
     width: 100%;
     padding: 15px;
     background-color:var(--laranja);
+    font-weight: 600;
     color: var(--cortexto);
     border: none;
     border-radius: 8px;
@@ -192,6 +239,7 @@ h1 {
 }
 
 .finalizar-compra button {
+    font-weight: 550;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -216,8 +264,5 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-/* Estilo para o ícone de lixeira */
-.cart-item .remove i {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
+
+

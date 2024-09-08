@@ -21,8 +21,8 @@
 }
 
 .container {
-    width: 889px;
-    height: 530px;
+    width: 950px;
+    height: 600px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@
     justify-content: center;
     flex-direction: column;
     height: auto;
-    padding: 25px;
+    padding: 35px;
     padding-top: 35px;
     padding-bottom: 35px;
     border-radius: 19px 0px 0px 19px;
@@ -63,18 +63,20 @@
 }
 
 .cantinhoLogo h1 {
+    margin-top: 10px;
     text-align: center;
-    font-size: 35px;
-    padding-bottom: 7px;
+    font-size: 30px;
+
     color: var(--cortexto);
 }
 
 .input-group input { 
-    outline: none;  
+    outline: none;
     text-indent: 10px;
-    margin-left: 15px;
-    height: 30px;
-    width: 350px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    height: 40px;
+    width: 390px;
     margin-top: 5px;
     border-radius: 8px;
     border-color: #493a31;
@@ -83,7 +85,6 @@
 
 .cadastro-form h3 { 
     margin-top: 2px;
-    margin-left: 20px;
     font-size: 16px;
     color: var(--cortexto);
 }
@@ -94,7 +95,7 @@
     text-decoration: none; /* Remove o sublinhado do link */
     text-align: center; /* Centraliza o texto */
     font-weight: bold;
-    background-color: var(--backgroundcolor);
+    background-color: var(--branco);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -103,20 +104,28 @@
     margin-top: 13px;
     margin-bottom: 10px;
     margin-left: 13px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .cadastro-form .entrar{
     margin-left: 90px;
 }
 
-.cadastro-form p{
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 14px;
+.cadastro-form .texto-entrar{
     color: var(--cortexto);
     text-align: center;
+    font-size: 18px;
 }
+
+.cadastro-form p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--cortexto);
+    text-align: center;
+    font-size: 16px;
+}
+
+
 
 .texto-final{
     font-size: 30px;

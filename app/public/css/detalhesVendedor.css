@@ -7,7 +7,7 @@
     --fonteprincipal: "Montserrat", sans-serif;
     --verdeescuro: 
     --branco: #FFFFFF;
-    --laranja: #E68A00;
+    --laranja: #f1a532; 
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
   }
@@ -22,8 +22,8 @@
 }
 
 .container {
-    width: 889px;
-    height: 473px;
+    width: 950px;
+    height: 600px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
@@ -40,8 +40,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 85%;
-    padding: 25px;
+    height: auto;
+    padding: 35px;
     padding-top: 35px;
     padding-bottom: 35px;
     border-radius: 19px 0px 0px 19px;
@@ -64,6 +64,7 @@
 }
 
 .cantinhoLogo h1 {
+    justify-content: center;
     text-align: center;
     font-size: 35px;
     padding-bottom: 15px;
@@ -114,18 +115,22 @@ color: var(--marrom);
 }
 
 .cadastro-form p{
+    font-weight: 600;
     margin: 8px;
     font-size: 18px;
     color: var(--cortexto);
     text-align: center;
 }
 
+.cadastro-form strong{  
+    font-weight: 900;
+}
 
 .cadastro-form .text-cadastro{
     font-weight: bold;
     color: var(--laranja);
-    margin-left: 175px;
-    font-size: 18px;
+    margin-left: 195px;
+    font-size: 24px;
     text-align: center;
 }
 

@@ -7,7 +7,7 @@
     --fonteprincipal: "Montserrat", sans-serif;
     --verdeescuro: 
     --branco: #FFFFFF;
-    --laranja: #f1a532;
+    --laranja: #f1a532; 
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
   }
@@ -22,8 +22,8 @@
 }
 
 .container {
-    width: 889px;
-    height: 530px;
+    width: 950px;
+    height: 600px;
     background-color: var(--corprincipal);
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     justify-content: center;
     flex-direction: column;
     height: auto;
-    padding: 25px;
+    padding: 35px;
     padding-top: 35px;
     padding-bottom: 35px;
     border-radius: 19px 0px 0px 19px;
@@ -97,12 +97,12 @@
     font-weight: bold;
     background-color: var(--backgroundcolor);
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 15px;
     width: 209px;
     color: var(--corprincipal);
     margin: 10px;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .entrar strong {
@@ -110,23 +110,22 @@ color: var(--marrom);
 }
 
 .cadastro-form .entrar{
-    margin-left: 170px;
+    text-align: center;
 }
 
 .cadastro-form p{
     margin: 8px;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--cortexto);
     text-align: center;
 }
 
 
 .cadastro-form .text-cadastro{
-
     font-weight: bold;
     color: var(--laranja);
-    margin-left: 175px;
-    font-size: 18px;
+    margin-left: 135px;
+    font-size: 20px;
     text-align: center;
 }
 
