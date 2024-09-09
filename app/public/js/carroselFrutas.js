@@ -6,7 +6,7 @@ const nextBtn = document.querySelector('.next');
 let currentIndex = 0;
 
 function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 1230}px)`;
+    carousel.style.transform = `translateX(-${currentIndex * 1550}px)`;
     indicators.forEach((indicator, index) => {
         if (index === currentIndex) {
             indicator.classList.add('active');

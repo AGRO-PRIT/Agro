@@ -56,9 +56,11 @@ h1 {
 }
 
 .cart-item .imagem-Maçã img{
-    width: 165px;
+    width: 160px;
     height: 140px;
     margin: 30px;
+    display: block;
+    object-fit: cover;
 }
 
 .total{
