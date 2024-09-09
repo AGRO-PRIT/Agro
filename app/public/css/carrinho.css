@@ -267,4 +267,13 @@ h1 {
     border-radius: 4px;
 }
 
-
+.quantity p {
+    margin: 6px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #b3b0b0b7;
+    padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 40px;
+}
