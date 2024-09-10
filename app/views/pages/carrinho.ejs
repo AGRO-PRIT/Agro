@@ -7,15 +7,16 @@
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/agro.css">
+    <link rel="stylesheet" href="css/carroseis.css">
     <link rel="stylesheet" href="css/carrinho.css">
-    <script src="js/carrinho.js"> </script>
+    <script async src="js/carrinho.js"> </script>
 </head>
 
 <body>  
      <!-- NavBar -->
     <%- include('../partials/navbar'); %>
 </header>
-<body>
+
     
 
 <main class="container">
@@ -34,13 +35,13 @@
                         <p class="vendor">Nome Do Vendedor</p>
                         <article class="quantity">
                             <button>-</button>
-                            <p>1</p>
+                            <input type="number" class="product-quantity" value="1" min="1">
                             <button>+</button>
                         </article>
                     </article>
                     
                     <article class="price">
-                        <h3 class="cart-item-price">R$000,00</h3>
+                        <h3 class="cart-item-price">R$10,99</h3>
                     <article class="remove">
                         <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
                         <i class="excluir">Excluir</i> 
@@ -58,13 +59,13 @@
                         <p class="vendor">Nome Do Vendedor</p>
                         <article class="quantity">
                             <button>-</button>
-                            <p>1</p>
+                            <input type="number" class="product-quantity" value="2" min="1">
                             <button>+</button>
                         </article>
                     </article>
                     
                     <article class="price">
-                        <h3 class="cart-item-price">R$000,00</h3>
+                        <h3 class="cart-item-price">R$20,99</h3>
                         <article class="remove">
                             <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
                             <i class="excluir">Excluir</i> 
@@ -82,13 +83,13 @@
                         <p class="vendor">Nome Do Vendedor</p>
                         <article class="quantity">
                             <button>-</button>
-                            <p>1</p>
+                            <input type="number" class="product-quantity" value="1" min="1">
                             <button>+</button>
                         </article>
                     </article>
                     
                     <article class="price">
-                        <h3 class="cart-item-price">R$000,00</h3>
+                        <h3 class="cart-item-price">R$30,00</h3>
                         <article class="remove">
                             <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
                             <i class="excluir">Excluir</i> 
@@ -132,9 +133,177 @@
                             <button onclick="validarCEP()">CALCULAR</button>
                             <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
                         </section>
-                        
-    
+                    
 </main>
+<main class="frutas-section">
+   
+    <article class="seta">
+    <h2 class="section-title">Frutas </h2>
+    <section class="carousel-container">
+        <article class="carousel">
+
+            <section class="carousel-item">
+                <img src="imagens/maça.png" alt="Imagem de uma Maçã Fuji" class="product-image">
+                <article class="product-info">
+                    <h3 class="product-name">Maçã Fuji (300g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </section>
+            
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/maça.png" alt="Imagem de uma Maçã Fuji">
+                <article class="product-info">
+                    <h3 class="product-name">Maçã Fuji (300g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/maça.png" alt="Imagem de uma Maçã Fuji">
+                <article class="product-info">
+                    <h3 class="product-name">Maçã Fuji (300g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/maça.png" alt="Imagem de uma Maçã Fuji">
+                <article class="product-info">
+                    <h3 class="product-name">Maçã Fuji (300g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/maça.png" alt="Imagem de uma Maçã Fuji">
+                <article class="product-info">
+                    <h3 class="product-name">Maçã Fuji (300g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            
+            
+            <article class="carousel-item">
+                <img src="imagens/laranja.png" alt="Imagem de uma Laranja">
+                <article class="product-info">
+                    <h3 class="product-name">Laranja Lima (160g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/laranja.png" alt="Imagem de uma Laranja">
+                <article class="product-info">
+                    <h3 class="product-name">Laranja Lima (160g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                
+                <img src="imagens/laranja.png" alt="Imagem de uma Laranja">
+                <article class="product-info">
+                    <h3 class="product-name">Laranja Lima (160g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/laranja.png" alt="Imagem de uma Laranja">
+                <article class="product-info">
+                    <h3 class="product-name">Laranja Lima (160g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/laranja.png" alt="Imagem de uma Laranja">
+                <article class="product-info">
+                    <h3 class="product-name">Laranja Lima (160g)</h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/abacaxi.png" alt="Imagem de um Abacaxi">
+                <article class="product-info">
+                    <h3 class="product-name"> Abacaxi Pérola (200g) </h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/abacaxi.png" alt="Imagem de um Abacaxi">
+                <article class="product-info">
+                    <h3 class="product-name"> Abacaxi Pérola (200g) </h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/abacaxi.png" alt="Imagem de um Abacaxi">
+                <article class="product-info">
+                    <h3 class="product-name"> Abacaxi Pérola (200g) </h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <strong class="desconto"> -10% OFF </strong>
+                <img src="imagens/abacaxi.png" alt="Imagem de um Abacaxi">
+                <article class="product-info">
+                    <h3 class="product-name"> Abacaxi Pérola (200g) </h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <article class="carousel-item">
+                <img src="imagens/abacaxi.png" alt="Imagem de um Abacaxi">
+                <article class="product-info">
+                    <h3 class="product-name"> Abacaxi Pérola (200g) </h3>
+                    <p class="seller-name">NomedoVendedor</p>
+                    <p class="product-price">R$ 00,00</p>
+                    <button class="add-to-cart"> ADICIONAR </button>
+                </article>
+            </article>
+            <!-- Repetir o bloco "carousel-item" para cada produto -->
+    </article>
+
+            
+
+    </section>
+            <button class="carousel-control prev"><img src="imagens/seta-esquerda.png"></button>
+            <button class="carousel-control next"><img src="imagens/seta-direita.png"></button>
+</article>
+            <article class="carousel-indicators">
+                <button class="indicator"></button>
+                <button class="indicator"></button>
+                <button class="indicator"></button>
+            </article>
+</main>
+
+    <script src="js/carroselFrutas.js"> </script>
 
                     <!--          RODAPÉ            -->
 
@@ -145,5 +314,6 @@
 </html>
 
         <!-- Script -->
+
 
 <script src="js/validacaoCEP.js"> </script> 

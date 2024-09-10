@@ -6,9 +6,7 @@ const path = require('path');
 router.get('/js/menuMobile.js', (req, res) => {
     res.sendFile(path.join(__dirname, '../app/public/js/menuMobile.js'));
 });
-router.get('/js/carrinho.js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../app/public/js/carrinho.js'));
-});
+
 
 /* TESTES*/
 router.get('/testes', function(req, res) {

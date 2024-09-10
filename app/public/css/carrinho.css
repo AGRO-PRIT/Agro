@@ -76,7 +76,6 @@ h1 {
     flex-direction: column;
 }
 
-
 .remove img{
     height: 30px;
     width: 30px;
@@ -267,7 +266,7 @@ h1 {
     border-radius: 4px;
 }
 
-.quantity p {
+.product-quantity {
     margin: 6px;
     text-align: center;
     border-radius: 3px;
