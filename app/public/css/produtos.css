@@ -34,13 +34,14 @@
 
 
 .filter-section {
+    position: sticky;
     margin-bottom: 100px;
     width: 200px;
     padding: 90px;
+    transition: all 0.5s ease;
     border-radius: 5px;
-    margin-right: 20px; /* Espaçamento entre filtros e produtos */
-    flex-shrink: 0; /* Garante que a seção de filtros não encolha */
-
+    margin-right: 20px; 
+    flex-shrink: 0; 
 }
 
 .filter-section h2 {
