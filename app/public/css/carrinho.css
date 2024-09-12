@@ -186,7 +186,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    font-size: 1.3em;
+    font-size: 1.3em;   
 }
 
 .total {
@@ -229,6 +229,10 @@ h1 {
     margin-top: 30px;
     margin-bottom: 60px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.content-text{
+  margin-left: 10px;
 }
 
 .finalizar-compra input[type="text"] {
