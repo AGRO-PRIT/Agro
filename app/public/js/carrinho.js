@@ -19,6 +19,8 @@ function ready() {
     for (var i = 0; i < addToCartButtons.length; i++) {
         addToCartButtons[i].addEventListener("click", addProductToCart)
     }
+
+    updateTotal()
 }
  
 function addProductToCart(event) {
