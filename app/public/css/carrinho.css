@@ -55,7 +55,7 @@ h1 {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
-.cart-item .imagem-Maçã img{
+.cart-item img{
     width: 160px;
     height: 140px;
     margin: 30px;
@@ -275,4 +275,9 @@ h1 {
     padding-right: 5px;
     padding-left: 5px;
     width: 40px;
+}
+
+.product-image {
+    
+
 }
