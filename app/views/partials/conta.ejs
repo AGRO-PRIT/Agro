@@ -1,5 +1,4 @@
 <main class="container">
-
     <!-- Seção de Perfil -->
     <section class="sidebar">
         <article class="profile">
@@ -10,73 +9,93 @@
         <ul class="menu">
             <li>
                 <img src="imagens/icon_user-consumidor.png" alt="Imagem Icone Usuario">
-                <a href="#">Minha Conta</a>
+                <a href="#" onclick="mostrarSeção('minhaConta')">Minha Conta</a>
             </li>
             <li>
                 <img src="imagens/icon_pedidos.png" alt="Imagem Icone Pedidos">
-                <a href="#">Pedidos</a>
+                <a href="#" onclick="mostrarSeção('pedidos')">Pedidos</a>
             </li>
             <li>
                 <img src="imagens/icon_cartão.png" alt="Imagem Icone Cartões">
-                <a href="#">Cartões</a>
+                <a href="#" onclick="mostrarSeção('cartoes')">Cartões</a>
             </li>
             <li>
                 <img src="imagens/icon_home.png" alt="Imagem Icone Endereços">
-                <a href="#">Endereços</a>
+                <a href="#" onclick="mostrarSeção('enderecos')">Endereços</a>
             </li>
             <li>
                 <img src="imagens/icone_consumidor-config.png" alt="Imagem Icone Configurações">
-                <a href="#">Configurações</a>
+                <a href="#" onclick="mostrarSeção('configuracoes')">Configurações</a>
             </li>
         </ul>
     </section>
 
     <!-- Seção de Conteúdo -->
     <section class="page-container">
-        <h1>Minha Conta</h1> 
+        <section id="minhaConta" style="display: block;">
+            <h1>Minha Conta</h1>
+            <form id="form-dados">
+                <article class="box-container">
+                    <article class="box-dados-pessoais">
+                        <h3>Dados Pessoais</h3>
+                        <article class="input-wrapper">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Digite seu nome completo">
+                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                            <span class="error-message" id="nome-error"></span>
+                        </article>
+                        <article class="input-wrapper">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" placeholder="Digite seu CPF">
+                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                            <span class="error-message" id="cpf-error"></span>
+                        </article>
+                        <article class="input-wrapper">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" placeholder="Digite seu telefone">
+                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                            <span class="error-message" id="telefone-error"></span>
+                        </article>
+                    </article>
+                    
+                    <article class="box-dados-acesso">
+                        <h3>Dados de Acesso</h3>
+                        <article class="input-wrapper">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Digite seu email">
+                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                            <span class="error-message" id="email-error"></span>
+                        </article>
+                        <article class="input-wrapper">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" placeholder="Digite sua senha">
+                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                            <span class="error-message" id="senha-error"></span>
+                        </article>
+                    </article>
+                </article>
+                <button class="botao-enviar" type="submit">Salvar</button>
+            </form>
+        </section>
 
-        <form id="form-dados">
-            <article class="box-container">
-                <article class="box-dados-pessoais">
-                    <h3>Dados Pessoais</h3>
-                    <article class="input-wrapper">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" placeholder="Digite seu nome completo">
-                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                        <span class="error-message" id="nome-error"></span>
-                    </article>
-                    <article class="input-wrapper">
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" placeholder="Digite seu CPF">
-                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                        <span class="error-message" id="cpf-error"></span>
-                    </article>
-                    <article class="input-wrapper">
-                        <label for="telefone">Telefone</label>
-                        <input type="text" id="telefone" placeholder="Digite seu telefone">
-                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                        <span class="error-message" id="telefone-error"></span>
-                    </article>
-                </article>
-                
-                <article class="box-dados-acesso">
-                    <h3>Dados de Acesso</h3>
-                    <article class="input-wrapper">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Digite seu email">
-                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                        <span class="error-message" id="email-error"></span>
-                    </article>
-                    <article class="input-wrapper">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha">
-                        <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                        <span class="error-message" id="senha-error"></span>
-                    </article>
-                </article>
-            </article>
-            <button class="botao-enviar" type="submit">Salvar</button>
-        </form>
+        <section id="pedidos" style="display:none;">
+            <h1>Pedidos</h1>
+            <p>Conteúdo da seção Pedidos</p>
+        </section>
+
+        <section id="cartoes" style="display:none;">
+            <h1>Cartões</h1>
+            <p>Conteúdo da seção Cartões</p>
+        </section>
+
+        <section id="enderecos" style="display:none;">
+            <h1>Endereços</h1>
+            <p>Conteúdo da seção Endereços</p>
+        </section>
+
+        <section id="configuracoes" style="display:none;">
+            <h1>Configurações</h1>
+            <p>Conteúdo da seção Configurações</p>
+        </section>
     </section>
-    <script src="js/validacaoConta.js"></script>
 </main>

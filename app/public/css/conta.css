@@ -139,7 +139,7 @@
 }
 
 .input-wrapper input{
-    width: 500px;
+    width: calc(100% - 40px);
     padding: 12px;
     margin-top: 10px;
     border: 2px solid #ccc;
@@ -147,6 +147,7 @@
     font-size: 17px;
     align-items: center;
     justify-content: center;
+
 }
 
 .input-wrapper {
@@ -156,9 +157,10 @@
 .input-wrapper .edit-icon {
     position: absolute;
     right: 20px;
-    top: 50px;
+    top: 60%;
     transform: translateY(-50%);
     cursor: pointer;
+
 }
 
 /* Alinhamento de textos e espaçamentos */
