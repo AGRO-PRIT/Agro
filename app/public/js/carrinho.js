@@ -19,9 +19,10 @@ function ready() {
     for (var i = 0; i < addToCartButtons.length; i++) {
         addToCartButtons[i].addEventListener("click", addProductToCart)
     }
+    updateTotal()
 }
  
-function addProductToCart(event) {
+function addProductToCart(event) {  
     const button = event.target
     const productInfos = button.parentElement.parentElement
     const productImage = productInfos.getElementsByClassName("product-image")[0].src
@@ -34,7 +35,7 @@ function addProductToCart(event) {
  
     newCartProduct.innerHTML =
     `
-    <article class="carousel-item">
+
         <img src="${productImage}" alt="${productTitle}">
     </article>
     <article class="details">
@@ -52,7 +53,7 @@ function addProductToCart(event) {
             <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
             <i class="excluir">Excluir</i>
         </article>
-    </article>
+
     `
  
     const cart = document.querySelector(".cart-itens")
@@ -78,10 +79,12 @@ function updateTotal() {
         const productQuantity = cartProducts[i].getElementsByClassName("product-quantity")[0].value
  
         totalAmount += productPrice * productQuantity
+
     }
     totalAmount = totalAmount.toFixed(2)
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".total strong").innerText = "R$" + totalAmount
+
 }
  
  

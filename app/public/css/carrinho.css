@@ -19,12 +19,12 @@
 
 
 .container {
+    justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 150px;
 }
 
 .conteudo{  
-    align-items: center;
     display: flex;
 }
 
@@ -39,6 +39,7 @@ h1 {
 }
 
 .cart-itens{
+    top: 0;
     margin-left: 180px;
 }
 
@@ -71,46 +72,52 @@ h1 {
     flex: 1;
 }
 
-
-.price{
+.price {
     flex-direction: column;
 }
 
-.remove img{
+.remove .removimg{
+    margin: 0px;
     height: 30px;
     width: 30px;
 }
 
 .cart-item .details h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: var(--marrom)
 }
 
 .cart-item .details .vendor {
     color: #777;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .cart-item .details .quantity {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #b3b0b0b7;
+    width: 135px;
 }
 
 .cart-item .details .quantity button {
-    background-color: #eee;
-    border: none;
+    margin: 3px;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
     padding: 5px 10px;
-    border-radius: 4px;
     cursor: pointer;
+    border: none;
 }
 
 .cart-item .details .quantity button:hover {
-    background-color: #ddd;
+    background-color: #333;
 }
 
 .cart-item .price {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .price h3{
@@ -123,7 +130,7 @@ h1 {
 }
 
 .cart-item .remove {
-    margin-left: 30px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     color: var(--marrom);
@@ -132,16 +139,17 @@ h1 {
 }
 
 .cart-item .remove i {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400; 
+    font-weight: 450; 
     margin-left: 3px;
     font-size: 20px;
 }
 
 .pedido-final{
-    padding-top: 27px;
-    justify-content: right;
+    position: static;
+    top: 20px; 
+    align-self: flex-start; 
     margin-left: 180px;
+    justify-content: right;
 }
 
 .cupom{
@@ -170,7 +178,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.resumo .item {
+.resumo .item, .resumo .item-frete {
     font-weight: bold;
     color: #333;
     display: flex;
@@ -281,7 +289,10 @@ h1 {
     width: 40px;
 }
 
-.product-image {
-    
+.frutas-section{
+    margin-bottom: 80px;
+}
 
+.legumes-section{
+    margin-bottom: 80px;
 }
