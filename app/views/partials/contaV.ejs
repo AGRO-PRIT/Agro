@@ -4,30 +4,31 @@
         <!-- Seção de Perfil -->
         <section class="sidebar">
             <article class="profile">
+                <a href="#" onclick="mostrarSeção('minhaConta')">
                 <img src="imagens/icon_user.png" alt="Imagem do perfil">
-                <h3>Usuario123<br> <strong>Vendedor</strong> </h3>
+                <h3>Usuario123<br></a> <strong>Vendedor</strong> </h3>
             </article>
 
             <ul class="menu">
                 <li>
                     <img src="imagens/icon_user-consumidor.png" alt="Imagem Icone Usuario">
-                    <a href="#">Minha Conta</a>
+                    <a href="#" onclick="mostrarSeção('minhaConta')">Minha Conta</a>
                 </li>
                 <li>
                     <img src="imagens/icon_pedidos.png" alt="Imagem Icone Pedidos">
-                    <a href="#">Produtos</a>
+                    <a href="#" onclick="mostrarSeção('produtos')">Produtos</a>
                 </li>
                 <li>
                     <img src="imagens/icon_vendas.png" alt="Imagem Icone Vendas"> 
-                    <a href="#">Vendas</a>
+                    <a href="#" onclick="mostrarSeção('vendas')">Vendas</a>
                 </li>
                 <li>
                     <img src="imagens/icon_comentario.png" alt="Imagem Icone Comentarios">
-                    <a href="#">Avaliações</a>
+                    <a href="#"onclick="mostrarSeção('avaliacoes')">Avaliações</a>
                 </li>
                 <li>
                     <img src="imagens/icone_consumidor-config.png" alt="Configurações">
-                    <a href="#">Configurações</a>
+                    <a href="#"onclick="mostrarSeção('configuracoes')">Configurações</a>
                 </li>
             </ul>
         </section>
@@ -35,8 +36,9 @@
         <!-- Seção de Conteúdo -->
 
         <section class="page-container">
+            <section id="minhaConta" style="display: block;">
             <h1>Minha Conta</h1> 
-
+            <form id="form-dados">
             <article class="box-container">
                 <article class="box-dados-pessoais">
                     <h3>Dados Pessoais</h3>
@@ -71,6 +73,32 @@
                     </article>
                 </article>
             </article>
+            <button class="botao-enviar" type="submit">Salvar</button>
+        </form>
+    </section>
+
+            <!-- Outras Seções -->
+
+            <section id="produtos" style="display:none;">
+                <h1>Produtos</h1>
+                <p>Conteúdo da seção Produtos</p>
+            </section>
+    
+            <section id="vendas" style="display:none;">
+                <h1>Vendas</h1>
+                <p>Conteúdo da seção Vendas</p>
+            </section>
+    
+            <section id="avaliacoes" style="display:none;">
+                <h1>Avaliações</h1>
+                <p>Conteúdo da seção Avaliações</p>
+            </section>
+    
+            <section id="configuracoes" style="display:none;">
+                <h1>Configurações</h1>
+                <p>Conteúdo da seção Configurações</p>
+            </section>
+
         </section>
         
     </main>

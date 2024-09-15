@@ -52,6 +52,10 @@
     color: #333;
 }
 
+.profile h3 a{
+    color: #333;
+}
+
 .profile strong {
     margin-left: 10px;
     font-weight: 600;
