@@ -93,7 +93,6 @@ h1 {
 }
 
 .cart-item .details .quantity {
-    display: flex;
     align-items: center;
     margin-top: 10px;
     text-align: center;
@@ -107,13 +106,13 @@ h1 {
     background-color: transparent;
     color: black;
     font-size: 20px;
-    padding: 5px 10px;
+    padding: 5px;
     cursor: pointer;
     border: none;
 }
 
 .cart-item .details .quantity button:hover {
-    background-color: #333;
+    opacity: 0.4;
 }
 
 .cart-item .price {
@@ -295,4 +294,18 @@ h1 {
 
 .legumes-section{
     margin-bottom: 80px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas no Firefox */
+input[type="number"] {
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    background: transparent;
 }

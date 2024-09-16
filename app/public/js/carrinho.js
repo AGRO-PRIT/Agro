@@ -19,7 +19,17 @@ function ready() {
     for (var i = 0; i < addToCartButtons.length; i++) {
         addToCartButtons[i].addEventListener("click", addProductToCart)
     }
+    const increaseQuantityButtons = document.getElementsByClassName("mais");
+    for (let i = 0; i < increaseQuantityButtons.length; i++) {
+        increaseQuantityButtons[i].addEventListener("click", increaseQuantity);
+    }
+
+    const decreaseQuantityButtons = document.getElementsByClassName("menos");
+    for (let i = 0; i < decreaseQuantityButtons.length; i++) {
+        decreaseQuantityButtons[i].addEventListener("click", decreaseQuantity);
+    }
     updateTotal()
+    updateCartCount();
 }
  
 function addProductToCart(event) {  
@@ -27,9 +37,18 @@ function addProductToCart(event) {
     const productInfos = button.parentElement.parentElement
     const productImage = productInfos.getElementsByClassName("product-image")[0].src
     const productTitle = productInfos.getElementsByClassName("product-name")[0].innerText
-    const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText
+    const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText.replace("R$ ", "R$")
    
-   
+    const productsCartName = document.getElementsByClassName("cart-product-title")
+    for (var i = 0; i < productsCartName.length; i++) {
+        if (productsCartName[i].innerText == productTitle) {
+            productsCartName[i].parentElement.parentElement.getElementsByClassName("product-quantity")[0].value++;
+            updateTotal();
+            return;
+        }
+    }
+
+
     let newCartProduct = document.createElement("article")
     newCartProduct.classList.add("cart-item")
  
@@ -37,14 +56,14 @@ function addProductToCart(event) {
     `
 
         <img src="${productImage}" alt="${productTitle}">
-    </article>
+   
     <article class="details">
-        <h3>${productTitle}</h3>
+        <h3 class="cart-product-title">${productTitle}</h3>
         <p class="vendor">NomedoVendedor</p>
         <article class="quantity">
-            <button>-</button>
-            <input type="number" class="product-quantity" value="1" min="1">
-            <button>+</button>
+            <button class="menos">-</button>
+            <input type="number" class="product-quantity" value="1" min="1"> 
+            <button class="mais">+</button>
         </article>
     </article>
     <article class="price">
@@ -53,21 +72,39 @@ function addProductToCart(event) {
             <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
             <i class="excluir">Excluir</i>
         </article>
-
+    </article>
     `
  
     const cart = document.querySelector(".cart-itens")
     cart.append(newCartProduct)
- 
+
+    
+
     // Adiciona eventos aos novos elementos
-    newCartProduct.getElementsByClassName("excluir")[0].addEventListener("click", removeProduct)
-    newCartProduct.getElementsByClassName("product-quantity")[0].addEventListener("change", updateTotal)
- 
+    newCartProduct.querySelector(".product-quantity").addEventListener("change", updateTotal)
+    newCartProduct.querySelector(".excluir").addEventListener("click", removeProduct)
+    newCartProduct.querySelector(".mais").addEventListener("click", increaseQuantity)
+    newCartProduct.querySelector(".menos").addEventListener("click", decreaseQuantity)
+
     updateTotal()
 }
- 
+
+function increaseQuantity(event) {
+    let quantityInput = event.target.parentElement.querySelector(".product-quantity");
+    quantityInput.value = parseInt(quantityInput.value) + 1;
+    updateTotal();
+}
+
+function decreaseQuantity(event) {
+    let quantityInput = event.target.parentElement.querySelector(".product-quantity");
+    if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+        updateTotal();
+    }
+}
+
 function removeProduct(event) {
-    event.target.parentElement.parentElement.parentElement.remove()
+    event.target.closest(".cart-item").remove()
     updateTotal()
 }
  
@@ -79,11 +116,14 @@ function updateTotal() {
         const productQuantity = cartProducts[i].getElementsByClassName("product-quantity")[0].value
  
         totalAmount += productPrice * productQuantity
-
+        
     }
+    
     totalAmount = totalAmount.toFixed(2)
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".total strong").innerText = "R$" + totalAmount
+    document.querySelector("#total-value").innerText = "R$" + totalAmount
+    document.querySelector("#product-count").innerText = productCount
 
 }
  
