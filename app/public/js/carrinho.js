@@ -3,13 +3,24 @@ if (document.readyState == "loading") {
 } else {
     ready()
 }
- 
+
+// variavel global para o valor total 
+
+var totalAmount = "0,00"
+
+// funcão carregamento de cada constante 
+
 function ready() {
     const removeProductButtons = document.getElementsByClassName("excluir")
     for (var i = 0; i < removeProductButtons.length; i++) {
         removeProductButtons[i].addEventListener("click", removeProduct)
     }
- 
+    
+    const removeImageButtons = document.getElementsByClassName("removimg");
+    for (var i = 0; i < removeImageButtons.length; i++) {
+        removeImageButtons[i].addEventListener("click", removeProduct);
+    }
+
     const quantityInputs = document.getElementsByClassName("product-quantity")
     for (var i = 0; i < quantityInputs.length; i++) {
         quantityInputs[i].addEventListener("change", updateTotal)
@@ -28,10 +39,33 @@ function ready() {
     for (let i = 0; i < decreaseQuantityButtons.length; i++) {
         decreaseQuantityButtons[i].addEventListener("click", decreaseQuantity);
     }
+
+    const purchaseButton = document.getElementsByClassName("checkout-button")[0]
+    purchaseButton.addEventListener("click", makePurchase)
+
     updateTotal()
     updateCartCount();
 }
- 
+
+// Mensagem ao Finalizar a compra + verifiçação de mensagem de carrinho vazio
+
+function makePurchase(){
+    if(totalAmount == "0,00"){
+        alert("Seu carrinho está vazio!")
+    } else{
+        alert(
+            `
+            Obrigado pela sua compra!
+            Valor do pedido: ${totalAmount}
+            Volte sempre!
+            `
+        )
+    }
+}
+
+
+// adicionar cada produto ao clicar em "adicionar" puxando informações da importação html
+
 function addProductToCart(event) {  
     const button = event.target
     const productInfos = button.parentElement.parentElement
@@ -48,6 +82,7 @@ function addProductToCart(event) {
         }
     }
 
+//  importação do html imposto de cada item tal como pegar informação de cada produto para adicionar
 
     let newCartProduct = document.createElement("article")
     newCartProduct.classList.add("cart-item")
@@ -78,22 +113,25 @@ function addProductToCart(event) {
     const cart = document.querySelector(".cart-itens")
     cart.append(newCartProduct)
 
-    
+// chamar eventos 
 
-    // Adiciona eventos aos novos elementos
     newCartProduct.querySelector(".product-quantity").addEventListener("change", updateTotal)
     newCartProduct.querySelector(".excluir").addEventListener("click", removeProduct)
     newCartProduct.querySelector(".mais").addEventListener("click", increaseQuantity)
     newCartProduct.querySelector(".menos").addEventListener("click", decreaseQuantity)
-
+    checkIfCartIsEmpty();
     updateTotal()
 }
+
+// botão de mais funcionar e adicionar um item
 
 function increaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
     quantityInput.value = parseInt(quantityInput.value) + 1;
     updateTotal();
 }
+
+// botão de menos funcionar e tirar um item
 
 function decreaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
@@ -103,13 +141,40 @@ function decreaseQuantity(event) {
     }
 }
 
+// remoção de produtos 
+
 function removeProduct(event) {
-    event.target.closest(".cart-item").remove()
-    updateTotal()
+    const cartItem = event.target.closest(".cart-item");
+    cartItem.remove();
+
+    updateTotal();
+
+    checkIfCartIsEmpty();
 }
- 
+
+// remoção de produtos ( validação carrinho vazio para aparecer mensagem)
+
+function checkIfCartIsEmpty() {
+    const cartItems = document.getElementsByClassName("cart-item");
+    const emptyCartMessage = document.querySelector(".empty-cart-message");
+    const emptyCartMessage2 = document.querySelector(".empty-cart-message2");
+    const cartContainer = document.querySelector(".cart-itens");
+
+    if (cartItems.length === 0) {
+        emptyCartMessage.style.display = "block";
+        emptyCartMessage2.style.display = "block"; 
+        cartContainer.classList.add("empty-cart"); 
+    } else {
+        emptyCartMessage.style.display = "none";
+        emptyCartMessage2.style.display = "none";    
+        cartContainer.classList.remove("empty-cart");  
+    }
+}
+
+// calculo do preço total 
+
 function updateTotal() {
-    let totalAmount = 0
+   totalAmount = 0
     const cartProducts = document.getElementsByClassName("cart-item")
     for (var i = 0; i < cartProducts.length; i++) {  
         const productPrice = parseFloat(cartProducts[i].getElementsByClassName("cart-item-price")[0].innerText.replace("R$", "").replace(",", "."))
@@ -123,7 +188,9 @@ function updateTotal() {
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".total strong").innerText = "R$" + totalAmount
     document.querySelector("#total-value").innerText = "R$" + totalAmount
-    document.querySelector("#product-count").innerText = productCount
+
+    // tag para funcionar a quantidade de produtos totais
+    // document.querySelector("#product-count").innerText = productCount
 
 }
  
