@@ -195,7 +195,15 @@ body {
     margin-right: 10px;
 }
 
+/* Carrinho Contador Js */
 
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 /* <!-- COMEÇO SUBNAV -->  */
 
@@ -281,7 +289,10 @@ body {
     text-decoration: none;
 }
 
-
+.active-link {
+    color: var(--corprincipal);/* Cor de destaque */
+    font-weight: 800
+}
 
 /* <!-- COMEÇO RODAPÉ -->  */
 

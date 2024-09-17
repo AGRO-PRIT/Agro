@@ -190,7 +190,7 @@
     padding: 13px;
     text-align: center;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
+    border-radius: 18px;
     margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
 
 }
@@ -230,16 +230,15 @@
 .botao-adicionar {
     width: 100%;
     padding: 15px;
-    background-color: var(--corlayouts);
+    background-color: white;
     color: var(--verdeescuro);
-    border: 3px solid var(--verdeescuro);
+    border: 3px solid #297f57;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 19px;
     cursor: pointer;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
-    border-radius: 10px;
 }
 
 .botao-adicionar:hover {

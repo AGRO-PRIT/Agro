@@ -2,11 +2,12 @@
  
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>  
     <link rel="stylesheet" href="css/home.css">
+    <script async src="js/navbar.js"> </script>
 
 <section class="navbar-tudo">
-<nav class="navbar">
 
-         
+    <nav class="navbar">
+
           <!-- Logo AgroBox -->
            
         <section class="logo">
@@ -37,7 +38,8 @@
 
         <section class="carrinho">
             <a href="/carrinho">
-            <img src="imagens/carrinho.png" alt="Icone de carrinho de compras" >
+            <img src="imagens/carrinho.png" alt="Icone de carrinho de compras">
+            <span id="cart-count" class="cart-count" >0</span> 
             <a class="text-carrinho" href="/carrinho"> Carrinho </a>
             </a>
         </section>
@@ -66,9 +68,9 @@
         <main class="subnav">
 
             <ul class="links">
-                <li> <a href="/home"> Início </a> </li>
+                <li> <a id="link-home" href="/home"> Início </a> </li>
                 <li class="subnav-list"> 
-                <a class="produtos" href="/produtos"> Produtos </a> 
+                <a id="link-produtos" class="produtos" href="/produtos"> Produtos </a> 
     
             <section class="dropdown-menu">
                 <a href="/legumes"> Legumes </a>
@@ -83,9 +85,9 @@
             </section>
                 </li>
                 
-                <li> <a href="/box">Box</a> </li>
-                <li> <a href="/premium">Premium</a> </li>
-                <li> <a href="/eventos">Eventos</a> </li>
+                <li> <a id="link-box" href="/box">Box</a> </li>
+                <li> <a id="link-premium" href="/premium">Premium</a> </li>
+                <li> <a id="link-eventos" href="/eventos">Eventos</a> </li>
             </ul>
 
                     

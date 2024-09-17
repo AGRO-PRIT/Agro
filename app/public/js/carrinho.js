@@ -78,6 +78,7 @@ function addProductToCart(event) {
         if (productsCartName[i].innerText == productTitle) {
             productsCartName[i].parentElement.parentElement.getElementsByClassName("product-quantity")[0].value++;
             updateTotal();
+            updateCartCount();
             return;
         }
     }
@@ -148,8 +149,22 @@ function removeProduct(event) {
     cartItem.remove();
 
     updateTotal();
-
+    updateCartCount();
     checkIfCartIsEmpty();
+}
+
+// Contador Carrinho
+
+function updateCartCount() {
+    let cartItems = document.getElementsByClassName("cart-item");
+    let totalItems = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+        let quantity = parseInt(cartItems[i].getElementsByClassName("product-quantity")[0].value);
+        totalItems += quantity;
+    }
+
+    document.getElementById("cart-count").innerText = totalItems;
 }
 
 // remoção de produtos ( validação carrinho vazio para aparecer mensagem)
