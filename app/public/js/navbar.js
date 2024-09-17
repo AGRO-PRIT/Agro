@@ -1,7 +1,7 @@
 const currentUrl = window.location.pathname;
 
 // Checar qual link deve estar ativo com base na URL
-if (currentUrl === '/home') {
+if (currentUrl === '/') {
     document.getElementById('link-home').classList.add('active-link');
 } else if (currentUrl === '/produtos') {
     document.getElementById('link-produtos').classList.add('active-link');
@@ -12,3 +12,6 @@ if (currentUrl === '/home') {
 } else if (currentUrl === '/eventos') {
     document.getElementById('link-eventos').classList.add('active-link');
 }
+
+
+   

@@ -43,7 +43,7 @@ function ready() {
     const purchaseButton = document.getElementsByClassName("checkout-button")[0]
     purchaseButton.addEventListener("click", makePurchase)
 
-    updateTotal()
+    updateTotal();
     updateCartCount();
 }
 
@@ -120,7 +120,8 @@ function addProductToCart(event) {
     newCartProduct.querySelector(".excluir").addEventListener("click", removeProduct)
     newCartProduct.querySelector(".mais").addEventListener("click", increaseQuantity)
     newCartProduct.querySelector(".menos").addEventListener("click", decreaseQuantity)
-    checkIfCartIsEmpty();
+    checkIfCartIsEmpty(); 
+    updateCartCount();
     updateTotal()
 }
 
@@ -130,6 +131,7 @@ function increaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
     quantityInput.value = parseInt(quantityInput.value) + 1;
     updateTotal();
+  
 }
 
 // botão de menos funcionar e tirar um item
@@ -158,12 +160,16 @@ function removeProduct(event) {
 function updateCartCount() {
     let cartItems = document.getElementsByClassName("cart-item");
     let totalItems = 0;
-
+    if(totalItems.length === 0){
+        document.getElementById("cart-count").style.display = "none";
+    }else {
     for (let i = 0; i < cartItems.length; i++) {
         let quantity = parseInt(cartItems[i].getElementsByClassName("product-quantity")[0].value);
         totalItems += quantity;
+        
     }
-
+    document.getElementById("cart-count").style.display = "inline";
+}
     document.getElementById("cart-count").innerText = totalItems;
 }
 
