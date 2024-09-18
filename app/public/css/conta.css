@@ -216,7 +216,7 @@
     margin-bottom: 4px;
 }
 
-/* segunda parte seção conta Consumidor Parte Pedidos */
+/* Segunda parte seção conta Consumidor Parte Pedidos */
 
 .menu2{
     margin-left: 50px;
@@ -235,7 +235,10 @@
     color: var(--marrom);
 }
 
+/* Seção Principal */
+
 .container-pedidos{
+    /* height: 460px; */
     border: 1px solid rgba(121, 121, 121, 0.24);
     text-align: center;
     font-size: 25px;
