@@ -150,7 +150,9 @@ body {
 
 /* <!-- COMEÇO PERFIL -->  */
 
-
+.links-nav{
+    display: flex;
+}
 
 .perfil{
     align-items: center;
@@ -164,6 +166,7 @@ body {
     color: #ffff;
     text-align: center;
     margin-right: 10px;
+    line-height: 45px;
 }
 
 .perfil img {
@@ -176,6 +179,7 @@ body {
 /* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
 
 .links-nav a{
+    text-decoration: none;
     z-index: -1000;
 }
 
@@ -191,17 +195,22 @@ body {
     font-size: 18px;
     color: #ffff;
     text-align: center;
-    margin-left: 3px;
+    margin-left: 10px;
+    line-height: 45px;  
+   
 }
 
 .carrinho img {
     height: 45px;
-  
 }
 
 /* Carrinho Contador Js */
 
 .cart-count {
+    top: 0;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: -8px;
     background-color: white;
     color: var(--corprincipal);
     padding: 3px 7px;

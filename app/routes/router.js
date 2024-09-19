@@ -158,6 +158,11 @@ router.get('/sobre', function(req, res) {
     res.render('pages/sobre');
 });
 
+/* Vendedor Perfil para ver*/
+
+router.get('/vendedor', function(req, res) {
+    res.render('pages/vendedor');
+});
 
 module.exports = router;
 
