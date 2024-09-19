@@ -39,7 +39,7 @@
 }
 
 .agro-content ul {
-  margin-bottom: 60px;
+ 
   list-style-type: disc; /* Bolinhas antes dos itens */
   padding-left: 50px;
 }
@@ -131,3 +131,21 @@
   color: var(--cortexto);
 }
 
+.message-button-agrobox1 {
+  margin-top: 20px;
+  margin-left: 55px;
+  font-size: 20px;
+  padding: 10px 55px;
+  color:  #71b21e;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  margin-bottom: 60px;
+}
+
+ .message-button-agrobox1.message-button-agrobox1:hover{
+  background: #308467;
+  color: var(--cortexto);
+}

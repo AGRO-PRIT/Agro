@@ -131,7 +131,7 @@ function increaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
     quantityInput.value = parseInt(quantityInput.value) + 1;
     updateTotal();
-  
+    updateCartCount();
 }
 
 // botão de menos funcionar e tirar um item
@@ -141,6 +141,7 @@ function decreaseQuantity(event) {
     if (parseInt(quantityInput.value) > 1) {
         quantityInput.value = parseInt(quantityInput.value) - 1;
         updateTotal();
+        updateCartCount();
     }
 }
 
@@ -168,9 +169,10 @@ function updateCartCount() {
         totalItems += quantity;
         
     }
-    document.getElementById("cart-count").style.display = "inline";
+    document.getElementById("cart-count").style.display = "inline-block";
 }
     document.getElementById("cart-count").innerText = totalItems;
+    document.querySelector(".cart-countTotal").innerText = totalItems;
 }
 
 // remoção de produtos ( validação carrinho vazio para aparecer mensagem)
@@ -210,8 +212,6 @@ function updateTotal() {
     document.querySelector(".total strong").innerText = "R$" + totalAmount
     document.querySelector("#total-value").innerText = "R$" + totalAmount
 
-    // tag para funcionar a quantidade de produtos totais
-    // document.querySelector("#product-count").innerText = productCount
 
 }
  
