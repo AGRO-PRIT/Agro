@@ -48,16 +48,16 @@
 }
 
 .imagem-primeiro-box{
-    margin-right: 100px;
+    display: block;
 }
 
 .imagem-primeiro-box img {
     outline: none;
     width: 100%;
-    height: 100%;
+    height: 800px;
     display: block;
     object-fit: contain;
-    margin-right: 300px;
+    border-bottom: none;
 }
 
 .primeiro-box {

@@ -25,7 +25,7 @@
   }
 
 a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -150,7 +150,9 @@ body {
 
 /* <!-- COMEÇO PERFIL -->  */
 
-
+.links-nav{
+    display: flex;
+}
 
 .perfil{
     align-items: center;
@@ -164,6 +166,7 @@ body {
     color: #ffff;
     text-align: center;
     margin-right: 10px;
+    line-height: 45px;
 }
 
 .perfil img {
@@ -175,8 +178,13 @@ body {
 
 /* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
 
+.links-nav a{
+    text-decoration: none;
+    z-index: -1000;
+}
 
 .carrinho{
+    z-index: 10;
     align-items: center;
     display: flex;
     margin-right: 50px;
@@ -187,15 +195,30 @@ body {
     font-size: 18px;
     color: #ffff;
     text-align: center;
-    margin-left: 3px;
+    margin-left: 10px;
+    line-height: 45px;  
+   
 }
 
 .carrinho img {
     height: 45px;
-    margin-right: 10px;
 }
 
+/* Carrinho Contador Js */
 
+.cart-count {
+    top: 0;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: -8px;
+    background-color: white;
+    color: var(--corprincipal);
+    padding: 3px 7px;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.8;
+}
 
 /* <!-- COMEÇO SUBNAV -->  */
 
@@ -281,7 +304,10 @@ body {
     text-decoration: none;
 }
 
-
+.active-link {
+    color: var(--corprincipal);/* Cor de destaque */
+    font-weight: 800
+}
 
 /* <!-- COMEÇO RODAPÉ -->  */
 

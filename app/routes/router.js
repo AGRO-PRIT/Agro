@@ -8,10 +8,13 @@ router.get('/js/menuMobile.js', (req, res) => {
 });
 
 
-/* TESTES*/
+/* Pagina TESTES*/
+
 router.get('/testes', function(req, res) {
     res.render('pages/testes');
 });
+
+/* Pagina Nav*/
 
 router.get('/', function(req, res) {
     res.render('pages/home');
@@ -71,7 +74,7 @@ router.get('/faca-box', function(req, res) {
 });
 
 
-/* menudropDown */
+/* menudropDown sub */
 
 router.get('/legumes', function(req, res) {
     res.render('pages/legumes');
@@ -135,5 +138,31 @@ router.get('/contaConsumidor', function(req, res) {
 router.post('/contaConsumidor', function(req, res) {
     res.redirect('/contaConsumidor');
 });
+
+
+/* Produto */
+
+router.get('/produto', function(req, res) {
+    res.render('pages/produto');
+});
+
+/* Evento */
+
+router.get('/evento', function(req, res) {
+    res.render('pages/evento');
+});
+
+/* Sobre Nós */
+
+router.get('/sobre', function(req, res) {
+    res.render('pages/sobre');
+});
+
+/* Vendedor Perfil para ver*/
+
+router.get('/vendedor', function(req, res) {
+    res.render('pages/vendedor');
+});
+
 module.exports = router;
 

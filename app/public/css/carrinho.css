@@ -45,8 +45,8 @@ h1 {
 }
 
 /* Mensagem Carrinho Vazio Javascript */
+
 .empty-cart-message{
-   
     font-weight: 550;
     margin-top: 230px;
     font-size: 30px;
@@ -214,6 +214,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+.total-pedido{
+    margin-left: 135px;
+}
+
+.total-pedido2{
+    margin-left: 215px;
+}
+
 .resumo .item, .resumo .item-frete {
     font-weight: bold;
     color: #333;
@@ -356,7 +364,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* Remove as setas no Firefox */
 input[type="number"] {
     border: none;
     padding: 0;
