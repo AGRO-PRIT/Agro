@@ -8,3 +8,13 @@ function mostrarSeção(seção) {
     document.getElementById(seção).style.display = 'block';
 }
 
+function mostrarSeção2(seção) {
+    // Esconde todas as seções
+    document.querySelectorAll('.container-pedidos > section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+
+    // Mostra a seção selecionada
+    document.getElementById(seção).style.display = 'block';
+}
+

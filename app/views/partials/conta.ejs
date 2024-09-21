@@ -33,7 +33,7 @@
 
     <!-- Seção de Conteúdo -->
     <section class="page-container">
-        <section id="minhaConta" style="display: block;">
+        <section id="minhaConta" class="minhaConta" style="display: block;">
             <h1>Minha Conta</h1>
             <form id="form-dados">
                 <article class="box-container">
@@ -79,36 +79,343 @@
             </form>
         </section>
 
-        <section id="pedidos" style="display:none;">
-            <h1>Pedidos</h1>  
+                                <!-- Seções-->
+
+<!-- Seção Pedidos -->
+
+        <section id="pedidos"  style="display:none;">
+            <h1 class="Titulos">Pedidos</h1>  
             <article class="container-pedidos">
 
                 <ul class="menu2">
-
-                    <li> <a href="#" onclick="mostrarSeção('tudo')">Tudo</a> </li>
-                    <li><a href="#" onclick="mostrarSeção('pagar')">A pagar</a></li>
-                    <li><a href="#" onclick="mostrarSeção('andamento')">Em andamento</a></li>
-                    <li><a href="#" onclick="mostrarSeção('finalizado')">Finalizado</a></li>
-                    <li><a href="#" onclick="mostrarSeção('Tcancelado')">Cancelado</a></li>
+                    <li> <a href="#"onclick="mostrarSeção2('tudo')">Tudo</a> </li>
+                    <li><a href="#" onclick="mostrarSeção2('pagar')">A pagar</a></li>
+                    <li><a href="#" onclick="mostrarSeção2('andamento')">Em andamento</a></li>
+                    <li><a href="#" onclick="mostrarSeção2('finalizado')">Finalizado</a></li>
+                    <li><a href="#" onclick="mostrarSeção2('cancelado')">Cancelado</a></li>
                 </ul>
-                    
-                <p>Conteúdo da seção Pedidos</p>
-            </article>
-            
-        </section>
 
+                <!-- Seções DENTRO de Produtos -->
+
+    <!-- SeçãoP "Tudo" que ta na tela Inicial de Produtos -->
+
+    <section id="tudo"> 
+
+            <section class="produtosGeral">
+                <article class="produto">
+
+                    <article class="information-produto">
+                        <img src="imagens/Frutas/maça.png">
+                        <h1>Nome do <br>Produto</h1>
+                        <p>Quantidade: 1</p>
+                        <h3>Valor: R$00,00</h3>
+                    </article>
+
+                    
+                    <article class="details-produtos">
+                        
+                        <article class="tittle"> 
+                            <h1><strong>Entrega 1</strong> - Vendido por NomedoVendedor</h1>
+                        </article>
+
+                    <article class="details-produtosInterior">
+        
+                        <article class="detail-produto">
+                            <p>25/04/2024</p>
+                            <p>08:34</p>
+                            <img src="imagens/icone_consumidor-etiqueta.png">
+                            <h3>Pedido<br>Realizado</h3>
+                        </article>
+
+                        <!-- <article class="connector"></article>  -->
+
+                        <article class="detail-produto">
+                            <p>30/04/2024</p>
+                            <p>20:03</p>
+                            <img src="imagens/icone_consumidor-mão.png"">
+                            <h3>Pagamento<br>Confirmado</h3>
+                        </article>
+                        
+                        <article class="detail-produto">
+                            <p>31/04/2024</p>
+                            <p>23:14</p>
+                            <img src="imagens/icone_consumidor-caminhão.png">
+                            <h3>Em<br>transporte</h3>
+                        </article>
+
+                        <article class="detail-produto">
+                            <p>11/05/2024</p>
+                            <p>17:30</p>
+                            <img src="imagens/icone_consumidor-caixa.png">
+                            <h3>Pedido<br>entregue</h3>
+                        </article>
+                    </article>
+                    </article>
+
+                    <article class="resumo-produtos">
+                        <h3>Resumo da Compra</h3>
+                        <p>Pedido:<strong>1234567890</strong> </p>
+                        <p>Data do Pedido: <br><strong>
+                            25/04/2024</strong>
+                        </p>
+                        <p>Valor total:<strong>R$000,00</strong></p>
+                    </article>
+
+                </article>
+            </section>
+<!-- 2 -->
+            <section class="produtosGeral">
+                <article class="produto">
+
+                    <article class="information-produto">
+                        <img src="imagens/Frutas/melancia.png">
+                        <h1>Nome do <br>Produto</h1>
+                        <p>Quantidade: 1</p>
+                        <h3>Valor: R$00,00</h3>
+                    </article>
+
+                    <article class="details-produtos">
+                        <article class="tittle"> 
+                            <h1><strong>Entrega 1</strong> - Vendido por NomedoVendedor</h1>
+                        </article>
+
+                    <article class="details-produtosInterior">
+                        <article class="detail-produto">
+                            <p>25/04/2024</p>
+                            <p>08:34</p>
+                            <img src="imagens/icone_consumidor-etiqueta.png">
+                            <h3>Pedido<br>Realizado</h3>
+                        </article>
+
+                        <!-- <article class="connector"></article>  -->
+
+                        <article class="detail-produto">
+                            <p>30/04/2024</p>
+                            <p>20:03</p>
+                            <img src="imagens/icone_consumidor-mão.png"">
+                            <h3>Pagamento<br>Confirmado</h3>
+                        </article>
+                        
+                        <article class="detail-produto">
+                            <p>31/04/2024</p>
+                            <p>23:14</p>
+                            <img src="imagens/icone_consumidor-caminhão.png">
+                            <h3>Em<br>transporte</h3>
+                        </article>
+
+                        <article class="detail-produto">
+                            <p>11/05/2024</p>
+                            <p>17:30</p>
+                            <img src="imagens/icone_consumidor-caixa.png">
+                            <h3>Pedido<br>entregue</h3>
+                        </article>
+                    </article>
+                    </article>
+
+                    <article class="resumo-produtos">
+                       
+
+                    </article>
+            </section>
+<!-- 3 -->
+            <section class="produtosGeral">
+                <article class="produto">
+
+                    <article class="information-produto">
+                        <img src="imagens/Frutas/maça.png">
+                        <h1>Nome do <br>Produto</h1>
+                        <p>Quantidade: 1</p>
+                        <h3>Valor: R$00,00</h3>
+                    </article>
+
+                    
+                    <article class="details-produtos">
+                        
+                        <article class="tittle"> 
+                            <h1><strong>Entrega 1</strong> - Vendido por NomedoVendedor</h1>
+                        </article>
+
+                    <article class="details-produtosInterior">
+        
+                        <article class="detail-produto">
+                            <p>25/04/2024</p>
+                            <p>08:34</p>
+                            <img src="imagens/icone_consumidor-etiqueta.png">
+                            <h3>Pedido<br>Realizado</h3>
+                        </article>
+
+                        <!-- <article class="connector"></article>  -->
+
+                        <article class="detail-produto">
+                            <p>30/04/2024</p>
+                            <p>20:03</p>
+                            <img src="imagens/icone_consumidor-mão.png"">
+                            <h3>Pagamento<br>Confirmado</h3>
+                        </article>
+                        
+                        <article class="detail-produto">
+                            <p>31/04/2024</p>
+                            <p>23:14</p>
+                            <img src="imagens/icone_consumidor-caminhão.png">
+                            <h3>Em<br>transporte</h3>
+                        </article>
+
+                        <article class="detail-produto">
+                            <p>11/05/2024</p>
+                            <p>17:30</p>
+                            <img src="imagens/icone_consumidor-caixa.png">
+                            <h3>Pedido<br>entregue</h3>
+                        </article>
+                    </article>
+                    </article>
+
+                    <article class="resumo-produtos">
+                        <h3>Resumo da Compra</h3>
+                        <p>Pedido:<strong>1234567890</strong> </p>
+                        <p>Data do Pedido: <br><strong>
+                            25/04/2024</strong>
+                        </p>
+                        <p>Valor total:<strong>R$000,00</strong></p>
+                    </article>
+
+                </article>
+            </section>
+        </section>
+        
+
+       
+    </section>
+
+
+        
+<!-- SeçãoP A pagar -->
+
+    <section id="pagar" style="display:none;">
+            
+        <section class="produtosGeral">
+            <article class="produto">
+
+                <article class="information-produto">
+                    <img src="imagens/Frutas/maça.png">
+                    <h1>Nome do <br>Produto</h1>
+                    <p>Quantidade: 1</p>
+                    <h3>Valor: R$00,00</h3>
+                </article>
+
+                
+                <article class="details-produtos">
+                    
+                    <article class="tittle"> 
+                        <h1><strong>Entrega 1</strong> - Vendido por NomedoVendedor</h1>
+                    </article>
+
+                <article class="details-produtosInterior">
+    
+                    <article class="detail-produto">
+                        <p>25/04/2024</p>
+                        <p>08:34</p>
+                        <img src="imagens/icone_consumidor-etiqueta.png">
+                        <h3>Pedido<br>Realizado</h3>
+                    </article>
+
+                    <!-- <article class="connector"></article>  -->
+
+                    <article class="detail-produtoP">
+                        <p>30/04/2024</p>
+                        <p>20:03</p>
+                        <img src="imagens/icone_consumidor-mão.png"">
+                        <h3>Pagamento<br>Confirmado</h3>
+                    </article>
+                    
+                    <article class="detail-produtoP">
+                        <p>31/04/2024</p>
+                        <p>23:14</p>
+                        <img src="imagens/icone_consumidor-caminhão.png">
+                        <h3>Em<br>transporte</h3>
+                    </article>
+
+                    <article class="detail-produtoP">
+                        <p>11/05/2024</p>
+                        <p>17:30</p>
+                        <img src="imagens/icone_consumidor-caixa.png">
+                        <h3>Pedido<br>entregue</h3>
+                    </article>
+                </article>
+                </article>
+
+                <article class="resumo-produtos">
+                    <h3>Resumo da Compra</h3>
+                    <p>Pedido:<strong>1234567890</strong> </p>
+                    <p>Data do Pedido: <br><strong>
+                        25/04/2024</strong>
+                    </p>
+                    <p>Valor total:<strong>R$000,00</strong></p>
+                </article>
+
+            </article>
+        </section>
+        
+   
+    </section>
+
+<!-- SeçãoP Em andamento -->
+
+    <section id="andamento" style="display:none;">
+
+    </section>
+
+<!-- SeçãoP Finalizado -->
+
+    <section id="finalizado" style="display:none;">
+
+    </section>
+
+<!-- SeçãoP Cancelado -->
+
+    <section id="cancelado" style="display:none;">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Seção Cartões -->
+ 
         <section id="cartoes" style="display:none;">
-            <h1>Cartões</h1>
+            <h1 class="Titulos">Cartões</h1>
             <p>Conteúdo da seção Cartões</p>
         </section>
 
+<!-- Seção Endereçõs -->
+
         <section id="enderecos" style="display:none;">
-            <h1>Endereços</h1>
+            <h1 class="Titulos">Endereços</h1>
             <p>Conteúdo da seção Endereços</p>
         </section>
 
+<!-- Seção Configurações -->
+
         <section id="configuracoes" style="display:none;">
-            <h1>Configurações</h1>
+            <h1 class="Titulos">Configurações</h1>
             <p>Conteúdo da seção Configurações</p>
         </section>
     </section>

@@ -108,7 +108,7 @@
 
 
 .page-container {
-    width: 70%;
+    width: 1260px;
     padding: 30px;
     padding-bottom: 40px;
     background-color: white;
@@ -117,7 +117,7 @@
     box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
 }
 
-.page-container h1{
+.page-container .minhaConta h1{
     margin-bottom: 20px;
     margin-left: 20px;
     font-size: 35px;
@@ -193,7 +193,7 @@
 }
 
 .botao-enviar{
-    border: 2px solid var(--corNeutra);
+    border: 2px solid var(--corlayouts);
     margin-top: 20px;
     border-radius: 8px;
     background-color: var(--marrom);
@@ -223,7 +223,8 @@
     list-style-type: none;
     display: flex;
     margin-top: 30px;
-    gap: 105px;
+    gap: 80px;
+    
 
 }
 
@@ -231,18 +232,193 @@
     align-items: center;
     line-height: 20px;
 }
+
 .menu2 li a{
-    color: var(--marrom);
-}
-
-/* Seção Principal */
-
-.container-pedidos{
-    /* height: 460px; */
-    border: 1px solid rgba(121, 121, 121, 0.24);
-    text-align: center;
-    font-size: 25px;
-    text-decoration: none;
     color: var(--marrom);
     font-weight: 700;
 }
+
+
+                            /* Seção Principal */
+
+            
+.container-pedidos{
+    /* height: 460px; */
+    border: 1px solid rgba(121, 121, 121, 0.24);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+    
+}
+
+                            /* Seção Produtos Geral */
+.Titulos {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 35px;
+    color:  #71b21e 
+}
+
+.produtosGeral{
+    display: flex;
+    justify-content: space-between; 
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.produto{
+    margin-top: 20px;
+    display: flex;
+    padding: 30px; /* Espaçamento interno */
+}
+
+
+
+.information-produto {
+    border-bottom: 2px solid rgba(121, 121, 121, 0.24);
+    padding: 20px;
+    text-align: left;
+}
+
+.information-produto img{
+    height: 130px;
+    width: 180px;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.tittle{
+    display: flex;
+}
+
+
+/* Titulo NomeDoVendedor */
+.information-produto h1{
+    font-size: 23px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--marrom);
+}
+
+/* Titulo Quantidade */
+.information-produto p{
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    color: var(--marrom);
+}
+/* Titulo Valor */
+.information-produto h3{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--marrom);
+}
+
+.details-produtosInterior {
+    gap: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+}
+
+.details-produtos{
+    border-left: 2px solid rgba(121, 121, 121, 0.24);
+    border-right: 2px solid rgba(121, 121, 121, 0.24);
+    border-bottom: 2px solid rgba(121, 121, 121, 0.24);
+    padding: 15px;
+}
+
+/* Titulo  */
+.details-produtos .tittle h1{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.details-produtos .tittle strong{
+    color: var(--marrom);
+    font-weight: 600;
+}
+
+.detail-produto p {
+    font-weight: 320;
+}
+
+.detail-produto h3{
+    font-weight: 500;
+    color: var(--corprincipal);
+}
+
+.detail-produto img{
+        border: 2px solid var(--corprincipal);
+        border-radius: 50%;
+        box-sizing: border-box;
+        padding: 5px;
+        margin: 5px;    
+        background-color: transparent;
+        height: 70px;
+        width: 70px;
+        display: block;
+        object-fit: contain;
+}
+
+/* Não verde */
+.detail-produtoP p {
+   text-align: center;
+    font-weight: 320;
+}
+
+.detail-produtoP h3{
+    font-weight: 500;
+    color: var(--corprincipal);
+}
+.detail-produtoP img{
+    border: 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;    
+    background-color: transparent;
+    height: 70px;
+    width: 70px;
+    display: block;
+    object-fit: contain;
+}
+
+.connector{
+    margin-top: 70px;
+    width: 50px; /* Largura da barra */
+    height: 5px; /* Espessura da barra */
+    background-color: var(--corprincipal);/* Cor da barra */
+}
+
+.resumo-produtos{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.resumo-produtos h3{
+    color: var(--marrom);
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.resumo-produtos p{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.resumo-produtos strong{
+    color: var(--marrom);
+}
+
+/* segundo produto do pedido 1 ("são dois produtos em um pedido") */
+
+
