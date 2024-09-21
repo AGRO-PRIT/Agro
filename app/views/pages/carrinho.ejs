@@ -119,11 +119,21 @@
                         </article>
 
                         <article class="item-cupom">
-                            Inserir cupom de desconto
-                            <i class="cupom">
-                                <img src="imagens/icon_cupom.png" alt="icone de cupom">
-                            </i>
+                            <section>
+                                Inserir cupom de desconto
+                                <i class="cupom">
+                                    <img src="imagens/icon_cupom.png" alt="icone de cupom">
+                                </i>
+                            </section>
+                           
                         </article>
+                        <section class="content-cupom">
+                            <input type="text" id="cupom" placeholder="Digite o codigo do cupom">
+                            <button class="botao-cupom" onclick="validarCupom()">Adicionar cupom</button>
+                            <p id="-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
+                        </section>
+                            
+                        
                         
                         <article class="total">
                             Total: 
