@@ -129,7 +129,7 @@
 .box-container {
     border: 1px solid rgba(121, 121, 121, 0.24);
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -245,7 +245,7 @@
 .container-pedidos{
     /* height: 460px; */
     border: 1px solid rgba(121, 121, 121, 0.24);
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     font-size: 25px;
     text-decoration: none;
@@ -421,3 +421,204 @@
 /* segundo produto do pedido 1 ("são dois produtos em um pedido") */
 
 
+
+                            /*  Seção Cartões */
+
+.container-cartoes{
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid rgba(121, 121, 121, 0.24);
+    padding: 30px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container-cards{
+  width: 530px;
+  display: flex;
+}
+
+.btn-cartoes{
+  margin-left: auto;
+  width: 300px;
+  height: 45px;
+  background-color: var(--corprincipal);
+  color: white;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 13px;
+  transition: 0.2s ease;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carton{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+.padron{
+  margin-left: 20px;
+  width: 100px;
+  height: 25px;
+  background-color: var(--corprincipal);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-cartoes{
+    display: flex;
+}
+
+.card-image{
+  width: 221px;
+}
+
+.card-image img{
+  margin: 10px;
+}
+
+.card-image p{
+  font-size: 18px;
+  color: var(--corprincipal);
+  font-weight: 650;
+}
+
+.card-image2 p{
+  font-size: 18px;
+  color: var(--corprincipal);
+  font-weight: 320;
+}
+
+.card-image2 img{
+  display: block;
+  object-fit: cover;
+  margin: 5px;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+}
+
+.card-image img{
+    display: block;
+    object-fit: cover;
+    margin: 5px;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+}
+
+.remover-card{
+    display: flex;
+    margin-top: 70px;
+    margin-left: 75px;
+    text-align: center;
+    align-items: center;
+}
+
+.card2 h3{
+  font-size: 24px;
+  font-weight: 450;
+}
+
+.card2 p{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.card2 strong{
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--marrom);
+}
+
+.card2 img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+                  /*  Seção Endereços */
+
+
+.container-enderecos{
+  border-radius: 15px;
+  border: 1px solid rgba(121, 121, 121, 0.24);
+  border-bottom: 3px solid rgba(121, 121, 121, 0.24);
+  padding: 30px; 
+  display: flex;
+}
+
+.container-enderecos h1{
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--marrom);
+  margin-bottom: 15px;
+}
+
+.container-enderecos h2{
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--marrom);
+  margin-bottom: 5px;
+}
+
+.container-enderecos strong{
+
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--marrom);
+}
+
+.edition{
+  text-align: right;
+  padding: 20px;
+  margin-left: auto;
+}
+
+.edition p{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--corprincipal);
+  font-weight: 700;
+}
+
+.btn-padron{
+  margin-left: 20px;
+  width: 230px;
+  height: 30px;
+  background-color: var(--corlayouts);
+  color: var(--corprincipal);
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  border: 2px solid var(--corprincipal);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.informationEnderecos{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interiorEnderecos{
+  margin-bottom: 50px;
+}
+
+.informationEnderecos2{
+  display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
