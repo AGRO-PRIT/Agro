@@ -117,7 +117,7 @@
     box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
 }
 
-.page-container .minhaConta h1{
+.page-container .minhaConta h1, .produtosSection h1, .vendas h1, .avaliacoes h1, .configuracoes h1 {
     margin-bottom: 20px;
     margin-left: 20px;
     font-size: 35px;
