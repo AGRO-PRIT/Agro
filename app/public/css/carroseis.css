@@ -47,10 +47,22 @@
 
 
 
-  /* CAROSSEL 02 FRUTAS */
+/* CAROSSEL 02 FRUTAS */
 
+.link-produto {
+  z-index: 20;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
 
- .frutas-section {
+.link-vendedor {
+  z-index: 1;
+}
+
+.frutas-section {
   color: #333333;
   border-radius: 15px;
   max-width: 1650px;
@@ -66,7 +78,7 @@
   color: #493a31;
 }
 
-.seta{
+.seta {
   margin: auto;
   position: relative;
 }
@@ -95,9 +107,10 @@
   border-radius: 15px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
   background-color: var(--branco);
+  position: relative;
 }
 
-.carousel-item img{
+.carousel-item img {
   display: block;
   object-fit: cover;
   height: 190px;
@@ -128,6 +141,7 @@
 }
 
 .add-to-cart {
+  cursor: not-allowed;
   margin-bottom: 10px;
   width: 100%;
   padding: 15px;
@@ -146,7 +160,7 @@
 
 .add-to-cart:hover {
   background: var(--verdeescuro);
-   color: var(--cortexto);
+  color: var(--cortexto);
 }
 
 .carousel-control {
@@ -161,12 +175,12 @@
   border-radius: 50%;
 }
 
-.carousel-control img{
+.carousel-control img {
   height: 25px;
   width: 25px;
 }
 
-.prev{
+.prev {
   left: 2px;
 }
 
@@ -187,14 +201,13 @@
   border-radius: 50%;
   display: inline-block;
   margin: 0 5px;
-  cursor: pointer;  
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
 .indicator.active {
   background-color: #519575;
 }
-
 
 
   /* CAROSSEL 03 LEGUMES */

@@ -42,7 +42,7 @@ router.get('/login', function(req, res) {
     res.render('pages/login');
 });
 
-router.get('/loginV', function(req, res) {
+router.post('/loginV', function(req, res) {
     res.render('pages/loginV');
 });
 
@@ -119,9 +119,6 @@ router.get('/contaVendedor', function(req, res) {
     res.redirect('/contaVendedor');
 });
 
-router.post('/contaVendedor', function(req, res) {
-    res.render('pages/contaVendedor');
-});
 
 router.get('/contaEscolha', function(req, res) {
     res.render('pages/contaEscolha');
