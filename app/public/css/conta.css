@@ -622,3 +622,14 @@
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
+
+
+/* LINK VERDE JAVASCRIPT */
+
+.section-link.ativo {
+    color: var(--corprincipal);
+}
+
+.section-link img {
+    transition: all 0.3s ease;
+}
