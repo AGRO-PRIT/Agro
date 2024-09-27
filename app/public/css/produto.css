@@ -1,0 +1,346 @@
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --marromClaro: rgba(98, 78, 66, 0.99);
+    --corlayouts: #f2f2f2;
+}
+
+
+.info-geral{
+    margin-left: 150px;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.info-imagem{
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.35);
+    display: flex;
+    width: 510px;
+    height: 430px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-imagem img{
+    padding: 10px;
+    width: 450px;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+.detalhes-produto{
+    margin-left: 50px;
+}
+
+.detalhes-produto h3{
+    color: var(--marrom);
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.detalhes-produto .tittle-p{
+    color: var(--marromClaro);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.detalhes-produto h2{
+    color: var(--marromClaro);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.detalhes-produto p{
+    color: var(--marromClaro);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.detalhes-produto strong{
+    color: #f5a83c;
+    font-size: 1.8em;
+    margin-right: 4px;
+}
+
+.detalhes-produto .price-p{
+    color: var(--marromClaro);
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.tt-quantidade{
+    margin-right: 20px;
+    color: var(--marromClaro);
+    font-size: 1.5em;
+    font-weight: 500;
+    display: flex;
+}
+
+.botao-quantidade{
+    margin: 6px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #b3b0b0b7;
+    padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 40px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    background: transparent;
+}
+
+.botao-c{
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.botao-c button{
+    line-height: 1px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--marrom);
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.botao-add{
+    width: 280px;
+    height: 70px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--corprincipal);
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-add:hover{
+    border: 3px solid var(--corprincipal);
+    background-color: white;
+    color: var(--corprincipal);
+}
+
+.botao-add-box{
+    width: 280px;
+    height: 70px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 3px solid var(--corprincipal);
+    color: var(--corprincipal);
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-family: "Montserrat Medium", "Montserrat", sans-serif;
+    font-weight: 500;
+    color:  var(--corprincipal);
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-add-box:hover{
+    opacity: 0.7;
+}   
+
+/* paragrafos */
+
+.descri, .preven{
+    margin-left: 130px
+}
+
+.descri h3, .preven h3{
+    color: var(--marromClaro);
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.descri p, .preven p{
+    color: var(--marromClaro);
+    font-size: 1.4em;
+    font-weight: 450;
+    line-height: auto;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-Vend{
+    margin-top: 90px;
+    margin-left: 150px;
+}
+
+.detail-Vend .dt-tittle{
+    color: var(--marrom);
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.total-detailV{
+    padding: 30px;
+    background-color: var(--corlayouts);
+    width: 92%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.total-detailV img{
+    padding: 10px;
+    width: 180px;
+    height: 180px;
+    display: block;
+    object-fit: cover; 
+}
+
+.detail-dtV{
+    margin-left: 40px;
+}
+
+.detail-dtV h1{
+    color: var(--marrom);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.btn-detailV{
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--corprincipal);
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detailV:hover {
+    opacity: 0.7;
+}
+
+
+
+.space1{
+    padding: 20px 20px 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 90px; /* Espaçamento vertical entre as colunas */
+    row-gap: 1px; /* Espaçamento horizontal entre as linhas */
+    border-radius: 5px;
+    height: 150px;
+    border-left: 2px solid rgba(121, 121, 121, 0.24);
+}
+
+.space-itemInfo {
+    display: flex;
+    justify-content: space-between; /* Mantém o título e o valor lado a lado */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.space1 h3 {
+    font-size: 1.5em;
+    color: var(--marromClaro);
+    font-weight: 450;
+    margin-right: 30px; /* Espaçamento à direita do título */
+}
+
+.space1 p {
+    font-size: 1.5em;
+    color: var(--corprincipal);
+    font-weight: 550;
+    margin-left: 10px; /* Espaçamento à esquerda do valor, se necessário */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PARTE MODIFICADA DE CARROSEIS.CSS */
+
+.section-titleV {
+    margin-top: 100px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    font-size: 30px;
+    color: var(--marromClaro);
+}
+
+.frutas-sectionP{
+    margin-bottom: 80px;
+    color: #333333;
+    border-radius: 15px;
+    max-width: 1650px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+  }

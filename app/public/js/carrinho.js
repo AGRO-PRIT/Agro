@@ -98,7 +98,7 @@ function addProductToCart(event) {
         <p class="vendor">NomedoVendedor</p>
         <article class="quantity">
             <button class="menos">-</button>
-            <input type="number" class="product-quantity" value="1" min="1"> 
+            <input type="number" class="product-quantity" value="1" min="1" max="2  00"> 
             <button class="mais">+</button>
         </article>
     </article>
