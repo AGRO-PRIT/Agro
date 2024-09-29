@@ -116,8 +116,9 @@ router.get('/proteinas', function(req, res) {
 /* PERFIL*/
 
 router.get('/contaVendedor', function(req, res) {
-    res.redirect('/contaVendedor');
+    res.render('pages/contaVendedor');
 });
+
 
 
 router.get('/contaEscolha', function(req, res) {
