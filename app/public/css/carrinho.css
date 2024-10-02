@@ -375,3 +375,11 @@ input[type="number"] {
     font-size: inherit;
     background: transparent;
 }
+
+.content-cupom {
+    display: none;
+}
+
+#toggle-cupom:checked ~ .content-cupom {
+    display: block; 
+}

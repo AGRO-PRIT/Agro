@@ -70,30 +70,32 @@
                             <strong class="total-pedido2">R$000,00</strong>
                         </article>
 
+                            
                         <article class="item-cupom">
                             <section>
-                                Inserir cupom de desconto
-                                <i class="cupom">
-                                    <img src="imagens/icon_cupom(verde).png" alt="icone de cupom">
-                                </i>
+                                <label for="toggle-cupom">
+                                    Inserir cupom de desconto
+                                    <i class="cupom">
+                                        <img src="imagens/icon_cupom(verde).png" alt="icone de cupom">
+                                    </i>
+                                </label>
                             </section>
-                           
                         </article>
+                        <input type="checkbox" id="toggle-cupom" style="display: none;">
                         <section class="content-cupom">
                             <input type="text" id="cupom" placeholder="Digite o codigo do cupom">
                             <button class="botao-cupom" onclick="validarCupom()">Adicionar cupom</button>
-                            <p id="-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
+                            <p id="-mensagem" style="color: red;"></p> 
                         </section>
-                            
                         
-                        
+                        <section class="finalizacao">
                         <article class="total">
                             Total: 
                             <strong>R$000,00</strong>
                         </article>
 
                         <button class="checkout-button">Finalizar Compra</button>
-
+                    </section>
                         
 
                 </section>
