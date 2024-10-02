@@ -50,10 +50,8 @@
 /* CAROSSEL 02 FRUTAS */
 
 .link-produto {
-  z-index: 20;
   display: block;
   width: 100%;
-  height: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -523,7 +521,32 @@
   
 }
 
+/* Resumo Carrinho */
 
+.cart-summary {
+  position: absolute;
+  top: 90px; /* Ajuste a posição vertical conforme necessário */
+  right: 0; /* Ajuste a posição horizontal conforme necessário */
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 450px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
+ 
+.cart-summary p {
+  color: var(--marrom);
+  font-weight: 550;
+  margin: 0;
+  padding: 5px 0;
+}
 
+.cart-summary input[type="number"]::-webkit-inner-spin-button,
+.cart-summary input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove a setinha */
+    margin: 0; /* Remove a margem */
+}
 

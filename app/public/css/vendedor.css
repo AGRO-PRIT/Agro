@@ -7,8 +7,10 @@
     --branco: #FFFFFF;
     --laranja: #E68A00;
     --marrom: #493A31;
+    --marromClaro: rgba(98, 78, 66, 0.99);
     --corlayouts: #f2f2f2;
 }
+
 
 
 .details-perfil{
