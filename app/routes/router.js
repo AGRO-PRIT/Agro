@@ -38,7 +38,7 @@ router.get('/cadastre-seV', function(req, res) {
     res.render('pages/cadastre-seV');
 });
 
-router.get('/login', function(req, res) {
+router.post('/login', function(req, res) {
     res.render('pages/login');
 });
 
