@@ -38,13 +38,22 @@ router.get('/cadastre-seV', function(req, res) {
     res.render('pages/cadastre-seV');
 });
 
-router.post('/login', function(req, res) {
+router.get('/login', function(req, res) {
     res.render('pages/login');
 });
 
-router.post('/loginV', function(req, res) {
+router.post('/login', function(req, res) {
+    res.redirect('/login');
+});
+
+router.get('/loginV', function(req, res) {
     res.render('pages/loginV');
 });
+
+router.post('/loginV', function(req, res) {
+    res.redirect('/loginV');
+});
+
 
 /* menudropDown */
 
