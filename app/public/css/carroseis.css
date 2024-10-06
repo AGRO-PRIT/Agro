@@ -357,7 +357,7 @@
 
  /* CAROSSEL 04 AGRICULTORES  */
 
-.titulo{
+.tituloAgro{
   position: relative;
   max-width: 1450px;
   overflow: hidden;
@@ -521,11 +521,22 @@
   
 }
 
+/* titulo de preço riscado geral */
+
+.product-price strong, .product-price2 strong{
+  font-size: 0.9em;
+  color: #61bf1a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-decoration: line-through;
+  margin-right: 5px;
+  opacity: 0.7;
+}
 /* Resumo Carrinho */
 
 .cart-summary {
   position: absolute;
-  top: 90px; /* Ajuste a posição vertical conforme necessário */
+  top: 80px; /* Ajuste a posição vertical conforme necessário */
   right: 0; /* Ajuste a posição horizontal conforme necessário */
   margin-right: 20px;
   background-color: white;
@@ -550,3 +561,13 @@
     margin: 0; /* Remove a margem */
 }
 
+
+
+/* carrinho mais produtos etc */
+
+.section-titleCV {
+  margin-bottom: 15px;
+  margin-left: 40px;
+  font-size: 40px;
+  color: #493a31;
+}

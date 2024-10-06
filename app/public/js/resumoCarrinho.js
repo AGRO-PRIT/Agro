@@ -16,7 +16,7 @@ function updateCartSummary() {
             itemElement.style.display = 'flex';
             itemElement.style.alignItems = 'center';
             itemElement.style.marginBottom = '10px';
-            itemElement.style.justifyContent = 'space-between'; // Espaço entre os elementos
+            itemElement.style.justifyContent = 'space-between'; 
 
             // Imagem do produto no resumo
             const imgElement = document.createElement('img');
@@ -31,11 +31,11 @@ function updateCartSummary() {
             const infoElement = document.createElement('div');
             const nameElement = document.createElement('p');
             nameElement.textContent = item.name;
-            nameElement.style.margin = '0'; // Remove margens para melhor alinhamento
+            nameElement.style.margin = '0'; 
 
             const priceElement = document.createElement('p');
             priceElement.textContent = `Preço: R$ ${item.price.toFixed(2)}`;
-            priceElement.style.margin = '0'; // Remove margens para melhor alinhamento
+            priceElement.style.margin = '0'; 
 
             infoElement.appendChild(nameElement);
             infoElement.appendChild(priceElement);
@@ -142,6 +142,7 @@ function updateCartSummary() {
 }
 
 // Função para atualizar a quantidade do item
+// Função para atualizar a quantidade do item
 function updateQuantity(index, change) {
     if (cartItems[index]) {
         // Atualiza a quantidade no array cartItems
@@ -154,19 +155,23 @@ function updateQuantity(index, change) {
 
         // Atualiza o resumo do carrinho
         updateCartSummary();
+
+        // Atualiza a contagem total de itens no carrinho
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = cartItems.reduce((total, item) => total + item.quantity, 0);
+        cartCount.style.display = 'block'; // Mostra o contador
     }
 }
-
 // Seleciona todos os botões de "Adicionar"
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const addToCartButtons = document.querySelectorAll('.add-to-cart, .botao-add, .botao-adicionar');
 
 // Adiciona o evento de clique para cada botão
 addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const productInfo = button.parentElement; // Pega o elemento do produto
-        const productName = productInfo.querySelector('.product-name').textContent; // Nome do produto
-        const productPrice = parseFloat(productInfo.querySelector('.product-price').textContent.replace('R$', '').trim()); // Preço do produto
-        const productImage = productInfo.parentElement.querySelector('img').src; // Imagem do produto
+        const productInfo = button.closest('.box-produto, .carousel-item, .carousel-item2, .info-geral'); // Usa closest para buscar o container correto
+        const productName = productInfo.querySelector('.product-name, .nome-produto, .tittle-p').textContent; // Nome do produto
+        const productPrice = parseFloat(productInfo.querySelector('.product-price, .valor-produto, .price-p').textContent.replace('R$', '').trim()); // Preço do produto
+        const productImage = productInfo.querySelector('img').src; // Busca a imagem diretamente dentro do container correto
 
         // Verifica se o produto já está no carrinho
         const existingItemIndex = cartItems.findIndex(item => item.name === productName);
@@ -183,9 +188,9 @@ addToCartButtons.forEach(button => {
             });
         }
 
-        // Atualiza o contador do carrinho
+        // Atualiza a contagem total de itens no carrinho
         const cartCount = document.getElementById('cart-count');
-        cartCount.textContent = cartItems.length;
+        cartCount.textContent = cartItems.reduce((total, item) => total + item.quantity, 0);
         cartCount.style.display = 'block'; // Mostra o contador
 
         // Atualiza o resumo do carrinho
@@ -195,6 +200,7 @@ addToCartButtons.forEach(button => {
         showAddedMessage(productName, productImage);
     });
 });
+
 
 // Função para mostrar mensagem de produto adicionado
 function showAddedMessage(productName, productImage) {
@@ -259,6 +265,7 @@ cartIcon.addEventListener('mouseenter', () => {
         const cartSummary = document.querySelector('.cart-summary');
         cartSummary.style.display = 'block'; // Mostra o resumo
     }
+    
 });
 
 // Oculta o resumo do carrinho quando o mouse sai
