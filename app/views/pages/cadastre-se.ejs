@@ -23,7 +23,7 @@
                 <img src="imagens/logo.png" alt="logosingup">
             </section>
             <section class="cantinhoLogo">
-                <form class="cadastro-form" action="/contaConsumidor" method="POST">
+                <form class="cadastro-form" action="/login" method="POST">
                     <h1>Cadastre-se</h1>
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
@@ -44,7 +44,7 @@
                         <p class="error-message" id="confirm-password-error">As senhas não correspondem.</p>
                     </section>  
                     <button type="submit" class="entrar">Cadastrar</button>
-                    <p class="texto-entrar">Já tem conta no AgroBox?<a class="text-cadastro" href="/login"> Acesse aqui!</a></p>
+                    <p class="texto-entrar">Já tem conta no AgroBox?<a class="text-cadastro"  action="/login" method="POST" href="/login"> Acesse aqui!</a></p>
                 </form>
             </section>
         </section>

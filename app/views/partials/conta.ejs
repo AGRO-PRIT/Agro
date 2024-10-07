@@ -624,13 +624,25 @@
 <!-- Seção Cartões -->
  
         <section id="cartoes" style="display:none;">
-
-            <article class="carton">
-                <h1 class="Titulos">Cartões</h1>
-                <button class="btn-cartoes"> + Adicionar novo cartão </button>     
-            </article>
-
-            <section class="container-cartoes">
+                <article class="carton">
+                    <h1 class="Titulos">Cartões</h1>
+                    <button id="adicionarCartao" class="btn-cartoes"> + Adicionar novo cartão </button> 
+                    <div id="formularioCartao" class="modal-cartao" style="display: none;">
+                        <div class="modal-content-cartao">
+                            <h1 class="titulo-formulario">Informações do cartão</h1>
+                            <form id="novoCartaoForm">
+                                <input type="text" class="numeroCartao" id="numeroCartao" placeholder="Número do Cartão" required>
+                                <input type="text" class="cvvCartao" id="cvvCartao" placeholder="CVV" required>
+                                <input type="month" class="validadeCartao" id="validadeCartao" placeholder="Validade (MM/AA)" required>
+                                <input type="text" class="nomeCartao" id="nomeCartao" placeholder="Nome no Cartão" required>
+                                <button type="submit" class="botaoadd-cartao">Adicionar Cartão</button>
+                            </form>
+                        </div>
+                    </div>  
+                </article> 
+                       
+           
+            <section class="container-cartoes" id="listaCartoes">
                 <section class="container-cards">
                 <article class="card-image">
                     <img src="imagens/credit-card.png">
@@ -701,7 +713,21 @@
         <section id="enderecos" style="display:none;">
             <article class="carton">
                 <h1 class="Titulos">Endereços</h1>
-                <button class="btn-cartoes"> + Adicionar novo endereço </button>     
+                <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
+                <div id="formularioEndereco" class="modal-endereco" style="display: none;">
+                    <div class="modal-content-endereco">
+                        <h1 class="titulo-formulario">Informações do cartão</h1>
+                        <form id="novoEnderecoForm">
+                            <input type="text" class="nomeCompletoEndereco" id="nomeCompleto" placeholder="Nome Endereco" required>
+                            <input type="text" class="numeroTelefoneEndereco" id="numeroTelefone" placeholder="Telefone" required>
+                            <input type="month" class="CEPEndereco" id="CEP" placeholder="CEP" required>
+                            <input type="text" class="cidadeEndereco" id="cidade" placeholder="Cidade" required>
+                            <input type="text" class="estadoEndereco" id="cidade" placeholder="Estado" required>
+                            <input type="text" class="numeroEndereco" id="cidade" placeholder="Numero" required>
+                            <button type="submit" class="botaoadd-endereco">Adicionar Cartão</button>
+                        </form>
+                    </div>
+                </div>     
             </article>
             
 
@@ -744,3 +770,6 @@
         </section>
     </section>
 </main>
+
+
+<script src="js/formularioCartao.js"> </script>
