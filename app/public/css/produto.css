@@ -132,7 +132,6 @@ input[type="number"] {
 }
 
 .botao-add{
-    position: fixed;
     width: 280px;
     height: 70px;
     padding: 2px;
