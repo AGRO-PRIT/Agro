@@ -1,35 +1,34 @@
 if (document.readyState == "loading") {
-    document.addEventListener("DOMContentLoaded", ready)
+    document.addEventListener("DOMContentLoaded", ready);
 } else {
-    ready()
+    ready();
 }
 
-// variavel global para o valor total 
+// Variável global para o valor total
+var totalAmount = "0,00";
 
-var totalAmount = "0,00"
-
-// funcão carregamento de cada constante 
-
+// Função carregamento de cada constante
 function ready() {
-    const removeProductButtons = document.getElementsByClassName("excluir")
+    const removeProductButtons = document.getElementsByClassName("excluir");
     for (var i = 0; i < removeProductButtons.length; i++) {
-        removeProductButtons[i].addEventListener("click", removeProduct)
+        removeProductButtons[i].addEventListener("click", removeProduct);
     }
-    
+
     const removeImageButtons = document.getElementsByClassName("removimg");
     for (var i = 0; i < removeImageButtons.length; i++) {
         removeImageButtons[i].addEventListener("click", removeProduct);
     }
 
-    const quantityInputs = document.getElementsByClassName("product-quantity")
+    const quantityInputs = document.getElementsByClassName("product-quantity");
     for (var i = 0; i < quantityInputs.length; i++) {
-        quantityInputs[i].addEventListener("change", updateTotal)
+        quantityInputs[i].addEventListener("change", updateTotal);
     }
- 
-    const addToCartButtons = document.getElementsByClassName("add-to-cart")
+
+    const addToCartButtons = document.getElementsByClassName("add-to-cart");
     for (var i = 0; i < addToCartButtons.length; i++) {
-        addToCartButtons[i].addEventListener("click", addProductToCart)
+        addToCartButtons[i].addEventListener("click", addProductToCart);
     }
+
     const increaseQuantityButtons = document.getElementsByClassName("mais");
     for (let i = 0; i < increaseQuantityButtons.length; i++) {
         increaseQuantityButtons[i].addEventListener("click", increaseQuantity);
@@ -40,40 +39,47 @@ function ready() {
         decreaseQuantityButtons[i].addEventListener("click", decreaseQuantity);
     }
 
-    const purchaseButton = document.getElementsByClassName("checkout-button")[0]
-    purchaseButton.addEventListener("click", makePurchase)
+    const purchaseButton = document.getElementsByClassName("checkout-button")[0];
+    purchaseButton.addEventListener("click", makePurchase);
 
     updateTotal();
     updateCartCount();
 }
 
-// Mensagem ao Finalizar a compra + verifiçação de mensagem de carrinho vazio
-
-function makePurchase(){
-    if(totalAmount == "0,00"){
-        alert("Seu carrinho está vazio!")
-    } else{
-        alert(
-            `
+// Mensagem ao finalizar a compra + verificação de mensagem de carrinho vazio
+function makePurchase() {
+    if (totalAmount == "0,00") {
+        alert("Seu carrinho está vazio!");
+    } else {
+        alert(`
             Obrigado pela sua compra!
             Valor do pedido: ${totalAmount}
             Volte sempre!
-            `
-        )
+        `);
     }
 }
 
+// Adicionar cada produto ao clicar em "adicionar"
+function addProductToCart(event) {
+    const button = event.target;
+    const productInfos = button.parentElement.parentElement;
 
-// adicionar cada produto ao clicar em "adicionar" puxando informações da importação html
+    // Imagem e nome do produto
+    const productImage = productInfos.getElementsByClassName("product-image")[0].src;
+    const productTitle = productInfos.getElementsByClassName("product-name")[0].innerText;
 
-function addProductToCart(event) {  
-    const button = event.target
-    const productInfos = button.parentElement.parentElement
-    const productImage = productInfos.getElementsByClassName("product-image")[0].src
-    const productTitle = productInfos.getElementsByClassName("product-name")[0].innerText
-    const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText.replace("R$ ", "R$")
-   
-    const productsCartName = document.getElementsByClassName("cart-product-title")
+    // Preço: buscar preço atual, se disponível, ou o preço antigo
+    const currentPriceElement = productInfos.querySelector(".current-price");
+    const oldPriceElement = productInfos.querySelector(".old-price");
+
+    let productPrice;
+    if (currentPriceElement) {
+        productPrice = currentPriceElement.innerText.replace("R$ ", "R$");
+    } else if (oldPriceElement) {
+        productPrice = oldPriceElement.innerText.replace("R$ ", "R$");
+    }
+
+    const productsCartName = document.getElementsByClassName("cart-product-title");
     for (var i = 0; i < productsCartName.length; i++) {
         if (productsCartName[i].innerText == productTitle) {
             productsCartName[i].parentElement.parentElement.getElementsByClassName("product-quantity")[0].value++;
@@ -83,50 +89,45 @@ function addProductToCart(event) {
         }
     }
 
-//  importação do html imposto de cada item tal como pegar informação de cada produto para adicionar
+    // Importação do HTML imposto de cada item tal como pegar informação de cada produto para adicionar
+    let newCartProduct = document.createElement("article");
+    newCartProduct.classList.add("cart-item");
 
-    let newCartProduct = document.createElement("article")
-    newCartProduct.classList.add("cart-item")
- 
     newCartProduct.innerHTML =
     `
-
         <img src="${productImage}" alt="${productTitle}">
-   
-    <article class="details">
-        <h3 class="cart-product-title">${productTitle}</h3>
-        <p class="vendor">NomedoVendedor</p>
-        <article class="quantity">
-            <button class="menos">-</button>
-            <input type="number" class="product-quantity" value="1" min="1" max="2  00"> 
-            <button class="mais">+</button>
+        <article class="details">
+            <h3 class="cart-product-title">${productTitle}</h3>
+            <p class="vendor">NomedoVendedor</p>
+            <article class="quantity">
+                <button class="menos">-</button>
+                <input type="number" class="product-quantity" value="1" min="1" max="200"> 
+                <button class="mais">+</button>
+            </article>
         </article>
-    </article>
-    <article class="price">
-        <h3 class="cart-item-price">${productPrice}</h3>
-        <article class="remove">
-            <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
-            <i class="excluir">Excluir</i>
+        <article class="price">
+            <h3 class="cart-item-price">${productPrice}</h3>
+            <article class="remove">
+                <img class="removimg" src="imagens/icon_lixeira.png" alt="icone de uma lixeira">  
+                <i class="excluir">Excluir</i>
+            </article>
         </article>
-    </article>
-    `
- 
-    const cart = document.querySelector(".cart-itens")
-    cart.append(newCartProduct)
+    `;
 
-// chamar eventos 
+    const cart = document.querySelector(".cart-itens");
+    cart.append(newCartProduct);
 
-    newCartProduct.querySelector(".product-quantity").addEventListener("change", updateTotal)
-    newCartProduct.querySelector(".excluir").addEventListener("click", removeProduct)
-    newCartProduct.querySelector(".mais").addEventListener("click", increaseQuantity)
-    newCartProduct.querySelector(".menos").addEventListener("click", decreaseQuantity)
+    // Chamar eventos
+    newCartProduct.querySelector(".product-quantity").addEventListener("change", updateTotal);
+    newCartProduct.querySelector(".excluir").addEventListener("click", removeProduct);
+    newCartProduct.querySelector(".mais").addEventListener("click", increaseQuantity);
+    newCartProduct.querySelector(".menos").addEventListener("click", decreaseQuantity);
     checkIfCartIsEmpty(); 
     updateCartCount();
-    updateTotal()
+    updateTotal();
 }
 
-// botão de mais funcionar e adicionar um item
-
+// Botão de mais funcionar e adicionar um item
 function increaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
     quantityInput.value = parseInt(quantityInput.value) + 1;
@@ -134,8 +135,7 @@ function increaseQuantity(event) {
     updateCartCount();
 }
 
-// botão de menos funcionar e tirar um item
-
+// Botão de menos funcionar e tirar um item
 function decreaseQuantity(event) {
     let quantityInput = event.target.parentElement.querySelector(".product-quantity");
     if (parseInt(quantityInput.value) > 1) {
@@ -145,8 +145,7 @@ function decreaseQuantity(event) {
     }
 }
 
-// remoção de produtos 
-
+// Remoção de produtos
 function removeProduct(event) {
     const cartItem = event.target.closest(".cart-item");
     cartItem.remove();
@@ -157,26 +156,23 @@ function removeProduct(event) {
 }
 
 // Contador Carrinho
-
 function updateCartCount() {
     let cartItems = document.getElementsByClassName("cart-item");
     let totalItems = 0;
-    if(totalItems.length === 0){
+    if (cartItems.length === 0) {
         document.getElementById("cart-count").style.display = "none";
-    }else {
-    for (let i = 0; i < cartItems.length; i++) {
-        let quantity = parseInt(cartItems[i].getElementsByClassName("product-quantity")[0].value);
-        totalItems += quantity;
-        
+    } else {
+        for (let i = 0; i < cartItems.length; i++) {
+            let quantity = parseInt(cartItems[i].getElementsByClassName("product-quantity")[0].value);
+            totalItems += quantity;
+        }
+        document.getElementById("cart-count").style.display = "inline-block";
     }
-    document.getElementById("cart-count").style.display = "inline-block";
-}
     document.getElementById("cart-count").innerText = totalItems;
     document.querySelector(".cart-countTotal").innerText = totalItems;
 }
 
-// remoção de produtos ( validação carrinho vazio para aparecer mensagem)
-
+// Remoção de produtos (validação carrinho vazio para aparecer mensagem)
 function checkIfCartIsEmpty() {
     const cartItems = document.getElementsByClassName("cart-item");
     const emptyCartMessage = document.querySelector(".empty-cart-message");
@@ -185,34 +181,27 @@ function checkIfCartIsEmpty() {
 
     if (cartItems.length === 0) {
         emptyCartMessage.style.display = "block";
-        emptyCartMessage2.style.display = "block"; 
-        cartContainer.classList.add("empty-cart"); 
+        emptyCartMessage2.style.display = "block";
+        cartContainer.classList.add("empty-cart");
     } else {
         emptyCartMessage.style.display = "none";
-        emptyCartMessage2.style.display = "none";    
-        cartContainer.classList.remove("empty-cart");  
+        emptyCartMessage2.style.display = "none";
+        cartContainer.classList.remove("empty-cart");
     }
 }
 
-// calculo do preço total 
-
+// Cálculo do preço total
 function updateTotal() {
-   totalAmount = 0
-    const cartProducts = document.getElementsByClassName("cart-item")
-    for (var i = 0; i < cartProducts.length; i++) {  
-        const productPrice = parseFloat(cartProducts[i].getElementsByClassName("cart-item-price")[0].innerText.replace("R$", "").replace(",", "."))
-        const productQuantity = cartProducts[i].getElementsByClassName("product-quantity")[0].value
- 
-        totalAmount += productPrice * productQuantity
-        
+    totalAmount = 0;
+    const cartProducts = document.getElementsByClassName("cart-item");
+    for (var i = 0; i < cartProducts.length; i++) {
+        const productPrice = parseFloat(cartProducts[i].getElementsByClassName("cart-item-price")[0].innerText.replace("R$", "").replace(",", "."));
+        const productQuantity = cartProducts[i].getElementsByClassName("product-quantity")[0].value;
+        totalAmount += productPrice * productQuantity;
     }
-    
-    totalAmount = totalAmount.toFixed(2)
-    totalAmount = totalAmount.replace(".", ",")
-    document.querySelector(".total strong").innerText = "R$" + totalAmount
-    document.querySelector("#total-value").innerText = "R$" + totalAmount
 
-
+    totalAmount = totalAmount.toFixed(2);
+    totalAmount = totalAmount.replace(".", ",");
+    document.querySelector(".total strong").innerText = "R$" + totalAmount;
+    document.querySelector("#total-value").innerText = "R$" + totalAmount;
 }
- 
- 
