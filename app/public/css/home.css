@@ -380,6 +380,12 @@ body {
 
 /* Menu Responsivo */
 
+
+.mobile-menu{
+    z-index: 1000;
+    position: relative;
+}
+
 .mobile-list{
     display: none;
 }
@@ -388,9 +394,7 @@ body {
     display: block;
 }
 
-.mobile-menu ul{
-    position: relative;
-    z-index: 1000;
+.mobile-menu ul{  
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -408,6 +412,8 @@ body {
 
 .open{
     display: block;
+    z-index: 100000;
+
 }
 
 /* logo */
