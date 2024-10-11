@@ -137,9 +137,8 @@
 
 
 .event-flex{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: inline-block;
+  position: relative;
 }
 
 .event-image1 {
