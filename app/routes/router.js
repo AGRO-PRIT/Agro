@@ -75,6 +75,14 @@ router.get('/eventos', function(req, res) {
     res.render('pages/eventos');
 });
 
+router.get('/evento1', function(req, res) {
+    res.render('pages/evento1');
+});
+
+router.get('/evento2', function(req, res) {
+    res.render('pages/evento2');
+});
+
 
 /* BOX */
 
