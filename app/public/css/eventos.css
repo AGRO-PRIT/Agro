@@ -40,32 +40,23 @@
   box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.35);
 }
 
-.event-image {
-  width: 100%;
-  height: 300px;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-}
-
 .event-title {
   line-height: normal;
   font-size: 2em;
   color: var(--marrom);
   font-weight: 700;
-  margin-top: 10px ;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-.event-date {
-  font-size: 1.6em;
-  line-height: normal;
-  color: var(--marrom);
-  font-weight: 700;
-  font-weight: bold;
-}
 
 .event-details {
   margin: 10px 0;
   font-size: 1em;
+  margin-left: 10px;
+  color: var(--marrom);
+  font-weight: 500;
+  align-items: flex-start;
 }
 
 .event-button {
@@ -128,29 +119,65 @@
 
 .event-box1 {
   padding: 20px;
-  border-radius: 18px;
+  border-radius: 12px;
   width: 25%;
   background-color: #f2f2f2;
   box-sizing: border-box;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
+.event-infoo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre os itens */
+  align-items: flex-start; /* Alinha os itens no começo */
+}
 
 .event-flex{
-  display: inline-block;
-  position: relative;
+  display: flex;
+  align-items: center; 
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--marrom);
+  font-weight: 500;
+  gap: 50px; 
 }
 
-.event-image1 {
-  max-width: 190px;
-  object-fit: contain;
+.event-flex-small{
+  display: flex;
+  align-items: center; 
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--marrom);
+  font-weight: 500;
+  gap: 20px; 
 }
 
+.event-flex-small img{
+  width: 30px;
+  height: 30px;
+}
+
+.event-flex img{
+  margin-left: 20px;
+  width: 30px; 
+  height: 30px;
+}
+
+.event-image {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  object-fit: cover;
+  display: block;
+}
 
 .event-images {
-  width: auto;
+  max-width: 100%;
   height: 200px;
   object-fit: contain;
+  display: block;
 }
 
 .event-info1 {
@@ -165,12 +192,7 @@
   text-align: left;
 }
 
-.event-date1 {
-  font-size: 1.2em;
-  color: var(--marrom);
-  margin-bottom: 10px;
-  text-align: left;
-}
+
 
 .event-details1 {
   font-size: 1em;

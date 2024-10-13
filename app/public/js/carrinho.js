@@ -205,3 +205,112 @@ function updateTotal() {
     document.querySelector(".total strong").innerText = "R$" + totalAmount;
     document.querySelector("#total-value").innerText = "R$" + totalAmount;
 }
+
+// Array para armazenar os itens do carrinho
+let cartItems = [];
+
+
+// Função para atualizar a quantidade do item
+function updateQuantity(index, change) {
+    if (cartItems[index]) {
+        // Atualiza a quantidade no array cartItems
+        cartItems[index].quantity = (cartItems[index].quantity || 1) + change;
+
+        // Evita que a quantidade fique negativa
+        if (cartItems[index].quantity < 1) {
+            cartItems[index].quantity = 1;
+        }
+
+        // Atualiza a contagem total de itens no carrinho
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = cartItems.reduce((total, item) => total + item.quantity, 0);
+        cartCount.style.display = 'block'; // Mostra o contador
+    }
+}
+
+
+// Seleciona todos os botões de "Adicionar"
+const addToCartButtons = document.querySelectorAll('.add-to-cart, .botao-add, .botao-adicionar');
+
+
+// Adiciona o evento de clique para cada botão
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productInfo = button.closest('.box-produto, .carousel-item, .carousel-item2, .info-geral'); // Usa closest para buscar o container correto
+        const productName = productInfo.querySelector('.product-name, .nome-produto, .tittle-p').textContent; // Nome do produto
+        const productPrice = parseFloat(productInfo.querySelector('.product-price, .valor-produto, .price-p').textContent.replace('R$', '').trim()); // Preço do produto
+        const productImage = productInfo.querySelector('img').src; // Busca a imagem diretamente dentro do container correto
+
+        // Verifica se o produto já está no carrinho
+        const existingItemIndex = cartItems.findIndex(item => item.name === productName);
+        if (existingItemIndex !== -1) {
+            // Se o produto já estiver no carrinho, aumenta a quantidade
+            cartItems[existingItemIndex].quantity += 1;
+        } else {
+            // Adiciona o produto ao array cartItems com nome, preço, imagem e quantidade inicial
+            cartItems.push({
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            });
+        }
+
+        // Exibe mensagem de produto adicionado com imagem e nome
+        showAddedMessage(productName, productImage);
+    });
+});
+
+
+// Função para mostrar mensagem de produto adicionado
+function showAddedMessage(productName, productImage) {
+    const message = document.createElement('section');
+    message.style.position = 'fixed';
+    message.style.bottom = '20px';
+    message.style.left = '80%';
+    message.style.transform = 'translateX(-50%)'; // Centraliza horizontalmente
+    message.style.backgroundColor = '#5AA504';
+    message.style.color = 'white';
+    message.style.padding = '25px';
+    message.style.width = '550px';
+    message.style.borderRadius = '10px';
+    message.style.display = 'flex';
+    message.style.alignItems = 'center';
+    message.style.justifyContent = 'center'; // Centraliza o conteúdo
+    message.style.zIndex = '1000';
+    message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Adiciona uma sombra suave
+
+    // Imagem do produto
+    const imgElement = document.createElement('img');
+    imgElement.src = productImage;
+    imgElement.alt = productName;
+    imgElement.style.width = '70px';
+    imgElement.style.height = 'auto';
+    imgElement.style.display = 'block';
+    imgElement.style.objectFit = 'cover';
+    imgElement.style.marginRight = '5px';
+
+    // Texto com o nome do produto
+    const textElement = document.createElement('span');
+    textElement.textContent = `${productName} Adicionado ao carrinho! `;
+    message.style.fontSize = '20px'; // Ajusta o tamanho da fonte para centralizar melhor
+
+    // Ícone de verificação 
+    const iconElement = document.createElement('i');
+    iconElement.classList.add('fas', 'fa-check-circle');
+    iconElement.style.fontSize = '20px'; 
+    iconElement.style.marginLeft = '10px';
+    iconElement.style.color = 'white'; 
+
+    // Adiciona a imagem, o texto e o ícone ao pop-up
+    message.appendChild(imgElement);
+    message.appendChild(textElement);
+    message.appendChild(iconElement);
+
+    document.body.appendChild(message);
+
+    // Remove a mensagem após 3 segundos
+    setTimeout(() => {
+        message.remove();
+    }, 3000);
+}
