@@ -1,12 +1,12 @@
 
- :root {
+:root {
   --backgroundcolor: #FCF2E6;
   --corprincipal: #5AA504;
   --cortexto: rgb(255, 255, 255);
   --fonteprincipal: "Montserrat", sans-serif;
   --verdeescuro: #006837;
   --branco: #FFFFFF;
-  --laranja: #f1a532;
+  --laranja: #E68A00;
   --marrom: #493A31;
   --corlayouts: #f2f2f2;
 }
@@ -60,7 +60,7 @@
   z-index: 1;
 }
 
-.frutas-sectionm, .legumes-section {
+.frutas-section, .legumes-section {
   color: #333333;
   border-radius: 15px;
   max-width: 1650px;

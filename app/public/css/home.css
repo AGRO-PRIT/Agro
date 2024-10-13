@@ -242,7 +242,7 @@ body {
 }
 
 .subnav li {
-    font-weight: 600;
+    font-weight: 550;
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
@@ -252,9 +252,6 @@ body {
 .subnav ul li{
     line-height: 50px;
 }
-
-
-
 
 .subnav-list .produtos::after {
  content: "\23F7";
@@ -267,7 +264,7 @@ body {
 
 .subnav .dropdown-menu a{
     text-decoration: none;
-    padding: 12px 16px;
+    padding: 19px 40px 19px 20px;
 }
 
 .links{
@@ -280,15 +277,16 @@ body {
 }
 
 .dropdown-menu{
+    margin-left: -20px;
     margin-top: -15px;
     position: absolute;
     background-color: #006837;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     justify-content: space-between;
     letter-spacing: 1px;
-    font-size: 13px;
-    line-height: 0.7;
+    font-size: 17px;
+    line-height: 0.4;
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
     display: none;
     border-radius: 5%;
@@ -296,7 +294,7 @@ body {
 }
 
 .dropdown-menu a {
-    font-weight: bold;
+    font-weight: 550;
     display: block;
     color: white;
 }

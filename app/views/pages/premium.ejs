@@ -22,7 +22,7 @@
    
         <section class="premium-container">
 
-            <section class="premiumV-Total">
+            <section class="premiumV-Total" id="section-basic">
         
             <section class="premium-Verde">
                 <article class="text-premium">
@@ -36,13 +36,13 @@
                     <ul class="text-lista">
                     <li>Acesso básico a Box </li>
                     </ul>
-                    <button class="button-premium1">SELECIONADO</button>
+                    <button class="button-premium1" onclick="selecionarPlano('section-basic', this)">SELECIONADO</button>
                 </article>
             </section>
 
         </section>
 
-        <section class="premiumV-Total">
+        <section class="premiumV-Total"  id="section-premium">
 
             <section class="premium-Laranja">
                 <article class="text-premium">
@@ -58,13 +58,13 @@
                         <li>Box com até 30 produtos.</li>
                         <li>Box semanal</li>
                         </ul>
-                        <button class="button-premium">ASSINAR</button>
+                        <button class="button-premium" onclick="selecionarPlano('section-premium', this)">ASSINAR</button>
                     </article>
                 </section>
                 
         </section>
 
-        <section class="premiumV-Total">
+        <section class="premiumV-Total" id="section-agroplus">
 
             <section class="premium-Marrom">
                 <article class="text-premium">
@@ -79,7 +79,7 @@
                         <li>Desconto no Frete</li>
                         <li>Box com até 20 produtos.</li>
                     </ul>
-                    <button class="button-premium">ASSINAR</button>
+                    <button class="button-premium" onclick="selecionarPlano('section-agroplus', this)">ASSINAR</button>
                 </article>
             </section>
     
@@ -92,11 +92,12 @@
     <!-- Rodapé -->
     <%- include('../partials/footer'); %>
     
+            <!-- Script -->
+<script src="js/premium.js"> </script>
+
 </body>
 </html>
 
-        <!-- Script -->
-<script src="#"> </script>
 
 
 

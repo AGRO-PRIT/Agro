@@ -438,7 +438,7 @@
   display: flex;
 }
 
-.btn-cartoes{
+.btn-cartoes, .btn-endereco{
   margin-left: auto;
   width: 300px;
   height: 45px;
@@ -745,4 +745,27 @@
     text-align: center;
     line-height: normal;
     border: none;
+}
+
+/* Seção configurações */
+
+
+.botao-darkMode{
+    float: right;
+    justify-content: flex-end;
+    padding: 15px;
+    border: 2px solid var(--corlayouts);
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: var(--marrom);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 570;
+    height: 50px;
+    width: auto;
+    cursor: pointer;    
+}
+
+.botao-darkMode:hover{
+    opacity: 0.9;
 }
