@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/agro.css">
     <link rel="stylesheet" href="css/carroseis.css">
     <link rel="stylesheet" href="css/carrinho.css">
+    
     <script async src="js/carrinho.js"> </script>
 </head>
 
@@ -98,17 +99,20 @@
                     </section>
                         
 
-                </section>
-                <section class="finalizar-compra">
-                    <article class="content-text">
-                    <h3>Calcular frete e prazo de entrega</h3>
-                    <input type="text" id="cep" placeholder="Digite seu CEP" oninput="formatarCEP(this)">
-                    <button onclick="validarCEP()">CALCULAR</button>
-                    <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
-                    </table>
-                </section>
-            </section>
+        </section>
 
+         <section class="finalizar-compra">
+            <article class="content-text">
+                <h3>Calcular frete e prazo de entrega</h3>
+                <input type="text" id="cep" class="cep" placeholder="Digite seu CEP" oninput="formatarCEP(this)">
+                <button onclick="calcularFrete()">CALCULAR</button>
+                <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
+                <p id="endereco"></p> <!-- Exibir endereço -->
+            </article>
+        </section>
+        
+        
+        
 </main>
 
 <main class="frutas-section">
@@ -573,3 +577,4 @@
 
 
 <script src="js/validacaoCEP.js"> </script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

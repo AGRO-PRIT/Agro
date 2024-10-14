@@ -309,8 +309,11 @@ function showAddedMessage(productName, productImage) {
 
     document.body.appendChild(message);
 
+    
+
     // Remove a mensagem após 3 segundos
     setTimeout(() => {
         message.remove();
     }, 3000);
 }
+

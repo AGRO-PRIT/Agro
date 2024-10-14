@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const axios = require('axios')
 
 //importar módulo mysql
 // const mysql = require('');
@@ -45,3 +46,4 @@ app.use('/', rotas);
 app.listen(port, () => {
   console.log(`Servidor ouvindo na porta ${port}\nhttp://localhost:${port}`);
 });
+
