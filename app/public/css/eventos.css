@@ -10,7 +10,6 @@
   --corlayouts: #f2f2f2;
 }
 
-
 /* Seção de Eventos em Destaque */
 .container-eventos {
   text-align: center;
@@ -155,6 +154,12 @@
   gap: 50px; 
 }
 
+.event-flex img{
+  margin-left: 20px;
+  width: 30px; 
+  height: 30px;
+}
+
 .event-flex-small{
   display: flex;
   align-items: center; 
@@ -167,12 +172,6 @@
 
 .event-flex-small img{
   width: 30px;
-  height: 30px;
-}
-
-.event-flex img{
-  margin-left: 20px;
-  width: 30px; 
   height: 30px;
 }
 
@@ -236,3 +235,4 @@
   color: var(--cortexto);
   border: 2px solid var(--laranja);
 }
+

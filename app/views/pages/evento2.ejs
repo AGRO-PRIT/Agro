@@ -6,7 +6,7 @@
     <title>AgroBox</title>
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/evento.css">
+    <link rel="stylesheet" href="css/evento.css"> 
 </head>
 
 <body>  
@@ -17,17 +17,46 @@
    
     <!--  CONTEÚDO -->
 
-    <main class="total-PrimaryEvent2">
-        <section class="GeralE2">
+<main class="total-PrimaryEvent">
+    <section class="GeralE">
+        <article class="info-imagemEvent">
+            <img src="imagens/feirasE2.jpg">
+        </article>
+        <article class="detalhes-evento1">
+            <h3>AgroBox / Eventos</h3>
+            <h1 class="tittle-e">Festa Nacional da Uva</h1>
+                <article class="event-flex">
+                    <img src="imagens/icon_callender.png"> 
+                    <p>12/12 - Sab. 14h00 até 21h30</p>
+                </article>
+                <article class="event-flex">
+                    <img src="imagens/icon_flag.png">
+                    <p>Rua Uvinha, 290 - Jardim das Uvas, Barueri - SP, 00000-000   </p>
+                </article>
+            <h1 class="priceEvent">R$00,00<strong>por pessoa</strong></h1>
+            <article class="botao-c">
+                <p class="tt-quantidade">Quantidade:</p>
+                <button class="menos">-</button>
+                <input type="number" class="botao-quantidade" value="1" min="1" max="99">
+                <button class="mais">+</button>
+            </article>
             
-        </section>
-    
-    
-    
-    
-    
-    
-    </main>
+            <button class="botao-add">Comprar ingresso</button>
+        </article>
+    </section>
+
+    <section class="descriEvent">
+        <h3>Descrição do Evento</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <br>
+            accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes,<br>
+             nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc <br> 
+             accuan eget.</p>
+    </section>
+ 
+
+    <%- include('../partials/evento'); %>
+
+</main>
 
     <!-- Rodapé -->
      
@@ -35,11 +64,3 @@
     
 </body>
 </html>
-
-        <!-- Script -->
-
-<script src="js/.js"> </script>
-
-
-
-
