@@ -32,188 +32,193 @@
         letter-spacing: 8px;
 }
 
-.Orintação {
-    margin-right: 300px;
-        font-size: 27px;
-        background-color: rgba(255, 255, 255, 0);
-        box-sizing: border-box;
-        font-family: "Montserrat Bold", "Montserrat", sans-serif;
-        font-weight: 700;
-        color: #333333;
-        text-align: center;
-        line-height: normal;
+.titulos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.Orintação strong{
-    width: 164px;
-  height: 24px;
-  background-color: rgba(255, 255, 255, 0);
-  box-sizing: border-box;
-  font-family: "Montserrat Light", "Montserrat", sans-serif;
-  font-weight: 300;
-  color: #493a31;
-  text-align: left;
-  line-height: normal;
+.titulos-sectionBox{
+    font-size: 1.5em;
+    margin-right: 25px;
+    color: var(--corprincipal);
+    text-align: center;
+    font-weight: 600;
 }
 
-.maximo-produtos{
-    width: 164px;
-    height: 24px;
-    background-color: rgba(255, 255, 255, 0);
-    box-sizing: border-box;
-    font-family: "Montserrat Light", "Montserrat", sans-serif;
-    font-weight: 300;
-    color: #493a31;
-    text-align: left;
-    line-height: normal;
-  }
+.titulos-sectionBox2{
+    font-size: 1.5em;
+    margin-left: 25px;
+    color: rgba(73, 58, 49, 0.69);
+    text-align: center;
+    font-weight: 600;
+}
 
- /* estilização produtos */
+/* carrosel Box */
 
-    
+
+.Box-section{
+    border-radius: 15px;
+    max-width: 1300px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.seta {
+    margin: auto;
+    position: relative;
+}
+
+.carousel-container {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
 
 .todos-produtos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    transition: transform 0.6s ease-in-out;
+    height: 560px;
 }
 
 .itens-produto {
-    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    overflow: hidden;
 }
 
 .box-produto {
-    width: 250px;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-    margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
-
-}
-
-.box-produto img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain; /* Assegura que a imagem seja ajustada sem cortar */
-    margin-bottom: 15px;
-}
-
-.nome-produto {
-    color:  rgba(98, 78, 66, 0.99);
-    font-weight: 500;   
-    text-align: left;
-    font-weight: bold;
+    padding: 15px 10px 15px 10px;
+    height: 230px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    background-color: var(--branco);
+    position: relative;
    
 }
 
+.box-produto img{
+    display: block;
+    object-fit: cover;
+    height: 100px;
+    width: 130px;
+    margin: auto;
+}
+
+.box-produto:hover {
+    transform: scale(1.05);
+}
+
+.nome-produto {
+    margin-top: 15px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: bold;  
+}
+
 .nome-vendedor {
-    text-align: left;
-    color: #777;
-    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .valor-produto {
-    text-align: left;
+    font-size: 20px;
     color: var(--verdeescuro);
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .botao-adicionar {
-    width: 100%;
-    padding: 15px;
     background-color: var(--corlayouts);
+    border: 3px solid var(--verdeescuro);
     color: var(--verdeescuro);
-    border: 2px solid var(--verdeescuro);
-    font-weight: bold;
-    border-radius: 5px;
+    font-weight: 550;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-    border-radius: 10px;
+    border-radius: 13px;
 }
 
 .botao-adicionar:hover {
     background-color: var(--verdeescuro);
-    color: var(--cortexto);
+    color: var(--branco);
 }
 
-/* barra de pesquisa */
-
-.barradepesquisaBox {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    border: 3px solid #493a31;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    background: #ffffff;
-    border-radius: 24px;
-    height: 45px;
-    padding: 10px;  
-    width: 35%;
-    margin-left: 30%;
-}
-
- .barradepesquisaBox img {
-    margin-left: 90px;
-    align-items: center;
-    height: 35px;
-    width: 35px;
-    box-sizing: border-box;
-} 
-
-.barra-texto-pesquisaBox{
-    background: none;
+.carousel-control {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent;
+    color: var(--marrom);
     border: none;
-    outline: none;
-    padding: 0 7px;
-    color: #614a3d;
-    font-size: 17px;
-    line-height: 40px;
-    width: 500px;
-    font-family: var(--fonteprincipal)
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1; 
+}
+  
+.carousel-control img{
+    height: 25px;
+    width: 25px;
+}
+  
+.prev{
+    left: 90px;
+    z-index: 200000;
 }
 
-.botao-pesquisa{
-    width: 40px;
-    height: 40px;
+.next{
+    right: 130px;
+    z-index: 200000;
+}
+
+.carousel-control, .carousel-control2 {
+    position: absolute;
+    top: 41%;
+    transform: translateY(50%);
+    background-color: transparent;
+    color: var(--marrom);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     border-radius: 50%;
 }
-
-/* botão */
-
-.button-faca-box {
-    cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    justify-content: center;
-    border: none;
-    width: 200px;
-    height: 50px;
-    padding: 2px 2px 2px 2px;
-    border-radius: 5px;
-    background-color: var(--laranja);
-    margin-left: 44%;
-    font-size: 18px;
-    font-family: "Arial", sans-serif;
-    color: #ffffff;
-    text-align: center;
-    line-height: normal;
+.carousel-control img, .carousel-control2 img{
+    height: 25px;
+    width: 25px;
 }
 
-.button-faca-box:hover{
-    background-color: rgba(243, 166, 22, 0.911);
-    color: var(--cortexto);
-    border: 2px solid var(--laranja);
+.carousel-indicators{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+  
+.indicator{
+    border: none;
+    width: 19px;
+    height: 19px;
+    background-color: rgba(81, 149, 117, 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+  
+.indicator.active{
+    background-color: #519575;
 }

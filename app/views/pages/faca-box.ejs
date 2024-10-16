@@ -6,7 +6,6 @@
     <title>AgroBox</title>
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/faca-box.css">
-    <link rel="stylesheet" href="css/carroseis.css">
 </head>
 
 <body>  
@@ -14,12 +13,31 @@
 
    <%- include('../partials/navbar'); %>
 
-<main>
-    <h1 class="titulo-faca-box">FAÇA SUA BOX</h1>
-    <h2 class="titulos-sectionBox">Produtos</h2>
-    <h2 class="titulos-sectionBox">Box Prontas</h2>
-</main>
+    <!-- Corpo/ Conteúdo -->
 
+
+<!-- Faça sua Box Titulo e afins  -->
+<main class="geralBox">
+    <h1 class="titulo-faca-box">FAÇA SUA BOX</h1>
+
+    <section class="titulos">
+        <h2 class="titulos-sectionBox">Produtos</h2>
+        <h2 class="titulos-sectionBox2">Box Prontas</h2>
+    </section>
+
+
+
+
+
+
+    <!-- CarroselFiltroProdutosBox -->
+<!-- 
+    <%- include('../partials/carroselFiltroBox'); %> -->
+
+
+    <!-- CarroselBoxProdutos -->
+
+    <%- include('../partials/carroselBox'); %>
 
 
    <!-- Rodapé -->
@@ -33,5 +51,6 @@
 
 <!-- Script -->
  
-<script src="js/resumoCarrinho.js"> </script>
+
+<script src="js/carroselBox.js"> </script>
 
