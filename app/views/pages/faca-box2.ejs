@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/faca-box.css">
+</head>
+
+<body>  
+    <!-- NavBar -->
+
+   <%- include('../partials/navbar'); %>
+
+    <!-- Corpo/ Conteúdo -->
+
+
+<!-- Faça sua Box Titulo e afins  -->
+<main class="geralBox">
+    <h1 class="titulo-faca-box2">ESCOLHA O TIPO DA SUA BOX</h1>
+
+    <section class="TipoBox">
+
+        <section class="TipoBoxHead">
+            <h1 class="TitleTipo">ÚNICA</h1>
+            <img src="imagens/icon_Box.png">
+        </section>
+
+        <section class="TipoBoxBody">
+            <p class="TextBoxTipo">Receba sua box em uma versão única.</p>
+            <button class="selectionBox">SELECIONAR</button>
+        </section>
+
+    </section>
+
+    <section class="TipoBox">
+
+        <section class="TipoBoxHead">
+            <h1 class="TitleTipo">SEMANAL</h1>
+            <h3 class="SubTitleTIpo">(requer premium)</h3>
+            <img src="imagens/icon_caminhaoBox.png">
+        </section>
+
+        <section class="TipoBoxBody">
+            <p class="TextBoxTipo">Receba sua box semanalmente
+                (Cancele quando quiser)</p>
+            <button class="selectionBox">SELECIONAR</button>
+        </section>
+    
+    </section>
+
+    <section class="TipoBox">
+
+        <section class="TipoBoxHead">
+            <h1 class="TitleTipo">SEMANAL</h1>
+            <h3 class="SubTitleTIpo">(requer premium)</h3>
+            <img src="imagens/icon_callenderBox.png">
+        </section>
+
+        <section class="TipoBoxBody">
+            <p class="TextBoxTipo">Receba sua box semanalmente
+                (Cancele quando quiser)</p>
+            <button class="selectionBox">SELECIONAR</button>
+        </section>
+        icon_callenderBox
+    </section>
+
+    <a href="/faca-box"> <button class="proximoBox">VOLTAR</button></a>
+
+    <a href="/faca-box3"> <button class="proximoBox">PRÓXIMO</button></a>
+</main>
+
+   <!-- Rodapé -->
+    
+   <%- include('../partials/footer'); %>
+   
+</body>
+
+</html>
+
+
+<!-- Script -->
+ 
+
+<script src="js/carroselBox.js"> </script>
+

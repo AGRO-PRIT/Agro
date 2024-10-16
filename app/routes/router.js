@@ -90,6 +90,17 @@ router.get('/faca-box', function(req, res) {
     res.render('pages/faca-box');
 });
 
+router.get('/faca-box2', function(req, res) {
+    res.render('pages/faca-box2');
+});
+
+router.get('/faca-box3', function(req, res) {
+    res.render('pages/faca-box3');
+});
+
+router.get('/faca-box4', function(req, res) {
+    res.render('pages/faca-box4');
+});
 
 /* menudropDown sub */
 
