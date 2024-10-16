@@ -155,20 +155,20 @@ router.post('/contaConsumidor', function(req, res) {
     res.redirect('/contaConsumidor');
 });
 
-router.get('/pedidos', function(req, res) {
-    res.render('pages/Conta-consumidor/pedidos');
+router.get('/contaConsumidor/pedidos', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/pedidos');
 });
 
-router.get('/cartoes', function(req, res) {
-    res.render('pages/Conta-consumidor/cartoes');
+router.get('/contaConsumidor/cartoes', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/cartoes');
 });
 
-router.get('/enderecos', function(req, res) {
-    res.render('pages/Conta-consumidor/enderecos');
+router.get('/contaConsumidor/enderecos', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/enderecos');
 });
 
-router.get('/configuracoes', function(req, res) {
-    res.render('pages/Conta-consumidor/configuracoes');
+router.get('/contaConsumidor/configuracoes', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/configuracoes');
 });
 
 
