@@ -20,17 +20,14 @@
 /* titilo e orientação*/
 
 .titulo-faca-box {
-        width: 707px;
-        height: 79px;
         background-color: rgba(255, 255, 255, 0);
         box-sizing: border-box;
         font-family: "Cooper Black", "Cooper", sans-serif;
         font-weight: 900;
         color: #006837;
-        text-align: left;
-        font-size: 75px;
-        margin-left: 300px;
-        margin-top: 50px;
+        text-align: center;
+        font-size: 60px;
+        margin-top: 30px;
         margin-bottom: 40px;
         letter-spacing: 8px;
 }
