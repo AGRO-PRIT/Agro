@@ -4,20 +4,20 @@
     align-items: center;
 }
 
-.carousel-container {
+.carousel-containerFiltro {
     width: 120px; /* Largura fixa, ajuste conforme necessário */
     height: 400px; /* Altura fixa para conter alguns itens visíveis */
     overflow: hidden;
     position: relative;
 }
 
-.carousel {
+.carouselFiltro {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel-item {
+.carousel-itemFiltro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,13 +25,13 @@
     margin: 10px 0;
 }
 
-.carousel-control {
+.carousel-controlFiltro {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.carousel-control img {
+.carousel-controlFiltro img {
     width: 24px;
     height: 24px;
 }

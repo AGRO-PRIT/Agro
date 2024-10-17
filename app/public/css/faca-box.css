@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 :root {
     --backgroundcolor: #FCF2E6;
@@ -203,7 +213,7 @@
 
 .carousel-control, .carousel-control2 {
     position: absolute;
-    top: 41%;
+    top: 50%;
     transform: translateY(50%);
     background-color: transparent;
     color: var(--marrom);
@@ -242,6 +252,7 @@
 
 .pagina {
     opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 1.5s ease-out;
     transition: opacity 0.8s ease-in-out;
     visibility: hidden; /* O elemento está invisível mas mantém a posição */
     position: absolute; /* Para manter a posição no container sem mudar */
@@ -278,3 +289,54 @@
     transition: background-color 0.3s ease;
 }
 
+/* FiltroBoxCarrosel */
+
+.geralFiltroBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-containerFiltro {
+    width: 120px; /* Largura fixa, ajuste conforme necessário */
+    height: 400px; /* Altura fixa para conter alguns itens visíveis */
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselFiltro {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-itemFiltro img{
+    height: 100px;
+    width: 150px;
+    display: block;
+    object-fit: cover;
+    margin: auto;
+}
+
+.carousel-itemFiltro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.carousel-controlFiltro {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-controlFiltro img {
+    width: 24px;
+    height: 24px;
+}
+
+.setaFiltro {
+    position: relative;
+}
