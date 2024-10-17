@@ -90,6 +90,17 @@ router.get('/faca-box', function(req, res) {
     res.render('pages/faca-box');
 });
 
+router.get('/faca-box2', function(req, res) {
+    res.render('pages/faca-box2');
+});
+
+router.get('/faca-box3', function(req, res) {
+    res.render('pages/faca-box3');
+});
+
+router.get('/faca-box4', function(req, res) {
+    res.render('pages/faca-box4');
+});
 
 /* menudropDown sub */
 
@@ -146,13 +157,31 @@ router.get('/detalhesVendedor', function(req, res) {
     res.render('pages/detalhesVendedor');
 });
 
+
 router.get('/contaConsumidor', function(req, res) {
-    res.render('pages/contaConsumidor');
+    res.render('pages/Conta-consumidor/contaConsumidor');
 });
 
 router.post('/contaConsumidor', function(req, res) {
     res.redirect('/contaConsumidor');
 });
+
+router.get('/contaConsumidor/pedidos', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/pedidos');
+});
+
+router.get('/contaConsumidor/cartoes', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/cartoes');
+});
+
+router.get('/contaConsumidor/enderecos', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/enderecos');
+});
+
+router.get('/contaConsumidor/configuracoes', function(req, res) {
+    res.render('pages/Conta-consumidor/contaConsumidor/configuracoes');
+});
+
 
 
 /* Produto */

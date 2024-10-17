@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/conta.css">
+
+    
+</head>
+
+<body>  
+     <!-- NavBar -->
+
+     <%- include('../../partials/navbar'); %>
+
+    <!--  CONTA CONSUMIDOR  -->
+
+    <%- include('../../partials/conta'); %>
+
+    <section id="cartoes" style="display:none;">
+        <article class="carton">
+            <h1 class="Titulos">Cartões</h1>
+            <button id="adicionarCartao" class="btn-cartoes"> + Adicionar novo cartão </button> 
+            <div id="formularioCartao" class="modal-cartao" style="display: none;">
+                <div class="modal-content-cartao">
+                    <h1 class="titulo-formulario">Informações do cartão</h1>
+                    <form id="novoCartaoForm">
+                        <input type="text" class="numeroCartao" id="numeroCartao" placeholder="Número do Cartão" required>
+                        <input type="text" class="cvvCartao" id="cvvCartao" placeholder="CVV" required>
+                        <input type="month" class="validadeCartao" id="validadeCartao" placeholder="Validade (MM/AA)" required>
+                        <input type="text" class="nomeCartao" id="nomeCartao" placeholder="Nome no Cartão" required>
+                        <button type="submit" class="botaoadd-cartao">Adicionar Cartão</button>
+                    </form>
+                </div>
+            </div>  
+        </article> 
+               
+   
+    <section class="container-cartoes" id="listaCartoes">
+        <section class="container-cards">
+        <article class="card-image">
+            <img src="imagens/credit-card.png">
+            <p>Remover como padrão</p>
+        </article>
+        <article class="card2">
+            <h3>**** **** **** 1234</h3>
+            <p>Nome no Cartão</p>  
+            <article class="remover-card">
+                <img src="imagens/icon_lixeira.png">
+                <strong>Excluir</strong>
+            </article>
+        </article>
+        <button class="padron">PADRÃO</button>
+    </section>
+   
+
+    <section class="container-cards">
+        <article class="card-image2">
+            <img src="imagens/credit-debito.png">
+            <p>Definir como padrão</p>
+        </article>
+        <article class="card2">
+            <h3>**** **** **** 1234</h3>
+            <p>Nome no Cartão</p>  
+            <article class="remover-card">
+                <img src="imagens/icon_lixeira.png">
+                <strong>Excluir</strong>
+            </article>
+        </article>
+    </section>
+
+    <section class="container-cards">
+        <article class="card-image2">
+            <img src="imagens/credi-prox.png">
+            <p>Definir como padrão</p>
+        </article>
+        <article class="card2">
+            <h3>**** **** **** 1234</h3>
+            <p>Nome no Cartão</p>  
+            <article class="remover-card">
+                <img src="imagens/icon_lixeira.png">
+                <strong>Excluir</strong>
+            </article>
+        </article>
+    </section>
+   
+    <section class="container-cards">
+        <article class="card-image2">
+            <img src="imagens/credit-debito.png">
+            <p>Definir como padrão</p>
+        </article>
+        <article class="card2">
+            <h3>**** **** **** 1234</h3>
+            <p>Nome no Cartão</p>  
+            <article class="remover-card">
+                <img src="imagens/icon_lixeira.png">
+                <strong>Excluir</strong>
+            </article>
+        </article>
+    </section>
+    
+</section>
+</section>
+
+
+    <!-- Rodapé -->
+     
+    <%- include('../../partials/footer'); %>
+    
+</body>
+</html>
+
+        <!-- Script -->
+
+<script src="js/perfil.js" defer></script>
+<script src="js/validacaoConta.js" defer></script>
+<script src="js/darkmode.js" defer> </script>
+<script src="js/imagens.js"> </script>
+<script src="js/formularioCartao.js"> </script>
+
+
+
+

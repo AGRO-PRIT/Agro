@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/conta.css">
+
+    
+</head>
+
+<body>  
+     <!-- NavBar -->
+
+     <%- include('../../partials/navbar'); %>
+
+    <!--  CONTA CONSUMIDOR  -->
+
+    <%- include('../../partials/conta'); %>
+
+    <section id="enderecos" style="display:none;">
+        <article class="carton">
+            <h1 class="Titulos">Endereços</h1>
+            <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
+            <div id="formularioEndereco" class="modal-endereco" style="display: none;">
+                <div class="modal-content-endereco">
+                    <h1 class="titulo-formulario">Informações do cartão</h1>
+                    <form id="novoEnderecoForm">
+                        <input type="text" class="nomeCompletoEndereco" id="nomeCompleto" placeholder="Nome Endereco" required>
+                        <input type="text" class="numeroTelefoneEndereco" id="numeroTelefone" placeholder="Telefone" required>
+                        <input type="month" class="CEPEndereco" id="CEP" placeholder="CEP" required>
+                        <input type="text" class="cidadeEndereco" id="cidade" placeholder="Cidade" required>
+                        <input type="text" class="estadoEndereco" id="cidade" placeholder="Estado" required>
+                        <input type="text" class="numeroEndereco" id="cidade" placeholder="Numero" required>
+                        <button type="submit" class="botaoadd-endereco">Adicionar Cartão</button>
+                    </form>
+                </div>
+            </div>     
+        </article>
+        
+
+        <section class="container-enderecos">
+
+            <section class="informationEnderecos">
+                <section class="interiorEnderecos">
+                    <h2><strong>Casa do Usuario1 </strong>| (+55) 1100000000</h2>
+                    <h2>Rua Joaninha, 404 - Bairro do Kiko</h2>
+                    <h2>Carpazinha, São Paulo, 00000000</h2>
+                </section>
+            
+                <button class="padron">PADRÃO</button>
+                <article class="edition">
+                    <p>Editar | Excluir</p>
+                    <button class="btn-padron">Remover como padrão</button>
+                </article>
+
+                <section class="interiorEnderecos">
+                    <h2><strong>Casa do Usuario1 </strong>| (+55) 1100000000</h2>
+                    <h2>Rua Joaninha, 404 - Bairro do Kiko</h2>
+                    <h2>Carpazinha, São Paulo, 00000000</h2>
+                </section>
+            
+                <button class="padron">PADRÃO</button>
+                <article class="edition">
+                    <p>Editar | Excluir</p>
+                    <button class="btn-padron">Remover como padrão</button>
+                </article>
+            </section>
+        </section>
+
+    </section>
+
+    <!-- Rodapé -->
+     
+    <%- include('../../partials/footer'); %>
+    
+</body>
+</html>
+
+        <!-- Script -->
+
+<script src="js/perfil.js" defer></script>
+<script src="js/validacaoConta.js" defer></script>
+<script src="js/darkmode.js" defer> </script>
+<script src="js/imagens.js"> </script>
+
+
+
+
