@@ -12,6 +12,7 @@
 </head>
 
 <body>  
+    <main>
      <!-- NavBar -->
 
      <%- include('../../partials/navbar'); %>
@@ -20,7 +21,9 @@
 
     <%- include('../../partials/conta'); %>
 
-    <section id="enderecos" style="display:none;">
+
+    <section class="page-container">
+    <section id="enderecos" >
         <article class="carton">
             <h1 class="Titulos">Endereços</h1>
             <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
@@ -71,7 +74,9 @@
         </section>
 
     </section>
+</section>
 
+</main>
     <!-- Rodapé -->
      
     <%- include('../../partials/footer'); %>

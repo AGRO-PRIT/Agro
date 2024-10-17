@@ -12,6 +12,8 @@
 </head>
 
 <body>  
+
+    <main>
      <!-- NavBar -->
 
      <%- include('../../partials/navbar'); %>
@@ -19,7 +21,7 @@
     <!--  CONTA CONSUMIDOR  -->
 
     <%- include('../../partials/conta'); %>
-
+    
     <section class="page-container">
         <section id="minhaConta" class="minhaConta" style="display: block;">
             <h1>Minha Conta</h1>
@@ -66,11 +68,15 @@
                 <button class="botao-enviar" type="submit">Salvar</button>
             </form>
         </section>
+        
+        </main>
 
     <!-- Rodapé -->
-     
+
+
+    <footer>
     <%- include('../../partials/footer'); %>
-    
+    </footer> 
 </body>
 </html>
 

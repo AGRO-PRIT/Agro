@@ -166,22 +166,21 @@ router.post('/contaConsumidor', function(req, res) {
     res.redirect('/contaConsumidor');
 });
 
-router.get('/contaConsumidor/pedidos', function(req, res) {
-    res.render('pages/Conta-consumidor/contaConsumidor/pedidos');
+router.get('/pedidos', function(req, res) {
+    res.render('pages/Conta-consumidor/pedidos'); // Verifique o caminho correto
 });
 
-router.get('/contaConsumidor/cartoes', function(req, res) {
-    res.render('pages/Conta-consumidor/contaConsumidor/cartoes');
+router.get('/cartoes', function(req, res) {
+    res.render('pages/Conta-consumidor/cartoes'); // Verifique o caminho correto
 });
 
-router.get('/contaConsumidor/enderecos', function(req, res) {
-    res.render('pages/Conta-consumidor/contaConsumidor/enderecos');
+router.get('/enderecos', function(req, res) {
+    res.render('pages/Conta-consumidor/enderecos'); // Verifique o caminho correto
 });
 
-router.get('/contaConsumidor/configuracoes', function(req, res) {
-    res.render('pages/Conta-consumidor/contaConsumidor/configuracoes');
+router.get('/configuracoes', function(req, res) {
+    res.render('pages/Conta-consumidor/configuracoes'); // Verifique o caminho correto
 });
-
 
 
 /* Produto */

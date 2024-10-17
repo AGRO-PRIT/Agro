@@ -20,6 +20,9 @@ const axios = require('axios')
 //   console.log('Conexão efetuada com sucesso!');
 // });
 
+
+
+
 app.use(express.static('app/public'));
 
 app.set('view engine', 'ejs');
