@@ -165,6 +165,7 @@
     border-radius: 13px;
     box-sizing: border-box;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    z-index: 10;
 }
 
 .botao-adicionar:hover {
@@ -240,12 +241,22 @@
 }
 
 .pagina {
-    display: none; /* Esconde todas as páginas inicialmente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.8s ease-in-out;
+    visibility: hidden; /* O elemento está invisível mas mantém a posição */
+    position: absolute; /* Para manter a posição no container sem mudar */
+    top: 0;
+    left: 0;
+    width: 100%; /* Certifica que o elemento ocupe toda a largura do container */
+    height: 100%; /* Certifica que o elemento ocupe toda a altura do container */
 }
 
 .pagina.active {
-    display: flex; /* Mostra a página ativa */
+    opacity: 1; /* Visível */
+    visibility: visible; /* Torna o elemento visível */
+    position: relative; /* Volta a ficar no fluxo normal do layout */
 }
+
 /* resumo Box */
 
 .proximoBox{

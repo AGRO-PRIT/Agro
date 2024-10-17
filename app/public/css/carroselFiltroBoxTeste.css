@@ -1,0 +1,38 @@
+.geralFiltroBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-container {
+    width: 120px; /* Largura fixa, ajuste conforme necessário */
+    height: 400px; /* Altura fixa para conter alguns itens visíveis */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.carousel-control {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-control img {
+    width: 24px;
+    height: 24px;
+}
+

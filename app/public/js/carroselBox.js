@@ -8,11 +8,13 @@ let currentPage = 0;
 pages[currentPage].classList.add('active');
 indicators[currentPage].classList.add('active');
 
-// Função para mudar de página
 function showPage(index) {
     // Remove a classe 'active' da página e do indicador atual
     pages[currentPage].classList.remove('active');
     indicators[currentPage].classList.remove('active');
+
+    // Adiciona a classe 'prev' na página anterior para o efeito de transição
+    pages[currentPage].classList.add('prev');
 
     // Atualiza o índice da página atual
     currentPage = index;
@@ -20,6 +22,11 @@ function showPage(index) {
     // Adiciona a classe 'active' à nova página e indicador
     pages[currentPage].classList.add('active');
     indicators[currentPage].classList.add('active');
+
+    // Remove a classe 'prev' depois da animação
+    setTimeout(() => {
+        pages.forEach(page => page.classList.remove('prev'));
+    }, 600); // Tempo correspondente à duração da transição
 }
 
 // Event listener para o botão "prev"
@@ -41,4 +48,5 @@ indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
         showPage(index);
     });
+    
 });
