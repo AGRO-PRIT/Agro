@@ -167,7 +167,7 @@ router.post('/contaConsumidor', function(req, res) {
 });
 
 router.get('/pedidos', function(req, res) {
-    res.render('pages/Conta-consumidor/pedidos'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); // Verifique o caminho correto
 });
 
 router.get('/cartoes', function(req, res) {
@@ -181,6 +181,27 @@ router.get('/enderecos', function(req, res) {
 router.get('/configuracoes', function(req, res) {
     res.render('pages/Conta-consumidor/configuracoes'); // Verifique o caminho correto
 });
+
+// pedidos
+
+router.get('/aPagar', function(req, res) {
+    res.render('pages/Conta-consumidor/Status-pedidos/aPagar'); // Verifique o caminho correto
+});
+
+router.get('/cancelado', function(req, res) {
+    res.render('pages/Conta-consumidor/Status-pedidos/cancelado'); // Verifique o caminho correto
+});
+router.get('/emAndamento', function(req, res) {
+    res.render('pages/Conta-consumidor/Status-pedidos/emAndamento'); // Verifique o caminho correto
+});
+router.get('/tudo', function(req, res) {
+    res.render('pages/Conta-consumidor/Status-pedidos/tudo'); // Verifique o caminho correto
+});
+
+router.get('/finalizado', function(req, res) {
+    res.render('pages/Conta-consumidor/Status-pedidos/finalizado'); // Verifique o caminho correto
+});
+
 
 
 /* Produto */

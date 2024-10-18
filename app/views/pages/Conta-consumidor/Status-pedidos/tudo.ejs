@@ -15,11 +15,11 @@
     <main>
      <!-- NavBar -->
 
-     <%- include('../../partials/navbar'); %>
+     <%- include('../../../partials/navbar'); %>
 
     <!--  CONTA CONSUMIDOR  -->
 
-    <%- include('../../partials/conta'); %>
+    <%- include('../../../partials/conta'); %>
 
 
     <section class="page-container">
@@ -28,11 +28,11 @@
         <article class="container-pedidos">
 
             <ul class="menu2">
-                <li> <a href="#"onclick="mostrarSeção2('tudo')">Tudo</a> </li>
-                <li><a href="#" onclick="mostrarSeção2('pagar')">A pagar</a></li>
-                <li><a href="#" onclick="mostrarSeção2('andamento')">Em andamento</a></li>
-                <li><a href="#" onclick="mostrarSeção2('finalizado')">Finalizado</a></li>
-                <li><a href="#" onclick="mostrarSeção2('cancelado')">Cancelado</a></li>
+                <li> <a href="/tudo">Tudo</a> </li>
+                <li><a href="/aPagar" >A pagar</a></li>
+                <li><a href="/emAndamento" >Em andamento</a></li>
+                <li><a href="/finalizado">Finalizado</a></li>
+                <li><a href="/cancelado">Cancelado</a></li>
             </ul>
 
 
@@ -553,7 +553,7 @@
 </main>
     <!-- Rodapé -->
      
-    <%- include('../../partials/footer'); %>
+    <%- include('../../../partials/footer'); %>
     
 </body>
 </html>
