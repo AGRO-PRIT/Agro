@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/conta.css">
+
+    
+</head>
+
+<body>  
+    <main>
+     <!-- NavBar -->
+
+    <%- include('../../partials/navbar'); %>
+
+   
+    <!--  CONTA VENDEDOR  -->
+
+    <%- include('../../partials/contaV'); %>
+
+    <section class="page-container">
+        <section id="minhaConta" class="minhaConta" >
+        <h1>Minha Conta</h1> 
+        <form id="form-dados">
+        <article class="box-container">
+            <article class="box-dados-pessoais">
+                <h3>Dados Pessoais</h3>
+                <article class="input-wrapper">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo">
+                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                </article>
+                <article class="input-wrapper">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="Digite seu CPF">
+                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                </article>
+                <article class="input-wrapper">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" placeholder="Digite seu telefone">
+                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                </article>
+            </article>
+            
+            <article class="box-dados-acesso">
+                <h3>Dados de Acesso</h3>
+                <article class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Digite seu email">
+                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                </article>
+                <article class="input-wrapper">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                </article>
+            </article>
+        </article>
+        <button class="botao-enviar" type="submit">Salvar</button>
+    </form>
+</section>
+
+</main>
+
+    <!-- Rodapé -->
+     
+    <footer>
+    <%- include('../../partials/footer'); %>
+</footer>
+    
+</body>
+</html>
+
+        <!-- Script -->
+
+<script src="js/perfil.js"> </script>
+    
+
+
+
+
