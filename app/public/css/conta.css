@@ -16,6 +16,40 @@
             /* CONTA CONSUMIDOR */
 
 
+            .modal-content-endereco .close {
+                position: absolute;
+                top: 320px;
+                left: 1190px;
+                color: #aaa;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            
+            .modal-content-endereco .close:hover,
+            .modal-content-endereco .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }    
+
+            
+            .modal-content-cartao .close {
+                position: absolute;
+                top: 320px;
+                left: 1190px;
+                color: #aaa;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            
+            .modal-content-cartao .close:hover,
+            .modal-content-cartao .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }    
 
 /* container geral */
 

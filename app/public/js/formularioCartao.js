@@ -2,6 +2,11 @@ const botao = document.getElementById('adicionarCartao');
 const formulario = document.getElementById('formularioCartao');
 const novoCartaoForm = document.getElementById('novoCartaoForm');
 const listaCartoes = document.getElementById('listaCartoes');
+const closeBtn = document.querySelector('.modal-content-cartao .close');
+
+closeBtn.addEventListener('click', () => {
+    formulario.style.display = 'none';
+});
 
 botao.addEventListener('click', () => {
     formulario.style.display = 'flex';

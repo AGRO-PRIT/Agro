@@ -24,25 +24,28 @@
 
 
     <section class="page-container">
-    <section id="enderecos" >
-        <article class="carton">
-            <h1 class="Titulos">Endereços</h1>
-            <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
-            <div id="formularioEndereco" class="modal-endereco" style="display: none;">
-                <div class="modal-content-endereco">
-                    <h1 class="titulo-formulario">Informações do cartão</h1>
-                    <form id="novoEnderecoForm">
-                        <input type="text" class="nomeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Endereco" required>
-                        <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone" required>
-                        <input type="month" class="CEPEndereco" id="CEP" placeholder="CEPEndereco" required>
-                        <input type="text" class="cidadeEndereco" id="cidade" placeholder="cidadeEndereco" required>
-                        <input type="text" class="estadoEndereco" id="cidade" placeholder="estadoEndereco" required>
-                        <input type="text" class="numeroEndereco" id="cidade" placeholder="numeroEndereco" required>
-                        <button type="submit" class="botaoadd-endereco">Adicionar Cartão</button>
-                    </form>
-                </div>
-            </div>     
-        </article>
+        <section id="enderecos">
+            <article class="carton">
+                <h1 class="Titulos">Endereços</h1>
+                <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
+                <section id="formularioEndereco" class="modal-endereco" style="display: none;">
+                    <section class="modal-content-endereco">
+                        <h1 class="titulo-formulario">Informações do Endereço</h1>
+                        <span class="close">&times;</span>
+                        <form id="novoEnderecoForm">
+                            <input type="text" class="omeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Completo" required>
+                            <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone" required>
+                            <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP" oninput="formatarCEP(this)" required>
+                            <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
+                            <input type="text" class="bairroEndereco" id="bairroEndereco" placeholder="Bairro" required>
+                            <input type="text" class="cidadeEndereco" id="cidadeEndereco" placeholder="Cidade" required>
+                            <input type="text" class="estadoEndereco" id="estadoEndereco" placeholder="Estado" required>
+                            <input type="text" class="numeroEndereco" id="numeroEndereco" placeholder="Número" required>
+                            <button type="submit" class="botaoadd-endereco">Adicionar Endereço</button>
+                        </form>
+                    </section>
+                </section>     
+            </article>>
         
 
         <section class="container-enderecos">
