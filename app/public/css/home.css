@@ -145,6 +145,7 @@ body {
 .botao-pesquisa{
     width: 40px;
     height: 40px;
+    margin-left: auto;
     border-radius: 50%;
 }
 
@@ -360,46 +361,52 @@ body {
 /*             RESPONSIVIDADE             */
 
 
+
 /* celulares */
 
 @media(max-width: 768px){
 
-
-*{
+* {
     box-sizing: border-box; 
+}
+
+/*  Carrosel */
+
+.slide img {
+    height: 250px;
 }
 
 /* Navbar */
 
-.navbar{
+.navbar {
     justify-content: space-between;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
+
 /* Menu Responsivo */
 
-
-.mobile-menu{
+.mobile-menu {
     z-index: 1000;
     position: relative;
 }
 
-.mobile-list{
+.mobile-list {
     display: none;
 }
 
-.mobile-menu-icon{
+.mobile-menu-icon {
     display: block;
 }
 
-.mobile-menu ul{  
+.mobile-menu ul {  
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 1rem;
 }
 
-.mobile-menu .mobile-list{
+.mobile-menu .mobile-list {
     display: block;
     padding-top: 1.2rem;
 }
@@ -408,37 +415,41 @@ body {
     width: 100%;
 }
 
-.open{
+.open {
     display: block;
     z-index: 100000;
-
 }
 
 /* logo */
 
-.logo{
+
+.logo {
     margin-left: 10px;
 }
 
-.logo img{
-    height: 55px;
-    width: 65px;
+.logo img { 
+    height: 50px;
+    width: 80px;
     margin: 0;
 }
 
 /* Barra de pesquisa */
 
-.barradepesquisa{
-    margin-left: 10px;
+.barradepesquisa {
+    margin-left: 0;
+    border-radius: 7px;
     padding: 3px;
+    width: 45%;
+    height: 40px;
 }
 
 .barra-texto-pesquisa{
-    font-size: 12px;
-    width: 80px;
+    font-size: 10px;
+    width: auto;
 }
 
 .barradepesquisa img{
+    margin-left: auto;
     margin-top: 5px;
     height: 25px;
     width: 25px;
@@ -447,6 +458,7 @@ body {
 /* Perfil */
 
 .perfil{
+    display: none;
     margin-left: 0;
 }
 
@@ -484,7 +496,7 @@ body {
 
 }
 
-.subnav li{
+.subnav li {
     margin: 0;
 }
 
@@ -492,7 +504,7 @@ body {
     display: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     font-size: 4px;
     letter-spacing: 0;
 }
@@ -500,9 +512,86 @@ body {
 
 /* Carrosel Frutas */
 
-.section-title{
-    margin-left: 40px;
+.section-title {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 30px;
 }
+
+.carousel-item, .carousel-item2 {
+    padding: 22px;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.carousel-item img, .carousel-item2 img {
+    display: block;
+    object-fit: cover;
+    height: 118px;
+    width: 142px;
+    margin: 0px;
+}
+
+.carousel-container2 {
+    border-radius: 15px;
+    position: relative;
+    max-width: 1550px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.product-name {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.seller-name, .seller-name2 {
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 0;
+}
+
+.product-price {
+    color: #006837;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.add-to-cart, .add-to-cart2 {
+    cursor: not-allowed;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--branco);
+    color: #006837;
+    border: 2px solid #006837;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.2s ease;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control, .carousel-control2 {
+    top: 30%;
+}
+
+.desconto {
+    background-color: #f5a83c;
+    color: #ffffff;
+    padding: 7px;
+    font-size: 15px;
+    margin-top: 15px;
+    width: 80px;
+    position: absolute;
+    border-radius: 4px;
+}
+
 
 /* Carrosel Verduras */
 
@@ -517,30 +606,36 @@ body {
 
 /* Agro-Assinatura */
 
-.agro-assinatura{
+.agro-assinatura {
     height: auto;  
 }
-.agro-content{
+
+.agro-content {
     margin-left: 10px;
 }
-.agro-content ul{
+
+.agro-content ul {
     margin-bottom: 10px;
     padding-left: 10px;
 }
-.agro-content h1{
+
+.agro-content h1 {
     font-size: 1.3em;
     margin-left: 10px;
     margin-bottom: 10px;
 }
-.agro-content ul li{
+
+.agro-content ul li {
     margin-left: 30px;
     font-size: 0.69em;
 }
-.agro-imagem{
+
+.agro-imagem {
     margin-right: 0;
     margin-top: 30px;
 }
-.agro-imagem img{
+
+.agro-imagem img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -550,9 +645,15 @@ body {
 
 /* Carrosel Agricultores */
 
-.user-name{
+.user-name {
     margin-left: 20px;
     font-size: 20px;
+}
+
+.desconto {
+    font-size: 8px;
+    margin-top: 15px;
+    width: 80px;
 }
 
 .carousel-container3{
@@ -562,34 +663,41 @@ body {
 .carousel-container3 {
     margin: 0;
 }
-.carousel-item3{
+
+.carousel-item3 {
     margin: 10px;
     padding: 10px;
 
 }
-.perfil-image3{
+.perfil-image3 {
     width: 120px;
     height: 120px;
     margin: 10px;
     padding: 5px;
 }
-.user-profession-name{
+
+.user-profession-name {
     font-size: 15px;
 }
-.user-profession-emoji{
+
+.user-profession-emoji {
     font-size: 15px;
 }
+
 .user-profession-emoji strong {
     font-size: 15px;
 }
-.user-profession{
+
+.user-profession {
     font-size: 0.80em;
     margin-right: 3px;
 }
+
 .user-profession br {
     display: none;
-  }
-.message-button{
+}
+
+.message-button {
     border-radius: 6px;
     padding: 3px;
     width: 180px;
