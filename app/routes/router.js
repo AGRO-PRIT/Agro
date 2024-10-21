@@ -144,8 +144,32 @@ router.get('/proteinas', function(req, res) {
 /* PERFIL*/
 
 router.get('/contaVendedor', function(req, res) {
-    res.render('pages/contaVendedor');
+    res.render('pages/Conta-vendedor/contaVendedor');
 });
+
+router.post('/contaVendedor', function(req, res) {
+    res.redirect('/contaVendedor');
+});
+
+
+router.get('/avaliacoes', function(req, res) {
+    res.render('pages/Conta-vendedor/avaliacoes'); 
+});
+
+
+router.get('/configuracoesV', function(req, res) {
+    res.render('pages/Conta-vendedor/configuracoesV'); 
+});
+
+
+router.get('/produtosContaV', function(req, res) {
+    res.render('pages/Conta-vendedor/produtosContaV'); 
+});
+
+router.get('/vendas', function(req, res) {
+    res.render('pages/Conta-vendedor/vendas'); 
+});
+
 
 
 
@@ -167,19 +191,19 @@ router.post('/contaConsumidor', function(req, res) {
 });
 
 router.get('/pedidos', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); 
 });
 
 router.get('/cartoes', function(req, res) {
-    res.render('pages/Conta-consumidor/cartoes'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/cartoes'); 
 });
 
 router.get('/enderecos', function(req, res) {
-    res.render('pages/Conta-consumidor/enderecos'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/enderecos'); 
 });
 
 router.get('/configuracoes', function(req, res) {
-    res.render('pages/Conta-consumidor/configuracoes'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/configuracoes');
 });
 
 // pedidos
