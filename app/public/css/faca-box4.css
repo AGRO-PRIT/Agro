@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+}
+
+.PagamentoTotalBox{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--corprincipal);
+    width: 1350px;
+    border-radius: 16px;
+    height: 430px;
+    padding: 50px;
+}
+
+.titleEnderecosBox{
+    font-size: 2.5em;
+    color: var(--marrom);
+    font-weight: bold;
+}
+
+.card-image img{
+    height: 120px;
+    width: 120px;
+    display: block;
+}
+
+.editionTittle{
+    margin-left: 750px;
+    font-size: 1.3em;
+    color: var(--marrom);
+    font-weight: bold;
+}
+
+.InteriorEnderecos{
+    color: var(--branco);
+    font-weight: 400;
+    padding: 15px 30px 0px 30px;
+    border: 3px solid var(--branco);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.numero-cartao{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.nome-cartao{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.tituloprimarioAddress{
+    display: flex;
+}
+
+.selecaoEnderess{
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    border: 2px solid var(--corprincipal);
+    font-size: 15px;
+    color: var(--corprincipal);
+}
+
+.AddEnderess{
+    width: 500px;
+    height: 75px;
+    margin-left: 450px;
+    font-size: 30px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    border: 1px solid rgba(252, 242, 230, 0.5);
+    background-color: rgba(30, 152, 215, 0);
+    box-sizing: border-box;
+    font-family: "Montserrat Medium", "Montserrat", "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgba(252, 242, 230, 0.5);
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+}
+
+

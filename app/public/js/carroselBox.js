@@ -1,52 +1,41 @@
+
+// Carrossel Box JS
 const pages = document.querySelectorAll('.pagina');
-const prevButton = document.querySelector('.carousel-control.prev');
-const nextButton = document.querySelector('.carousel-control.next');
-const indicators = document.querySelectorAll('.indicator');
-let currentPage = 0;
+const prevButtonBox = document.querySelector('.carousel-control.prev');
+const nextButtonBox = document.querySelector('.carousel-control.next');
+const indicatorsBox = document.querySelectorAll('.indicator');
+let currentPageBox = 0;
 
-// Mostra a primeira página
-pages[currentPage].classList.add('active');
-indicators[currentPage].classList.add('active');
+pages[currentPageBox].classList.add('active');
+indicatorsBox[currentPageBox].classList.add('active');
 
-function showPage(index) {
-    // Remove a classe 'active' da página e do indicador atual
-    pages[currentPage].classList.remove('active');
-    indicators[currentPage].classList.remove('active');
+function showPageBox(indexBox) {
+    pages[currentPageBox].classList.remove('active');
+    indicatorsBox[currentPageBox].classList.remove('active');
+    pages[currentPageBox].classList.add('prev');
 
-    // Adiciona a classe 'prev' na página anterior para o efeito de transição
-    pages[currentPage].classList.add('prev');
+    currentPageBox = indexBox;
 
-    // Atualiza o índice da página atual
-    currentPage = index;
+    pages[currentPageBox].classList.add('active');
+    indicatorsBox[currentPageBox].classList.add('active');
 
-    // Adiciona a classe 'active' à nova página e indicador
-    pages[currentPage].classList.add('active');
-    indicators[currentPage].classList.add('active');
-
-    // Remove a classe 'prev' depois da animação
     setTimeout(() => {
         pages.forEach(page => page.classList.remove('prev'));
-    }, 600); // Tempo correspondente à duração da transição
+    }, 600);
 }
 
-// Event listener para o botão "prev"
-prevButton.addEventListener('click', () => {
-    // Calcula a página anterior, voltando ao final se estiver na primeira
-    const prevPage = (currentPage - 1 + pages.length) % pages.length;
-    showPage(prevPage);
+prevButtonBox.addEventListener('click', () => {
+    const prevPageBox = (currentPageBox - 1 + pages.length) % pages.length;
+    showPageBox(prevPageBox);
 });
 
-// Event listener para o botão "next"
-nextButton.addEventListener('click', () => {
-    // Calcula a próxima página, voltando ao início se estiver na última
-    const nextPage = (currentPage + 1) % pages.length;
-    showPage(nextPage);
+nextButtonBox.addEventListener('click', () => {
+    const nextPageBox = (currentPageBox + 1) % pages.length;
+    showPageBox(nextPageBox);
 });
 
-// Event listeners para os indicadores (dots)
-indicators.forEach((indicator, index) => {
+indicatorsBox.forEach((indicator, indexBox) => {
     indicator.addEventListener('click', () => {
-        showPage(index);
+        showPageBox(indexBox);
     });
-    
 });

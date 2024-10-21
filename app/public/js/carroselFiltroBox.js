@@ -1,19 +1,34 @@
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const carousel = document.querySelector('.carousel');
-let currentIndex = 0;
+const upButtonFiltro = document.querySelector('.carousel-controlFiltro.up');
+const downButtonFiltro = document.querySelector('.carousel-controlFiltro.down');
+const carouselFiltro = document.querySelector('.carouselFiltro');
+let currentIndexFiltro = 0; // Índice inicial do carrossel
+const itemsToShowFiltro = 3; // Quantidade de itens visíveis
+const totalItemsFiltro = document.querySelectorAll('.carousel-itemFiltro').length; // Total de itens
+const itemHeightFiltro = 150; // Altura de cada item no carrossel
+const itemsPerClick = 3; // Quantidade de itens para mover por vez
 
-prevButton.addEventListener('click', () => {
-    currentIndex = Math.max(currentIndex - 1, 0); // Evita rolar acima do primeiro item
-    updateCarousel();
+// Função para mover o carrossel para cima
+upButtonFiltro.addEventListener('click', () => {
+    if (currentIndexFiltro > 0) {
+        currentIndexFiltro = Math.max(currentIndexFiltro - itemsPerClick, 0); // Garante que não vá abaixo de 0
+    } else {
+        currentIndexFiltro = totalItemsFiltro - itemsToShowFiltro; // Volta para a última posição
+    }
+    updateCarouselPositionFiltro();
 });
 
-nextButton.addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, carousel.children.length - 1); // Evita rolar abaixo do último item
-    updateCarousel();
+// Função para mover o carrossel para baixo
+downButtonFiltro.addEventListener('click', () => {
+    if (currentIndexFiltro < totalItemsFiltro - itemsToShowFiltro) {
+        currentIndexFiltro = Math.min(currentIndexFiltro + itemsPerClick, totalItemsFiltro - itemsToShowFiltro); // Garante que não ultrapasse o limite
+    } else {
+        currentIndexFiltro = 0; // Volta para a primeira posição
+    }
+    updateCarouselPositionFiltro();
 });
 
-function updateCarousel() {
-    const itemHeight = carousel.children[0].offsetHeight;
-    carousel.style.transform = `translateY(-${currentIndex * itemHeight}px)`;
+// Função que atualiza a posição do carrossel
+function updateCarouselPositionFiltro() {
+    const translateYValueFiltro = -currentIndexFiltro * itemHeightFiltro; // Calcula o valor de translação baseado no índice
+    carouselFiltro.style.transform = `translateY(${translateYValueFiltro}px)`; // Aplica a translação vertical
 }

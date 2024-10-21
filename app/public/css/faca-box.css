@@ -24,7 +24,7 @@
     --laranja: #E68A00;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
-  }
+}
 
 
 /* titilo e orientação*/
@@ -79,6 +79,10 @@
 
 /* carrosel Box */
 
+.carousel-containerBox {
+    position: relative;
+    z-index: 5;
+}
 
 .Box-section{
     border-radius: 15px;
@@ -87,6 +91,8 @@
     margin: auto;
     position: relative;
     width: 100%;
+    margin-left: 45px;
+    margin-right: 80px;
 }
 
 .seta {
@@ -169,13 +175,42 @@
     align-items: center;
     text-align: center;
     height: 40px;
-    margin-bottom: 10px;
+    padding: 10px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 13px;
     box-sizing: border-box;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
     z-index: 10;
+}
+
+.proximoBoxLeft,
+.proximoBoxRight {
+    width: 180px;
+    height: 55px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--corprincipal);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.buttons{
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    width: calc(100% - 40px); 
+    margin: 20px; 
+    margin-bottom: 50px;
 }
 
 .botao-adicionar:hover {
@@ -271,26 +306,26 @@
 /* resumo Box */
 
 .proximoBox{
-    width: 170px;
-    height: 50px;
+    width: 180px;
+    height: 55px;
     padding: 2px;
     border-radius: 5px;
     border: none;
     background-color: var(--corprincipal);
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: white;
     text-align: center;
     line-height: normal;
     cursor: pointer;
-    margin-right: 50px;
-    margin-top: auto;
+    margin-top: 50px;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 /* FiltroBoxCarrosel */
-
 .geralFiltroBox {
     display: flex;
     flex-direction: column;
@@ -298,32 +333,39 @@
 }
 
 .carousel-containerFiltro {
-    width: 120px; /* Largura fixa, ajuste conforme necessário */
-    height: 400px; /* Altura fixa para conter alguns itens visíveis */
-    overflow: hidden;
     position: relative;
+    overflow: hidden; 
+    height: 430px; 
+    width: 180px;
+    z-index: 10;
 }
 
 .carouselFiltro {
     display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease-in-out;
+    flex-direction: column; /* Para garantir que o carrossel seja vertical */
+    transition: transform 0.8s ease-in-out;
 }
 
-.carousel-itemFiltro img{
-    height: 100px;
-    width: 150px;
+.carousel-itemFiltro img {
+    height: 80px;
+    width: 100px;
     display: block;
     object-fit: cover;
-    margin: auto;
 }
 
 .carousel-itemFiltro {
+    box-shadow: 0px 1px 10px 0px #333333;
+    border-radius: 20px;
+    background-color: white;
+    width: 170px;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;
 }
 
 .carousel-controlFiltro {
@@ -338,5 +380,78 @@
 }
 
 .setaFiltro {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os botões de seta horizontalmente */
+    cursor: pointer;
+    margin: 10px 0; /* Espaço em torno das setas para não ficar colado ao carrossel */
+}
+
+.TodosCarrosel {
+    display: flex;
+    margin-left: 60px;
+}
+
+
+/* resumo BOx */
+
+.resumoBox{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    text-align: start;
+    width: 320px;
+    height: 470px;
+    background-color: var(--branco);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center; 
+}
+
+.itemResumo{ 
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.name-Product{
+    font-size: 1.1em ;
+    margin-bottom: 5px;
+}
+
+.FlexzoneBox{
+    display: flex;
+}
+
+.price-Product{
+    margin-right: 40px;
+    font-weight: 550;
+}
+
+.itemResumo img{
+    height: 70px;
+    width: 80px;
+    margin-right: 8px;
+}
+
+.tittleResumoBox{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--marrom);
+}
+
+.geralResumo{
+    align-items: center;
+    text-align: center;
+}
+
+.quantityAndPrice{
+    display: flex;
+    flex-direction: column;
 }
