@@ -1,4 +1,3 @@
-    
  
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>  
     <link rel="stylesheet" href="css/home.css">
@@ -47,9 +46,21 @@
 
         <!-- Botão Menu Responsivo Mobile -->
 
-        <article class="mobile-menu-icon">
-            <button onclick="menuShow()">  <label class="checkbtn"> <i class="fas fa-bars"> </i> </label> </button>  
-        </article>
+        <section class="MobileTudo">
+            <section class="carrinhoMobile">
+                <a class="links-nav" href="/carrinho">
+                <img src="imagens/carrinho.png" alt="Icone de carrinho de compras">
+                <span id="cart-count" class="cart-count" style="display: none;">0</span>
+                <p class="text-carrinho"> Carrinho </p>
+                </a>
+                <article class="cart-summary" style="display: none;"></article>
+            </section>
+
+            <section class="mobile-menu-icon">
+                <button onclick="menuShow()">  <label class="checkbtn"> <i class="fas fa-bars"> </i> </label> </button>  
+            </section>
+
+        </section>
         
     </nav>
 
@@ -63,6 +74,12 @@
             </ul>
         </article>
 
+            <section class="barradepesquisaMobile">
+                <input type="text" class="barra-texto-pesquisa" placeholder="Busque pela AgroBox">
+                <a hrfe="#" class="botao-pesquisa"> 
+                <img src="imagens/lupa.png" alt="icone de uma lupa"> 
+                </a>
+            </section>
 
                 <!-- SUB NAVE-->
 
