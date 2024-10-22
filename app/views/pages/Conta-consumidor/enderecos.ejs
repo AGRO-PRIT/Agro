@@ -8,88 +8,69 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/conta.css">
     <link rel="stylesheet" href="css/perfil.css">
-
-    
 </head>
-
 <body>  
     <main>
-     <!-- NavBar -->
+        <!-- NavBar -->
+        <%- include('../../partials/navbar'); %>
 
-     <%- include('../../partials/navbar'); %>
+        <!-- CONTA CONSUMIDOR -->
+        <%- include('../../partials/conta'); %>
 
-    <!--  CONTA CONSUMIDOR  -->
-
-    <%- include('../../partials/conta'); %>
-
-
-    <section class="page-container">
-        <section id="enderecos">
-            <article class="carton">
-                <h1 class="Titulos">Endereços</h1>
-                <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
-                <section id="formularioEndereco" class="modal-endereco" style="display: none;">
-                    <section class="modal-content-endereco">
-                        <h1 class="titulo-formulario">Informações do Endereço</h1>
-                        
-                        <form id="novoEnderecoForm">
-                            <span class="close">&times;</span>
-                            <input type="text" class="nomeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Completo" required> <br>
-                            <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone" required> <br>
-                            <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP" oninput="formatarCEP(this)" required> <br>
-                            <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
-                            <input type="text" class="bairroEndereco" id="bairroEndereco" placeholder="Bairro" required><br>
-                            <input type="text" class="cidadeEndereco" id="cidadeEndereco" placeholder="Cidade" required><br>
-                            <input type="text" class="estadoEndereco" id="estadoEndereco" placeholder="Estado" required><br>
-                            <input type="text" class="numeroEndereco" id="numeroEndereco" placeholder="Número" required><br>
-                            <button type="submit" class="botaoadd-endereco">Adicionar Endereço</button>
-                        </form>
-                    </section>
-                </section>     
-            </article>>
-        
-
-        <section class="container-enderecos">
-
-            <section class="informationEnderecos">
-                <section class="interiorEnderecos">
-                    <h2><strong>Casa do Usuario1 </strong>| (+55) 1100000000</h2>
-                    <h2>Rua Joaninha, 404 - Bairro do Kiko</h2>
-                    <h2>Carpazinha, São Paulo, 00000000</h2>
-                </section>
-            
-                <button class="padron">PADRÃO</button>
-                <article class="edition">
-                    <p>Editar | Excluir</p>
-                    <button class="btn-padron">Remover como padrão</button>
+        <section class="page-container">
+            <section id="enderecos">
+                <article class="carton">
+                    <h1 class="Titulos">Endereços</h1>
+                    <button id="adicionarEndereco" class="btn-endereco"> + Adicionar novo endereço </button>  
+                    <section id="formularioEndereco" class="modal-endereco" style="display: none;">
+                        <section class="modal-content-endereco">
+                            <h1 class="titulo-formulario">Informações do Endereço</h1>
+                            <form id="novoEnderecoForm">
+                                <span class="close">×</span>
+                                <input type="text" class="nomeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Completo" required> <br>
+                                <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone" required> <br>
+                                <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP" oninput="formatarCEP(this)" required> <br>
+                                <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
+                                <input type="text" class="RuaEndereco" id="RuaEndereco" placeholder="Rua" required><br>
+                                <input type="text" class="bairroEndereco" id="bairroEndereco" placeholder="Bairro" required><br>
+                                <input type="text" class="cidadeEndereco" id="cidadeEndereco" placeholder="Cidade" required><br>
+                                <input type="text" class="estadoEndereco" id="estadoEndereco" placeholder="Estado" required><br>
+                                <input type="text" class="numeroEndereco" id="numeroEndereco" placeholder="Número" required><br>
+                                <button type="submit" class="botaoadd-endereco">Adicionar Endereço</button>
+                            </form>
+                        </section>
+                    </section>     
                 </article>
 
-                <section class="interiorEnderecos">
-                    <h2><strong>Casa do Usuario1 </strong>| (+55) 1100000000</h2>
-                    <h2>Rua Joaninha, 404 - Bairro do Kiko</h2>
-                    <h2>Carpazinha, São Paulo, 00000000</h2>
+                <section class="EnderecosAdd" id="listaEnderecos">
+                    <section class="container-enderecos" >
+                        <section class="interiorEnderecos">
+                            <h2><strong>Casa do Usuario1 </strong> | (+55) 1100000000</h2>
+                            <h2>Rua Joaninha, 404 - Bairro do Kiko</h2>
+                            <h2>Carpazinha, São Paulo, 00000000</h2>
+                        </section>
+                        <button class="padron">PADRÃO</button>
+                        <article class="edition">
+                            <p>Editar | Excluir</p>
+                            <button class="btn-padron">Remover como padrão</button>
+                        </article>
+                        </section>
+                        </section>
                 </section>
             
-                <button class="padron">PADRÃO</button>
-                <article class="edition">
-                    <p>Editar | Excluir</p>
-                    <button class="btn-padron">Remover como padrão</button>
-                </article>
+            </section>
+                
+
+                </section>
             </section>
         </section>
-
-    </section>
-</section>
-
-</main>
+    </main>
+            
     <!-- Rodapé -->
-     
     <%- include('../../partials/footer'); %>
-    
 </body>
 </html>
 
-        <!-- Script -->
 
 <script src="js/perfil.js" defer></script>
 <script src="js/validacaoConta.js" defer></script>
