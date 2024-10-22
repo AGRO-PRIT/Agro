@@ -18,12 +18,12 @@
 
             .modal-content-endereco .close {
                 position: absolute;
-                top: 90px;
-                left: 970px;
+                top: 145px;
+                left: 1170px;
                 color: #aaa;
-                font-size: 28px;
+                font-size: 70px;
                 font-weight: bold;
-                cursor: pointer;
+                cursor: pointer;;
             }
             
             .modal-content-endereco .close:hover,
@@ -723,6 +723,20 @@
     font-family: "Montserrat", sans-serif;
     color: #999999;
     text-align: left;
+}
+
+.RuaEndereco{
+    width: 350px;
+    height: 30px;
+    margin: 10px;
+    padding: 2px 2px 2px 10px;
+    border-radius: 10px;
+    border: 1px solid #493a31;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #999999;
+    text-align: left; 
 }
 
 
