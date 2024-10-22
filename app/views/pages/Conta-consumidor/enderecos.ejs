@@ -28,7 +28,7 @@
                             <form id="novoEnderecoForm">
                                 <span class="close">×</span>
                                 <input type="text" class="nomeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Completo" required> <br>
-                                <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone" required> <br>
+                                <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone"  required pattern="\(\d{2}\) \d{4,5}-\d{4}"> <br>
                                 <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP" oninput="formatarCEP(this)" required> <br>
                                 <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
                                 <input type="text" class="RuaEndereco" id="RuaEndereco" placeholder="Rua" required><br>
