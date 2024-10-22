@@ -18,12 +18,12 @@
 
             .modal-content-endereco .close {
                 position: absolute;
-                top: 90px;
-                left: 970px;
+                top: 145px;
+                left: 1170px;
                 color: #aaa;
-                font-size: 28px;
+                font-size: 70px;
                 font-weight: bold;
-                cursor: pointer;
+                cursor: pointer;;
             }
             
             .modal-content-endereco .close:hover,
