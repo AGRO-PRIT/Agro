@@ -594,8 +594,8 @@ body {
 .carousel-item img, .carousel-item2 img {
     display: block;
     object-fit: cover;
-    height: 50px;
-    width: 125px;
+    height: 65px;
+    width: 99px;
     margin: auto;
 }
 
@@ -626,12 +626,12 @@ body {
     cursor: not-allowed;
     margin-bottom: 10px;
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     background-color: var(--branco);
     color: #006837;
     border: 2px solid #006837;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     border-radius: 12px;
     transition: 0.2s ease;

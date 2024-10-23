@@ -1,5 +1,5 @@
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+const preBTN = document.querySelector('.PREV3');
+const nexBtn = document.querySelector('.NEXT3');
 const productContainer = document.querySelector('.todos-produtos');
 
 // Definir o índice inicial e o número de itens visíveis
@@ -10,7 +10,7 @@ const totalItems = document.querySelectorAll('.box-produto').length;
 const maxIndex = Math.ceil(totalItems / itemsToShow) - 1; // Número máximo de páginas
 
 // Função para mover o carrossel para a direita
-nextBtn.addEventListener('click', () => {
+nexBtn.addEventListener('click', () => {
     if (currentIndex < maxIndex) {
         currentIndex++;
         productContainer.style.transform = `translateX(-${currentIndex * (itemWidth * itemsToShow)}px)`;
@@ -18,7 +18,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 // Função para mover o carrossel para a esquerda
-prevBtn.addEventListener('click', () => {
+preBTN.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
         productContainer.style.transform = `translateX(-${currentIndex * (itemWidth * itemsToShow)}px)`;
