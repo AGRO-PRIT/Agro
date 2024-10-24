@@ -52,6 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
         event.target.value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
     }
 
+    const CPFInput = document.getElementById('cpf');
+    CPFInput.addEventListener('input', formatCPF);
+
+    // Limitar o número de caracteres no campo de telefone
+    CPFInput.setAttribute('maxlength', '14');
+
     // Função para formatar o Telefone enquanto o usuário digita
     function formatTelefone(event) {
         const value = event.target.value.replace(/\D/g, '');
