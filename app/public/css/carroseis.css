@@ -206,11 +206,11 @@
   width: 25px;
 }
 
-.prev, .prev2{
+.prev, .prev2, .PREV3{
   left: 2px;
 }
 
-.next, .next2  {
+.next, .next2,  .NEXT3{
   right: 10px;
 }
 

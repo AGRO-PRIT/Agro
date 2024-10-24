@@ -1,4 +1,4 @@
-const carousel = document.querySelector('.carousel');
+const carousel = document.querySelector('.carousel, .carouselEvent');
 const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');

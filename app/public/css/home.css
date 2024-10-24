@@ -75,6 +75,22 @@ body {
 
 /* <!-- Menu Responsivo -->  */
 
+.mobile-menu {
+    background-color: var(--branco);
+    display: none;
+    width: 65%;
+    position: fixed;
+    transition: transform 0.3s ease; /* Animação suave para abrir o menu */
+    top: 0;
+    right: 0;
+    height: 70vh; /* Ocupa toda a altura da tela */
+    z-index: 9999; /* Certifique-se de que o valor é alto o suficiente */
+    overflow-y: auto; /* Permite rolagem no conteúdo caso necessário */
+    box-sizing: border-box;
+    box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
+}
+
+
 .mobile-menu-icon {
     background-color: transparent;
     margin-right: 15px;
@@ -89,34 +105,40 @@ body {
     color: white;
 }
 
-.mobile-menu-icon button{
+.mobile-menu-icon button {
     border: none;
     background-color: transparent;
 }
 
-.mobile-menu{
-    background-color: var(--branco);
-    display: none;
-}
-
-.mobile-menu .mobile-links{
+.mobile-menu .mobile-links, .mobile-list2 {
     list-style: none;
 }
 
-.mobile-links .mobile-link{
-    line-height: 40px;
+.mobile-links .mobile-link {
+    line-height: 20px;
 }
 
-.mobile-link{
-    text-align: center;
+.mobile-list2 {
+    line-height: 30px;
+}
+
+.mobile-link {
+    text-align: left;
     color: #5aa504;
-    font-weight: 500;
+    font-weight: bold;
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
+.mobile-list2 {
+    color: #5aa504;
+    font-weight: 400;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 16px;
+}
 
 /* <!-- COMEÇO BARRA DE PESQUISA -->  */
 
@@ -131,7 +153,7 @@ body {
     margin-left: 18%;
 }
 
-.barradepesquisaMobile{
+.barradepesquisaMobile {
     display: none;
 }
 
@@ -141,7 +163,7 @@ body {
     box-sizing: border-box;
 } 
 
-.barra-texto-pesquisa{
+.barra-texto-pesquisa {
     background: none;
     border: none;
     outline: none;
@@ -153,7 +175,7 @@ body {
     font-family: var(--fonteprincipal)
 }
 
-.botao-pesquisa{
+.botao-pesquisa {
     width: 40px;
     height: 40px;
     margin-left: auto;
@@ -163,17 +185,17 @@ body {
 
 /* <!-- COMEÇO PERFIL -->  */
 
-.links-nav{
+.links-nav {
     display: flex;
 }
 
-.perfil{
+.perfil {
     align-items: center;
     display: flex;
     margin-left: 70px;
 }
 
-.text-perfil{
+.text-perfil {
     font-family: var(--fonteprincipal);
     font-size: 19px;
     color: #ffff;
@@ -191,17 +213,17 @@ body {
 
 /* <!-- COMEÇO CARRINHO DE COMPRAS -->  */
 
-.links-nav a{
+.links-nav a {
     text-decoration: none;
     z-index: -1000;
 }
 
-.MobileTudo{ 
+.MobileTudo { 
     display: flex;
     gap: 30px;
 }
 
-.carrinho{
+.carrinho {
     z-index: 10;
     align-items: center;
     display: flex;
@@ -218,7 +240,7 @@ body {
    
 }
 
-.carrinhoMobile img{
+.carrinhoMobile img {
     height: 35px;
 }
 
@@ -414,11 +436,6 @@ body {
 
 /* Menu Responsivo */
 
-.mobile-menu {
-    z-index: 1000;
-    position: relative;
-}
-
 .mobile-list {
     display: none;
 }
@@ -430,8 +447,10 @@ body {
 .mobile-menu ul {  
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: right;
+    margin-right: 15px;
     padding-bottom: 1rem;
+    margin-bottom: 50px;
 }
 
 .mobile-menu .mobile-list {
@@ -439,13 +458,64 @@ body {
     padding-top: 1.2rem;
 }
 
-.mobile-menu .mobile-menu-icon {
-    width: 100%;
+.Mobileclose{
+    position: absolute;
+    top: -9px;
+    left: 231px;
+    color: var(--marrom);
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mobile-section{
+    background-color: var(--corprincipal);
+    height: 10vh;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    box-shadow: -5px 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.TextMobile{
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btnsMobiles{
+    display: flex;
+}
+
+.BTNmEntrar{
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    color: var(--branco);
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 11px;
+    width: 105px;
+    cursor: pointer;
+}
+
+.BTNmCriarConta{
+    text-align: center;
+    background-color: var(--corlayouts);
+    border: 2px solid var(--branco);
+    color: var(--corprincipal);
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 11px;
+    width: 105px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .open {
     display: block;
-    z-index: 100000;
 }
 
 /* logo */
@@ -600,12 +670,12 @@ body {
 }
 
 .product-name {
-    font-size: 0.9em;
+    font-size: 0.81em;
     margin-bottom: 0;
 }
 
 .product-name2 {
-    font-size: 0.69em;
+    font-size: 0.67em;
     margin-bottom: 0;
 }
 
@@ -677,20 +747,27 @@ body {
     margin-left: 10px;
 }
 
+.agroText{
+    display: none;
+}
+
+.agroMobileText{
+    display: block;
+}
+
 .agro-content ul {
     margin-bottom: 10px;
     padding-left: 10px;
 }
 
 .agro-content h1 {
-    font-size: 1.3em;
-    margin-left: 10px;
+    font-size: 1.35em;
     margin-bottom: 10px;
 }
 
 .agro-content ul li {
-    margin-left: 30px;
-    font-size: 0.69em;
+    margin-left: 10px;  
+    font-size: 0.70em;
 }
 
 .agro-imagem {
@@ -702,15 +779,27 @@ body {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    width: auto;
+    width: 400px;
 }
 
+.message-button-agrobox1 {
+    display: none;
+}
 
 /* Carrosel Agricultores */
+
+.prev3 {
+    left: 5px;
+}
+
+.next3 {
+    right: 5px;
+}
 
 .user-name {
     margin-left: 20px;
     font-size: 20px;
+    margin-top: 20px;
 }
 
 .carousel-container3{
@@ -734,15 +823,15 @@ body {
 }
 
 .user-profession-name {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .user-profession-emoji {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .user-profession-emoji strong {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .user-profession {
@@ -763,26 +852,33 @@ body {
 
 /* Sobre Agricultores */
 
-.sobre-agrobox{
+.sobre-agrobox {
+    margin-top: 20px;
     margin-bottom: 80px;
     padding: 10px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
 }
 
 .content-Agrobox {
-    
+    text-align: center;
+    display: block;
+    justify-content: center;
     font-size: 0.6em;
     padding-left: 10px;
 }
 
 .content-Agrobox h1 {
     margin-top: 10px;
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin-bottom: 10px;
     
 }
 
 .content-Agrobox p {
     margin-right: 30px;
+    font-size: 1.2em;
 }
 
 .content-Agrobox p br {
@@ -790,7 +886,16 @@ body {
 }
 
 .message-button-agrobox {
+    display: none;
     font-size: 12px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.message-buttonMobile-agrobox{
+    display: block;
+    color: var(--corprincipal);
+    margin-right: 20px;
 }
 
 .agrobox-imagem {
@@ -800,10 +905,7 @@ body {
 }
 
 .agrobox-imagem img {
-    width: auto;
-    max-width: 100%;
-    height: 110px;
-    overflow: hidden;
+    display: none;
 }
 
 /* footer */

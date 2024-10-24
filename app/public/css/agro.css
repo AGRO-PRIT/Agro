@@ -34,8 +34,16 @@
   margin-bottom: 30px;
 }
 
-.agro-content h1 strong {
+.agroMobileText{
+  display: none;
+}
+
+.laranjaText{
   color: var(--laranja);  /* Cor verde diferente para a palavra Agro+ */
+}
+
+.verdeText{
+  color: var(--corprincipal);
 }
 
 .agro-content ul {
