@@ -12,6 +12,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
+* {
+    outline: none;
+}
+
+
 :root {
     --backgroundcolor: #FCF2E6;
     --corprincipal: #5AA504;
@@ -405,6 +410,31 @@ body {
 
 
 
+/* Celulares Menores */
+
+@media(max-width: 385px){
+
+.navbar{
+    height: 10vh;    
+}
+
+.barradepesquisaMobile {
+    height: 50px;
+}
+
+.subnav a {
+    font-size: 11px;
+    padding: 0;
+    gap: 20px;
+}
+
+.subnav ul li{
+    line-height: 0px;
+}
+
+}
+    
+
 /* celulares */
 
 @media(max-width: 768px){
@@ -462,6 +492,7 @@ body {
     position: absolute;
     top: -9px;
     left: 231px;
+    height: 42px;   
     color: var(--marrom);
     font-size: 50px;
     font-weight: bold;
@@ -665,7 +696,7 @@ body {
     display: block;
     object-fit: cover;
     height: 65px;
-    width: 99px;
+    width: 87px;
     margin: auto;
 }
 
@@ -712,6 +743,11 @@ body {
 
 .carousel-control, .carousel-control2 {
     top: 35%;
+    display: none;
+}
+
+.carousel-indicators, .carousel-indicators2{
+    display: none;
 }
 
 .desconto {
@@ -744,6 +780,7 @@ body {
 }
 
 .agro-content {
+    width: 1000%;
     margin-left: 10px;
 }
 
@@ -778,8 +815,12 @@ body {
 .agro-imagem img {
     max-width: 100%;
     height: auto;
-    object-fit: contain;
-    width: 400px;
+    object-fit: cover;
+    width: 464px;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    display: flex;
 }
 
 .message-button-agrobox1 {
@@ -877,7 +918,6 @@ body {
 }
 
 .content-Agrobox p {
-    margin-right: 30px;
     font-size: 1.2em;
 }
 
@@ -895,7 +935,6 @@ body {
 .message-buttonMobile-agrobox{
     display: block;
     color: var(--corprincipal);
-    margin-right: 20px;
 }
 
 .agrobox-imagem {
@@ -929,23 +968,7 @@ a {
 .fixarRodape img{
     height: 70px;
 }
-}
 
-
-
-
-/* Celulares Menores */
-
-@media(max-width: 385px){
-.subnav a {
-    font-size: 11px;
-    padding: 0;
-    gap: 20px;
-}
-
-.subnav ul li{
-    line-height: 0px;
-}
 }
 
 /* Tablets */
@@ -954,8 +977,8 @@ a {
 
 }
 
-/* Orientação horizontal */
+/* Desktop */
 
-@media (orientation: landscape){
+@media(min-width: 1024px){
 
 }
