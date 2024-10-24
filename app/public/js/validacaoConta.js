@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                   .replace(/(\d{4,5})(\d{4})$/, '$1-$2');
     }
 
+    const numeroTelefoneInput = document.getElementById('telefone');
+    numeroTelefoneInput.addEventListener('input', formatTelefone);
+
+    // Limitar o número de caracteres no campo de telefone
+    numeroTelefoneInput.setAttribute('maxlength', '15');
+
     function validateNome(nome) {
         return nome.length > 0;
     }
