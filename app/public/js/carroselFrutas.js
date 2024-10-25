@@ -1,84 +1,117 @@
-const carousel = document.querySelector('.carousel, .carouselEvent');
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
 const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
+const itemWidthMobile = 200; // Largura de cada item para toque (mobile)
+const itemWidthDesktop = 1550; // Largura de cada slide para desktop
+const maxTranslateX = -(items.length * itemWidthMobile - window.innerWidth); // Ajusta o limite máximo de movimento
+
 let currentIndex = 0;
 let startX = 0;
-let endX = 0;
-const itemWidth = 150; // Tamanho do movimento em pixels
+let currentTranslate = 0;
+let prevTranslate = 0;
+let isDragging = false;
 
-// Atualiza a posição do carrossel
-function updateCarousel() {
-    const offset = currentIndex * itemWidth;
-    carousel.style.transform = `translateX(-${offset}px)`;
+// === Funções para Desktop ===
+
+function updateCarouselDesktop() {
+    if (currentIndex >= indicators.length) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = indicators.length - 1;
+    }
+    carousel.style.transform = `translateX(-${currentIndex * itemWidthDesktop}px)`;
+
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
     });
 }
 
-// Move o carrossel para a direita
-function moveNext() {
-    if (currentIndex < indicators.length - 1) {
+function setupDesktopCarousel() {
+    nextBtn.addEventListener('click', () => {
         currentIndex++;
-    }
-    updateCarousel();
-}
-
-// Move o carrossel para a esquerda
-function movePrev() {
-    if (currentIndex > 0) {
-        currentIndex--;
-    }
-    updateCarousel();
-}
-
-// Ação ao clicar no botão "Próximo"
-nextBtn.addEventListener('click', moveNext);
-
-// Ação ao clicar no botão "Anterior"
-prevBtn.addEventListener('click', movePrev);
-
-// Ação ao clicar nos indicadores
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel();
+        updateCarouselDesktop();
     });
-});
 
-// Função touch para manipulação do carrossel
+    prevBtn.addEventListener('click', () => {
+        currentIndex--;
+        updateCarouselDesktop();
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarouselDesktop();
+        });
+    });
+
+    updateCarouselDesktop();
+}
+
+// === Funções para Mobile (Touch) ===
+
 function handleTouchStart(event) {
     startX = event.touches[0].clientX;
+    isDragging = true;
+    prevTranslate = currentTranslate;
+    carousel.style.transition = 'none';
 }
 
 function handleTouchMove(event) {
-    endX = event.touches[0].clientX;
+    if (!isDragging) return;
+    const currentX = event.touches[0].clientX;
+    const movementX = currentX - startX;
+    currentTranslate = prevTranslate + movementX * 0.3;
+
+    // Limita o movimento dentro dos limites do container
+    if (currentTranslate > 0) {
+        currentTranslate = 0; // Limite no primeiro item
+    } else if (currentTranslate < maxTranslateX) {
+        currentTranslate = maxTranslateX; // Limite no último item
+    }
+
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
 }
 
 function handleTouchEnd() {
-    const distance = startX - endX;
-
-    // Se a distância do toque for significativa, mova o carrossel
-    if (Math.abs(distance) > itemWidth) {
-        if (distance > 0) { // Deslizar para a esquerda
-            moveNext();
-        } else { // Deslizar para a direita
-            movePrev();
-        }
-    }
-
-    // Reiniciar as variáveis de toque após o movimento
-    startX = 0;
-    endX = 0;
+    isDragging = false;
+    carousel.style.transition = 'transform 0.4s ease';
 }
 
-// Adiciona ouvintes de eventos de toque se a largura da tela for menor que 768px
-if (window.innerWidth < 768) {
+function enableTouchCarousel() {
     carousel.addEventListener('touchstart', handleTouchStart);
     carousel.addEventListener('touchmove', handleTouchMove);
     carousel.addEventListener('touchend', handleTouchEnd);
 }
 
-// Atualiza o carrossel inicialmente
-updateCarousel();
+function disableTouchCarousel() {
+    carousel.removeEventListener('touchstart', handleTouchStart);
+    carousel.removeEventListener('touchmove', handleTouchMove);
+    carousel.removeEventListener('touchend', handleTouchEnd);
+}
+
+// === Alternância entre as versões ===
+
+function checkScreenSize() {
+    if (window.innerWidth < 768) {
+        enableTouchCarousel(); // Habilita o toque em mobile
+        disableDesktopCarousel(); // Desabilita a versão desktop
+    } else {
+        disableTouchCarousel(); // Desabilita o toque em desktop
+        setupDesktopCarousel(); // Habilita a versão desktop
+    }
+}
+
+function disableDesktopCarousel() {
+    nextBtn.removeEventListener('click', () => {});
+    prevBtn.removeEventListener('click', () => {});
+    indicators.forEach((indicator) => {
+        indicator.removeEventListener('click', () => {});
+    });
+}
+
+// Verifica o tamanho da tela ao carregar e ao redimensionar a janela
+window.addEventListener('resize', checkScreenSize);
+checkScreenSize(); // Executa a verificação ao iniciar
