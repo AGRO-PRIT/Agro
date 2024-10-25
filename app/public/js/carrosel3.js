@@ -6,7 +6,8 @@ const nextBtn3 = document.querySelector('.next3');
 let currentIndex3 = 0;
 
 function updateCarousel3() {
-    carousel3.style.transform = `translateX(-${currentIndex3 * 1300}px)`;
+    const carouselWidth = carousel3.clientWidth; // Obtém a largura atual do carrossel
+    carousel3.style.transform = `translateX(-${currentIndex3 * carouselWidth}px)`; // Usa a largura do carrossel para a translação
     indicators3.forEach((indicator3, index) => {
         if (index === currentIndex3) {
             indicator3.classList.add('active');

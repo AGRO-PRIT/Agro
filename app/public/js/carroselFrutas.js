@@ -63,7 +63,7 @@ function handleTouchMove(event) {
     if (!isDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - startX;
-    currentTranslate = prevTranslate + movementX * 0.3;
+    currentTranslate = prevTranslate + movementX * 0.7;
 
     // Limita o movimento dentro dos limites do container
     if (currentTranslate > 0) {

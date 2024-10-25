@@ -85,12 +85,12 @@ body {
     display: none;
     width: 65%;
     position: fixed;
-    transition: transform 0.3s ease; /* Animação suave para abrir o menu */
+    transition: transform 0.3s ease;
     top: 0;
     right: 0;
-    height: 70vh; /* Ocupa toda a altura da tela */
-    z-index: 9999; /* Certifique-se de que o valor é alto o suficiente */
-    overflow-y: auto; /* Permite rolagem no conteúdo caso necessário */
+    height: auto;
+    z-index: 9999; 
+    overflow-y: auto; 
     box-sizing: border-box;
     box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
 }
@@ -412,8 +412,8 @@ body {
 
 /* Celulares Menores */
 
-@media(max-width: 385px){
-
+@media(max-width: 375px ) {
+   
 
 .barradepesquisaMobile {
     height: 50px;
@@ -434,7 +434,7 @@ body {
 }
 
 .Mobileclose{
-left: 208px;
+    left: 208px;
 }
 
 }
@@ -457,7 +457,8 @@ left: 208px;
 /* Navbar */
 
 .navbar-tudo {
-    height: 16.5vh;
+    height: auto;
+    padding-bottom: 10px;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -495,18 +496,18 @@ left: 208px;
 
 .Mobileclose{
     position: absolute;
-    top: -9px;
-    left: 231px;
-    height: 42px;   
+    top: -5px;
+    right: 10px;
     color: var(--marrom);
-    font-size: 50px;
+    font-size: 42px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .mobile-section{
     background-color: var(--corprincipal);
-    height: 10vh;
+    height: auto;
+    padding-bottom: 10px;
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 10px;
@@ -517,6 +518,7 @@ left: 208px;
 .TextMobile{
     color: var(--branco);
     font-size: 14px;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -926,7 +928,7 @@ left: 208px;
 
 .content-Agrobox h1 {
     margin-top: 10px;
-    font-size: 2.2em;
+    font-size: 2em;
     margin-bottom: 10px;
     
 }
@@ -989,10 +991,50 @@ a {
 
 @media (min-width: 768px) and (max-width: 1024px){
 
+.mobile-section{
+    display: flex;
+    justify-content: flex-end;    
+    padding-right: 45px;
+}
+
+.Mobileclose{
+    left: 450px;
+}
+
+.user-profession-name{
+    font-size: 23px;    
+}
+
+.user-profession-emoji{
+    font-size: 23px;
+}
+
+.user-profession {
+    font-size: 1.1em;
+    margin-right: 0px;
+    width: 480px;
+}
+
+.message-button {
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 5px;
+    width: 180px;
+}
+
+.perfil-image3 {
+    width: 145px;
+    height: 145px;
+    margin: 10px;
+    padding: 5px;
+}
+
 }
 
 /* Desktop */
 
 @media(min-width: 1024px){
+
+
 
 }

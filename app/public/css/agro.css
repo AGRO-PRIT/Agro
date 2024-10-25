@@ -113,6 +113,10 @@
   margin-right: 120px;  
 }
 
+.message-buttonMobile-agrobox{
+  display: none;
+}
+
 .agrobox-imagem img {
   margin-top: 10px;
   margin-bottom: 10px;
