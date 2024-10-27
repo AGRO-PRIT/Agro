@@ -3,10 +3,8 @@ const items = document.querySelectorAll('.carousel-item');
 const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-
-const itemWidthMobile = 500; // Width of each item for touch (mobile)
+const itemWidthMobile = 200; // Width of each item for touch (mobile)
 const itemWidthDesktop = 1550; // Width of each slide for desktop
-
 let currentIndex = 0;
 let startX = 0;
 let currentTranslate = 0;
@@ -22,16 +20,13 @@ function calculateMaxTranslateX() {
 }
 
 // === Functions for Desktop ===
-
 function updateCarouselDesktop() {
     if (currentIndex >= indicators.length) {
         currentIndex = 0;
     } else if (currentIndex < 0) {
         currentIndex = indicators.length - 1;
     }
-
     carousel.style.transform = `translateX(${-currentIndex * itemWidthDesktop}px)`;
-
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
     });
@@ -42,24 +37,20 @@ function setupDesktopCarousel() {
         currentIndex++;
         updateCarouselDesktop();
     });
-
     prevBtn.addEventListener('click', () => {
         currentIndex--;
         updateCarouselDesktop();
     });
-
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             currentIndex = index;
             updateCarouselDesktop();
         });
     });
-
     updateCarouselDesktop();
 }
 
 // === Functions for Mobile (Touch) ===
-
 function handleTouchStart(event) {
     startX = event.touches[0].clientX;
     isDragging = true;
@@ -72,21 +63,18 @@ function handleTouchMove(event) {
     const currentX = event.touches[0].clientX;
     const movementX = currentX - startX;
     currentTranslate = prevTranslate + movementX; // Ajuste a sensibilidade aqui
-
     // Limits the movement within the container bounds
     if (currentTranslate > 0) {
         currentTranslate = 0; // Limite ao início
     } else if (currentTranslate < maxTranslateX) {
         currentTranslate = maxTranslateX; // Limite ao final
     }
-
     carousel.style.transform = `translateX(${currentTranslate}px)`;
 }
 
 function handleTouchEnd() {
     isDragging = false;
     carousel.style.transition = 'transform 0.4s ease'; // Transição suave ao soltar
-
     // Calculate which index to snap to
     const movedBy = currentTranslate - prevTranslate;
     if (movedBy < -itemWidthMobile / 3) {
@@ -94,18 +82,15 @@ function handleTouchEnd() {
     } else if (movedBy > itemWidthMobile / 3) {
         currentIndex--; // Move to the previous item
     }
-
     // Ensure currentIndex stays within bounds
     if (currentIndex >= items.length) {
         currentIndex = items.length - 1; // Limit to last item
     } else if (currentIndex < 0) {
         currentIndex = 0; // Limit to first item
     }
-
     // Snap to the nearest item
     currentTranslate = -currentIndex * itemWidthMobile;
     carousel.style.transform = `translateX(${currentTranslate}px)`;
-
     // Update indicators
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
@@ -125,7 +110,6 @@ function disableTouchCarousel() {
 }
 
 // === Toggle between versions ===
-
 function checkScreenSize() {
     calculateMaxTranslateX(); // Calcule maxTranslateX sempre que verificar o tamanho da tela
     if (window.innerWidth < 768) {
@@ -151,7 +135,7 @@ checkScreenSize(); // Execute the check on startup
 
 // Ensure all items are draggable even if not visible initially
 items.forEach(item => {
-   item.style.touchAction = 'pan-y';
+    item.style.touchAction = 'pan-y';
 });
 
 // Ensure all items are considered for dragging

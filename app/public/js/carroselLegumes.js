@@ -4,7 +4,7 @@ const legumesIndicators = document.querySelectorAll('.indicator2');
 const legumesPrevBtn = document.querySelector('.prev2');
 const legumesNextBtn = document.querySelector('.next2');
 
-const legumesItemWidthMobile = 300; // Largura de cada item para toque (mobile)
+const legumesItemWidthMobile = 200; // Largura de cada item para toque (mobile)
 const legumesItemWidthDesktop = 1550; // Largura de cada slide para desktop
 
 let legumesCurrentIndex = 0;
