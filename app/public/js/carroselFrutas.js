@@ -148,3 +148,8 @@ function disableDesktopCarousel() {
 // Check screen size on load and when resizing the window
 window.addEventListener('resize', checkScreenSize);
 checkScreenSize(); // Execute the check on startup
+
+// Ensure all items are draggable even if not visible initially
+items.forEach(item => {
+   item.style.touchAction = 'pan-y';
+});
