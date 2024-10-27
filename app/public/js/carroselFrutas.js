@@ -153,3 +153,6 @@ checkScreenSize(); // Execute the check on startup
 items.forEach(item => {
    item.style.touchAction = 'pan-y';
 });
+
+// Ensure all items are considered for dragging
+carousel.style.width = `${items.length * itemWidthMobile}px`;
