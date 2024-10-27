@@ -16,7 +16,9 @@ let legumesMaxTranslateX;
 
 // Calcula maxTranslateX dinamicamente
 function calculateLegumesMaxTranslateX() {
-    legumesMaxTranslateX = -(legumesItems.length * legumesItemWidthMobile - window.innerWidth); // Ajusta o limite de movimento máximo
+    const totalItemsWidth = legumesItems.length * legumesItemWidthMobile;
+    const viewportWidth = window.innerWidth;
+    legumesMaxTranslateX = Math.min(0, viewportWidth - totalItemsWidth); // Ajusta o limite máximo de movimento
 }
 
 // === Funções para Desktop ===
@@ -33,7 +35,6 @@ function updateLegumesCarouselDesktop() {
     legumesIndicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === legumesCurrentIndex);
     });
-    
 }
 
 function setupLegumesDesktopCarousel() {
@@ -70,7 +71,7 @@ function handleLegumesTouchMove(event) {
     if (!legumesIsDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - legumesStartX;
-    legumesCurrentTranslate = legumesPrevTranslate + movementX * 0.5; // Ajuste a sensibilidade aqui
+    legumesCurrentTranslate = legumesPrevTranslate + movementX; // Ajuste a sensibilidade aqui
 
     // Limita o movimento dentro dos limites do contêiner
     if (legumesCurrentTranslate > 0) {
@@ -147,3 +148,11 @@ function disableLegumesDesktopCarousel() {
 // Verifique o tamanho da tela na carga e ao redimensionar a janela
 window.addEventListener('resize', checkLegumesScreenSize);
 checkLegumesScreenSize(); // Execute a verificação na inicialização
+
+// Ensure all items are draggable even if not visible initially
+legumesItems.forEach(item => {
+   item.style.touchAction = 'pan-y';
+});
+
+// Ensure all items are considered for dragging
+legumesCarouselContainer.style.width = `${legumesItems.length * legumesItemWidthMobile}px`;
