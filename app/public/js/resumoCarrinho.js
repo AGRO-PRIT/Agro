@@ -169,7 +169,7 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart, .botao-add, .b
 addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
         const productInfo = button.closest('.box-produto, .carousel-item, .carousel-item2, .info-geral'); // Usa closest para buscar o container correto
-        const productName = productInfo.querySelector('.product-name, .nome-produto, .tittle-p').textContent; // Nome do produto
+        const productName = productInfo.querySelector('.product-name, .product-name2, .nome-produto, .tittle-p').textContent; // Nome do produto
         const productPrice = parseFloat(productInfo.querySelector('.product-price, .valor-produto, .price-p').textContent.replace('R$', '').trim()); // Preço do produto
         const productImage = productInfo.querySelector('img').src; // Busca a imagem diretamente dentro do container correto
 
