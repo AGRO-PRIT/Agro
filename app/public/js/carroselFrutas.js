@@ -4,7 +4,7 @@ const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-const itemWidthMobile = 158; // Width of each item for touch (mobile)
+const itemWidthMobile = 300; // Width of each item for touch (mobile)
 const itemWidthDesktop = 1550; // Width of each slide for desktop
 
 let currentIndex = 0;
@@ -70,13 +70,13 @@ function handleTouchMove(event) {
     if (!isDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - startX;
-    currentTranslate = prevTranslate + movementX * 0.5; // Ajuste a sensibilidade aqui
+    currentTranslate = prevTranslate + movementX * 2; // Ajuste a sensibilidade aqui
 
     // Limits the movement within the container bounds
     if (currentTranslate > 0) {
         currentTranslate = currentTranslate * 0.5; // Efeito de desaceleração
     } else if (currentTranslate < maxTranslateX) {
-        currentTranslate = maxTranslateX + (currentTranslate - maxTranslateX) * 0.5; // Efeito de desaceleração
+        currentTranslate = maxTranslateX + (currentTranslate - maxTranslateX) * 2; // Efeito de desaceleração
     }
 
     carousel.style.transform = `translateX(${currentTranslate}px)`;
