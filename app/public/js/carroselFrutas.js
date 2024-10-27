@@ -4,7 +4,7 @@ const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-const itemWidthMobile = 300; // Width of each item for touch (mobile)
+const itemWidthMobile = 500; // Width of each item for touch (mobile)
 const itemWidthDesktop = 1550; // Width of each slide for desktop
 
 let currentIndex = 0;
