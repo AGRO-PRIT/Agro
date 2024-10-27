@@ -203,22 +203,36 @@ addToCartButtons.forEach(button => {
 
 
 // Função para mostrar mensagem de produto adicionado
+// Função para mostrar mensagem de produto adicionado
 function showAddedMessage(productName, productImage) {
     const message = document.createElement('div');
+
+    // Configurações padrão para telas maiores
     message.style.position = 'fixed';
     message.style.bottom = '20px';
-    message.style.left = '80%';
-    message.style.transform = 'translateX(-50%)'; // Centraliza horizontalmente
+    message.style.left = '65%';
+    message.style.whiteSpace = 'nowrap';
+    message.style.transform = 'translateX(-50%)';
     message.style.backgroundColor = '#5AA504';
     message.style.color = 'white';
     message.style.padding = '25px';
-    message.style.width = '550px';
+    message.style.width = 'auto';
+
     message.style.borderRadius = '10px';
     message.style.display = 'flex';
     message.style.alignItems = 'center';
-    message.style.justifyContent = 'center'; // Centraliza o conteúdo
+    message.style.justifyContent = 'center';
     message.style.zIndex = '1000';
-    message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Adiciona uma sombra suave
+    message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    message.style.fontSize = '20px';
+
+    // Ajuste para telas menores
+    if (window.innerWidth < 768) {
+        message.style.left = '50%'; // Centraliza para telas menores
+        message.style.width = '90%';
+        message.style.padding = '15px';
+        message.style.fontSize = '16px';
+    }
 
     // Imagem do produto
     const imgElement = document.createElement('img');
@@ -226,21 +240,19 @@ function showAddedMessage(productName, productImage) {
     imgElement.alt = productName;
     imgElement.style.width = '70px';
     imgElement.style.height = 'auto';
-    imgElement.style.display = 'block';
     imgElement.style.objectFit = 'cover';
-    imgElement.style.marginRight = '5px';
+    imgElement.style.marginRight = '10px';
 
     // Texto com o nome do produto
     const textElement = document.createElement('span');
-    textElement.textContent = `${productName} Adicionado ao carrinho! `;
-    message.style.fontSize = '20px'; // Ajusta o tamanho da fonte para centralizar melhor
+    textElement.textContent = `${productName} Adicionado ao carrinho!`;
 
     // Ícone de verificação 
     const iconElement = document.createElement('i');
     iconElement.classList.add('fas', 'fa-check-circle');
-    iconElement.style.fontSize = '20px'; 
+    iconElement.style.fontSize = '20px';
     iconElement.style.marginLeft = '10px';
-    iconElement.style.color = 'white'; 
+    iconElement.style.color = 'white';
 
     // Adiciona a imagem, o texto e o ícone ao pop-up
     message.appendChild(imgElement);
@@ -254,6 +266,7 @@ function showAddedMessage(productName, productImage) {
         message.remove();
     }, 3000);
 }
+
 
 // Seleciona os elementos do carrinho e o resumo
 const cartIcon = document.querySelector('.carrinho');

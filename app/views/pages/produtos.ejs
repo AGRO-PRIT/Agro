@@ -105,7 +105,101 @@
         </section>
        
        <section class="antes-produtos">
-        <h1 class="titulo">Todos os produtos</h1>
+        <article class="titulos">
+            <h1 class="titulo">Todos os produtos</h1>
+            <article class="TudoFiltroMobile" onclick="menuFiltro()">
+                <p class="filter-mobile">Filtros</p>
+                <img class="imagem-filtro" src="imagens/icone_filtro.png" alt="Ícone de Filtro">
+            </article>
+        </article>
+
+        
+
+        <section class="mobile-filter">
+            
+            <h2 class="categorias">Categorias</h2>
+           <article class="mobileFiler-interior">
+            <span class="Mobileclose" onclick="menuFiltro()">×</span>
+           </article>
+            <form id="category-filters">
+                
+                <label class="filter-option">
+                    <p>Legumes</p>
+                    <input type="checkbox" name="category" value="legumes">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Verduras</p>
+                    <input type="checkbox" name="category" value="verduras">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Frutas</p>
+                    <input type="checkbox" name="category" value="frutas">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Cereais</p>
+                    <input type="checkbox" name="category" value="cereais">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Latiociníos</p>
+                    <input type="checkbox" name="category" value="latiociníos">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Suplementos</p>
+                    <input type="checkbox" name="category" value="suplementos">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Grãos</p>
+                    <input type="checkbox" name="category" value="grãos">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Chás</p>
+                    <input type="checkbox" name="category" value="chás">
+                    <p class="checkmark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Proteínas</p>
+                    <input type="checkbox" name="category" value="proteínas">
+                    <p class="checkmark"></p>
+                </label>
+    
+                <!-- Adicione mais categorias conforme necessário -->
+                 
+            </form>
+    
+            <h2 class="ordernar">Ordenar</h2>
+            <form id="sort-filters">
+                <label class="filter-option">
+                    <p>Mais vendidos</p>
+                    <input type="radio" name="sort" value="mais_vendidos">
+                    <p class="radiomark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Menor preço</p>
+                    <input type="radio" name="sort" value="menor_preco">
+                    <p class="radiomark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Maior preço</p>
+                    <input type="radio" name="sort" value="maior_preco">
+                    <p class="radiomark"></p>
+                </label>
+                <label class="filter-option">
+                    <p>Relevância</p>
+                    <input type="radio" name="sort" value="relevancia">
+                    <p class="radiomark"></p>
+                </label>
+               
+            </form>
+            
+            <button type="submit" form="category-filters" class="apply-button">Aplicar</button>
+        </section>
 
             <!-- Produtos partials -->
 
@@ -123,7 +217,8 @@
 </html>
 
         <!-- Script -->
-        
+
+<script src="js/menuFiltro.js"> </script>
 <script src="js/resumoCarrinho.js"> </script>
 
 
