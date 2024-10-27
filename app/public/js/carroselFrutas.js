@@ -4,7 +4,7 @@ const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-const itemWidthMobile = 158; // Width of each item for touch (mobile)
+const itemWidthMobile = 500; // Width of each item for touch (mobile)
 const itemWidthDesktop = 1550; // Width of each slide for desktop
 
 let currentIndex = 0;
@@ -16,17 +16,18 @@ let maxTranslateX;
 
 // Calculate maxTranslateX dynamically
 function calculateMaxTranslateX() {
-    maxTranslateX = -(items.length * itemWidthMobile - window.innerWidth); // Adjusts the maximum movement limit
+    const totalItemsWidth = items.length * itemWidthMobile;
+    const viewportWidth = window.innerWidth;
+    maxTranslateX = Math.min(0, viewportWidth - totalItemsWidth); // Ajusta o limite máximo de movimento
 }
 
 // === Functions for Desktop ===
 
 function updateCarouselDesktop() {
-    // Loop back to the first section if at the end
     if (currentIndex >= indicators.length) {
         currentIndex = 0;
     } else if (currentIndex < 0) {
-        currentIndex = indicators.length - 1; // Volte para o último indicador ao ir para trás do primeiro
+        currentIndex = indicators.length - 1;
     }
 
     carousel.style.transform = `translateX(${-currentIndex * itemWidthDesktop}px)`;
@@ -70,13 +71,13 @@ function handleTouchMove(event) {
     if (!isDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - startX;
-    currentTranslate = prevTranslate + movementX * 0.5; // Ajuste a sensibilidade aqui
+    currentTranslate = prevTranslate + movementX; // Ajuste a sensibilidade aqui
 
     // Limits the movement within the container bounds
     if (currentTranslate > 0) {
-        currentTranslate = currentTranslate * 0.5; // Efeito de desaceleração
+        currentTranslate = 0; // Limite ao início
     } else if (currentTranslate < maxTranslateX) {
-        currentTranslate = maxTranslateX + (currentTranslate - maxTranslateX) * 0.5; // Efeito de desaceleração
+        currentTranslate = maxTranslateX; // Limite ao final
     }
 
     carousel.style.transform = `translateX(${currentTranslate}px)`;
@@ -147,3 +148,11 @@ function disableDesktopCarousel() {
 // Check screen size on load and when resizing the window
 window.addEventListener('resize', checkScreenSize);
 checkScreenSize(); // Execute the check on startup
+
+// Ensure all items are draggable even if not visible initially
+items.forEach(item => {
+   item.style.touchAction = 'pan-y';
+});
+
+// Ensure all items are considered for dragging
+carousel.style.width = `${items.length * itemWidthMobile}px`;

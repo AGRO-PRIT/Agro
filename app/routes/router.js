@@ -252,5 +252,17 @@ router.get('/vendedor', function(req, res) {
     res.render('pages/vendedor');
 });
 
+// carrinho
+
+router.get('/finalizar-carrinho-endereco', function(req, res) {
+    res.render('pages/finalizar-carrinho-endereco');
+});
+
+router.get('/finalizar-carrinho-cartao', function(req, res) {
+    res.render('pages/finalizar-carrinho-cartao');
+});
+
+
+
 module.exports = router;
 

@@ -40,24 +40,34 @@ function ready() {
     }
 
     const purchaseButton = document.getElementsByClassName("checkout-button")[0];
-    purchaseButton.addEventListener("click", makePurchase);
-
+    purchaseButton.removeEventListener("click", makePurchase);
+    
     updateTotal();
     updateCartCount();
+    
 }
 
 // Mensagem ao finalizar a compra + verificação de mensagem de carrinho vazio
-function makePurchase() {
-    if (totalAmount == "0,00") {
-        alert("Seu carrinho está vazio!");
-    } else {
-        alert(`
-            Obrigado pela sua compra!
-            Valor do pedido: ${totalAmount}
-            Volte sempre!
-        `);
-    }
+// function makePurchase() {
+//     if (totalAmount == "0,00") {
+//         alert("Seu carrinho está vazio!");
+//     } else {
+//         alert(`
+//             Obrigado pela sua compra!
+//             Valor do pedido: ${totalAmount}
+//             Volte sempre!
+//         `);
+//     }
+// }
+
+function finalizarCompra() {
+    alert("Obrigado pela sua compra! Sua compra foi bem-sucedida.");
+    window.location.href = "/pedidos"; // Certifique-se de que este caminho está correto
 }
+
+// // Adicione um event listener para garantir que a função seja chamada
+// document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
+
 
 // Adicionar cada produto ao clicar em "adicionar"
 function addProductToCart(event) {
