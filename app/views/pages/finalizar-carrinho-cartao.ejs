@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/faca-box.css">
+    <link rel="stylesheet" href="css/faca-box4.css">
+</head>
+
+<body>  
+    <!-- NavBar -->
+
+   <%- include('../partials/navbar'); %>
+
+    <!-- Corpo/ Conteúdo -->
+
+<main class="geralBox">
+    <h1 class="titulo-faca-box">MÉTODO DE PAGAMENTO</h1>
+    
+    <section class="PagamentoTotalBox">
+        <h2 class="titleEnderecosBox">Cartões</h2>
+            <section class="InteriorEnderecos">
+                <article class="tituloprimarioAddress">
+                    <article class="card-image">
+                        <img src="imagens/icon_cartao.png">
+                    </article>
+                    <article class="card2">
+                        <strong class="numero-cartao">**** **** **** 1234</strong> 
+                        <strong class="nome-cartao">Nome no cartão</strong>
+                    </article>
+                    <article class="acoes-cartao">
+                        <p class="editionTittle">Editar | Excluir</p>
+                      </article>
+                </article>
+            </section>
+
+            <section class="InteriorEnderecos">
+                <article class="tituloprimarioAddress">
+                    <article class="card-image">
+                        <img src="imagens/icon_cartao.png">
+                    </article>
+                    <article class="card2">
+                        <strong class="numero-cartao">**** **** **** 1234</strong> 
+                        <strong class="nome-cartao">Nome no cartão</strong>
+                    </article>
+                    <article class="acoes-cartao">
+                        <p class="editionTittle">Editar | Excluir</p>
+                        <button class="selecaoEnderess">SELECIONAR</button>
+                      </article>
+                </article>
+            </section>
+            <button class="AddEnderess">+ Adicionar outro Cartão</button>
+    </section>
+    
+    <article class="buttons">
+        <a href="/finalizar-carrinho-endereco">
+            <button class="proximoBoxLeft">VOLTAR</button>
+        </a>
+        <button class="proximoBoxRight" onclick="finalizarCompra()">FINALIZAR</button>
+    </article>
+    
+</main>
+
+
+   <!-- Rodapé -->
+    
+   <%- include('../partials/footer'); %>
+   
+</body>
+
+</html>
+
+
+<!-- Script -->
+ 
+
+<script src="js/carrinho.js"></script>
+
