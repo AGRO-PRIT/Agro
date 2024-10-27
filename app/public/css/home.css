@@ -82,10 +82,10 @@ body {
 
 .mobile-menu {
     background-color: var(--branco);
-    display: none;
     width: 65%;
     position: fixed;
-    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Começa fora da tela */
+    transition: transform 0.3s ease; /* Transição suave */
     top: 0;
     right: 0;
     height: auto;
@@ -94,7 +94,6 @@ body {
     box-sizing: border-box;
     box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
 }
-
 
 .mobile-menu-icon {
     background-color: transparent;
@@ -113,6 +112,10 @@ body {
 .mobile-menu-icon button {
     border: none;
     background-color: transparent;
+}
+
+.mobile-menu.open {
+    transform: translateX(0); /* Move o menu para dentro da tela */
 }
 
 .mobile-menu .mobile-links, .mobile-list2 {
@@ -989,6 +992,7 @@ body {
 a { 
     font-size: small;
 }
+
 .fixarRodape img{
     height: 70px;
 }
@@ -1287,11 +1291,11 @@ a {
 }
 
 .prev, .prev2 {
-    left: 35px;
+    left: 0px;
 }
 
 .next, .next2 {
-    right: 35px;
+    right: 0px;
 }
 
 .carousel-control img, .carousel-control2 img{
