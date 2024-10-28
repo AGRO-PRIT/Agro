@@ -92,7 +92,7 @@ body {
     z-index: 9999; 
     overflow-y: auto; 
     box-sizing: border-box;
-    box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: -6px 0px 10px -4px rgba(0, 0, 0, 0.35)
 }
 
 .mobile-menu-icon {
@@ -101,6 +101,49 @@ body {
     cursor: pointer;
     display: none;
 }
+
+.mobile-links,
+.subMenu {
+    list-style: none; /* Remove os marcadores */
+    padding: 0;      /* Remove o padding padrão */
+    margin: 0;       /* Remove a margem padrão */
+}
+
+
+.subMenu {
+    display: none; /* Oculta o subMenu por padrão */
+    padding-left: 20px; /* Ajuste se necessário */
+}
+
+.subMenu li {
+    color: var(--corprincipal);
+    padding: 3px 0;
+}
+
+
+.mobile-list .arrow {
+    color: var(--marrom);
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a rotação */
+    display: inline-block; /* Garante que a seta possa ser rotacionada */
+}
+
+/* Quando o submenu está expandido, rotaciona a seta para baixo */
+.mobile-list.expanded .arrow {
+    transform: rotate(0deg); /* Rotaciona 90 graus para baixo */
+}
+
+/* Quando o submenu está fechado, a seta fica na posição original (para a esquerda) */
+.mobile-list .arrow {
+    transform: rotate(90deg); /* Mantém a seta na posição original (para a esquerda) */
+}
+
+/* Exibe o submenu quando o item tem a classe 'expanded' */
+.mobile-list.expanded .subMenu {
+    display: block;
+}
+
 
 .checkbtn {
     cursor: pointer;
@@ -118,8 +161,17 @@ body {
     transform: translateX(0); /* Move o menu para dentro da tela */
 }
 
+.mobile-link2{
+    font-size: 0.9em;
+    text-align: left;
+}
+
 .mobile-menu .mobile-links, .mobile-list2 {
     list-style: none;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
 }
 
 .mobile-links .mobile-link {
@@ -134,7 +186,7 @@ body {
     text-align: left;
     color: #5aa504;
     font-weight: bold;
-    margin-left: 21px;  
+    margin-left: 5px;  
     list-style-type: none;
     text-decoration: none;
     font-size: 16px;
@@ -236,6 +288,7 @@ body {
     z-index: 10;
     align-items: center;
     display: flex;
+    margin-left: 50px;
     margin-right: 80px;
 }
 
@@ -299,7 +352,7 @@ body {
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .subnav ul li{
@@ -437,9 +490,6 @@ body {
     height: 14vh;
 }
 
-.Mobileclose{
-    left: 208px;
-}
 
 }
     
@@ -485,20 +535,18 @@ body {
 }
 
 .mobile-menu ul {  
-    display: flex;
     flex-direction: column;
     text-align: right;
     margin-right: 15px;
-    padding-bottom: 1rem;
-    margin-bottom: 50px;
 }
 
 .mobile-menu .mobile-list {
     display: block;
-    padding-top: 1.2rem;
+    padding-top: 1rem;
 }
 
 .Mobileclose{
+    display: block;
     position: absolute;
     top: -5px;
     right: 10px;
@@ -671,6 +719,9 @@ body {
     letter-spacing: 0;
 }
 
+.mobile-list {
+    display: none;
+}
 
 /* Carrosel Frutas */
 
@@ -1035,12 +1086,13 @@ a {
 }
 
 .mobile-menu ul {  
-    display: flex;
     flex-direction: column;
     text-align: right;
     margin-right: 15px;
-    padding-bottom: 1rem;
-    margin-bottom: 50px;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
 }
 
 .mobile-menu .mobile-list {
@@ -1049,6 +1101,7 @@ a {
 }
 
 .Mobileclose{
+    display: block;
     position: absolute;
     top: -5px;
     right: 10px;

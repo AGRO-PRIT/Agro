@@ -195,3 +195,32 @@
     background-color: white;
     color: var(--corprincipal);
 }
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+    
+}

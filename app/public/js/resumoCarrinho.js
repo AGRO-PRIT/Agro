@@ -224,21 +224,21 @@ function showAddedMessage(productName, productImage) {
     message.style.justifyContent = 'center';
     message.style.zIndex = '1000';
     message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-    message.style.fontSize = '20px';
+    message.style.fontSize = '15px';
 
     // Ajuste para telas menores
     if (window.innerWidth < 768) {
         message.style.left = '50%'; // Centraliza para telas menores
         message.style.width = '90%';
-        message.style.padding = '15px';
-        message.style.fontSize = '16px';
+        message.style.padding = '5px';
+        message.style.fontSize = '8px';
     }
 
     // Imagem do produto
     const imgElement = document.createElement('img');
     imgElement.src = productImage;
     imgElement.alt = productName;
-    imgElement.style.width = '70px';
+    imgElement.style.width = '15%';
     imgElement.style.height = 'auto';
     imgElement.style.objectFit = 'cover';
     imgElement.style.marginRight = '10px';
@@ -250,7 +250,7 @@ function showAddedMessage(productName, productImage) {
     // Ícone de verificação 
     const iconElement = document.createElement('i');
     iconElement.classList.add('fas', 'fa-check-circle');
-    iconElement.style.fontSize = '20px';
+    iconElement.style.fontSize = '16px';
     iconElement.style.marginLeft = '10px';
     iconElement.style.color = 'white';
 

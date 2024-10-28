@@ -67,6 +67,14 @@
    
 }
 
+.titulo-terceiro-box {
+    font-size: 6.5em;
+    text-align: center;
+    color: var(--verdeescuro);
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+
 .texto-box {
     display: flex;
     flex-direction: column;
@@ -114,6 +122,9 @@
     height: auto; /* Mantém a proporção da imagem */
 }
 
+.linksPremium { 
+    margin: auto;
+}
 .descricao-box2 {
     width: 600px;
     background-color: rgba(255, 255, 255, 0);
@@ -172,6 +183,14 @@
     margin-right: 150px; /* Adiciona espaço entre a descrição e a caixa premium */
 }
 
+.tittlePremiumBox{
+    color: var(--marrom);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    margin-left: 185px;
+    text-align: center;
+}
+
 .assine-agro-premium {
     width: 65%;
     padding: 50px;
@@ -228,3 +247,86 @@
     font-size: 30px;
     margin-bottom: 20px; /* Espaço entre o preço e o botão */
 }
+
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+
+.descricao-box, .descricao-box2{
+    width: 50%;
+}
+
+.tittlePremiumBox{
+    margin: 0;
+}
+
+.texto-box{
+    padding: 0;
+}
+
+.FAÇA-SUA-BOX{
+    margin: auto;
+    width: 50%;
+}
+
+.assine-ja{
+    margin: auto;
+    width: 90%;
+}
+
+.titulo-box {
+    font-size: xx-large;
+    padding: 0 10px;
+}
+
+.descricao-box,
+.descricao-box2 {
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+
+
+.imagem-primeiro-box img,
+.imagem-segundo-box img {
+    height: auto; /* Mantém proporção */
+}
+
+.segundo-box {
+    flex-direction: column; /* Coluna em telas menores */
+}
+
+.titulo-terceiro-box {
+    font-size: 36px; /* Diminuído para telas menores */
+}
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+
+}
+
+
+
+
