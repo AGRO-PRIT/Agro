@@ -81,7 +81,7 @@ function verificacaoCompra() {
 }
 
 // Modifique o evento de clique do botão "Finalizar Compra"
-document.querySelector('.checkout-button').addEventListener('click', verificacaoCompra);
+// document.querySelector('.checkout-button').addEventListener('click', verificacaoCompra);
 
 
 // // Adicione um event listener para garantir que a função seja chamada
