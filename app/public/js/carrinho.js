@@ -62,8 +62,27 @@ function ready() {
 
 function finalizarCompra() {
     alert("Obrigado pela sua compra! Sua compra foi bem-sucedida.");
-    window.location.href = "/pedidos"; // Certifique-se de que este caminho está correto
+    window.location.href = "/pedidos"; // Redireciona para a página de pedidos
 }
+
+// Adicione o listener de evento para o botão "FINALIZAR"
+document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
+
+
+function verificacaoCompra() {
+    // Verifica se o carrinho está vazio
+    const cartItems = document.getElementsByClassName("cart-item");
+    if (cartItems.length === 0) {
+        alert("Seu carrinho está vazio! Adicione produtos antes de finalizar a compra.");
+        return; // Interrompe a execução se o carrinho estiver vazio
+    }
+    // Se o carrinho não estiver vazio, redireciona para a página de finalização
+    window.location.href = "/finalizar-carrinho-endereco"; 
+}
+
+// Modifique o evento de clique do botão "Finalizar Compra"
+document.querySelector('.checkout-button').addEventListener('click', verificacaoCompra);
+
 
 // // Adicione um event listener para garantir que a função seja chamada
 // document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);

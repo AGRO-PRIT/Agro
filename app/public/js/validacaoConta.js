@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     numeroTelefoneInput.setAttribute('maxlength', '15');
 
     function validateNome(nome) {
-        return nome.length > 0;
+        const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:\s[A-Za-zÀ-ÖØ-öø-ÿ]+)+$/;
+        return regex.test(nome);
     }
 
     function validateCPF(cpf) {
