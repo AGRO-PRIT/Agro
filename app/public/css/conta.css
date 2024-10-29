@@ -16,40 +16,40 @@
             /* CONTA CONSUMIDOR */
 
 
-            .modal-content-endereco .close {
-                position: absolute;
-                top: 145px;
-                left: 1170px;
-                color: #aaa;
-                font-size: 70px;
-                font-weight: bold;
-                cursor: pointer;;
-            }
-            
-            .modal-content-endereco .close:hover,
-            .modal-content-endereco .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }    
+.modal-content-endereco .close {
+    position: absolute;
+    top: 145px;
+    left: 1170px;
+    color: #aaa;
+    font-size: 70px;
+    font-weight: bold;
+    cursor: pointer;;
+}
 
-            
-            .modal-content-cartao .close {
-                position: absolute;
-                top: 320px;
-                left: 1190px;
-                color: #aaa;
-                font-size: 28px;
-                font-weight: bold;
-                cursor: pointer;
-            }
-            
-            .modal-content-cartao .close:hover,
-            .modal-content-cartao .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }    
+.modal-content-endereco .close:hover,
+.modal-content-endereco .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}    
+
+
+.modal-content-cartao .close {
+    position: absolute;
+    top: 320px;
+    left: 1190px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content-cartao .close:hover,
+.modal-content-cartao .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}    
 
 /* container geral */
 
@@ -187,7 +187,6 @@
     font-size: 17px;
     align-items: center;
     justify-content: center;
-
 }
 
 .input-wrapper {
@@ -977,4 +976,160 @@
 
 .botao-darkMode:hover{
     opacity: 0.9;
+}
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.sidebar{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile h3 a{
+    text-align: center;
+    font-size: large;
+}
+
+.box-container{
+    border: none;
+    flex-direction: column;
+}
+
+.box-dados-pessoais, .box-dados-acesso{
+    width: 100%;
+    padding: 10px;
+}
+
+.edit-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.input-wrapper input{
+    width: 100%;
+    font-size: 0.7em;
+}
+
+.input-wrapper .edit-icon{
+    right: 5px;
+}
+
+.box-dados-pessoais h3{
+    font-size: 1.5em;
+}
+
+.box-dados-acesso h3{
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+
+.menu li a{
+    display: none;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.box-dados-acesso{
+    border: none;
+}
+
+.page-container{
+    width: 95%;
+    margin: 20px auto 60px auto;
+}
+
+.page-container .minhaConta h1, .produtosSection h1, .vendas h1, .avaliacoes h1, .configuracoes h1{
+    margin-left: 1%;
+}
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.container{
+    width: 100%;    
+}
+
+.page-container{
+    width: 70%;
+    margin: 20px auto 60px auto;
+    
+}
+
+.page-container .minhaConta h1, .produtosSection h1, .vendas h1, .avaliacoes h1, .configuracoes h1{
+    margin-left: 1%;
+}
+
+
+.box-dados-acesso h3{
+    font-size: 1.2em;
+}
+
+.box-dados-pessoais h3{
+    font-size: 1.2em;
+}
+
+.box-dados-pessoais, .box-dados-acesso{
+    padding: 10px;
+}
+
+.input-wrapper input{
+    font-size: 12px;
+}
+
+.profile h3 a{
+    font-size: 17px;
+}
+
+.input-wrapper label{
+    font-size: 1.1em;
+}
+
+.sidebar{
+    margin: 0 ;
+    width: 25%;
+    padding-right: 0;
+}
+
+.menu {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+    
 }

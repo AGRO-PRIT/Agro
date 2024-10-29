@@ -262,7 +262,12 @@ router.get('/finalizar-carrinho-cartao', function(req, res) {
     res.render('pages/finalizar-carrinho-cartao');
 });
 
+router.post('/finalizar-carrinho-endereco', function(req, res) {
+    res.redirect('/finalizar-carrinho-endereco');
+});
 
-
+router.post('finalizar-carrinho-cartao', function(req, res) {
+    res.redirect('finalizar-carrinho-cartao');
+});
 module.exports = router;
 

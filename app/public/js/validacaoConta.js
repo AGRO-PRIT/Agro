@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const nomeError = document.getElementById('nome-error');
     const cpfError = document.getElementById('cpf-error');
     const telefoneError = document.getElementById('telefone-error');
+    const emailInput = form.querySelector('input[id="email"]');
+    const passwordInput = form.querySelector('input[id="senha"]');
+    const senhaError = document.getElementById('senha-error');
+    const emailError = document.getElementById('email-error');
+
 
     cpfInput.addEventListener('input', formatCPF);
     telefoneInput.addEventListener('input', formatTelefone);
@@ -40,6 +45,25 @@ document.addEventListener('DOMContentLoaded', function() {
             telefoneError.style.display = 'none';
         }
 
+        // Validação do Email
+if (!validateEmail(emailInput.value)) {
+    valid = false;
+    emailError.style.display = 'block';
+    emailError.textContent = 'Email inválido. Por favor, insira um email válido.';
+} else {
+    emailError.style.display = 'none';
+}
+
+// Validação da Senha
+if (passwordInput.value.length < 6) {
+    valid = false;
+    senhaError.style.display = 'block';
+    senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
+} else {
+    senhaError.style.display = 'none';
+}
+
+
         // Impede o envio do formulário se alguma validação falhar
         if (!valid) {
             event.preventDefault();
@@ -52,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.target.value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
     }
 
+   
     const CPFInput = document.getElementById('cpf');
     CPFInput.addEventListener('input', formatCPF);
 
@@ -72,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     numeroTelefoneInput.setAttribute('maxlength', '15');
 
     function validateNome(nome) {
-        return nome.length > 0;
+        const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:\s[A-Za-zÀ-ÖØ-öø-ÿ]+)+$/;
+        return regex.test(nome);
     }
 
     function validateCPF(cpf) {
@@ -82,4 +108,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateTelefone(telefone) {
         return telefone.length === 15; 
     }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+    
+
 });

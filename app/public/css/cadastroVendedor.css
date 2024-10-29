@@ -8,10 +8,24 @@
     --laranja: #f1a532;
     --marrom: #493A31;
     --corlayouts: #f2f2f2;
-  }
+    --vermelho: #FF0000;
 
-/*    Cadastro Conta Vendedor    */
+}
 
+.error-message {
+  color: var(--vermelho);
+  display: none;
+}
+
+/* .email-error {
+    color: red;
+    display: none;
+}
+
+.password-error {
+    color: red;
+    display: none;
+} */
 
 .bodydoPerfil {
     margin-top: 100px;
@@ -40,14 +54,13 @@
     justify-content: center;
     flex-direction: column;
     height: auto;
-    padding: 35px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    margin: 0 auto;
+    width: 45%;
     border-radius: 19px 0px 0px 19px;
 }
 
 .cantinhoLogo {
-    width: 667px;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,21 +70,20 @@
     padding-bottom: 10px;
 }
 
-.banner img {
-    width: 250px;
-    height: 210px;
+.banner img{
+    width: 100%;
+    height: auto;
 }
 
 .cantinhoLogo h1 {
-    margin-top: 10px;
     text-align: center;
-    font-size: 30px;
-
+    font-size: 45px;
+    padding-bottom: 15px;
     color: var(--cortexto);
 }
 
 .input-group input { 
-    outline: none;
+    outline: none;  
     text-indent: 10px;
     margin-bottom: 4px;
     font-size: 15px;
@@ -84,9 +96,25 @@
 }
 
 .cadastro-form h3 { 
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 16px;
     color: var(--cortexto);
+}
+
+.img-login{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-login img{
+    background-color: var(--branco);
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
 }
 
 .entrar {
@@ -94,52 +122,60 @@
     cursor: pointer;
     text-decoration: none; /* Remove o sublinhado do link */
     text-align: center; /* Centraliza o texto */
-    font-weight: bold;
+    justify-content: center;
+    font-weight: 700;
     background-color: var(--branco);
     border: none;
     border-radius: 5px;
     padding: 10px;
-    width: 209px;
+    width: 225px;
     color: var(--corprincipal);
-    margin-top: 13px;
-    margin-bottom: 10px;
-    margin-left: 13px;
+    margin: 13px;
     font-size: 16px;
 }
 
 .cadastro-form .entrar{
-    margin-left: 90px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .cadastro-form .texto-entrar{
+    margin-top: 5px;
+    margin-bottom: 7px;
+    color: var(--cortexto);
+    text-align: center;
+    font-size: 19px;
+}
+
+.cadastro-form p{
+    margin-top: 5px;
+    margin-bottom: 7px;
+    color: var(--cortexto);
+    text-align: center;
+    font-size: 16px;
+}
+
+.cadastro-form .texto-checkbox{
+    margin-top: 5px;
+    margin-bottom: 7px;
     color: var(--cortexto);
     text-align: center;
     font-size: 18px;
 }
 
-.cadastro-form p{
-    margin-bottom: 4px;
-    color: var(--cortexto);
-    text-align: center;
-    font-size: 16px;
-}
-
-.texto-final{
-    font-size: 30px;
-    color: var(--cortexto);
-    text-align: center;
-}
 .cadastro-form .text-cadastro{
     font-weight: bold;
     color: var(--laranja);
 }
 .checagem {
     display: flex;
-    margin: 10px;
+    margin: 3px;
 }
 
-
-.voltar{
+.voltar, .voltarMobile{
     width: 280px;
     height: 70px;
     padding: 2px;

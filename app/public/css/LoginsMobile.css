@@ -1,0 +1,190 @@
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #f1a532;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+    --vermelho: #FF0000;
+
+}
+
+
+.bodydoPerfilMobile{
+    display: none;
+}
+
+.voltarMobile{
+    display: none;
+}
+
+
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+ /*  MOBILE LOGIN */
+
+
+ .bodydoPerfil{
+    width: 100%;
+}
+
+.cantinhoLogo{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bannerMobile{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: auto;
+
+}
+
+.cadastro-form .texto-checkbox{
+    color: var(--marrom);
+    margin-left: 5px;
+}
+
+.cadastro-form .entrar{
+    margin: 10px auto;
+}
+
+.cantinhoLogo h1{
+    color: var(--corprincipal);
+    text-align: start;
+    font-size: xx-large;
+}
+
+.cadastro-form h3{
+    color: var(--marrom);
+}
+
+.input-group input{
+    width: 90%;
+    background-color: var(--branco);
+}
+
+.bannerMobile img{
+    width: 35%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.entrar{
+    display: flex;
+    background-color: #5AA504;
+    color: var(--branco);
+    width: 70%;
+}
+
+.img-login{
+    margin: 15px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.voltar {
+    display: none;    
+}
+
+.bodydoPerfil {
+    display: none;    
+}
+
+.bodydoPerfilMobile{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--branco);
+    display: block;
+}
+
+.voltarMobile{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 15px;
+    height: 45px;
+    margin-top: 15%;
+}
+
+.cadastro-form .texto-entrar{
+    font-size: medium;
+    color: var(--marrom);
+}
+
+
+.cadastro-form .text-cadastro{
+    font-size: small;
+}
+
+.checagem{
+    margin: 5px;
+}
+
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.bodydoPerfil{
+    padding-bottom: 100px;
+}
+
+.banner{
+    width: 45%;
+    font-size: x-large;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.img-login{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.input-group input{
+    width: 90%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;  
+}
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+    
+}

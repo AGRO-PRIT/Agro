@@ -18,8 +18,9 @@ let legumesMaxTranslateX;
 function calculateLegumesMaxTranslateX() {
     const totalItemsWidth = legumesItems.length * legumesItemWidthMobile;
     const viewportWidth = window.innerWidth;
-    legumesMaxTranslateX = Math.min(0, viewportWidth - totalItemsWidth); // Ajusta o limite máximo de movimento
+    legumesMaxTranslateX = Math.max(-2750, viewportWidth - totalItemsWidth); // Garante que não exceda -2000
 }
+
 
 // === Funções para Desktop ===
 
@@ -71,23 +72,24 @@ function handleLegumesTouchMove(event) {
     if (!legumesIsDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - legumesStartX;
-    legumesCurrentTranslate = legumesPrevTranslate + movementX; // Ajuste a sensibilidade aqui
+    legumesCurrentTranslate = legumesPrevTranslate + movementX;
 
     // Limita o movimento dentro dos limites do contêiner
     if (legumesCurrentTranslate > 0) {
         legumesCurrentTranslate = 0; // Limite no primeiro item
-    } else if (legumesCurrentTranslate < legumesMaxTranslateX) {
-        legumesCurrentTranslate = legumesMaxTranslateX; // Limite no último item
+    } 
+    if (legumesCurrentTranslate < -2750) {
+        legumesCurrentTranslate = -2750; // Limite no último item
     }
 
     legumesCarouselContainer.style.transform = `translateX(${legumesCurrentTranslate}px)`;
 }
 
+
 function handleLegumesTouchEnd() {
     legumesIsDragging = false;
-    legumesCarouselContainer.style.transition = 'transform 0.4s ease'; // Transição suave ao soltar
+    legumesCarouselContainer.style.transition = 'transform 0.4s ease';
 
-    // Calcula qual índice "snap" para
     const movedBy = legumesCurrentTranslate - legumesPrevTranslate;
     if (movedBy < -legumesItemWidthMobile / 3) {
         legumesCurrentIndex++; // Mover para o próximo item
@@ -97,13 +99,19 @@ function handleLegumesTouchEnd() {
 
     // Garantir que legumesCurrentIndex permaneça dentro dos limites
     if (legumesCurrentIndex >= legumesItems.length) {
-        legumesCurrentIndex = legumesItems.length - 1; // Limitar ao último item
+        legumesCurrentIndex = legumesItems.length - 1;
     } else if (legumesCurrentIndex < 0) {
-        legumesCurrentIndex = 0; // Limitar ao primeiro item
+        legumesCurrentIndex = 0;
     }
 
     // Snap para o item mais próximo
     legumesCurrentTranslate = -legumesCurrentIndex * legumesItemWidthMobile;
+
+    // Garante que não ultrapasse -2000px
+    if (legumesCurrentTranslate < -2750) {
+        legumesCurrentTranslate = -2750; 
+    }
+
     legumesCarouselContainer.style.transform = `translateX(${legumesCurrentTranslate}px)`;
 
     // Atualiza os indicadores
@@ -111,6 +119,7 @@ function handleLegumesTouchEnd() {
         indicator.classList.toggle('active', index === legumesCurrentIndex);
     });
 }
+
 
 function enableLegumesTouchCarousel() {
     legumesCarouselContainer.addEventListener('touchstart', handleLegumesTouchStart);

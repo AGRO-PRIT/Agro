@@ -62,8 +62,27 @@ function ready() {
 
 function finalizarCompra() {
     alert("Obrigado pela sua compra! Sua compra foi bem-sucedida.");
-    window.location.href = "/pedidos"; // Certifique-se de que este caminho está correto
+    window.location.href = "/pedidos"; // Redireciona para a página de pedidos
 }
+
+// Adicione o listener de evento para o botão "FINALIZAR"
+// document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
+
+
+function verificacaoCompra() {
+    // Verifica se o carrinho está vazio
+    const cartItems = document.getElementsByClassName("cart-item");
+    if (cartItems.length === 0) {
+        alert("Seu carrinho está vazio! Adicione produtos antes de finalizar a compra.");
+        return; // Interrompe a execução se o carrinho estiver vazio
+    }
+    // Se o carrinho não estiver vazio, redireciona para a página de finalização
+    window.location.href = "/finalizar-carrinho-endereco"; 
+}
+
+// Modifique o evento de clique do botão "Finalizar Compra"
+document.querySelector('.checkout-button').addEventListener('click', verificacaoCompra);
+
 
 // // Adicione um event listener para garantir que a função seja chamada
 // document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
@@ -272,45 +291,55 @@ addToCartButtons.forEach(button => {
 });
 
 
-// Função para mostrar mensagem de produto adicionado
 function showAddedMessage(productName, productImage) {
-    const message = document.createElement('section');
+    const message = document.createElement('div');
+
+    // Configurações padrão para telas maiores
     message.style.position = 'fixed';
     message.style.bottom = '20px';
-    message.style.left = '80%';
-    message.style.transform = 'translateX(-50%)'; // Centraliza horizontalmente
+    message.style.left = '65%';
+    message.style.whiteSpace = 'nowrap';
+    message.style.transform = 'translateX(-50%)';
     message.style.backgroundColor = '#5AA504';
     message.style.color = 'white';
     message.style.padding = '25px';
-    message.style.width = '550px';
+    message.style.width = 'auto';
+
     message.style.borderRadius = '10px';
     message.style.display = 'flex';
     message.style.alignItems = 'center';
-    message.style.justifyContent = 'center'; // Centraliza o conteúdo
+    message.style.justifyContent = 'center';
     message.style.zIndex = '1000';
-    message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'; // Adiciona uma sombra suave
+    message.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    message.style.fontSize = '15px';
+
+    // Ajuste para telas menores
+    if (window.innerWidth < 768) {
+        message.style.left = '50%'; // Centraliza para telas menores
+        message.style.width = '90%';
+        message.style.padding = '5px';
+        message.style.fontSize = '8px';
+    }
 
     // Imagem do produto
     const imgElement = document.createElement('img');
     imgElement.src = productImage;
     imgElement.alt = productName;
-    imgElement.style.width = '70px';
+    imgElement.style.width = '15%';
     imgElement.style.height = 'auto';
-    imgElement.style.display = 'block';
     imgElement.style.objectFit = 'cover';
-    imgElement.style.marginRight = '5px';
+    imgElement.style.marginRight = '10px';
 
     // Texto com o nome do produto
     const textElement = document.createElement('span');
-    textElement.textContent = `${productName} Adicionado ao carrinho! `;
-    message.style.fontSize = '20px'; // Ajusta o tamanho da fonte para centralizar melhor
+    textElement.textContent = `${productName} Adicionado ao carrinho!`;
 
     // Ícone de verificação 
     const iconElement = document.createElement('i');
     iconElement.classList.add('fas', 'fa-check-circle');
-    iconElement.style.fontSize = '20px'; 
+    iconElement.style.fontSize = '16px';
     iconElement.style.marginLeft = '10px';
-    iconElement.style.color = 'white'; 
+    iconElement.style.color = 'white';
 
     // Adiciona a imagem, o texto e o ícone ao pop-up
     message.appendChild(imgElement);
@@ -319,11 +348,11 @@ function showAddedMessage(productName, productImage) {
 
     document.body.appendChild(message);
 
-    
-
     // Remove a mensagem após 3 segundos
     setTimeout(() => {
         message.remove();
+        // Remove o listener de redimensionamento quando a mensagem for removida
+        window.removeEventListener('resize', adjustMessageLayout);
     }, 3000);
 }
 

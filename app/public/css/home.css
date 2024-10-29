@@ -80,6 +80,17 @@ body {
 
 /* <!-- Menu Responsivo -->  */
 
+.barraPremiumMobile {
+    background-color: #519000;
+    color: var(--branco);
+    text-align: center;
+    margin-top: 20px;
+    height: 6vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .mobile-menu {
     background-color: var(--branco);
     width: 65%;
@@ -92,7 +103,7 @@ body {
     z-index: 9999; 
     overflow-y: auto; 
     box-sizing: border-box;
-    box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: -6px 0px 10px -4px rgba(0, 0, 0, 0.35)
 }
 
 .mobile-menu-icon {
@@ -100,6 +111,48 @@ body {
     margin-right: 15px;
     cursor: pointer;
     display: none;
+}
+
+.mobile-links,
+.subMenu {
+    list-style: none; 
+    padding: 0;      
+    margin: 0;      
+}
+
+
+.subMenu {
+    display: none; 
+    padding-left: 20px; 
+}
+
+.subMenu li {
+    color: var(--corprincipal);
+    padding: 3px 0;
+}
+
+
+.mobile-list .arrow {
+    color: var(--marrom);
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease; 
+    display: inline-block; 
+}
+
+
+.mobile-list.expanded .arrow {
+    transform: rotate(0deg); /
+}
+
+
+.mobile-list .arrow {
+    transform: rotate(90deg); 
+}
+
+
+.mobile-list.expanded .subMenu {
+    display: block;
 }
 
 .checkbtn {
@@ -118,8 +171,17 @@ body {
     transform: translateX(0); /* Move o menu para dentro da tela */
 }
 
+.mobile-link2{
+    font-size: 0.9em;
+    text-align: left;
+}
+
 .mobile-menu .mobile-links, .mobile-list2 {
     list-style: none;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
 }
 
 .mobile-links .mobile-link {
@@ -134,7 +196,7 @@ body {
     text-align: left;
     color: #5aa504;
     font-weight: bold;
-    margin-left: 21px;  
+    margin-left: 5px;  
     list-style-type: none;
     text-decoration: none;
     font-size: 16px;
@@ -236,6 +298,7 @@ body {
     z-index: 10;
     align-items: center;
     display: flex;
+    margin-left: 50px;
     margin-right: 80px;
 }
 
@@ -299,7 +362,7 @@ body {
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .subnav ul li{
@@ -368,6 +431,7 @@ body {
     color: var(--cortexto);
     text-align: center;
     padding: 20px;  
+    overflow: hidden;
 }
 
  .blocos-do-footer {
@@ -437,9 +501,10 @@ body {
     height: 14vh;
 }
 
-.Mobileclose{
-    left: 208px;
+.mobileFoto {
+    display: none; /* Exibe imagens móveis */
 }
+
 
 }
     
@@ -452,17 +517,32 @@ body {
     box-sizing: border-box; 
 }
 
+
+
 /*  Carrosel */
+
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 
 .slide img {
     height: 250px;
 }
 
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 /* Navbar */
 
 .navbar-tudo {
     height: auto;
-    padding-bottom: 10px;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -485,20 +565,18 @@ body {
 }
 
 .mobile-menu ul {  
-    display: flex;
     flex-direction: column;
     text-align: right;
     margin-right: 15px;
-    padding-bottom: 1rem;
-    margin-bottom: 50px;
 }
 
 .mobile-menu .mobile-list {
     display: block;
-    padding-top: 1.2rem;
+    padding-top: 1rem;
 }
 
 .Mobileclose{
+    display: block;
     position: absolute;
     top: -5px;
     right: 10px;
@@ -671,6 +749,9 @@ body {
     letter-spacing: 0;
 }
 
+.mobile-list {
+    display: none;
+}
 
 /* Carrosel Frutas */
 
@@ -698,6 +779,7 @@ body {
 }
 
 .carousel-item, .carousel-item2 {
+    flex: 1;
     padding: 15px;
     height: 200px;
     border-radius: 15px;
@@ -712,7 +794,7 @@ body {
 }
 
 .product-name {
-    font-size: 0.81em;
+    font-size: 0.78em;
     margin-bottom: 0;
 }
 
@@ -1012,7 +1094,6 @@ a {
 
 .navbar-tudo {
     height: auto;
-    padding-bottom: 10px;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -1035,12 +1116,13 @@ a {
 }
 
 .mobile-menu ul {  
-    display: flex;
     flex-direction: column;
     text-align: right;
     margin-right: 15px;
-    padding-bottom: 1rem;
-    margin-bottom: 50px;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
 }
 
 .mobile-menu .mobile-list {
@@ -1049,6 +1131,7 @@ a {
 }
 
 .Mobileclose{
+    display: block;
     position: absolute;
     top: -5px;
     right: 10px;
@@ -1236,7 +1319,7 @@ a {
 }
 
 .carousel-item, .carousel-item2 {
-    flex: 0 0 20%; 
+
     padding: 10px;
     box-sizing: border-box;
     height: 180px;
@@ -1590,6 +1673,10 @@ a {
 
 .agrobox-imagem img{
     width: 100%;  
+}
+
+.barraPremiumMobile{
+     display: none;
 }
 
 }

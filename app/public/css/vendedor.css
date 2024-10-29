@@ -145,3 +145,123 @@
     gap: 10px;
     margin-bottom: 100px;
 }
+
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.geral-perfil{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.imagem-perfil{
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.imagem-perfil img{
+    margin: 0 auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.tudo-perfil{
+    margin: 20px 0;
+    flex-direction: column;
+}
+
+.details-perfil{
+    margin: 20px auto;
+    width: 100%;
+    padding: 0;
+}
+
+.details .p-title{
+    font-size: 1em;
+}
+
+.details{
+    margin: 20px auto;
+}
+
+.btn-chat{
+    margin: 15px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details strong{
+    font-size: x-large;
+}
+
+.details .p-avaliacao{
+    font-size: 1em;
+}
+
+.details h1{
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.sobre-perfil{
+    margin-left: 5%;
+}
+
+.sobre-perfil h1{
+    font-size: 1.5em;
+}
+
+.sobre-perfil p{
+    font-size: 1.2em;
+}
+
+.tituloProduto{
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.details-perfil{
+    margin: 20px auto;
+}
+
+.sobre-perfil{
+    margin: 20px 5%;
+}
+
+}
+
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+
+.todos-produtos-p{
+    overflow: hidden;    
+}
+
+}

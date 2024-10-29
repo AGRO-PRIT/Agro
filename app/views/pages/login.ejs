@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/LoginsMobile.css">
     
 
 </head>
+
 <body>
+
     <a href="/"> <button class="voltar">Voltar Para Home</button></a>
+
     <main class="bodydoPerfil">  
         <section class="container">
             <section class="banner">
@@ -48,6 +52,48 @@
             </section>
         </section>
     </main>
+
+    <main class="bodydoPerfilMobile">  
+        <section class="containerMobile">
+            <section class="bannerMobile">
+                <a href="/"><img src="imagens/logo.png" alt="logo da agroBox"></a>
+            </section>
+
+            <section class="cantinhoLogo">
+                <form class="cadastro-form" action="/contaConsumidor" method="POST">
+                    <h1>Login</h1>
+                    <section class="input-group">
+                        <i class="fas far-enveloper"></i>
+                        <h3>Entre com e-mail ou usuário</h3>
+                        <input type="email" name="email" placeholder="Ex: seuemail@gmail.com">
+                        <p class="error-message" id="email-error">Por favor, insira um email válido.</p>
+                    </section>
+                    <section class="input-group">   
+                        <i class="fas far-lock"></i>
+                        <h3>Sua senha</h3>
+                        <input type="password" name="password" placeholder="Senha">
+                        <p class="error-message" id="password-error">A senha deve ter pelo menos 6 caracteres.</p>
+                    </section>
+                   
+                    <section class="checagem">
+                        <input type="checkbox" name="" id="checagem2">
+                        <p class="texto-checkbox">Manter-se conectado.</p>
+                    </section> 
+                    <button type="submit" class="entrar">Entrar</button>
+                    <section class="img-login">
+                        <a href=""><img src="imagens/icon_google.png" alt="Imagem de icone do google"></a>
+                        <a href=""><img src="imagens/icon_apple.png" alt="Imagem de icone da apple"></a> 
+                    </section>
+                    <p class="texto-entrar">Novo no AgroBox?<a class="text-cadastro" href="/contaEscolha"> Cadastre-se aqui</a></p>
+                </form>
+            </section>
+        </section>
+        <a href="/"> <button class="voltarMobile">Voltar Para Home</button></a>
+    </main>
+
+ 
+
+
     <script src="js/validacaologin.js"></script>
 </body>
 </html>
