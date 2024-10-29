@@ -16,8 +16,9 @@ let maxTranslateX;
 function calculateMaxTranslateX() {
     const totalItemsWidth = items.length * itemWidthMobile;
     const viewportWidth = window.innerWidth;
-    maxTranslateX = Math.min(0, viewportWidth - totalItemsWidth); // Ajusta o limite máximo de movimento
+    maxTranslateX = Math.max(-2100, viewportWidth - totalItemsWidth);
 }
+
 
 // === Functions for Desktop ===
 function updateCarouselDesktop() {
@@ -62,40 +63,56 @@ function handleTouchMove(event) {
     if (!isDragging) return;
     const currentX = event.touches[0].clientX;
     const movementX = currentX - startX;
-    currentTranslate = prevTranslate + movementX; // Ajuste a sensibilidade aqui
-    // Limits the movement within the container bounds
+    currentTranslate = prevTranslate + movementX;
+
+    // Limites de movimento
     if (currentTranslate > 0) {
         currentTranslate = 0; // Limite ao início
-    } else if (currentTranslate < maxTranslateX) {
-        currentTranslate = maxTranslateX; // Limite ao final
     }
+    
+    // Garante que currentTranslate não passe de -2000px
+    if (currentTranslate < -2100) {
+        currentTranslate = -2100;
+    }
+    
     carousel.style.transform = `translateX(${currentTranslate}px)`;
 }
 
+
 function handleTouchEnd() {
     isDragging = false;
-    carousel.style.transition = 'transform 0.4s ease'; // Transição suave ao soltar
-    // Calculate which index to snap to
+    carousel.style.transition = 'transform 0.4s ease';
+    
     const movedBy = currentTranslate - prevTranslate;
     if (movedBy < -itemWidthMobile / 3) {
-        currentIndex++; // Move to the next item
+        currentIndex++;
     } else if (movedBy > itemWidthMobile / 3) {
-        currentIndex--; // Move to the previous item
+        currentIndex--;
     }
-    // Ensure currentIndex stays within bounds
+
+    // Restringir currentIndex
     if (currentIndex >= items.length) {
-        currentIndex = items.length - 1; // Limit to last item
+        currentIndex = items.length - 1;
     } else if (currentIndex < 0) {
-        currentIndex = 0; // Limit to first item
+        currentIndex = 0;
     }
+
     // Snap to the nearest item
     currentTranslate = -currentIndex * itemWidthMobile;
+
+    // Garante que currentTranslate não ultrapasse -2000px
+    if (currentTranslate < -2100) {
+        currentTranslate = -2100;
+    }
+
     carousel.style.transform = `translateX(${currentTranslate}px)`;
-    // Update indicators
+    
+    // Atualizar indicadores
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
     });
 }
+
 
 function enableTouchCarousel() {
     carousel.addEventListener('touchstart', handleTouchStart);
