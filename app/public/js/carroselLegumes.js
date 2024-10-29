@@ -18,7 +18,7 @@ let legumesMaxTranslateX;
 function calculateLegumesMaxTranslateX() {
     const totalItemsWidth = legumesItems.length * legumesItemWidthMobile;
     const viewportWidth = window.innerWidth;
-    legumesMaxTranslateX = Math.max(-2100, viewportWidth - totalItemsWidth); // Garante que não exceda -2000
+    legumesMaxTranslateX = Math.max(-2750, viewportWidth - totalItemsWidth); // Garante que não exceda -2000
 }
 
 
@@ -78,8 +78,8 @@ function handleLegumesTouchMove(event) {
     if (legumesCurrentTranslate > 0) {
         legumesCurrentTranslate = 0; // Limite no primeiro item
     } 
-    if (legumesCurrentTranslate < -2100) {
-        legumesCurrentTranslate = -2100; // Limite no último item
+    if (legumesCurrentTranslate < -2750) {
+        legumesCurrentTranslate = -2750; // Limite no último item
     }
 
     legumesCarouselContainer.style.transform = `translateX(${legumesCurrentTranslate}px)`;
@@ -108,8 +108,8 @@ function handleLegumesTouchEnd() {
     legumesCurrentTranslate = -legumesCurrentIndex * legumesItemWidthMobile;
 
     // Garante que não ultrapasse -2000px
-    if (legumesCurrentTranslate < -2100) {
-        legumesCurrentTranslate = -2200; 
+    if (legumesCurrentTranslate < -2750) {
+        legumesCurrentTranslate = -2750; 
     }
 
     legumesCarouselContainer.style.transform = `translateX(${legumesCurrentTranslate}px)`;

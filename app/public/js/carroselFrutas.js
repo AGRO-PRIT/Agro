@@ -16,7 +16,7 @@ let maxTranslateX;
 function calculateMaxTranslateX() {
     const totalItemsWidth = items.length * itemWidthMobile;
     const viewportWidth = window.innerWidth;
-    maxTranslateX = Math.max(-2100, viewportWidth - totalItemsWidth);
+    maxTranslateX = Math.max(-2650, viewportWidth - totalItemsWidth);
 }
 
 
@@ -71,8 +71,8 @@ function handleTouchMove(event) {
     }
     
     // Garante que currentTranslate não passe de -2000px
-    if (currentTranslate < -2100) {
-        currentTranslate = -2100;
+    if (currentTranslate < -2650) {
+        currentTranslate = -2650;
     }
     
     carousel.style.transform = `translateX(${currentTranslate}px)`;
@@ -101,8 +101,8 @@ function handleTouchEnd() {
     currentTranslate = -currentIndex * itemWidthMobile;
 
     // Garante que currentTranslate não ultrapasse -2000px
-    if (currentTranslate < -2100) {
-        currentTranslate = -2100;
+    if (currentTranslate < -2650) {
+        currentTranslate = -2650;
     }
 
     carousel.style.transform = `translateX(${currentTranslate}px)`;
