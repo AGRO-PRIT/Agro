@@ -89,7 +89,7 @@
 
 .content-Agrobox {
   padding-left: 100px;
-  max-width: 60%; /* Limita o espaço ocupado pelo texto */
+  max-width: 50%; /* Limita o espaço ocupado pelo texto */
   letter-spacing: 1px;
   line-height: 1.5;
 }

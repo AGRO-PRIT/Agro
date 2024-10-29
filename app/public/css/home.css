@@ -1319,7 +1319,7 @@ a {
 }
 
 .carousel-item, .carousel-item2 {
-    flex: 0 0 20%; 
+
     padding: 10px;
     box-sizing: border-box;
     height: 180px;

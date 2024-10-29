@@ -20,9 +20,10 @@
     margin-left: auto;
     margin-right: auto;
     background-color: var(--corprincipal);
-    width: 1350px;
+    width: 75%;
     border-radius: 16px;
-    height: 430px;
+    height: auto;
+    margin: 0 auto;
     padding: 50px;
 }
 
@@ -107,3 +108,296 @@
 }
 
 
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.geralBox{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo-faca-box{
+    width: 100%;
+    margin: 20px auto;  
+    font-size: 20px;  
+}
+
+.selecaoEnderess{
+    width: 70%;
+    height: 20px;
+    margin: 10px auto;
+    font-size: 5px;
+}
+
+.PagamentoTotalBox{
+    width: 85%;
+    height: auto;
+    padding: 20px;
+
+}
+
+.titleEnderecosBox{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card-image img{
+    height: 75%;
+    width: 75%;
+}
+
+.InteriorEnderecos{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.card2{
+    width: 100%;
+    font-size: 0.5em;
+    margin: 0 auto;
+
+}
+
+.numero-cartao{
+    width: 100%;
+}
+
+.acoes-cartao{
+    width: 100%;
+    text-align: center;
+}
+
+.editionTittle{
+    font-size: 0.5em;
+    margin-left: auto;
+}
+
+.tittleAddress{
+    font-size: 0.6em;
+}
+
+.tituloprimarioAddress{
+    margin-bottom: 5px;
+}
+
+.editionTittle{
+    font-size: 0.5em;
+}
+
+
+.EnderecosTotalBox{
+    padding: 10px;
+    height: auto;
+}
+
+.AddEnderess{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 10px;
+    height: auto;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+
+    .geralBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .titulo-faca-box{
+        width: 100%;
+        margin: 20px auto;  
+        font-size: 20px;  
+    }
+    
+    .selecaoEnderess{
+        width: 70%;
+        height: 20px;
+        margin: 10px auto;
+        font-size: 5px;
+    }
+    
+    .PagamentoTotalBox{
+        width: 85%;
+        height: auto;
+        padding: 20px;
+    
+    }
+    
+    .card-image{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .card-image img{
+        height: 75%;
+        width: 75%;
+    }
+    
+    .InteriorEnderecos{
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+    .card2{
+        width: 100%;
+        font-size: 0.5em;
+        margin: 0 auto;
+    
+    }
+    
+    .numero-cartao{
+        width: 100%;
+    }
+    
+    .acoes-cartao{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .editionTittle{
+        font-size: 0.5em;
+        margin-left: auto;
+    }
+    
+    .tittleAddress{
+        font-size: 0.6em;
+    }
+    
+    .tituloprimarioAddress{
+        margin-bottom: 5px;
+    }
+    
+    .editionTittle{
+        font-size: 1em;
+    }
+    
+    
+    .EnderecosTotalBox{
+        padding: 10px;
+        height: auto;
+    }
+    
+    .AddEnderess{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        font-size: 10px;
+        height: auto;
+        padding: 7px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+ 
+    
+    .geralBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .titulo-faca-box{
+        width: 100%;
+        margin: 20px auto;  
+    }
+    
+    .selecaoEnderess{
+        width: 70%;
+    }
+
+    .card-image{
+
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+
+    
+    .InteriorEnderecos{
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+    .card2{
+        width: 100%;
+        margin: 0 auto;
+        margin-left: 20px;
+    }
+    
+    .numero-cartao{
+        width: 100%;
+    }
+    
+    .acoes-cartao{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .editionTittle{
+        margin-left: auto;
+    }
+    
+    .tituloprimarioAddress{
+        margin-bottom: 5px;
+    }
+    
+    
+    
+    .EnderecosTotalBox{
+        padding: 10px;
+        height: auto;
+    }
+    
+    .AddEnderess{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        height: auto;
+        padding: 7px;
+        justify-content: center;
+        align-items: center;
+    }
+}

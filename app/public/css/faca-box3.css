@@ -33,7 +33,8 @@
     margin-left: auto;
     margin-right: auto;
     background-color: var(--corprincipal);
-    width: 1350px;
+    width: 75%;
+    margin: 0 auto;
     border-radius: 16px;
     height: 430px;
     padding: 50px;
@@ -82,7 +83,10 @@
 .AddEnderess{
     width: 500px;
     height: 75px;
-    margin-left: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
     padding: 2px 2px 2px 2px;
     border-radius: 5px;
@@ -96,3 +100,98 @@
     line-height: normal;
     cursor: pointer;
   }
+
+  /*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.geralBox{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo-faca-box{
+    width: 100%;
+    margin: 20px auto;  
+    font-size: 20px;  
+}
+
+.selecaoEnderess{
+    width: 30%;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 5px;
+}
+
+.EnderecosTotalBox{
+    width: 85%;
+}
+
+.tiitleEnderecosBox{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.InteriorEnderecos{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.tittleAddress{
+    font-size: 0.6em;
+}
+
+.tituloprimarioAddress{
+    margin-bottom: 5px;
+}
+
+.editionTittle{
+    font-size: 0.5em;
+}
+
+
+.EnderecosTotalBox{
+    padding: 10px;
+    height: auto;
+}
+
+.AddEnderess{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 10px;
+    height: auto;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.editionTittle{
+    font-size: 0.9em;    
+}
+
+}
+
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+    
+}
