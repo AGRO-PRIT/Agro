@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBox</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="css/faca-box.css">
+    <link rel="stylesheet" href="css/faca-box3.css">
+</head>
+
+<body>  
+    <!-- NavBar -->
+
+   <%- include('../partials/navbar'); %>
+
+    <!-- Corpo/ Conteúdo -->
+
+
+
+<main class="geralBox">
+    <h1 class="titulo-faca-box">CONFIRME SEU ENDEREÇO</h1>
+    
+    <section class="EnderecosTotalBox">
+        <h2 class="tiitleEnderecosBox">Endereços</h2>
+
+            <section class="InteriorEnderecos">
+                <article class="tituloprimarioAddress">
+                    <h3 class="tittleAddress"> Casa do Usuario1 | (+55) 1100000000</h3>
+                    <p class="editionTittle">Editar | Excluir</p>
+                </article>
+                    <h3 class="tittleAddress">Rua Joaninha, 404 - Bairro do Kiko</h3>
+                    <h3 class="tittleAddress">Carpazinha, São Paulo, 00000000</h3>
+            </section>
+
+            <section class="InteriorEnderecos">
+                <article class="tituloprimarioAddress">
+                    <h3 class="tittleAddress"> Casa do Usuario2 | (+55) 1100000000</h3>
+                    <p class="editionTittle">Editar | Excluir</p>
+                </article>
+                    <h3 class="tittleAddress">Rua Joaninha, 404 - Bairro do Kiko</h3>
+                    <article class="tituloprimarioAddress">
+                    <h3 class="tittleAddress">Carpazinha, São Paulo, 00000000</h3>
+                    <button class="selecaoEnderess">SELECIONAR</button>
+                </article>
+            </section>
+            <button class="AddEnderess">+ Adicionar outro Endereço</button>
+    </section>
+    
+    <article class="buttons">
+        <a href="/carrinho">
+            <button class="proximoBoxLeft">VOLTAR</button>
+        </a>
+        <a href="/finalizar-carrinho-cartao">
+            <button class="proximoBoxRight">PRÓXIMO</button>
+        </a>
+    </article>
+
+</main>
+</main>
+
+   <!-- Rodapé -->
+    
+   <%- include('../partials/footer'); %>
+   
+</body>
+
+</html>
+
+
+<!-- Script -->
+ 
+
+<script src="js/carroselBox.js"> </script>
+

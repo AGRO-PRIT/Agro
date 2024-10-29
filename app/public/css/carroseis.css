@@ -15,36 +15,47 @@
  /*inicio css slider*/
 
  /*passagem dos sliders*/
- 
 
- .slider {
+ .desktop{
+    display: block;
+ }
+
+.linksSlider:hover{
+    opacity: 1;
+}
+
+ .mobileFoto {
+  display: none; /* Exibe imagens móveis */
+}
+
+.slider {
   list-style-type: none; 
   position: relative;
   width: 100%;
   overflow: hidden;
- }
+}
 
- .slides {
+.slides {
   list-style-type: none; 
   display: flex;
   transition: transform 0.5s ease-in-out;
- }
+}
 
- .slide{
+.slide {
   list-style-type: none; 
   min-width: 100%;
   box-sizing: border-box;
- }
+}
 
- /*imagens do slider*/
-
- .slide img {
+/* Imagens do slider */
+.slide img {
   outline: none;
   width: 100%;
   height: 400px;
-  display: block;
   object-fit: cover;
- }
+  image-rendering: auto; /* Renderização padrão */
+}
+
 
 
 

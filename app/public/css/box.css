@@ -67,6 +67,14 @@
    
 }
 
+.titulo-terceiro-box {
+    font-size: 6.5em;
+    text-align: center;
+    color: var(--verdeescuro);
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+
 .texto-box {
     display: flex;
     flex-direction: column;
@@ -114,6 +122,10 @@
     height: auto; /* Mantém a proporção da imagem */
 }
 
+.linksPremium { 
+    margin: auto;
+}
+
 .descricao-box2 {
     width: 600px;
     background-color: rgba(255, 255, 255, 0);
@@ -123,7 +135,7 @@
     color: #ffffff;
     text-align: left;
     line-height: 32px;
-    font-size: 22px;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
     letter-spacing: 0.3px;
 }
 
@@ -140,6 +152,9 @@
     margin-right: 130px;
 }
 
+.titleDescription{
+    color: var(--laranja);
+}
 .titulo-terceiro-box {
     display: flex;
     font-family: "Cooper Black", "Cooper", sans-serif;
@@ -170,6 +185,26 @@
     letter-spacing: 0.7px;
     font-size: 20px;
     margin-right: 150px; /* Adiciona espaço entre a descrição e a caixa premium */
+}
+
+.descricao-terceiro-box {
+    flex: 1 1 100%;
+    margin-right: 0;
+    max-width: 600px;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: var(--marromClaro);
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+
+.tittlePremiumBox{
+    color: var(--marrom);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    margin-left: 280px;
+    text-align: center;
 }
 
 .assine-agro-premium {
@@ -228,3 +263,146 @@
     font-size: 30px;
     margin-bottom: 20px; /* Espaço entre o preço e o botão */
 }
+
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.primeiro-box{
+    display: flex;
+}
+
+.linksPremium { 
+    margin: 0;
+}
+
+.tittlePremiumBox{
+    margin: 0;
+}
+
+.texto-box{
+    padding: 0 0 30px 10px;
+}
+
+.FAÇA-SUA-BOX{
+    margin: auto;
+    width: 50%;
+}
+
+.assine-ja{
+    margin: auto;
+    width: 90%;
+}
+
+.titulo-box {
+    width: 100%;
+    font-size: xx-large;
+    padding: 0px 15px;
+    margin-top: 40px;
+    line-height: 1;
+}
+
+.descricao-box{
+    font-size: 15px;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.descricao-box2{
+    line-height: 1.4;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.imagem-primeiro-box{
+   display: none;
+}
+
+.imagem-segundo-box{
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 0;
+    height: auto;
+}
+
+.imagem-primeiro-box img{
+    height: auto;
+    width: 500px;
+    position: absolute;
+    top: -5px;
+}
+
+.imagem-segundo-box img{
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    width: 100%;
+    height: auto;
+}
+
+.segundo-box {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px 10px;
+}
+
+.titulo-terceiro-box {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: start;
+    font-size: 36px; /* Diminuído para telas menores */
+}
+
+.tittlePremiumBox {
+    display: none;
+}
+
+.descricao-terceiro-box {
+    margin: 0;
+    width: 100%;
+    font-size:medium;
+    padding: 25px;
+}
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.tittlePremiumBox{
+    display: none;
+}
+
+.texto-box{
+    padding: 0;
+}
+
+.imagem-segundo-box{
+    margin-right: 0
+}
+
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px) { 
+
+
+}
+
+
+
+

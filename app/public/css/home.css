@@ -12,6 +12,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
+* {
+    outline: none;
+}
+
+
 :root {
     --backgroundcolor: #FCF2E6;
     --corprincipal: #5AA504;
@@ -75,27 +80,79 @@ body {
 
 /* <!-- Menu Responsivo -->  */
 
-.mobile-menu {
-    background-color: var(--branco);
-    display: none;
-    width: 65%;
-    position: fixed;
-    transition: transform 0.3s ease; /* Animação suave para abrir o menu */
-    top: 0;
-    right: 0;
-    height: 70vh; /* Ocupa toda a altura da tela */
-    z-index: 9999; /* Certifique-se de que o valor é alto o suficiente */
-    overflow-y: auto; /* Permite rolagem no conteúdo caso necessário */
-    box-sizing: border-box;
-    box-shadow: -5px 0px 10px 3px rgba(0, 0, 0, 0.35);
+.barraPremiumMobile {
+    background-color: #519000;
+    color: var(--branco);
+    text-align: center;
+    margin-top: 20px;
+    height: 6vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
+.mobile-menu {
+    background-color: var(--branco);
+    width: 65%;
+    position: fixed;
+    transform: translateX(100%); /* Começa fora da tela */
+    transition: transform 0.3s ease; /* Transição suave */
+    top: 0;
+    right: 0;
+    height: auto;
+    z-index: 9999; 
+    overflow-y: auto; 
+    box-sizing: border-box;
+    box-shadow: -6px 0px 10px -4px rgba(0, 0, 0, 0.35)
+}
 
 .mobile-menu-icon {
     background-color: transparent;
     margin-right: 15px;
     cursor: pointer;
     display: none;
+}
+
+.mobile-links,
+.subMenu {
+    list-style: none; 
+    padding: 0;      
+    margin: 0;      
+}
+
+
+.subMenu {
+    display: none; 
+    padding-left: 20px; 
+}
+
+.subMenu li {
+    color: var(--corprincipal);
+    padding: 3px 0;
+}
+
+
+.mobile-list .arrow {
+    color: var(--marrom);
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease; 
+    display: inline-block; 
+}
+
+
+.mobile-list.expanded .arrow {
+    transform: rotate(0deg); /
+}
+
+
+.mobile-list .arrow {
+    transform: rotate(90deg); 
+}
+
+
+.mobile-list.expanded .subMenu {
+    display: block;
 }
 
 .checkbtn {
@@ -110,8 +167,21 @@ body {
     background-color: transparent;
 }
 
+.mobile-menu.open {
+    transform: translateX(0); /* Move o menu para dentro da tela */
+}
+
+.mobile-link2{
+    font-size: 0.9em;
+    text-align: left;
+}
+
 .mobile-menu .mobile-links, .mobile-list2 {
     list-style: none;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
 }
 
 .mobile-links .mobile-link {
@@ -126,7 +196,7 @@ body {
     text-align: left;
     color: #5aa504;
     font-weight: bold;
-    margin-left: 21px;  
+    margin-left: 5px;  
     list-style-type: none;
     text-decoration: none;
     font-size: 16px;
@@ -206,6 +276,7 @@ body {
 
 .perfil img {
     height: 45px;
+    margin: auto;
     margin-right: 7px;
 }
 
@@ -227,7 +298,8 @@ body {
     z-index: 10;
     align-items: center;
     display: flex;
-    margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 80px;
 }
 
 .text-carrinho {
@@ -290,7 +362,7 @@ body {
     margin-left: 21px;  
     list-style-type: none;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .subnav ul li{
@@ -359,6 +431,7 @@ body {
     color: var(--cortexto);
     text-align: center;
     padding: 20px;  
+    overflow: hidden;
 }
 
  .blocos-do-footer {
@@ -405,24 +478,71 @@ body {
 
 
 
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+   
+
+.barradepesquisaMobile {
+    height: 50px;
+}
+
+.subnav a {
+    font-size: 11px;
+    padding: 0;
+    gap: 20px;
+}
+
+.subnav ul li{
+    line-height: 0px;
+}
+
+.mobile-section{
+    height: 14vh;
+}
+
+.mobileFoto {
+    display: none; /* Exibe imagens móveis */
+}
+
+
+}
+    
+
 /* celulares */
 
-@media(max-width: 768px){
+@media(max-width: 767px){
 
 * {
     box-sizing: border-box; 
 }
 
+
+
 /*  Carrosel */
+
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 
 .slide img {
     height: 250px;
 }
 
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 /* Navbar */
 
-.navbar-tudo{
-    height: 16vh;
+.navbar-tudo {
+    height: auto;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -430,7 +550,7 @@ body {
 .navbar {
     justify-content: space-between;
     box-shadow: none;
-    height: 8.5vh;
+    height: 9vh;
 }
 
 
@@ -445,32 +565,31 @@ body {
 }
 
 .mobile-menu ul {  
-    display: flex;
     flex-direction: column;
     text-align: right;
     margin-right: 15px;
-    padding-bottom: 1rem;
-    margin-bottom: 50px;
 }
 
 .mobile-menu .mobile-list {
     display: block;
-    padding-top: 1.2rem;
+    padding-top: 1rem;
 }
 
 .Mobileclose{
+    display: block;
     position: absolute;
-    top: -9px;
-    left: 231px;
+    top: -5px;
+    right: 10px;
     color: var(--marrom);
-    font-size: 50px;
+    font-size: 42px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .mobile-section{
     background-color: var(--corprincipal);
-    height: 10vh;
+    height: auto;
+    padding-bottom: 10px;
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 10px;
@@ -481,6 +600,7 @@ body {
 .TextMobile{
     color: var(--branco);
     font-size: 14px;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -558,7 +678,7 @@ body {
 
 .barra-texto-pesquisa{
     font-size: 12px;
-    width: auto;
+    width: 100%
 }
 
 .barradepesquisa img{
@@ -629,6 +749,9 @@ body {
     letter-spacing: 0;
 }
 
+.mobile-list {
+    display: none;
+}
 
 /* Carrosel Frutas */
 
@@ -656,6 +779,7 @@ body {
 }
 
 .carousel-item, .carousel-item2 {
+    flex: 1;
     padding: 15px;
     height: 200px;
     border-radius: 15px;
@@ -665,12 +789,12 @@ body {
     display: block;
     object-fit: cover;
     height: 65px;
-    width: 99px;
+    width: 87px;
     margin: auto;
 }
 
 .product-name {
-    font-size: 0.81em;
+    font-size: 0.78em;
     margin-bottom: 0;
 }
 
@@ -712,6 +836,11 @@ body {
 
 .carousel-control, .carousel-control2 {
     top: 35%;
+    display: none;
+}
+
+.carousel-indicators, .carousel-indicators2{
+    display: none;
 }
 
 .desconto {
@@ -719,7 +848,8 @@ body {
     color: #ffffff;
     padding: 7px;
     font-size: 8px;
-    margin-top: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
     width: 55px;
     position: absolute;
     border-radius: 4px;
@@ -740,12 +870,19 @@ body {
 /* Agro-Assinatura */
 
 .agro-assinatura {
-    height: auto;  
+    height: auto;
 }
 
 .agro-content {
-    margin-left: 10px;
+    margin-left: 20px;
 }
+
+.clickable-section {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+}
+
 
 .agroText{
     display: none;
@@ -762,11 +899,14 @@ body {
 
 .agro-content h1 {
     font-size: 1.35em;
+    margin-top: 20px;
     margin-bottom: 10px;
+    width: 190px;
 }
 
 .agro-content ul li {
-    margin-left: 10px;  
+    margin-left: 7px;
+    margin-bottom: 5px;  
     font-size: 0.70em;
 }
 
@@ -776,10 +916,13 @@ body {
 }
 
 .agro-imagem img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    width: 400px;
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    display: flex;
 }
 
 .message-button-agrobox1 {
@@ -787,6 +930,12 @@ body {
 }
 
 /* Carrosel Agricultores */
+
+
+.carousel-control3 img{
+    height: 20px;
+    width: 20px;
+}
 
 .prev3 {
     left: 5px;
@@ -811,7 +960,6 @@ body {
 }
 
 .carousel-item3 {
-    margin: 10px;
     padding: 10px;
 
 }
@@ -835,8 +983,9 @@ body {
 }
 
 .user-profession {
-    font-size: 0.80em;
-    margin-right: 3px;
+    font-size: 0.9em;
+    margin-right: 0px;
+    width: 100%;
 }
 
 .user-profession br {
@@ -853,6 +1002,7 @@ body {
 /* Sobre Agricultores */
 
 .sobre-agrobox {
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 80px;
     padding: 10px;
@@ -870,14 +1020,12 @@ body {
 }
 
 .content-Agrobox h1 {
-    margin-top: 10px;
-    font-size: 2.2em;
+    font-size: 2em;
     margin-bottom: 10px;
     
 }
 
 .content-Agrobox p {
-    margin-right: 30px;
     font-size: 1.2em;
 }
 
@@ -893,9 +1041,9 @@ body {
 }
 
 .message-buttonMobile-agrobox{
+    margin-top: 10px;
     display: block;
     color: var(--corprincipal);
-    margin-right: 20px;
 }
 
 .agrobox-imagem {
@@ -926,36 +1074,609 @@ body {
 a { 
     font-size: small;
 }
+
 .fixarRodape img{
     height: 70px;
 }
-}
 
-
-
-
-/* Celulares Menores */
-
-@media(max-width: 385px){
-.subnav a {
-    font-size: 11px;
-    padding: 0;
-    gap: 20px;
-}
-
-.subnav ul li{
-    line-height: 0px;
-}
 }
 
 /* Tablets */
 
 @media (min-width: 768px) and (max-width: 1024px){
 
+/* navbar */
+
+a { 
+    font-size: small;
 }
 
-/* Orientação horizontal */
 
-@media (orientation: landscape){
+.navbar-tudo {
+    height: auto;
+    background-color: var(--corprincipal);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.navbar {
+    justify-content: space-between;
+    box-shadow: none;
+    height: 11vh;
+}
+
+
+/* Menu Responsivo */
+
+.mobile-list {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: block;
+}
+
+.mobile-menu ul {  
+    flex-direction: column;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.mobile-menu .mobile-links1 {
+    margin-bottom: 30px;
+}
+
+.mobile-menu .mobile-list {
+    display: block;
+    padding-top: 1.2rem;
+}
+
+.Mobileclose{
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    color: var(--marrom);
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mobile-section{
+    background-color: var(--corprincipal);
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    box-shadow: -5px 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.TextMobile{
+    color: var(--branco);
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btnsMobiles{
+    justify-content: center;
+    display: flex;
+}
+
+.BTNmEntrar{
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    color: var(--branco);
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 11px;
+    width: 105px;
+    cursor: pointer;
+}
+
+.BTNmCriarConta{
+    text-align: center;
+    background-color: var(--corlayouts);
+    border: 2px solid var(--branco);
+    color: var(--corprincipal);
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 11px;
+    width: 105px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.open {
+    display: block;
+}
+
+
+/* logo */
+
+.logo {
+    margin-left: 10px;
+}
+
+.logo img { 
+    height: 47px;
+    width: 80px;
+    margin: 0;
+}
+
+/* Barra de pesquisa */
+
+.barradepesquisa {
+    display: none;
+}
+
+.barradepesquisaMobile {
+    border-radius: 18px;
+    padding: 3px;
+    width: 83%;
+    height: 44px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    background: #ffffff;
+    margin: auto;
+}
+
+.barradepesquisaMobile img {
+    margin-left: auto;
+    margin-top: 7px;
+    height: 25px;
+    width: 25px;
+}
+
+.barra-texto-pesquisa{
+    font-size: 14px;
+    width: 100%
+}
+
+.barradepesquisa img{
+    margin-left: auto;
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+/* Perfil */
+
+.perfil{
+    display: none;
+    margin-left: 0;
+}
+
+.perfil img{
+    height: 30px;
+    margin: 0;
+}
+
+.text-perfil{
+    display: none;
+}
+
+
+/* Carrinho */
+    
+.carrinho{
+    display: none;
+}
+
+.carrinhoMobile{
+    display: block;
+}
+
+.carrinhoMobile{
+    margin-right: 0;
+}
+
+.carrinho img{
+    height: 30px;
+    margin: 0 ;
+}
+
+.text-carrinho{
+    display: none;
+}
+
+/* Subnav */
+
+.subnav{
+    display: none;
+}
+
+
+/* Carrosel Frutas */
+
+.current-price, .current-price2{
+    width: 100%;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.carousel-container, .carousel-container2 {
+    border-radius: 15px;
+    position: relative;
+    max-width: 92%;
+    height: 210px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel, .carousel2 {
+    gap: 15px;
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item, .carousel-item2 {
+    flex: 0 0 20%; 
+    padding: 10px;
+    box-sizing: border-box;
+    height: 180px;
+}
+
+.carousel-item img, .carousel-item2 img{
+    display: block;
+    object-fit: cover;
+    height: 65px;
+    width: 87px;
+    margin: auto;
+}
+
+.product-name, .product-name2 {
+    font-size: 0.76em;
+    margin-bottom: 0;
+}
+
+.seller-name, .seller-name2 {
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 0;
+}
+
+.product-price {
+    color: #006837;
+    font-size: 0.78em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.add-to-cart, .add-to-cart2 {
+    cursor: not-allowed;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--branco);
+    color: #006837;
+    border: 2px solid #006837;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.2s ease;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control, .carousel-control2 {
+    top: 35%;
+}
+
+.prev, .prev2 {
+    left: 0px;
+}
+
+.next, .next2 {
+    right: 0px;
+}
+
+.carousel-control img, .carousel-control2 img{
+    height: 20px;
+    width: 20px;   
+}
+
+.desconto {
+    background-color: #f5a83c;
+    color: #ffffff;
+    padding: 7px;
+    font-size: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 55px;
+    position: absolute;
+    border-radius: 4px;
+}
+
+
+/* Carrosel Verduras */
+
+.container-section{
+    width: 100%;
+}
+
+.container-section h2{
+    font-size: 25px;
+}
+
+/* Agro-Assinatura */
+
+.agro-assinatura {
+    height: auto;
+    margin-top: 40px;
+}
+
+.agro-content {
+    margin-left: 20px;
+}
+
+.clickable-section {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.agroText{
+    display: none;
+}
+
+.agroMobileText{
+    display: block;
+}
+
+.agro-content ul {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.agro-content h1 {
+    font-size: 2.4em;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.agro-content ul li {
+    margin-left: 7px;
+    margin-bottom: 5px;  
+    font-size: 1.3em;
+}
+
+.agro-imagem {
+    margin-right: 0;
+    margin-top: 30px;
+}
+
+.agro-imagem img {
+    height: 230px;
+    object-fit: cover;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.message-button-agrobox1 {
+    display: none;
+}
+
+/* Carrosel Agricultores */
+
+.carousel-conteudo3{
+    width: 90%;
+}
+
+.carousel-control3 img{
+    height: 20px;
+    width: 20px;
+}
+
+.prev3 {
+    left: 35px;
+}
+
+.next3 {
+    right: 35px;
+}
+
+.user-name {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.carousel-container3{
+    width: 100%;
+}
+
+.carousel-container3 {
+    margin: 0;
+}
+
+.carousel-item3 {
+    padding: 20px;
+
+}
+.perfil-image3 {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.user-profession-name {
+    font-size: 25px;
+}
+
+.user-profession-emoji {
+    font-size: 25px;
+}
+
+.user-profession-emoji strong {
+    font-size: 25px;
+}
+
+.user-profession {
+    font-size: 1em;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.user-profession br {
+    display: none;
+}
+
+.message-button {
+    border-radius: 12px;
+    padding: 8px;
+    width: 180px;
+    font-size: 14px;
+}
+
+/* Sobre Agricultores */
+
+.sobre-agrobox {
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.content-Agrobox {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    font-size: 0.6em;
+    padding-left: 10px;
+}
+
+.content-Agrobox h1 {
+    margin-top: 10px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    
+}
+
+.content-Agrobox p {
+    font-size: 1.3em;
+}
+
+.content-Agrobox p br {
+    display: none;
+}
+
+.message-button-agrobox {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.message-buttonMobile-agrobox{
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    color: var(--corprincipal);
+}
+
+.agrobox-imagem {
+    margin-left: 5px;
+    margin-right: 3px;
+    
+}
+
+.agrobox-imagem img {
+    display: none;
+}
+
+/* footer */
+
+.blocos {
+    margin: 0;
+}
+
+.fixarRodape {
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocos h2 {
+    font-size: 0.78em;
+}
+
+
+.fixarRodape img{
+    height: 70px;
+}
+
+}
+
+/* Desktop */
+
+@media(min-width: 1024px){
+
+.frutas-section, .legumes-section{
+    width: 95%;
+}
+
+.barradepesquisa{
+    margin-left: auto;
+    margin-right: 70px;
+    width: 36%;
+    min-width: auto;
+    max-width: auto;    
+}
+
+.barra-texto-pesquisa{
+    width: 100%;
+}
+
+.perfil{
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.text-perfil{
+    white-space: nowrap;
+}
+
+.container-section{
+    width: 95%;
+}
+
+.agro-assinatura{
+    justify-content: center;
+    width: 100%;
+}
+
+.agro-imagem img{
+    max-width: 500px;
+}
+
+.agro-content{
+    margin-left: 76px;
+}
+
+.agrobox-imagem img{
+    width: 100%;  
+}
+
+.barraPremiumMobile{
+     display: none;
+}
 
 }

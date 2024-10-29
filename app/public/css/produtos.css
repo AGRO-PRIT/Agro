@@ -164,14 +164,12 @@
     margin-left: 40px;
 }
 
-.todos-produtos {
-    display: flex;
-    flex-direction: row; /* Alinha os filtros e os produtos lado a lado */
-    gap: 20px; /* Espaçamento entre filtros e produtos */
+.TudoFiltroMobile{
+    display: none;
 }
-    
 
 .todos-produtos {
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -194,6 +192,10 @@
     border-radius: 18px;
     margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
 
+}
+
+.mobile-filter{
+    display: none;
 }
 
 .box-produto img {
@@ -247,3 +249,307 @@
     color: var(--cortexto);
 }
 
+.filter-sectionMobile{
+    display: none;
+}
+
+.Mobileclose{
+    display: none;
+}
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* celulares */
+
+/* @media(min-width: 375px) and (max-width: 767px){ */
+@media(max-width: 767px){
+
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    font-size: small;
+}
+
+/* funcionalidade filtro MOBILE */
+
+.openF {
+    display: block;
+}
+
+.mobile-filter {
+    position: fixed; /* Fica fixo na tela */
+    top: 0;
+    right: 0;
+    width: 60%; /* Largura de 60% da tela */
+    height: 100%; /* Altura total da tela */
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    transform: translateX(100%); /* Inicialmente escondido à esquerda */
+    transition: transform 0.3s ease; /* Transição suave */
+    z-index: 100000; /* Certifique-se de que fique sobre outros conteúdos */
+    padding: 15px;
+}
+
+.mobile-filter.openF {
+    transform: translateX(0); /* Move para a posição visível */
+}
+
+.filter-content {
+    padding: 20px; 
+}
+
+.filter-mobile {
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+}
+
+.imagem-filtro {
+    margin-left: 10px; 
+}
+
+
+/* filtros */
+
+.mobile-filter openF{
+    padding: 15px;
+}
+
+.filter-option{
+    font-size: 15px;
+}
+
+.filter-section {
+    display: none;   
+}
+
+.categorias, .ordernar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--marrom);
+}
+
+.imagem-filtro{
+    height: 20px;
+    width: 20px;
+}
+
+.TudoFiltroMobile{
+    display: flex;
+    margin-right: 2%;
+}
+
+.filter-mobile {
+    margin-right: 5px;
+    color: var(--corprincipal);
+    font-weight: 550;
+    display: block;
+}
+
+.tudo{
+    width: 100%;    
+}
+
+.antes-produtos{
+    margin: 0px;
+    margin: auto;
+    width: 100%;
+}
+
+/* produtos */
+
+.todos-produtos{
+    gap: 10px;
+}
+
+.antes-produtos{
+    margin-top: 20px;
+}
+
+.titulos{
+    justify-content: space-between;
+    display: flex;    
+}
+
+.titulo{
+    margin-top: 0;
+    white-space: nowrap;
+    font-size: 20px
+}
+
+.box-produto{
+    width: 100%;
+    max-width: 165px;
+}
+
+.box-produto img{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: 135px;
+    height: 70px;
+}
+
+.nome-produto{
+    font-size: 0.74em;
+}
+
+.nome-vendedor{
+    margin: 0px;
+}
+
+.valor-produto{
+    line-height: 1; /* ou um valor que deixe o texto bem ajustado */
+    font-size: 1.7em;
+    margin: 0px;
+}
+
+.current-price, .current-price2{
+    font-size: 0.5em;
+    line-height: 1;
+}
+
+.botao-adicionar{
+    font-size: 0.7em;
+}
+
+.itens-produto{
+    column-gap: 20px;
+    grid-row-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+ 
+
+/* filtros */
+
+.filter-section .categorias, .filter-section .ordernar{
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.filter-section{
+    margin: 0;
+    padding: 10px;
+    width: 16%;   
+}
+
+.filter-option{
+    font-size: 15px;
+}
+
+.filter-option .checkmark, .filter-option .radiomark{
+    height: 15px;
+    width: 15px;
+}
+
+.filter-option{
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+.apply-button{
+    font-size: 12px;  
+    width: 90%;
+    padding: 7px;  
+}
+
+/* produtos */
+
+.todos-produtos{
+    gap: 10px;
+}
+
+.antes-produtos{
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.titulos{
+    justify-content: space-between;
+    display: flex;    
+}
+
+.titulo{
+    margin-top: 0;
+    white-space: nowrap;
+    font-size: 20px
+}
+
+.box-produto{
+    width: 100%;
+    max-width: 165px;
+}
+
+.box-produto img{
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: 135px;
+    height: 70px;
+}
+
+.nome-produto{
+    font-size: 0.74em;
+}
+
+.nome-vendedor{
+    margin: 0px;
+}
+
+.valor-produto{
+    line-height: 1; /* ou um valor que deixe o texto bem ajustado */
+    font-size: 1.7em;
+    margin: 0px;
+}
+
+.current-price, .current-price2{
+    font-size: 0.5em;
+    line-height: 1;
+}
+
+.botao-adicionar{
+    font-size: 0.7em;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.itens-produto{
+    column-gap: 40px;
+    grid-row-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+    
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+
+
+.antes-produtos{
+    overflow: hidden;
+}
+
+
+}

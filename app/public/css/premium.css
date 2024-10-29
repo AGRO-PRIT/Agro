@@ -33,7 +33,7 @@
 }
 
  .titulo{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     padding-top: 120px;
     margin-bottom: 10px;
@@ -174,7 +174,8 @@
     height: 55px;
     border-radius: 15px;
     background-color: var(--branco);
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 20px;
     font-family: "Arial", sans-serif;
     color: var(--corprincipal);
@@ -268,13 +269,6 @@
     margin: 0 auto;
 }
 
-.titulo-terceiro-box {
-    font-size: 6.5em;
-    text-align: center;
-    color: var(--verdeescuro);
-    margin-bottom: 80px;
-    text-transform: uppercase;
-}
 
 .conteudo-premium {
     display: flex;
@@ -283,13 +277,133 @@
     max-width: 100%;
 }
 
-.descricao-terceiro-box {
-    flex: 1 1 100%;
-    margin-right: 0;
-    max-width: 600px;
-    font-size: 1.4em;
-    line-height: 1.6;
-    color: var(--marromClaro);
-    text-align: justify;
-    margin-bottom: 40px;
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+
+.titulo {
+    margin: auto;
+    font-size: larger; 
+    padding-top: 50px;
+}
+
+.text-premium .title{
+    font-size: xx-large;
+}
+
+.text-premium .title2{
+    font-size: 1.6em;
+}
+
+.premium-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.premiumV-Total,
+.premium-Verde,
+.premium-Laranja,
+.premium-Marrom,
+.premium-Branco {
+    width: 100%;
+    flex: 1;
+    padding-bottom: 10%;
+}
+
+.text-premium .title2Verde{
+    font-size: 1.5em;
+}
+
+.button-premium,
+.button-premium1 {
+    display: block;
+    width: 80%;
+    margin: 0 auto 15px; /* Centraliza o botão */
+    font-size: 15px;
+    line-height: 55px; /* Centraliza o texto verticalmente */
+}
+
+.text-premium ul li {
+    font-size: medium;
+}
+
+.premiumV-Total{
+    box-shadow: none;
+}
+
+.text-premium ul{
+    margin-left: 0;
+
+}
+
+}
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+.premium-container{
+    display: grid;
+}
+
+
+
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+
+
+.premium-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.premiumV-Total {
+    flex: 1 1 33.33%; /* Permite que cada container ocupe 1/3 da largura */
+    max-width: 33.33%; /* Mantém a largura em três por linha */
+    min-width: 350px; /* Define a largura mínima para melhor responsividade */
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-Verde,
+.premium-Laranja,
+.premium-Marrom,
+.premium-Branco {
+    width: 100%; /* Faz com que os elementos internos ocupem toda a largura do container */
+}
+
+
+.button-premium, .button-premium1{
+    margin: auto;
+}
+
+.premium-container{
+    gap: 20px;
+}
+
 }
