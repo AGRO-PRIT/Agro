@@ -66,7 +66,7 @@ function finalizarCompra() {
 }
 
 // Adicione o listener de evento para o botão "FINALIZAR"
-document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
+// document.querySelector('.proximoBoxRight').addEventListener('click', finalizarCompra);
 
 
 function verificacaoCompra() {
