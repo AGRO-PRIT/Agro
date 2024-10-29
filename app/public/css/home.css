@@ -80,6 +80,17 @@ body {
 
 /* <!-- Menu Responsivo -->  */
 
+.barraPremiumMobile {
+    background-color: #519000;
+    color: var(--branco);
+    text-align: center;
+    margin-top: 20px;
+    height: 6vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .mobile-menu {
     background-color: var(--branco);
     width: 65%;
@@ -104,15 +115,15 @@ body {
 
 .mobile-links,
 .subMenu {
-    list-style: none; /* Remove os marcadores */
-    padding: 0;      /* Remove o padding padrão */
-    margin: 0;       /* Remove a margem padrão */
+    list-style: none; 
+    padding: 0;      
+    margin: 0;      
 }
 
 
 .subMenu {
-    display: none; /* Oculta o subMenu por padrão */
-    padding-left: 20px; /* Ajuste se necessário */
+    display: none; 
+    padding-left: 20px; 
 }
 
 .subMenu li {
@@ -125,25 +136,24 @@ body {
     color: var(--marrom);
     font-size: 12px;
     margin-left: 5px;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para a rotação */
-    display: inline-block; /* Garante que a seta possa ser rotacionada */
+    transition: transform 0.3s ease; 
+    display: inline-block; 
 }
 
-/* Quando o submenu está expandido, rotaciona a seta para baixo */
+
 .mobile-list.expanded .arrow {
-    transform: rotate(0deg); /* Rotaciona 90 graus para baixo */
+    transform: rotate(0deg); /
 }
 
-/* Quando o submenu está fechado, a seta fica na posição original (para a esquerda) */
+
 .mobile-list .arrow {
-    transform: rotate(90deg); /* Mantém a seta na posição original (para a esquerda) */
+    transform: rotate(90deg); 
 }
 
-/* Exibe o submenu quando o item tem a classe 'expanded' */
+
 .mobile-list.expanded .subMenu {
     display: block;
 }
-
 
 .checkbtn {
     cursor: pointer;
@@ -421,6 +431,7 @@ body {
     color: var(--cortexto);
     text-align: center;
     padding: 20px;  
+    overflow: hidden;
 }
 
  .blocos-do-footer {
@@ -490,6 +501,10 @@ body {
     height: 14vh;
 }
 
+.mobileFoto {
+    display: none; /* Exibe imagens móveis */
+}
+
 
 }
     
@@ -502,17 +517,32 @@ body {
     box-sizing: border-box; 
 }
 
+
+
 /*  Carrosel */
+
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 
 .slide img {
     height: 250px;
 }
 
+.desktop {
+    display: none; /* Esconde imagens de desktop em telas menores */
+}
+.mobileFoto {
+    display: block; /* Exibe imagens móveis */
+}
 /* Navbar */
 
 .navbar-tudo {
     height: auto;
-    padding-bottom: 10px;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -749,6 +779,7 @@ body {
 }
 
 .carousel-item, .carousel-item2 {
+    flex: 1;
     padding: 15px;
     height: 200px;
     border-radius: 15px;
@@ -763,7 +794,7 @@ body {
 }
 
 .product-name {
-    font-size: 0.81em;
+    font-size: 0.78em;
     margin-bottom: 0;
 }
 
@@ -1063,7 +1094,6 @@ a {
 
 .navbar-tudo {
     height: auto;
-    padding-bottom: 10px;
     background-color: var(--corprincipal);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
@@ -1643,6 +1673,10 @@ a {
 
 .agrobox-imagem img{
     width: 100%;  
+}
+
+.barraPremiumMobile{
+     display: none;
 }
 
 }

@@ -19,9 +19,8 @@
 
 
 .container {
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .conteudo{  
@@ -71,8 +70,6 @@ h1 {
 }
 
 
-
-
 .cart-item {
     border-radius: 20px;
     width: 880px;
@@ -96,6 +93,7 @@ h1 {
 
 .total{
     margin-left: 30px;
+    margin-bottom: 10px;
 }
 
 .cart-item .details {
@@ -113,6 +111,7 @@ h1 {
 }
 
 .cart-item .details h3 {
+    white-space: nowrap;
     font-size: 1.4em;
     color: var(--marrom)
 }
@@ -382,4 +381,434 @@ input[type="number"] {
 
 #toggle-cupom:checked ~ .content-cupom {
     display: block; 
+}
+
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+
+h1{
+    margin: 20px 0 20px 20px;
+    font-size: 1.3em;
+}
+
+/* MENSAGEM VAZIO JS CARRINHO */
+
+.cart-itens.empty-cart{
+    width: 100%;
+    height: 400px;
+}
+
+.empty-cart-message{
+    margin: 15%;
+    font-size: 20px;
+}
+
+.empty-cart-message2{
+    font-size: 20px;
+}
+
+.conteudo{
+    flex-direction: column;
+}
+
+.cart-itens{
+    width: 90%;
+    margin: auto;
+}
+
+.cart-item{
+    width: 95%;
+    margin: 20px auto;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cart-item img{
+    width: 50px;
+    height: 45px;
+    margin: 5px 10px 5px 5px;
+}
+
+.resumo .item, .resumo .item-frete{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.resumo{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pedido-final{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.total-pedido2{
+    margin-left: auto;
+}
+
+.item-cupom{
+    font-size: 1em;
+}
+
+.total{
+    font-size: 1.2em;
+}
+
+.content-text{
+    font-size: 0.6em;
+}
+
+.pedido-final input[type="text"]{
+    padding: 5px;
+    font-size: 10px;
+}
+
+.finalizar-compra{
+    width: 90%;
+    margin: 20px auto 20px auto ;
+}
+
+.cupom img{
+    height: 20px;
+    width: 20px
+}
+
+.cart-item .price{
+    margin-right: 30px;
+    flex-direction: row;
+    display: flex;
+}
+
+.cart-item .details h3{
+    font-size: 0.7em;
+    white-space: nowrap;
+}
+
+.cart-item .details .vendor{
+    font-size: 0.6em;
+}
+
+.cart-item .details .quantity{
+    width: 80px;
+    display: flex;
+    height: 20px;
+}
+
+input[type="number"]{
+    font-size: 0.5em;
+
+}
+
+.cart-item .details .quantity button{
+    font-size: 10px;
+}
+
+.price h3{
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.cart-item .remove i{
+    font-size: 0.6em;
+}
+
+.cart-item .remove{
+    margin-left: 0;
+}
+
+.remove .removimg{
+    height: 20px;
+    width: 20px;
+}
+
+.section-titleCV{
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* resumo Pedido */
+
+.resumo h2{
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.finalizar-compra button{
+    font-size: 10px;
+}
+
+.checkout-button{
+    width: 80%;
+    margin: 10px auto;
+}
+
+}
+
+
+/* Tablets */
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+    h1{
+    margin: 30px 0 20px 20px;
+    font-size: 1.3em;
+}
+
+/* MENSAGEM VAZIO JS CARRINHO */
+
+.cart-itens.empty-cart{
+    width: 100%;
+    height: 400px;
+}
+
+.empty-cart-message{
+    margin: 15%;
+    font-size: 20px;
+}
+
+.empty-cart-message2{
+    font-size: 20px;
+}
+
+.conteudo{
+    flex-direction: column;
+}
+
+.cart-itens{
+    width: 90%;
+    margin: auto;
+}
+
+.cart-item{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cart-item img{
+    width: 80px;
+    height: 69px;
+    margin: 5px 10px 15px 15px;
+}
+
+.resumo .item, .resumo .item-frete{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.resumo{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pedido-final{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.total-pedido2{
+    margin-left: auto;
+}
+
+.item-cupom{
+    font-size: 1em;
+}
+
+.total{
+    font-size: 1.2em;
+}
+
+.content-text{
+    font-size: 0.9em;
+}
+
+.pedido-final input[type="text"]{
+    padding: 5px;
+    font-size: 12px;
+}
+
+.finalizar-compra{
+    width: 90%;
+    margin: 20px auto 20px auto ;
+}
+
+.cupom img{
+    height: 20px;
+    width: 20px
+}
+
+.cart-item .price{
+    margin-right: 30px;
+    flex-direction: row;
+    display: flex;
+}
+
+.cart-item .details h3{
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+.cart-item .details .vendor{
+    font-size: 0.8em;
+}
+
+.cart-item .details .quantity{
+    width: 95px;
+    display: flex;
+    height: 20px;
+}
+
+input[type="number"]{
+    font-size: 0.8em;
+
+}
+
+.cart-item .details .quantity button{
+    font-size: 10px;
+}
+
+.price h3{
+    font-size: 1.2em;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cart-item .remove{
+    margin: 0;
+}
+
+.cart-item .remove i{
+    font-size: 1em;
+}
+
+.remove .removimg{
+    height: 20px;
+    width: 20px;
+}
+
+.section-titleCV{
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* resumo Pedido */
+
+.resumo h2{
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.finalizar-compra button{
+    font-size: 10px;
+}
+
+.checkout-button{
+    width: 80%;
+    margin: 10px auto;
+}
+
+}
+
+/*  Desktops */
+
+@media(min-width: 1024px){
+    
+h1{
+    margin-left: 0;
+}
+.conteudo{
+    flex-direction: row
+}
+
+.cart-itens{
+    width: 90%;
+    margin: 10px auto 50px auto;
+}
+
+.cart-item{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.resumo{
+    height: 500px;
+    width: 70%;
+    margin:  auto;
+    overflow: hidden;
+}
+
+.pedido-final{
+    width: 50%;
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column
+}
+
+.total-pedido2{
+    margin-left: auto;
+}
+
+
+.finalizar-compra{
+    width: 70%;
+    margin: 20px auto 20px auto ;
+}
+
+.cupom img{
+    height: 20px;
+    width: 20px
+}
+
+.cart-item .price{
+    margin-right: 30px;
+    flex-direction: row;
+    display: flex;
+}
+
+
+
+
+
+.cart-item .remove{
+    margin: 0;
+}
+
+
+.checkout-button{
+    width: 80%;
+    margin: 10px auto;
+}
+
+
 }

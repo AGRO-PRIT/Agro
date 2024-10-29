@@ -41,14 +41,14 @@
     justify-content: center;
     flex-direction: column;
     height: auto;
-    padding: 35px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    margin: 0 auto;
+    width: 45%;
     border-radius: 19px 0px 0px 19px;
 }
 
-.cantinhoLogo {
-    width: 667px;
+.cantinhoLogoMobile {
+    margin: 0 auto;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,11 +59,11 @@
 }
 
 .banner img {
-    width: 250px;
-    height: 210px;
+    width: 100%;
+    height: auto;
 }
 
-.cantinhoLogo h1 {
+.cantinhoLogoMobile h1 {
     justify-content: center;
     text-align: center;
     font-size: 35px;
@@ -126,7 +126,7 @@ color: var(--marrom);
     font-weight: 900;
 }
 
-.cadastro-form .text-cadastro{
+.cadastro-form .text-cadastro, .text-cadastroMobile{
     font-weight: bold;
     color: var(--laranja);
     margin-left: 195px;
@@ -134,8 +134,7 @@ color: var(--marrom);
     text-align: center;
 }
 
-
-.voltar{
+.voltar, .voltarMobile{
     width: 280px;
     height: 70px;
     padding: 2px;
@@ -158,4 +157,50 @@ color: var(--marrom);
     border: 3px solid var(--corprincipal);
     background-color: white;
     color: var(--corprincipal);
+}
+
+
+/*             RESPONSIVIDADE             */
+
+
+/* Celulares Menores */
+
+@media(max-width: 375px ) {
+
+}
+
+/* Celulares */
+
+@media(max-width: 767px){
+
+.cadastro-form p{
+    font-weight: 600;
+    margin: 15px;
+    font-size: 18px;
+    color: var(--marrom);
+    text-align: start;
+}
+    
+.cantinhoLogoMobile h1{
+    font-size: larger;
+    color: var(--corprincipal);
+    text-align: start;
+}
+
+.cadastro-form .text-cadastroMobile{
+    font-size: x-large;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-form{
+    width: 100%;
+}
+.cantinhoLogo{
+    width: 90%;
+    margin: 0 auto;
+}
+
 }

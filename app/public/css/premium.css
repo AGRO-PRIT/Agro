@@ -174,7 +174,8 @@
     height: 55px;
     border-radius: 15px;
     background-color: var(--branco);
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 20px;
     font-family: "Arial", sans-serif;
     color: var(--corprincipal);
@@ -276,16 +277,6 @@
     max-width: 100%;
 }
 
-.descricao-terceiro-box {
-    flex: 1 1 100%;
-    margin-right: 0;
-    max-width: 600px;
-    font-size: 1.4em;
-    line-height: 1.6;
-    color: var(--marromClaro);
-    text-align: justify;
-    margin-bottom: 40px;
-}
 
 
 /*             RESPONSIVIDADE             */
@@ -335,7 +326,7 @@
 .premium-Marrom,
 .premium-Branco {
     width: 100%;
-    height: auto;
+    flex: 1;
     padding-bottom: 10%;
 }
 
@@ -345,9 +336,11 @@
 
 .button-premium,
 .button-premium1 {
-    font-size: 15px;
+    display: block;
     width: 80%;
-    margin-left: 10%;
+    margin: 0 auto 15px; /* Centraliza o botão */
+    font-size: 15px;
+    line-height: 55px; /* Centraliza o texto verticalmente */
 }
 
 .text-premium ul li {
@@ -372,6 +365,8 @@
 .premium-container{
     display: grid;
 }
+
+
 
 }
 
