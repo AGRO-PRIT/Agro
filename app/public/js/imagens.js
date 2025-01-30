@@ -5,7 +5,9 @@ const imagens = {
     image2: ["imagens/icon_pedidos.png", "imagens/icon_pedidos(verde).png"],
     image3: ["imagens/icon_vendas.png", "imagens/icon_vendas(verde).png"],
     image4: ["imagens/icon_comentario.png", "imagens/icon_comentario(verde).png"],
-    image5: ["imagens/icone_consumidor-config.png", "imagens/icone_consumidor-config(verde).png"]
+    image5: ["imagens/icone_consumidor-config.png", "imagens/icone_consumidor-config(verde).png"],
+    image6: ["imagens/icon_cartao.png", "imagens/icon_cartao(verde).png"],
+    image7: ["imagens/icon_home.png", "imagens/icon_home(verde).png"]
 };
 
 // Função para trocar a imagem

@@ -1126,6 +1126,10 @@
     align-items: center;
 }
 
+
+
+}
+
 .menu a.ativo {
     color: green;
  }
@@ -1133,8 +1137,6 @@
  .menu a.ativo + img {
     filter: brightness(0.5) sepia(1) hue-rotate(90deg); 
  }
-
-}
 
 
 /*  Desktops */
