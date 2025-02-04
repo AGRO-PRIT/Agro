@@ -1,73 +1,103 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('#form-dados');
-    const nomeInput = form.querySelector('input[id="nome"]');
-    const cpfInput = form.querySelector('input[id="cpf"]');
-    const telefoneInput = form.querySelector('input[id="telefone"]');
-    const nomeError = document.getElementById('nome-error');
-    const cpfError = document.getElementById('cpf-error');
-    const telefoneError = document.getElementById('telefone-error');
-    const emailInput = form.querySelector('input[id="email"]');
-    const passwordInput = form.querySelector('input[id="senha"]');
-    const senhaError = document.getElementById('senha-error');
-    const emailError = document.getElementById('email-error');
+    const forms = document.querySelectorAll('form');
 
+    forms.forEach(form => {
+        const nomeInput = form.querySelector('input[name="nome"]');
+        const cpfInput = form.querySelector('input[name="cpf"]');
+        const telefoneInput = form.querySelector('input[name="telefone"]');
+        const emailInput = form.querySelector('input[name="email"]');
+        const passwordInput = form.querySelector('input[name="senha"]');
+        const cnpjInput = form.querySelector('input[name="cnpj"]');
+        const confirmPasswordInput = form.querySelector('input[name="confirm-senha"]');
 
-    cpfInput.addEventListener('input', formatCPF);
-    telefoneInput.addEventListener('input', formatTelefone);
+        const nomeError = form.querySelector('.error-message[name="nome-error"]');
+        const cpfError = form.querySelector('.error-message[name="cpf-error"]');
+        const telefoneError = form.querySelector('.error-message[name="telefone-error"]');
+        const emailError = form.querySelector('.error-message[name="email-error"]');
+        const senhaError = form.querySelector('.error-message[name="senha-error"]');
+        const cnpjError = form.querySelector('.error-message[name="cnpj-error"]');
+        const confirmPasswordError = form.querySelector('.error-message[name="confirm-senha-error"]');
 
-    form.addEventListener('submit', function(event) {
-        let valid = true;
-
-        // Validação do Nome
-        if (!validateNome(nomeInput.value)) {
-            valid = false;
-            nomeError.style.display = 'block';
-            nomeError.textContent = 'Nome inválido. Por favor, insira seu nome completo.';
-        } else {
-            nomeError.style.display = 'none';
+        if (cpfInput) {
+            cpfInput.addEventListener('input', formatCPF);
+            cpfInput.setAttribute('maxlength', '14');
         }
 
-        // Validação do CPF
-        if (!validateCPF(cpfInput.value)) {
-            valid = false;
-            cpfError.style.display = 'block';
-            cpfError.textContent = 'CPF inválido. Por favor, insira um CPF válido.';
-        } else {
-            cpfError.style.display = 'none';
+        if (telefoneInput) {
+            telefoneInput.addEventListener('input', formatTelefone);
+            telefoneInput.setAttribute('maxlength', '15');
         }
 
-        // Validação do Telefone
-        if (!validateTelefone(telefoneInput.value)) {
-            valid = false;
-            telefoneError.style.display = 'block';
-            telefoneError.textContent = 'Telefone inválido. Por favor, insira um telefone válido.';
-        } else {
-            telefoneError.style.display = 'none';
+        if (cnpjInput) {
+            cnpjInput.addEventListener('input', () => {
+                cnpjInput.value = formatCNPJ(cnpjInput.value);
+            });
         }
 
-        // Validação do Email
-if (!validateEmail(emailInput.value)) {
-    valid = false;
-    emailError.style.display = 'block';
-    emailError.textContent = 'Email inválido. Por favor, insira um email válido.';
-} else {
-    emailError.style.display = 'none';
-}
+        form.addEventListener('submit', function(event) {
+            let valid = true;
 
-// Validação da Senha
-if (passwordInput.value.length < 6) {
-    valid = false;
-    senhaError.style.display = 'block';
-    senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
-} else {
-    senhaError.style.display = 'none';
-}
+            // Validação do Nome
+            if (nomeInput && !validateNome(nomeInput.value)) {
+                valid = false;
+                showError(nomeError, 'Nome inválido. Por favor, insira seu nome completo.');
+            } else if (nomeError) {
+                hideError(nomeError);
+            }
 
+            // Validação do CPF
+            if (cpfInput && !validateCPF(cpfInput.value)) {
+                valid = false;
+                showError(cpfError, 'CPF inválido. Por favor, insira um CPF válido.');
+            } else if (cpfError) {
+                hideError(cpfError);
+            }
 
-        // Impede o envio do formulário se alguma validação falhar
-        if (!valid) {
-            event.preventDefault();
-        }
+            // Validação do Telefone
+            if (telefoneInput && !validateTelefone(telefoneInput.value)) {
+                valid = false;
+                showError(telefoneError, 'Telefone inválido. Por favor, insira um telefone válido.');
+            } else if (telefoneError) {
+                hideError(telefoneError);
+            }
+
+            // Validação do Email
+            if (emailInput && !validateEmail(emailInput.value)) {
+                valid = false;
+                showError(emailError, 'Email inválido. Por favor, insira um email válido.');
+            } else if (emailError) {
+                hideError(emailError);
+            }
+
+            // Validação da Senha
+            if (passwordInput && passwordInput.value.length < 6) {
+                valid = false;
+                showError(senhaError, 'A senha deve ter pelo menos 6 caracteres.');
+            } else if (senhaError) {
+                hideError(senhaError);
+            }
+
+            // Validação da Confirmação de Senha
+            if (confirmPasswordInput && confirmPasswordInput.value !== passwordInput.value) {
+                valid = false;
+                showError(confirmPasswordError, 'As senhas não correspondem.');
+            } else if (confirmPasswordError) {
+                hideError(confirmPasswordError);
+            }
+
+            // Validação do CNPJ
+            if (cnpjInput && !validateCNPJ(cnpjInput.value)) {
+                valid = false;
+                showError(cnpjError, 'CNPJ inválido. Por favor, insira um CNPJ válido.');
+            } else if (cnpjError) {
+                hideError(cnpjError);
+            }
+
+            // Impede o envio do formulário se alguma validação falhar
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
     });
 
     // Função para formatar o CPF enquanto o usuário digita
@@ -76,13 +106,6 @@ if (passwordInput.value.length < 6) {
         event.target.value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
     }
 
-   
-    const CPFInput = document.getElementById('cpf');
-    CPFInput.addEventListener('input', formatCPF);
-
-    // Limitar o número de caracteres no campo de telefone
-    CPFInput.setAttribute('maxlength', '14');
-
     // Função para formatar o Telefone enquanto o usuário digita
     function formatTelefone(event) {
         const value = event.target.value.replace(/\D/g, '');
@@ -90,11 +113,16 @@ if (passwordInput.value.length < 6) {
                                   .replace(/(\d{4,5})(\d{4})$/, '$1-$2');
     }
 
-    const numeroTelefoneInput = document.getElementById('telefone');
-    numeroTelefoneInput.addEventListener('input', formatTelefone);
-
-    // Limitar o número de caracteres no campo de telefone
-    numeroTelefoneInput.setAttribute('maxlength', '15');
+    // Função para formatar o CNPJ enquanto o usuário digita
+    function formatCNPJ(value) {
+        value = value.replace(/\D/g, '');
+        if (value.length > 14) value = value.slice(0, 14);
+        return value
+            .replace(/^(\d{2})(\d)/, '$1.$2')
+            .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
+            .replace(/\.(\d{3})(\d)/, '.$1/$2')
+            .replace(/\/(\d{4})(\d)/, '/$1-$2');
+    }
 
     function validateNome(nome) {
         const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:\s[A-Za-zÀ-ÖØ-öø-ÿ]+)+$/;
@@ -113,6 +141,22 @@ if (passwordInput.value.length < 6) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
     }
-    
 
+    function validateCNPJ(cnpj) {
+        cnpj = cnpj.replace(/\D/g, '');
+        return cnpj.length === 14;
+    }
+
+    function showError(input, message) {
+        if (input) {
+            input.textContent = message;
+            input.style.display = 'block';
+        }
+    }
+
+    function hideError(input) {
+        if (input) {
+            input.style.display = 'none';
+        }
+    }
 });

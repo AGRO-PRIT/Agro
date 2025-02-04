@@ -8,90 +8,75 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/conta.css">
     <link rel="stylesheet" href="css/contaVendedorPro.css">
-
-    
 </head>
 
 <body>  
     <main>
-     <!-- NavBar -->
+        <!-- NavBar -->
+        <%- include('../../partials/navbar'); %>
 
-    <%- include('../../partials/navbar'); %>
+        <!-- CONTA VENDEDOR -->
+        <%- include('../../partials/contaV'); %>
 
-   
-    <!--  CONTA VENDEDOR  -->
-
-    <%- include('../../partials/contaV'); %>
-
-    <section class="page-container">
-        <section id="minhaConta" class="minhaConta" >
-        <h1>Minha Conta</h1> 
-        <form id="form-dados">
-        <article class="box-container">
-            <article class="box-dados-pessoais">
-                <h3>Dados Pessoais</h3>
-                <article class="input-wrapper">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome completo">
-                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                    <span class="error-message" id="nome-error"></span>
-                </article>
-                <article class="input-wrapper">
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" placeholder="Digite seu CNPJ">
-                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                    <span class="error-message" id="cnpj-error"></span>
-                </article>
-                <article class="input-wrapper">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" placeholder="Digite seu telefone">
-                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                    <span class="error-message" id="telefone-error"></span>
-                    
-                </article>
-            </article>
-            
-            <article class="box-dados-acesso">
-                <h3>Dados de Acesso</h3>
-                <article class="input-wrapper">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Digite seu email">
-                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                    <span class="error-message" id="email-error"></span>
-                </article>
-                <article class="input-wrapper">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha">
-                    <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                    <span class="error-message" id="senha-error"></span>
-                </article>
-            </article>
-        </article>
-        <button class="botao-enviar" type="submit">Salvar</button>
-    </form>
-</section>
-
-</main>
+        <section class="page-container">
+            <section id="minhaConta" class="minhaConta">
+                <h1>Minha Conta</h1> 
+                <form>
+                    <article class="box-container">
+                        <article class="box-dados-pessoais">
+                            <h3>Dados Pessoais</h3>
+                            <article class="input-wrapper">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" name="nome" placeholder="Digite seu nome completo">
+                                <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                                <p class="error-message" name="nome-error"></p>
+                            </article>
+                            <article class="input-wrapper">
+                                <label for="cnpj">CNPJ</label>
+                                <input type="text" name="cnpj" placeholder="Digite seu CNPJ">
+                                <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                                <span class="error-message" id="cnpj-error"></span>
+                            </article>
+                            <article class="input-wrapper">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" name="telefone" placeholder="Digite seu telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}">
+                                <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                                <span class="error-message" name="telefone-error"></span>
+                            </article>
+                        </article>
+                        
+                        <article class="box-dados-acesso">
+                            <h3>Dados de Acesso</h3>
+                            <article class="input-wrapper">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Digite seu email">
+                                <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                                <span class="error-message" id="email-error"></span>
+                            </article>
+                            <article class="input-wrapper">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" placeholder="Digite sua senha">
+                                <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
+                                <span class="error-message" id="senha-error"></span>
+                            </article>
+                        </article>
+                    </article>
+                    <button class="botao-enviar" type="submit">Salvar</button>
+                </form>
+            </section>
+        </section>
+    </main>
 
     <!-- Rodapé -->
-     
     <footer>
-    <%- include('../../partials/footer'); %>
-</footer>
-    
+        <%- include('../../partials/footer'); %>
+    </footer>
 </body>
 </html>
 
-        <!-- Script -->
-
-<script src="js/perfil.js"> </script>
+<!-- Script -->
+<script src="js/perfil.js"></script>
 <script src="js/perfil.js" defer></script>
-<script src="js/darkmode.js" defer> </script>
-<script src="js/imagens.js"> </script>
-<script src="js/validacaovendedor.js"> </script>
-
-    
-
-
-
-
+<script src="js/darkmode.js" defer></script>
+<script src="js/imagens.js"></script>
+<script src="js/validacaoConta.js" defer></script>
