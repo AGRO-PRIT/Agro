@@ -1,0 +1,126 @@
+:root {
+    --backgroundcolor: #FCF2E6;
+    --corprincipal: #5AA504;
+    --cortexto: rgb(255, 255, 255);
+    --fonteprincipal: "Montserrat", sans-serif;
+    --verdeescuro: #006837;
+    --branco: #FFFFFF;
+    --laranja: #E68A00;
+    --marrom: #493A31;
+    --corlayouts: #f2f2f2;
+  }
+  
+  .container-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 500px; /* Ajuste conforme necessário */
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-header {
+    width: 100%;
+    height: 50px;
+    padding: 2px;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .title-chat {
+    font-family: "Montserrat Bold", "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #493a31;
+    text-align: left;
+    line-height: normal;
+    padding: 10px;
+  }
+  
+  .chat-main {
+    display: flex;
+    flex: 1;
+    overflow-y: hidden; 
+  }
+  
+  .contact-list {
+    width: 180px; 
+    border-right: 1px solid #ccc;
+    background-color: #f8f8f8;
+    overflow-y: auto; 
+  }
+  
+  
+  .contact-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    height: 35px;
+  }
+
+  .contact-list p {
+    width: 57px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Montserrat Bold", "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #493a31;
+    text-align: left;
+    line-height: normal;
+    padding: 10px 10px 10px 50px;
+    margin-top: -51px;
+  }
+  
+  
+
+  .contact-list li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .chats {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Permite rolagem nas mensagens do chat */
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-left: 180px;
+    padding-left: 10px;
+    
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .chat-input button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    /* background-color: #006837;
+    color: #fff; */
+    background: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
