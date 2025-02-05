@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(event) {
             let valid = true;
 
-            // Validação do Nome
+    
             if (nomeInput && !validateNome(nomeInput.value)) {
                 valid = false;
                 showError(nomeError, 'Nome inválido. Por favor, insira seu nome completo.');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(nomeError);
             }
 
-            // Validação do CPF
+            
             if (cpfInput && !validateCPF(cpfInput.value)) {
                 valid = false;
                 showError(cpfError, 'CPF inválido. Por favor, insira um CPF válido.');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(cpfError);
             }
 
-            // Validação do Telefone
+        
             if (telefoneInput && !validateTelefone(telefoneInput.value)) {
                 valid = false;
                 showError(telefoneError, 'Telefone inválido. Por favor, insira um telefone válido.');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(telefoneError);
             }
 
-            // Validação do Email
+    
             if (emailInput && !validateEmail(emailInput.value)) {
                 valid = false;
                 showError(emailError, 'Email inválido. Por favor, insira um email válido.');
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(emailError);
             }
 
-            // Validação da Senha
+    
             if (passwordInput && passwordInput.value.length < 6) {
                 valid = false;
                 showError(senhaError, 'A senha deve ter pelo menos 6 caracteres.');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(senhaError);
             }
 
-            // Validação da Confirmação de Senha
+        
             if (confirmPasswordInput && confirmPasswordInput.value !== passwordInput.value) {
                 valid = false;
                 showError(confirmPasswordError, 'As senhas não correspondem.');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(confirmPasswordError);
             }
 
-            // Validação do CNPJ
+    
             if (cnpjInput && !validateCNPJ(cnpjInput.value)) {
                 valid = false;
                 showError(cnpjError, 'CNPJ inválido. Por favor, insira um CNPJ válido.');
@@ -93,27 +93,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideError(cnpjError);
             }
 
-            // Impede o envio do formulário se alguma validação falhar
+        
             if (!valid) {
                 event.preventDefault();
             }
         });
     });
 
-    // Função para formatar o CPF enquanto o usuário digita
+    
     function formatCPF(event) {
         const value = event.target.value.replace(/\D/g, '');
         event.target.value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
     }
 
-    // Função para formatar o Telefone enquanto o usuário digita
+    
     function formatTelefone(event) {
         const value = event.target.value.replace(/\D/g, '');
         event.target.value = value.replace(/(\d{2})(\d)/, '($1) $2')
                                   .replace(/(\d{4,5})(\d{4})$/, '$1-$2');
     }
 
-    // Função para formatar o CNPJ enquanto o usuário digita
     function formatCNPJ(value) {
         value = value.replace(/\D/g, '');
         if (value.length > 14) value = value.slice(0, 14);
