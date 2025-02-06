@@ -37,7 +37,7 @@
 
 
 .produto-preco {
-   color: #28a228; /* Cor verde do preço */
+   color: #28a228;
    font-size: 16px;
 }
 
@@ -60,7 +60,7 @@
 
 /* Botão de edição */
 .edit-button {
-   background-color: #6dbd45; /* Verde do botão */
+   background-color: #6dbd45; 
    color: white;
    padding: 8px 12px;
    border: none;
@@ -74,7 +74,7 @@
 }
 
 .menu a.ativo {
-   color: green;
+   color: #26a726;
 }
 
 .menu a.ativo + img {

@@ -132,6 +132,10 @@
     color: #71b21e
 }
 
+.menu a.hover {
+    color: var(--corprincipal);
+}
+
 .edit-icon{
     margin-top: 6px;
     height: 30px;
@@ -1131,7 +1135,7 @@
 }
 
 .menu a.ativo {
-    color: green;
+    color: #26a726;
  }
  
  .menu a.ativo + img {
