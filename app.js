@@ -3,24 +3,6 @@ const app = express();
 const port = 3000;
 const axios = require('axios')
 
-//importar módulo mysql
-// const mysql = require('');
-
-//configuração de conexão
-// const conexão = mysql.creatConnection({
-//   host:'localhost:3306',
-//   user:'root',
-//   password:'@ITB123456',
-//   database:''
-// });
-
-//teste de conexão
-// conexão.connect(funtion(erro){
-//   if(erro) throw erro;
-//   console.log('Conexão efetuada com sucesso!');
-// });
-
-
 
 
 app.use(express.static('app/public'));
