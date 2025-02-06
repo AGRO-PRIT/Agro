@@ -3,3 +3,17 @@ para adicionar as depencencias use:
 npm config set strict-ssl false
 
 npm install
+
+banco:
+npm install body-parser
+
+npm install mysql2
+
+
+
+
+
+--------------------
+sites para consultar quando necessario:
+
+https://medium.com/@sahni_hargun/rest-api-with-node-js-express-and-mysql2-86ea9f1db2b7
