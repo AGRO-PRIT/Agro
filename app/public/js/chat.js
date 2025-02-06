@@ -4,9 +4,11 @@ document.getElementById('toggleButton').addEventListener('click', function() {
 
     if (secao.classList.contains('hidden')) {
         secao.classList.remove('hidden');
-        botao.textContent = 'Fechar chat';
+        botao.textContent = 'X';
+        botao.classList.add('close-chat-btn'); 
     } else {
         secao.classList.add('hidden');
-        botao.textContent = 'Abrir chat';
+        botao.textContent = 'Chat'; //
+        botao.classList.remove('close-chat-btn'); 
     }
 });

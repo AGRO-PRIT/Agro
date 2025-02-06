@@ -14,16 +14,23 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 140px;
-    height: 47px;
-    padding: 2px 2px 2px 2px;
-    border-radius: 10px;
-    background-color: #fdfdfd;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+    padding: 10px 20px;
+    background-color: #006837;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     z-index: 100;
-  }
+}
+
+.close-chat-btn {
+  background: none;
+  font-size: 20px;
+  color: green;
+  font-weight: 700;
+  position: fixed;
+  bottom: 372px;
+}
 
 
   .hidden {
