@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
+// controller
+
+const todoController = require('../controllers/todoController');
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
@@ -272,9 +275,7 @@ router.post('finalizar-carrinho-cartao', function(req, res) {
 
 
 
-// controller
 
-const todoController = require('../controllers/todoController');
 
 // Routes
 router.get('/', todoController.getAllTodos);
