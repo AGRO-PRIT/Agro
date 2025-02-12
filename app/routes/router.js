@@ -269,5 +269,19 @@ router.post('/finalizar-carrinho-endereco', function(req, res) {
 router.post('finalizar-carrinho-cartao', function(req, res) {
     res.redirect('finalizar-carrinho-cartao');
 });
+
+
+
+// controller
+
+const todoController = require('../controllers/todoController');
+
+// Routes
+router.get('/', todoController.getAllTodos);
+router.get('/:id', todoController.getTodoById);
+router.post('/', todoController.createTodo);
+router.put('/:id', todoController.updateTodo);
+router.delete('/:id', todoController.deleteTodo);
+
 module.exports = router;
 
