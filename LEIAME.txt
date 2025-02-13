@@ -22,7 +22,10 @@ quando formos utilizar o multer:
 
 https://www.npmjs.com/package/multer
 
-resumindo oq fazer para utilizar o multer:
+--------------------------------------------
+
+RESUMINDO OQ FAZER PARA UTILIZAR O MULTER:
+
  powershell: npm install --save multer
 
 se tiver algum formulari onde sera necessario o envio de imagens, por exemplo de uma foto de perfil, é necessario colocar isso no elemento forms:
@@ -55,3 +58,16 @@ app.post('/cool-profile', cpUpload, function (req, res, next) {
   //
   // req.body will contain the text fields, if there were any
 })
+
+-----------------------------------------------------------------
+
+EXPRESS SESSION (login e tal ): 
+
+site para entender como funciona: 
+
+https://medium.com/weekly-webtips/how-to-create-a-simple-login-functionality-in-express-5274c44c20df
+
+
+saber qual codigo usar: https://www.npmjs.com/package/express-session
+
+------------------------------------------------------------------
