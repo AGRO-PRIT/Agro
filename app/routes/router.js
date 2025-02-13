@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
-// controller
+// const { registerUser } = require('../controllers/controller');
 
 const todoController = require('../controllers/todoController');
 
@@ -272,8 +272,6 @@ router.post('/finalizar-carrinho-endereco', function(req, res) {
 router.post('finalizar-carrinho-cartao', function(req, res) {
     res.redirect('finalizar-carrinho-cartao');
 });
-
-
 
 
 

@@ -1,3 +1,21 @@
+// Exemplo nodemail
+
+// const sendEmail = require('../utils/emailService');
+
+// const registerUser = async (req, res) => {
+//     const { email } = req.body;
+
+//     // Aqui viria a lógica de cadastro no banco
+
+//     await sendEmail(email, 'Bem-vindo!', 'Obrigado por se cadastrar!');
+//     res.status(200).json({ message: 'Usuário cadastrado com sucesso!' });
+// };
+
+// module.exports = { registerUser };
+
+
+
+
 // const Todo = require('../models/todo');
 
 // exports.getAllTodos = function(req, res) {
