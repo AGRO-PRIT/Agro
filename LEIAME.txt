@@ -14,9 +14,26 @@ npm install mysql2
 
 
 --------------------
-sites para consultar quando necessario:
+sites para consultar quando necessario e algumas explicações:
+
+mysql2 banco: 
 
 https://medium.com/@sahni_hargun/rest-api-with-node-js-express-and-mysql2-86ea9f1db2b7
+
+--------------------------------------------------------------------------------
+
+nodemailer: 
+
+https://nodemailer.com/
+
+-------------------------------------------------------------------------------
+
+simple notify: 
+
+https://drewdulz.github.io/simpleNotify-js/
+
+
+------------------------------------------------------------------------------
 
 quando formos utilizar o multer: 
 
@@ -71,3 +88,32 @@ https://medium.com/weekly-webtips/how-to-create-a-simple-login-functionality-in-
 saber qual codigo usar: https://www.npmjs.com/package/express-session
 
 ------------------------------------------------------------------
+
+bcrypt:
+explicação e codigos: 
+
+https://www.npmjs.com/package/bcrypt
+
+para entender mais como funciona na pratica: 
+
+https://bcrypt-generator.com/
+
+------------------------------------------------------------
+
+JWT: 
+
+entender como funciona e como aplicar: 
+
+https://jwt.io/introduction
+
+-----------------------------------------------------------
+ 
+explicação oq é gateway:
+
+https://www.minhaconexao.com.br/blog/internet/gateway
+
+como add o mercado pago: 
+
+https://www.mercadopago.com.br/developers/pt/docs/sdks-library/client-side/mp-js-v2
+
+----------------------------------------------
