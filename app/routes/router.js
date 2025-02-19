@@ -3,7 +3,7 @@ var router = express.Router();
 const path = require('path');
 // const { registerUser } = require('../controllers/controller');
 
-const todoController = require('../controllers/todoController');
+// const todoController = require('../controllers/todoController');
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
