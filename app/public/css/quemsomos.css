@@ -147,9 +147,14 @@
 
 .text-sobre{
     margin-left: 5%;
-    margin-left: 5%;
-        font-size: 1.3em;
-        width: 90%;
+    margin-bottom: 5%;
+    font-size: 1.3em;
+    width: 90%;
+}
+
+.sobre-nos{
+    height: auto;
+    margin-bottom: 50px;
 }
 
 }
@@ -212,9 +217,8 @@
 
 .text-sobre{
     margin-left: 5%;
-    margin-left: 5%;
-        font-size: 1.3em;
-        width: 90%;
+    font-size: 1.3em;
+    width: 90%;
 }
 
 }

@@ -60,7 +60,7 @@ h1 {
 }
 
 .cart-itens.empty-cart {
-    width: 895px;
+    width: 90%;
     border: 3px solid white;
     background-color: var(--corlayouts);
     text-align: center;
@@ -281,7 +281,7 @@ h1 {
 .finalizar-compra {
     background-color: var(--branco);
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     font-size: 15px;
     margin-top: 30px;
     margin-bottom: 60px;
@@ -313,8 +313,6 @@ h1 {
     cursor: pointer;
     margin-left: 10px;
 }
-
-
 
 .finalizar-compra button {
     font-weight: 550;
@@ -429,6 +427,7 @@ h1{
     margin: auto;
 }
 
+
 .cart-item{
     width: 95%;
     margin: 20px auto;
@@ -481,6 +480,7 @@ h1{
 .pedido-final input[type="text"]{
     padding: 5px;
     font-size: 10px;
+    width: 60%;
 }
 
 .finalizar-compra{
@@ -560,6 +560,7 @@ input[type="number"]{
 
 .checkout-button{
     width: 80%;
+    font-size: large;
     margin: 10px auto;
 }
 
@@ -578,7 +579,7 @@ input[type="number"]{
 /* MENSAGEM VAZIO JS CARRINHO */
 
 .cart-itens.empty-cart{
-    width: 100%;
+    width: 90%;
     height: 400px;
 }
 
@@ -653,10 +654,6 @@ input[type="number"]{
     font-size: 12px;
 }
 
-.finalizar-compra{
-    width: 90%;
-    margin: 20px auto 20px auto ;
-}
 
 .cupom img{
     height: 20px;

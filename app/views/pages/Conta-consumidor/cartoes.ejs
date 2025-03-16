@@ -21,21 +21,24 @@
 
     <%- include('../../partials/conta'); %>
    
-    <section class="page-container">
-    <section id="cartoes" >
+<section class="page-container">
+    <section id="cartoes">
         <article class="carton">
             <h1 class="Titulos">Cartões</h1>
             <button id="adicionarCartao" class="btn-cartoes"> + Adicionar novo cartão </button> 
             <div id="formularioCartao" class="modal-cartao" style="display: none;">
                 <div class="modal-content-cartao">
-                    <h1 class="titulo-formulario">Informações do cartão</h1>
+                    <h1 class="titulo-formulario">Adicionar Cartão</h1>
+                    <h1 class="titulo-formulario2">Informações Do Cartão</h1>
                     <span class="close">&times;</span>
                     <form id="novoCartaoForm">
                         <input type="text" class="numeroCartao" id="numeroCartao" placeholder="Número do Cartão" required>
-                        <input type="text" class="cvvCartao" id="cvvCartao" placeholder="CVV" required>
-                        <input type="month" class="validadeCartao" id="validadeCartao" placeholder="Validade (MM/AA)" required>
+                        <div class="inputs-row">
+                            <input type="month" class="validadeCartao" id="validadeCartao" placeholder="Validade (MM/AA)" required>
+                            <input type="text" class="cvvCartao" id="cvvCartao" placeholder="CVV" required>
+                        </div>  
                         <input type="text" class="nomeCartao" id="nomeCartao" placeholder="Nome no Cartão" required>
-                        <button type="submit" class="botaoadd-cartao">Adicionar Cartão</button>
+                        <button type="submit" class="botaoadd-cartao">Enviar</button>
                     </form>
                 </div>
             </div>  
@@ -43,10 +46,11 @@
                
    
     <section class="container-cartoes" id="listaCartoes">
+
         <section class="container-cards">
         <article class="card-image">
             <img src="imagens/credit-card.png">
-            <p>Remover como padrão</p>
+            <button class="padrons">Remover como padrão</button>
         </article>
         <article class="card2">
             <h3>**** **** **** 1234</h3>
@@ -59,11 +63,10 @@
         <button class="padron">PADRÃO</button>
     </section>
    
-
     <section class="container-cards">
         <article class="card-image2">
             <img src="imagens/credit-debito.png">
-            <p>Definir como padrão</p>
+            <button class="padrons2">Definir como padrão</button>
         </article>
         <article class="card2">
             <h3>**** **** **** 1234</h3>
@@ -78,7 +81,7 @@
     <section class="container-cards">
         <article class="card-image2">
             <img src="imagens/credi-prox.png">
-            <p>Definir como padrão</p>
+            <button class="padrons2">Definir como padrão</button>
         </article>
         <article class="card2">
             <h3>**** **** **** 1234</h3>
@@ -93,7 +96,7 @@
     <section class="container-cards">
         <article class="card-image2">
             <img src="imagens/credit-debito.png">
-            <p>Definir como padrão</p>
+            <button class="padrons2">Definir como padrão</button>
         </article>
         <article class="card2">
             <h3>**** **** **** 1234</h3>
@@ -105,8 +108,10 @@
         </article>
     </section>
     
-</section>
-</section>
+    </section>
+
+    </section>
+</section>  
 
 </main>
 

@@ -17,21 +17,18 @@
   display: none;
 }
 
-/* .email-error {
-    color: red;
-    display: none;
+.bodydoPerfilMobile {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--branco);
+    display: block;
 }
 
-.password-error {
-    color: red;
-    display: none;
-} */
-
 .bodydoPerfil {
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+     margin-top: 100px; 
+     display: flex;
+     align-items: center; 
+     justify-content: center;
 }
 
 .container {
@@ -175,7 +172,7 @@
     margin: 3px;
 }
 
-.voltar, .voltarMobile{
+.voltar, .voltarMobileC{
     width: 280px;
     height: 70px;
     padding: 2px;
@@ -198,4 +195,14 @@
     border: 3px solid var(--corprincipal);
     background-color: white;
     color: var(--corprincipal);
+}
+
+@media (max-width: 767px){
+    .voltarMobileC{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 15px;
+        height: 45px;
+    }
 }

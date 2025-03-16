@@ -153,6 +153,7 @@ body {
 
 .mobile-list.expanded .subMenu {
     display: block;
+    margin-right: 0;
 }
 
 .checkbtn {
@@ -874,8 +875,10 @@ body {
 }
 
 .agro-content {
+    position: relative;
     margin-left: 20px;
 }
+
 
 .clickable-section {
     display: block; 
@@ -1002,7 +1005,6 @@ body {
 /* Sobre Agricultores */
 
 .sobre-agrobox {
-    height: 300px;
     margin-top: 20px;
     margin-bottom: 80px;
     padding: 10px;
@@ -1547,7 +1549,6 @@ a {
 /* Sobre Agricultores */
 
 .sobre-agrobox {
-    height: 200px;
     margin-top: 20px;
     margin-bottom: 80px;
     padding: 10px;

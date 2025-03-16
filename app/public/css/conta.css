@@ -16,15 +16,6 @@
             /* CONTA CONSUMIDOR */
 
 
-.modal-content-endereco .close {
-    position: absolute;
-    top: 145px;
-    left: 1170px;
-    color: #aaa;
-    font-size: 70px;
-    font-weight: bold;
-    cursor: pointer;;
-}
 
 .modal-content-endereco .close:hover,
 .modal-content-endereco .close:focus {
@@ -34,19 +25,20 @@
 }    
 
 
-.modal-content-cartao .close {
+ .close {
     position: absolute;
-    top: 320px;
-    left: 1190px;
+    top: 10px;
+    right: 15px;
     color: #aaa;
-    font-size: 28px;
+    font-size: 60px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 10; 
 }
 
 .modal-content-cartao .close:hover,
 .modal-content-cartao .close:focus {
-    color: black;
+    color: #333;
     text-decoration: none;
     cursor: pointer;
 }    
@@ -462,6 +454,22 @@
 
                             /*  Seção Cartões */
 
+.padrons{
+    font-size: 18px;
+    color: var(--corprincipal);
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+}
+
+.padrons2{
+    font-size: 18px;
+    color: var(--corprincipal);
+    font-weight: 320;
+    background-color: transparent;
+    border: none;
+}
+
 .container-cartoes{
     display: flex;
     border-radius: 15px;
@@ -516,7 +524,7 @@
     display: flex;
 }
 
-.card-image{
+.card-image, .card-image2{
   width: 221px;
 }
 
@@ -611,7 +619,6 @@
 }
 
 .container-enderecos strong{
-
   font-size: 22px;
   font-weight: 600;
   color: var(--marrom);
@@ -682,18 +689,20 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1000000;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-endereco {
-    background-color: white;
-    padding: 50px;
+    background-color: var(--corlayouts);
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 25%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     text-align: center;
+    position: relative;
 }
 
 /* Inputs endereco */
@@ -702,9 +711,10 @@
 /* * inputs cartão */ 
 
 .nomeCompletoEndereco{
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 90%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -715,8 +725,9 @@
     text-align: left;
 }
 .bairroEndereco{
-    width: 350px;
-    height: 30px;
+    width: 40%;
+    height: 40px;
+    font-size: 1.1em;
     margin: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
@@ -729,9 +740,10 @@
 }
 
 .RuaEndereco{
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 65%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -742,11 +754,11 @@
     text-align: left; 
 }
 
-
 .numeroTelefoneEndereco {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 50%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -758,9 +770,11 @@
 }
 
 .CEPEndereco {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 40%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -769,13 +783,13 @@
     font-family: "Montserrat", sans-serif;
     color: #999999;
     text-align: left;
-
 }
 
 .cidadeEndereco {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 50%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -787,9 +801,11 @@
 }
 
 .estadoEndereco {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 40%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -801,9 +817,11 @@
 }
 
 .numeroEndereco {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 30%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-top: 10px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -814,13 +832,20 @@
     text-align: left;
 }
 
-
-
-
 .titulo-formulario {
+    font-size: 1.7em;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Montserrat Medium", "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #493a31;
+    text-align: left;
+    line-height: normal;
+}
 
-    width: 218px;
-    height: 18px;
+.titulo-formulario2 {
+    font-size: 0.9em;
+    margin-top: 5px;
     background-color: rgba(255, 255, 255, 0);
     box-sizing: border-box;
     font-family: "Montserrat Medium", "Montserrat", sans-serif;
@@ -828,14 +853,15 @@
     color: #493a31;
     text-align: left;
     line-height: normal;
-
 }
 
 .botaoadd-endereco{
-    width: 140px;
-    height: 40px;
-    padding: 2px 2px 2px 2px;
+    width: 200px;
+    height: 45px;
+    font-size: 1.3em;
+    margin-top: 5%;
     border-radius: 5px;
+    padding: 5px;
     background-color: #5aa504;
     box-sizing: border-box;
     font-family: "Montserrat Medium", "Montserrat", sans-serif;
@@ -844,38 +870,52 @@
     text-align: center;
     line-height: normal;
     border: none;
+    cursor: pointer;
 }
 
 
 /* FORMULARIO CARTÂO  */
 
+
+
 .modal-cartao {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+
 }
 
 .modal-content-cartao {
-    background-color: white;
+    background-color:var(--corlayouts);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 25%;
-    height: 25%;
+    width: 40%;
+    height: 40%;
     text-align: center;
+    position: relative;
 }
 
 /* inputs cartão */
 
+.ambosCartao{
+    display: flex;
+}
+
 .numeroCartao {
-    width: 350px;
-    height: 30px;
+    width: 90%;
+    height: 40px;
+    font-size: 1.1em;
     margin-top: 20px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
@@ -888,9 +928,11 @@
 }
 
 .cvvCartao {
-    width: 175px;
-    height: 30px;
-    margin-left: 1px;
+    height: 40px;
+    width: 30%;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-top: 15px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -899,12 +941,15 @@
     font-family: "Montserrat", sans-serif;
     color: #999999;
     text-align: left;
+   
 }
 
 .validadeCartao {
-    width: 150px;
-    margin: 10px;
-    height: 30px;
+    width: 50%;
+    margin-top: 15px;
+    height: 40px;
+    font-size: 1.1em;
+
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -913,12 +958,20 @@
     font-family: "Montserrat", sans-serif;
     color: #999999;
     text-align: left;
+}
+
+.inputs-row {
+    display: flex;
+    width: 90%;
+    margin: auto;
 }
 
 .nomeCartao {
-    width: 350px;
-    height: 30px;
-    margin: 10px;
+    width: 90%;
+    height: 40px;
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 2px 2px 2px 10px;
     border-radius: 10px;
     border: 1px solid #493a31;
@@ -929,25 +982,12 @@
     text-align: left;
 }
 
-
-.titulo-formulario {
-
-    width: 218px;
-    height: 18px;
-    background-color: rgba(255, 255, 255, 0);
-    box-sizing: border-box;
-    font-family: "Montserrat Medium", "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #493a31;
-    text-align: left;
-    line-height: normal;
-
-}
-
 .botaoadd-cartao{
-    width: 140px;
-    height: 40px;
-    padding: 2px 2px 2px 2px;
+    width: 200px;
+    font-size: 1.2em;
+    height: 50px;
+    margin-top: 5%;
+    padding: 10px;
     border-radius: 5px;
     background-color: #5aa504;
     box-sizing: border-box;
@@ -957,6 +997,7 @@
     text-align: center;
     line-height: normal;
     border: none;
+    cursor: pointer;
 }
 
 /* Seção configurações */

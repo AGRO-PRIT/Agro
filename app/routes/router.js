@@ -144,7 +144,7 @@ router.get('/proteinas', function(req, res) {
 });
 
 
-/* PERFIL*/
+/* PERFIL*/  /* VENDEDOR!*/
 
 router.get('/contaVendedor', function(req, res) {
     res.render('pages/Conta-vendedor/contaVendedor');
@@ -174,7 +174,7 @@ router.get('/vendas', function(req, res) {
 });
 
 
-
+/* CONSUMIDOR!*/
 
 router.get('/contaEscolha', function(req, res) {
     res.render('pages/contaEscolha');

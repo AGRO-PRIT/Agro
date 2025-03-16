@@ -392,12 +392,24 @@
     }
     
     .AddEnderess{
-        width: 90%;
+        width: 500px;
+        height: 75px;
         margin: 0 auto;
         display: flex;
-        height: auto;
-        padding: 7px;
         justify-content: center;
         align-items: center;
+        font-size: 30px;
+        padding: 2px 2px 2px 2px;
+        border-radius: 5px;
+        border: 1px solid rgba(252, 242, 230, 0.5);
+        background-color: rgba(30, 152, 215, 0);
+        box-sizing: border-box;
+        font-family: "Montserrat Medium", "Montserrat", "Montserrat", sans-serif;
+        font-weight: 500;
+        color: rgba(252, 242, 230, 0.5);
+        text-align: center;
+        line-height: normal;
+        cursor: pointer;
+    
     }
 }

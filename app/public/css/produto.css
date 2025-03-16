@@ -250,6 +250,10 @@ input[type="number"] {
     font-weight: 700;
 }
 
+.perfis{
+    display: flex;
+}
+
 .btn-detailV{
     justify-content: center;
     align-items: center;
@@ -268,6 +272,30 @@ input[type="number"] {
     cursor: pointer;
     margin-right: 50px;
     transition: background-color 0.3s ease;
+}
+
+.btn-detailV2{
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--corprincipal);
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detailV2:hover {
+    opacity: 0.7;
 }
 
 .btn-detailV:hover {
