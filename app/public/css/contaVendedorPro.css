@@ -36,6 +36,7 @@
 }
 
 /* Detalhes do produto */
+
 .produto-detalhes {
    display: flex;
    justify-content: space-between;
@@ -81,7 +82,148 @@
    align-items: center;
 }
 
-/* Texto de vendas */
+/* formulário adicionar produto */
+
+.edit-button2 {
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border: none;
+   background-color: #4CAF50;
+   color: white;
+   margin-top: 20px;
+}
+
+.modal-Produto {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+}
+
+.modal-content-Produto {
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   width: 60%;
+   height: 60%;
+   text-align: left;
+   position: relative;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+   position: absolute;
+   right: 15px;
+   top: 10px;
+   font-size: 60px;
+   cursor: pointer;
+   z-index: 10;
+   color: #aaa;
+}
+
+ .close:hover, .close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}    
+
+#nomeProduto, #precoProduto{
+   width: 70%;
+   height: 40px;
+   margin-bottom: 15px;
+   border-color: var(--marrom);
+   border-radius: 5px;
+   font-size: 20px;
+   padding-left: 5px;
+}
+
+#quantityProduto{
+   width: 10%;
+   height: 40px;
+   border-color: var(--marrom);
+   border-radius: 5px;
+   font-size: 20px;
+   padding-left: 5px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+#descriptionboxProduto{
+   width: 80%;
+   height: 60%;
+   border-color: var(--marrom);
+   border-radius: 5px;
+   font-size: 20px;
+   padding-left: 5px;
+}
+
+
+.novoProdutoForm{
+   display: flex;
+   width: 100%;
+   color: #333; 
+   font-size: 1.5em;
+}
+
+.produtoFlex{
+   width: 60%;
+}
+
+.produtoFlex2{
+   width: 40%;
+}
+
+.image-preview img {
+   width: 85%;
+   height: auto;
+   margin-top: 10px;
+   border-radius: 8px;
+}
+
+.publicar {
+   background-color: var(--corprincipal);
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 20px;
+   transition: 0.3s;
+}
+
+.publicar, .rascunho{
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px
+}
+
+.publicar:hover {
+   opacity: 0.7;
+}
+
+.rascunho {
+   background-color: white;
+   color: var(--corprincipal);
+   border: 1px solid var(--corprincipal);
+   padding: 10px 15px;
+   font-size: 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.rascunho:hover {
+   background-color: #e8f5e9;
+}
+
+/* Texto de produtos Vendedor */
 .produto-vendas {
    font-size: 1.3em;
    color: #666;
@@ -219,7 +361,6 @@
    margin: auto;
 }
 
-
 .edit-button:hover {
    background-color: #57a337;
 }
@@ -231,6 +372,8 @@
 .menu a.ativo + img {
    filter: brightness(0.5) sepia(1) hue-rotate(90deg); 
 }
+
+
 /* SETAS DO CARROUSEL */
 
 .carousel-controlFiltro {
@@ -269,3 +412,135 @@
    z-index: 10;
    margin: 10px 0; 
 }
+
+
+/* Vendas Vendedor */
+
+/* part 1 *preparar* */
+
+.container-pedidos{
+   border: none;
+}
+
+.vendasGeral{
+   margin-top: 30px;
+   margin-left: 30px;
+   height: 100%;
+   width: 100%;
+}
+
+.vendasSection {
+   display: flex;
+   background-color: #0D6938;
+   color: white;
+   width: 90%;
+   height: 300px;
+   padding: 20px;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section1Vendas {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-right: 2px solid white;
+   font-size: 0.8em;
+   text-align: left;
+   color: var(--branco);
+   font-weight: bold;
+}
+
+.textVendasSection{
+   margin-bottom: 15px;
+}
+
+ .quantity {
+   margin-left: 30px;
+   font-weight: 500;
+  
+ }
+
+.preparar-pedido {
+   color: var(--laranja);
+   font-weight: bold;
+}
+
+.descricao {
+   margin-top: 10px;
+   font-size: 0.7em;
+   font-weight: 400;
+}
+
+.box0Vendas {
+   display: flex;
+}
+
+.box3Vendas {
+   display: flex;
+   flex-direction: column;
+}
+
+.produto-imagem {
+   width: 30%;
+   height: 150px;
+   margin-right: 25px;
+   margin-bottom: 20px;
+}
+
+.section2Vendas {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex: 1;
+   font-size: 0.8em;
+   text-align: left;
+   color: var(--branco);
+}
+
+.comprador-perfil {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.comprador-imagem {
+   width: 30%;
+   margin-top: 20px;
+   height: 120px;
+   margin-right: 25px;
+   margin-left: 30px;
+   margin-bottom: 20px;
+}
+
+.contato {
+   color: var(--laranja);
+   margin-top: 10px;
+   text-decoration: none;
+   font-size: 0.7em;
+   text-align: center;
+   font-weight: bold;
+}
+
+.botao-preparado {
+   display: flex;
+   background-color:  #e68a00;
+   border: none;
+   color: white;
+   text-align: center;
+   padding: 10px 15px;
+   font-size: 1em;
+   border-radius: 5px;
+   justify-content: center;
+   cursor: pointer;
+   margin-top: auto; /* Ajuste de espaçamento para o botão */
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+/* part 2 *enviar* */
+
+/* part 3 *em transito* */
+
+/* part 4 *concluido* */

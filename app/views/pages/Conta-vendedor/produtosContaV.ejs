@@ -27,9 +27,40 @@
     <section class="product-section">
         <article class="section-flex">
             <h1 class="product-header">Meus Produtos</h1> 
-            <button class="edit-button2">ADICIONAR PRODUTO</button>
+            <button id="adicionarProduto" class="edit-button2">ADICIONAR PRODUTO</button>
+            <section id="formularioProduto" class="modal-Produto" style="display: none;">
+                <section class="modal-content-Produto">
+                    
+                    <span class="close">&times;</span>
+                    <form id="novoProdutoForm" class="novoProdutoForm">
+                    <article class="produtoFlex">
+                        <label for="nomeProduto">Nome do Produto</label> <br>
+                        <input type="text" id="nomeProduto" placeholder="Digite aqui..."><br>
+                   
+                        <label for="precoProduto">Preço</label><br>
+                        <input type="text" id="precoProduto" placeholder="Digite aqui..."><br>
+        
+                        <label for="quantityProduto">Quantidade disponível</label>
+                        <input type="number" id="quantityProduto" value="50"><br>
+        
+                        <label for="descriptionboxProduto">Descrição do Produto</label><br>
+                        <textarea id="descriptionboxProduto"></textarea>
+                    </article>
+                    
+                    <article class="produtoFlex2">
+                        <label for="imageProduto">Imagem do Produto</label>
+                        <article class="image-preview">
+                            <img src="imagens/imagemNaoLoad.png" id="imageProduto" alt="Imagem do Produto">
+                        </article>
+                        <button type="submit" class="publicar">Publicar</button>
+                        <button type="button" class="rascunho">Salvar Rascunho</button>
+                    </article>
+                    </form>
+        
+                </section>
+            </section>  
         </article>
-        <article class="tittlesFlex">
+        <article class="tittlesFlex" id="listaProdutos">
             <h2 class="titleDetails">Detalhes</h2> 
             <h2 class="titleDetails">Vendas</h2> 
         </article>
@@ -60,6 +91,7 @@
 
         <!-- Script -->
 
+<script src="js/formularioProduto.js"> </script>
 <script src="js/perfil.js"> </script>
 <script src="js/imagens.js"> </script>
     

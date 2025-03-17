@@ -173,6 +173,19 @@ router.get('/vendas', function(req, res) {
     res.render('pages/Conta-vendedor/vendas'); 
 });
 
+// vendas!
+
+router.get('/concluido', function(req, res) {
+    res.render('pages/Conta-vendedor/Status-vendas/concluido'); // Verifique o caminho correto
+});
+
+router.get('/emtransito', function(req, res) {
+    res.render('pages/Conta-vendedor/Status-vendas/emtransito'); // Verifique o caminho correto
+});
+router.get('/enviarV', function(req, res) {
+    res.render('pages/Conta-vendedor/Status-vendas/enviar'); // Verifique o caminho correto
+});
+
 
 /* CONSUMIDOR!*/
 
