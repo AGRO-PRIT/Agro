@@ -1,34 +1,190 @@
--- ainda n tem nada... ;( 
--- mas aqui ficara os codigos sql das tabelas quando finalizarmos
-
--- exemplo:
-
---  CREATE TABLE `produtos` (
--- 	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
--- 	`nomeProduto` VARCHAR(255),
--- 	`descricao` TEXT(65535),
--- 	`preco` DOUBLE,
--- 	`categorias_id` INT,
--- 	`fornecedor_id` INT,
--- 	PRIMARY KEY(`id`)
--- );
+CREATE TABLE `Usuarios` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`LogradouroId` INTEGER,
+	`Telefone` VARCHAR(15) NOT NULL UNIQUE,
+	`Email` VARCHAR(255) NOT NULL UNIQUE,
+	`NomeCompleto` VARCHAR(100) NOT NULL,
+	`DataNascimento` DATE NOT NULL,
+	PRIMARY KEY(`id`)
+);
 
 
--- CREATE TABLE `categorias` (
--- 	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
--- 	`nomeCategoria` VARCHAR(255),
--- 	PRIMARY KEY(`id`)
--- );
+CREATE TABLE `vendedores` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`UsuarioId` INTEGER NOT NULL UNIQUE,
+	`CNPJ` VARCHAR(18) NOT NULL UNIQUE,
+	`LicençasDocumentos` BLOB NOT NULL,
+	`RazaoSocial` VARCHAR(150) NOT NULL UNIQUE,
+	`NomeFantasia` VARCHAR(100) NOT NULL,
+	`RedeSociaisId` INTEGER,
+	PRIMARY KEY(`id`)
+);
 
 
--- CREATE TABLE `pedidos` (
--- 	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
--- 	`dataPedido` DATETIME,
--- 	`cliente_id` INT,
--- 	`quantidade` INT,
--- 	`statusPedido` ENUM("delivered", "received", "processing"),
--- 	`produto_id` INT,
--- 	PRIMARY KEY(`id`)
--- );
+CREATE TABLE `Logradouro` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`Cidade` VARCHAR(100) NOT NULL,
+	`Estado` VARCHAR(2) NOT NULL,
+	`Bairro` VARCHAR(100) NOT NULL,
+	`Numero` VARCHAR(10) NOT NULL,
+	`CEP` VARCHAR(9) NOT NULL,
+	`Complemento` VARCHAR(50) NOT NULL,
+	PRIMARY KEY(`id`)
+);
 
--- e assim vai seguindo
+
+CREATE TABLE `Eventos` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`UsuarioId` INTEGER NOT NULL,
+	`DescriçãoEvento` VARCHAR(255) NOT NULL,
+	`LogradouroId` INTEGER,
+	`ImgEvento` BLOB NOT NULL,
+	`LinkEventi` VARCHAR(2048) NOT NULL,
+	`ValorEvento` DECIMAL NOT NULL,
+	`NomeEvento` VARCHAR(255) NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Produtos` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`VendedorId` INTEGER NOT NULL,
+	`DescricaoProduto` VARCHAR(255) NOT NULL,
+	`NomeProduto` VARCHAR(255) NOT NULL,
+	`Valor` DECIMAL NOT NULL,
+	`CategoriaId` INTEGER NOT NULL,
+	`ImgProduto` BLOB NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Categorias` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`TituloCategoria` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Avaliacaoes` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`ClienteId` INTEGER NOT NULL,
+	`ProdutoId` INTEGER NOT NULL,
+	`Nota` INTEGER NOT NULL,
+	`Comentario` VARCHAR(255),
+	`DataAvaliacao` DATETIME NOT NULL,
+	`imgAvaliacao` BLOB,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Carrinhos` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`Produtosid` INTEGER NOT NULL,
+	`ClienteId` INTEGER NOT NULL,
+	`Quantidade` INTEGER UNSIGNED NOT NULL,
+	`ValorSubtotal` DECIMAL NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Transacoes` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`CarrinhoId` INTEGER NOT NULL,
+	`StatusId` INTEGER NOT NULL,
+	`MetodoPagamento` VARCHAR(255) NOT NULL,
+	`NotaFiscalId` INTEGER NOT NULL,
+	`DataTransacao` DATETIME NOT NULL,
+	`ValorTotal` DECIMAL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Status` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`TituloStatus` ENUM('A pagar', 'Em andamento ', 'Finalizado', 'Cancelado ', 'Pedido Realizado', 'Pagamento Confirmado ', 'Em transporte ', 'Pedido Entregue') NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `NotasFiscais` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`Transacaoid` INTEGER NOT NULL,
+	`NumeroNota` VARCHAR(50) NOT NULL,
+	`Serie` VARCHAR(10) NOT NULL,
+	`DataEmissao` DATETIME NOT NULL,
+	`ChaveAcesso` VARCHAR(44) NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Cliente` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`UsuarioId` INTEGER NOT NULL,
+	`CPF` VARCHAR(14) NOT NULL UNIQUE,
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `RedesSociais` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`NomeRedeSocial` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+
+
+CREATE TABLE `Perfil` (
+	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
+	`FotoPerfil` BLOB,
+	`UsuarioId` INTEGER NOT NULL,
+	PRIMARY KEY(`id`)
+);
+
+
+ALTER TABLE `Usuarios`
+ADD FOREIGN KEY(`LogradouroId`) REFERENCES `Logradouro`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `vendedores`
+ADD FOREIGN KEY(`UsuarioId`) REFERENCES `Usuarios`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Eventos`
+ADD FOREIGN KEY(`LogradouroId`) REFERENCES `Logradouro`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Produtos`
+ADD FOREIGN KEY(`VendedorId`) REFERENCES `vendedores`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Produtos`
+ADD FOREIGN KEY(`CategoriaId`) REFERENCES `Categorias`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Carrinhos`
+ADD FOREIGN KEY(`Produtosid`) REFERENCES `Produtos`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Avaliacaoes`
+ADD FOREIGN KEY(`ProdutoId`) REFERENCES `Produtos`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Transacoes`
+ADD FOREIGN KEY(`StatusId`) REFERENCES `Status`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Transacoes`
+ADD FOREIGN KEY(`CarrinhoId`) REFERENCES `Carrinhos`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `NotasFiscais`
+ADD FOREIGN KEY(`Transacaoid`) REFERENCES `Transacoes`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Usuarios`
+ADD FOREIGN KEY(`id`) REFERENCES `Cliente`(`UsuarioId`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Carrinhos`
+ADD FOREIGN KEY(`ClienteId`) REFERENCES `Cliente`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Eventos`
+ADD FOREIGN KEY(`UsuarioId`) REFERENCES `Usuarios`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `vendedores`
+ADD FOREIGN KEY(`RedeSociaisId`) REFERENCES `RedesSociais`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Avaliacaoes`
+ADD FOREIGN KEY(`ClienteId`) REFERENCES `Cliente`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Perfil`
+ADD FOREIGN KEY(`UsuarioId`) REFERENCES `Usuarios`(`id`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;

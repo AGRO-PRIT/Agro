@@ -1,13 +1,5 @@
-// Esse codigo é uma base e previa do que vai ter esse ano no banco :o omg
-// Além disso é necessario colocar alguns comandos no terminal que são: 
-// - tenho que pesquisar ainda rsrsrs
-// -
-// -
-// -
-// -
-// -
-
 const mysql = require('mysql2')
+
 const pool = mysql.createPool({
     host: process.env.BD_HOST,
     user: process.env.BD_USER,
@@ -21,7 +13,7 @@ const pool = mysql.createPool({
 
 
 pool.getConnection((err, conn) => { 
-    // Se ocorrer um erro ao obter a conexão, ele será tratado e registrado
+    
     if(err){
         console.log(err)
         console.log("Erro :(")
@@ -32,5 +24,3 @@ pool.getConnection((err, conn) => {
 })
 
 module.exports = pool.promise()
-// conexão obtida é exportada como uma promessa
-// Agora pode-se usar a promessa para executar consultas SQL e receber os resultados como promessas assíncronas
