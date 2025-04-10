@@ -31,7 +31,7 @@
                                 <input type="text" class="nomeCompletoEndereco" id="nomeCompletoEndereco" placeholder="Nome Completo" required> <br>
                             <div class="inputs-row">
                                 <input type="text" class="numeroTelefoneEndereco" id="numeroTelefoneEndereco" placeholder="Telefone"  required pattern="\(\d{2}\) \d{4,5}-\d{4}"> <br>
-                                <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP" oninput="formatarCEP(this)" required> <br>
+                                <input type="text" class="CEPEndereco" id="CEPEndereco" placeholder="CEP"  required> <br>
                                 <p id="cep-mensagem" style="color: red;"></p> <!-- Mensagem de validação -->
                             </div>
                            
@@ -41,6 +41,7 @@
                             </div>
                             <div class="inputs-row">    
                                 <input type="text" class="RuaEndereco" id="RuaEndereco" placeholder="Rua/Avenida" required><br>
+                                <input type="text" class="bairroEndereco" id="bairroEndereco" placeholder="Bairro" required><br>
                                 <input type="text" class="numeroEndereco" id="numeroEndereco" placeholder="Número" required><br>
                             </div> 
                                 <button type="submit" class="botaoadd-endereco">Enviar</button>

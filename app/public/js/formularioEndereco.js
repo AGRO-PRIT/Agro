@@ -89,7 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     mensagem.textContent = 'CEP não encontrado.';
                 }
             })
-            .catch(() => {
+            .catch((error) => {
+                console.error(error);
                 mensagem.textContent = 'Erro ao consultar o CEP.';
             });
     });
