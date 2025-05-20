@@ -3,7 +3,9 @@ const app = express();
 const port = 3000;
 const axios = require('axios')
 
+const session = require('express-session');
 
+const env = require("dotenv").config();
 
 app.use(express.static('app/public'));
 
@@ -32,3 +34,11 @@ app.listen(port, () => {
   console.log(`Servidor ouvindo na porta ${port}\nhttp://localhost:${port}`);
 });
 
+
+
+app.use(session({
+    secret: 'seuSegredoAqui',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Defina como true se estiver usando HTTPS
+}));

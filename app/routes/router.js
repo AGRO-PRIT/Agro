@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
-// const { registerUser } = require('../controllers/controller');
-
-// const todoController = require('../controllers/todoController');
+const autenticar = require('../models/autenticator-middleware');
+const usuarioController = require('../controllers/usuariosController');
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
@@ -286,9 +285,25 @@ router.post('finalizar-carrinho-cartao', function(req, res) {
     res.redirect('finalizar-carrinho-cartao');
 });
 
+// ACTIONS BANCO USUARIO
 
+// /* Rotas Públicas */
+// router.get('/', (req, res) => res.render('pages/home'));
+// router.get('/home', (req, res) => res.render('pages/home'));
+// router.get('/login', (req, res) => res.render('pages/login'));
+// router.get('/cadastre-se', (req, res) => res.render('pages/cadastre-se'));
 
+// /* Rotas de Autenticação */
+// router.post('/registrar', usuarioController.cadastrarUsuario); // Corrigido para usar cadastrarUsuario
+// router.post('/login', usuarioController.login);
 
+// /* Rotas Protegidas */
+// router.get('/perfil', autenticar, usuarioController.obterPerfil);
+// router.put('/atualizar', autenticar, usuarioController.atualizarUsuario);
+// router.delete('/deletar', autenticar, usuarioController.excluirUsuario);
+// // Rota de admin
+// router.get('/listar', autenticar, usuarioController.listar);
 
 module.exports = router;
+
 
