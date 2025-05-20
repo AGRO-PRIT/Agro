@@ -4,18 +4,18 @@ CREATE TABLE `Usuarios` (
 	`Telefone` VARCHAR(15) NOT NULL UNIQUE,
 	`Email` VARCHAR(255) NOT NULL UNIQUE,
 	`NomeCompleto` VARCHAR(100) NOT NULL,
-	`DataNascimento` DATE NOT NULL,
+	`DataNascimento` DATE,
 	PRIMARY KEY(`id`)
 );
 
 
-CREATE TABLE `vendedores` (
+CREATE TABLE `Vendedores` (
 	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 	`UsuarioId` INTEGER NOT NULL UNIQUE,
 	`CNPJ` VARCHAR(18) NOT NULL UNIQUE,
-	`LicençasDocumentos` BLOB NOT NULL,
-	`RazaoSocial` VARCHAR(150) NOT NULL UNIQUE,
-	`NomeFantasia` VARCHAR(100) NOT NULL,
+	`LicencasDocumentos` BLOB,
+	`RazaoSocial` VARCHAR(150),
+	`NomeFantasia` VARCHAR(100),
 	`RedeSociaisId` INTEGER,
 	PRIMARY KEY(`id`)
 );
@@ -23,9 +23,6 @@ CREATE TABLE `vendedores` (
 
 CREATE TABLE `Logradouro` (
 	`id` INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
-	`Cidade` VARCHAR(100) NOT NULL,
-	`Estado` VARCHAR(2) NOT NULL,
-	`Bairro` VARCHAR(100) NOT NULL,
 	`Numero` VARCHAR(10) NOT NULL,
 	`CEP` VARCHAR(9) NOT NULL,
 	`Complemento` VARCHAR(50) NOT NULL,
@@ -179,7 +176,7 @@ ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE `Eventos`
 ADD FOREIGN KEY(`UsuarioId`) REFERENCES `Usuarios`(`id`)
 ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE `vendedores`
+ALTER TABLE `Vendedores`
 ADD FOREIGN KEY(`RedeSociaisId`) REFERENCES `RedesSociais`(`id`)
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE `Avaliacaoes`

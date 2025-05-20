@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 const autenticar = require('../models/autenticator-middleware');
-const usuarioController = require('../controllers/usuariosController');
+const usuariosController = require('../controllers/usuariosController');
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
@@ -285,7 +285,8 @@ router.post('finalizar-carrinho-cartao', function(req, res) {
     res.redirect('finalizar-carrinho-cartao');
 });
 
-// ACTIONS BANCO USUARIO
+
+router.post('/cadastrar-usuario', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
 
 // /* Rotas Públicas */
 // router.get('/', (req, res) => res.render('pages/home'));

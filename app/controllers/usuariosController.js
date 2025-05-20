@@ -53,48 +53,92 @@ const usuariosController = {
       });
     },
 
+    cadastrarUsuarioNormal: async (req, res) => {
+    const errors = validationResult(req);
     
-  
-    // Cadastrar novo usuário
-    cadastrarUsuario: async (req, res) => {
-      const errors = validationResult(req);
-      
-      if (!errors.isEmpty()) {
-        return res.render("usuarios/cadastrar", {
-          dados: req.body,
-          listaErros: errors.array()
+    if (!errors.isEmpty()) {
+        return res.render("cadastre-se", {  // Supondo que sua view se chame 'cadastre-se.ejs'
+            dados: req.body,
+            erros: errors.array()
         });
-      }
-  
-      try {
-        const { email, nome_completo, data_nascimento, telefone, senha } = req.body;
+    }
+
+    try {
+        const { nome_completo, data_nascimento, telefone, email, senha } = req.body;
         
+        // Verifica se email já existe
+        const usuarioExistente = await UsuarioModel.findByEmail(email);
+        if (usuarioExistente) {
+            return res.render("cadastre-se", {
+                dados: req.body,
+                erros: [{ msg: "Este email já está cadastrado" }]
+            });
+        }
+
         // Hash da senha
         const senhaHash = await bcrypt.hash(senha, 10);
-  
-        await UsuarioModel.criar({
-          email,
-          nome_completo,
-          data_nascimento,
-          telefone,
-          senha: senhaHash
+
+        // Cria o usuário
+        const novoUsuarioId = await UsuarioModel.create({
+            NomeCompleto: nome_completo,
+            DataNascimento: data_nascimento,
+            Telefone: telefone,
+            Email: email,
+            senha: senhaHash  // Note que seu model parece usar 'senha' em vez de 'Senha'
         });
-  
-        req.flash('sucesso', 'Usuário cadastrado com sucesso!');
-        res.redirect("/usuarios");
-      } catch (e) {
+
+        // Redireciona para login com mensagem de sucesso
+        req.flash('sucesso', 'Cadastro realizado com sucesso! Faça login para continuar.');
+        res.redirect("/login");
+    } catch (e) {
         console.error(e);
-        res.render("usuarios/cadastrar", {
-          dados: req.body,
-          listaErros: [{ msg: "Erro ao cadastrar usuário" }]
+        res.render("cadastre-se", {
+            dados: req.body,
+            erros: [{ msg: "Erro ao cadastrar usuário. Tente novamente." }]
         });
-      }
+    }
     },
+  
+    // // Cadastrar novo usuário
+    // cadastrarUsuario: async (req, res) => {
+    //   const errors = validationResult(req);
+      
+    //   if (!errors.isEmpty()) {
+    //     return res.render("usuarios/cadastrar", {
+    //       dados: req.body,
+    //       listaErros: errors.array()
+    //     });
+    //   }
+  
+    //   try {
+    //     const { email, nome_completo, data_nascimento, telefone, senha } = req.body;
+        
+    //     // Hash da senha
+    //     const senhaHash = await bcrypt.hash(senha, 10);
+  
+    //     await UsuarioModel.criar({
+    //       email,
+    //       nome_completo,
+    //       data_nascimento,
+    //       telefone,
+    //       senha: senhaHash
+    //     });
+  
+    //     req.flash('sucesso', 'Usuário cadastrado com sucesso!');
+    //     res.redirect("/usuarios");
+    //   } catch (e) {
+    //     console.error(e);
+    //     res.render("usuarios/cadastrar", {
+    //       dados: req.body,
+    //       listaErros: [{ msg: "Erro ao cadastrar usuário" }]
+    //     });
+    //   }
+    // },
   
     // Formulário de edição
     exibirFormEdicao: async (req, res) => {
       try {
-        const usuario = await UsuarioModel.buscarPorId(req.params.id);
+        const usuario = await UsuarioModel.findId(req.params.id);
         
         if (!usuario) {
           return res.redirect("/usuarios");
@@ -147,6 +191,12 @@ const usuariosController = {
       res.redirect("/usuarios");
     },
 
+
+    
+logout: (req, res) => {
+  req.session.destroy();
+  res.redirect('/login');
+},
 
     login: async (req, res) => {
       try {
