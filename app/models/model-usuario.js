@@ -53,34 +53,67 @@ const usuarioModel = {
         }  
     },
 
-    delete: async (id) => {
-        try {
-            // Opção 1: Exclusão física (DELETE)
-            // const [result] = await pool.query('DELETE FROM Usuarios WHERE id = ?', [id])
-            
-            // Opção 2: Exclusão lógica (recomendado, igual ao do professor)
-            const [result] = await pool.query('UPDATE Usuarios SET ativo = 0 WHERE id = ?', [id])
-            
-            return result.affectedRows > 0;
-        } catch (error) {
-            console.error(error);
-            return false;
-        }  
-    },
+  
+delete: async (id) => {
+  try {
+    const [result] = await pool.query('UPDATE Usuarios SET ativo = 0 WHERE id = ? AND ativo = 1', [id]);
+    return result.affectedRows > 0;
+  } catch (error) {
+    console.error('Erro em delete:', error);
+    throw error;
+  }
+},
+   
+findByEmail: async (email) => {
+  try {
+    const [linhas] = await pool.query('SELECT * FROM Usuarios WHERE Email = ?', [email]);
+    return linhas[0] || null; // Sempre retorna null em vez de undefined
+  } catch (error) {
+    console.error('Erro em findByEmail:', error);
+    throw error; 
+  }
+},
 
-    findByEmail: async (email) => {
-        try {
-            const [linhas] = await pool.query('SELECT * FROM Usuarios WHERE Email = ?', [email])
-            return linhas[0]; // Retorna o usuário ou undefined
-        } catch (error) {
-            console.error(error);
-            return null;
-        }
-    },
+emailExists: async (email) => {
+  try {
+    const [linhas] = await pool.query('SELECT 1 FROM Usuarios WHERE Email = ?', [email]);
+    return linhas.length > 0;
+  } catch (error) {
+    console.error('Erro em emailExists:', error);
+    throw error;
+  }
+},
+
+findByEmailWithPassword: async (email) => {
+  try {
+    const [linhas] = await pool.query(
+      'SELECT id, Email, senha, NomeCompleto FROM Usuarios WHERE Email = ?', 
+      [email]
+    );
+    return linhas[0] || null;
+  } catch (error) {
+    console.error('Erro em findByEmailWithPassword:', error);
+    throw error;
+  }
+},
+
+listarComPaginacao: async (offset, limit) => {
+  try {
+    const [linhas] = await pool.query(
+      'SELECT * FROM Usuarios WHERE ativo = 1 LIMIT ?, ?',
+      [offset, limit]
+    );
+    const [total] = await pool.query('SELECT COUNT(*) as total FROM Usuarios WHERE ativo = 1');
+    return { usuarios: linhas, total: total[0].total };
+  } catch (error) {
+    console.error('Erro em listarComPaginacao:', error);
+    throw error;
+  }
+},
 
     totalReg: async () => {
         try {
-            const [linhas] = await pool.query('SELECT COUNT(*) as total FROM Usuarios WHERE id > 0') // Adapte conforme necessário
+            const [linhas] = await pool.query('SELECT COUNT(*) as total FROM Usuarios WHERE id > 0') 
             return linhas[0].total;
         } catch (error) {
             console.error(error);

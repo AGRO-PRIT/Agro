@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const path = require('path');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const autenticar = require('../models/autenticator-middleware');
 const usuariosController = require('../controllers/usuariosController');
 
@@ -287,6 +288,16 @@ router.post('finalizar-carrinho-cartao', function(req, res) {
 
 
 router.post('/cadastrar-usuario', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
+
+
+// No seu arquivo de rotas (routes.js ou similar)
+router.get('/cadastre-se', guestMiddleware, usuariosController.exibirFormCadastro);
+router.post('/cadastre-se', guestMiddleware, usuariosController.cadastrarUsuarioNormal);
+
+// Rotas protegidas (requer login)
+// router.get('/perfil', autenticar, usuariosController.mostrarPerfil);
+
+
 
 // /* Rotas Públicas */
 // router.get('/', (req, res) => res.render('pages/home'));

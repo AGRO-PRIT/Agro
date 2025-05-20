@@ -45,13 +45,12 @@ const usuariosController = {
       }
     },
   
-    // Formulário de cadastro
-    exibirFormCadastro: (req, res) => {
-      res.render("usuarios/cadastrar", { 
-        dados: {}, 
-        listaErros: null 
-      });
-    },
+  exibirFormCadastro: (req, res) => {
+  res.render("cadastre-se", {  // Note que agora aponta para seu arquivo EJS real
+    dados: {}, 
+    erros: null 
+  });
+},
 
     cadastrarUsuarioNormal: async (req, res) => {
     const errors = validationResult(req);
@@ -64,7 +63,7 @@ const usuariosController = {
     }
 
     try {
-        const { nome_completo, data_nascimento, telefone, email, senha } = req.body;
+        const { nome_completo, email, senha } = req.body;
         
         // Verifica se email já existe
         const usuarioExistente = await UsuarioModel.findByEmail(email);
@@ -81,8 +80,6 @@ const usuariosController = {
         // Cria o usuário
         const novoUsuarioId = await UsuarioModel.create({
             NomeCompleto: nome_completo,
-            DataNascimento: data_nascimento,
-            Telefone: telefone,
             Email: email,
             senha: senhaHash  // Note que seu model parece usar 'senha' em vez de 'Senha'
         });
