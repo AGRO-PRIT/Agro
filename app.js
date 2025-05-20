@@ -45,3 +45,10 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false } // Defina como true se estiver usando HTTPS
 }));
+
+const flash = require('connect-flash');
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.messages = req.flash();
+  next();
+});
