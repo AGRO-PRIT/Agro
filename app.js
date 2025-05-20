@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const axios = require('axios')
+const axios = require('axios');
+const helmet = require('helmet');
 
 const session = require('express-session');
 
@@ -34,7 +35,9 @@ app.listen(port, () => {
   console.log(`Servidor ouvindo na porta ${port}\nhttp://localhost:${port}`);
 });
 
-
+app.use(helmet({
+  contentSecurityPolicy: false // ⚠️ Apenas para desenvolvimento!
+}));
 
 app.use(session({
     secret: 'seuSegredoAqui',
