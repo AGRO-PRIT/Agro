@@ -1,140 +1,180 @@
-// models/Usuario.js
-var pool = require("../../config/pool-conexoes");
+// models/model-usuario.js
+const pool = require("../../config/pool-conexoes");
+const moment = require("moment");
+const bcrypt = require("bcryptjs");
+const { body, validationResult } = require("express-validator");
 
-const usuarioModel = {
-    findAll: async () => {
-        try {
-            const [linhas] = await pool.query('SELECT * FROM Usuarios WHERE id > 0') // Adapte conforme sua regra de status
-            return linhas;
-        } catch (error) {
-            console.error(error);
-            return error;
-        }
-    },
 
-    findId: async (id) => {
-        try {
-            const [linhas] = await pool.query('SELECT * FROM Usuarios WHERE id = ?', [id])
-            return linhas[0]; // Retorna apenas o primeiro registro
-        } catch (error) {
-            console.error(error);
-            return error;
-        }
-    },
+const UsuarioModel = {
+  // Regras de validação
+  regrasValidacao: [
+    body("email")
+      .isEmail()
+      .withMessage("E-mail inválido!"),
+    body("nome_completo")
+      .isLength({ min: 5, max: 100 })
+      .withMessage("Nome deve conter de 5 a 100 caracteres!"),
+    body("senha")
+      .isLength({ min: 6 })
+      .withMessage("A senha deve ter pelo menos 6 caracteres!")
+  ],
 
-    findPage: async (pagina, total) => {
-        try {
-            const inicio = (pagina - 1) * total;
-            const [linhas] = await pool.query('SELECT * FROM Usuarios LIMIT ?, ?', [inicio, total])
-            return linhas;
-        } catch (error) {
-            console.error(error);
-            return error;
-        }  
-    },
-    
-    create: async (dadosForm) => {
-        try {
-            const [result] = await pool.query('INSERT INTO Usuarios SET ?', [dadosForm])
-            return result.insertId; // Retorna o ID do novo usuário
-        } catch (error) {
-            console.error(error);
-            return null;
-        }  
-    },
-
-    update: async (dadosForm, id) => {
-        try {
-            const [result] = await pool.query('UPDATE Usuarios SET ? WHERE id = ?', [dadosForm, id])
-            return result.affectedRows > 0; // Retorna true/false
-        } catch (error) {
-            console.error(error);
-            return false;
-        }  
-    },
-
-  
-delete: async (id) => {
-  try {
-    const [result] = await pool.query('UPDATE Usuarios SET ativo = 0 WHERE id = ? AND ativo = 1', [id]);
-    return result.affectedRows > 0;
-  } catch (error) {
-    console.error('Erro em delete:', error);
-    throw error;
-  }
-},
-   
-findByEmail: async (email) => {
-  try {
-    const [linhas] = await pool.query('SELECT * FROM Usuarios WHERE Email = ?', [email]);
-    return linhas[0] || null; // Sempre retorna null em vez de undefined
-  } catch (error) {
-    console.error('Erro em findByEmail:', error);
-    throw error; 
-  }
-},
-
-emailExists: async (email) => {
-  try {
-    const [linhas] = await pool.query('SELECT 1 FROM Usuarios WHERE Email = ?', [email]);
-    return linhas.length > 0;
-  } catch (error) {
-    console.error('Erro em emailExists:', error);
-    throw error;
-  }
-},
-
-findByEmailWithPassword: async (email) => {
-  try {
-    const [linhas] = await pool.query(
-      'SELECT id, Email, senha, NomeCompleto FROM Usuarios WHERE Email = ?', 
-      [email]
-    );
-    return linhas[0] || null;
-  } catch (error) {
-    console.error('Erro em findByEmailWithPassword:', error);
-    throw error;
-  }
-},
-
-listarComPaginacao: async (offset, limit) => {
-  try {
-    const [linhas] = await pool.query(
-      'SELECT * FROM Usuarios WHERE ativo = 1 LIMIT ?, ?',
-      [offset, limit]
-    );
-    const [total] = await pool.query('SELECT COUNT(*) as total FROM Usuarios WHERE ativo = 1');
-    return { usuarios: linhas, total: total[0].total };
-  } catch (error) {
-    console.error('Erro em listarComPaginacao:', error);
-    throw error;
-  }
-},
-
-    totalReg: async () => {
-        try {
-            const [linhas] = await pool.query('SELECT COUNT(*) as total FROM Usuarios WHERE id > 0') 
-            return linhas[0].total;
-        } catch (error) {
-            console.error(error);
-            return 0;
-        }  
-    },
-
-    // Adicione outros métodos específicos para usuários
-    buscarVendedores: async () => {
-        try {
-            const [linhas] = await pool.query(`
-                SELECT u.* FROM Usuarios u
-                JOIN vendedores v ON u.id = v.UsuarioId
-                WHERE u.id > 0
-            `)
-            return linhas;
-        } catch (error) {
-            console.error(error);
-            return [];
-        }
+  // Buscar usuário por ID
+  findId: async (id) => {
+    try {
+      const query = "SELECT * FROM Usuarios WHERE id = ?";
+      const [rows] = await pool.query(query, [id]);
+      return rows.length > 0 ? rows[0] : null;
+    } catch (error) {
+      console.error("Erro ao buscar usuário por ID:", error);
+      throw error;
     }
+  },
+
+  // Buscar usuário por email
+  buscarPorEmail: async (email) => {
+    try {
+      const query = "SELECT * FROM Usuarios WHERE Email = ?";
+      const [rows] = await pool.query(query, [email]);
+      return rows.length > 0 ? rows[0] : null;
+    } catch (error) {
+      console.error("Erro ao buscar usuário por email:", error);
+      throw error;
+    }
+  },
+
+  // Verificar se email já existe
+  findByEmail: async (email) => {
+    try {
+      const query = "SELECT * FROM Usuarios WHERE Email = ?";
+      const [rows] = await pool.query(query, [email]);
+      return rows.length > 0 ? rows[0] : null;
+    } catch (error) {
+      console.error("Erro ao verificar email:", error);
+      throw error;
+    }
+  },
+
+  // Criar novo usuário
+  create: async (userData) => {
+    try {
+      const { NomeCompleto, Email, Senha, Telefone, DataNascimento, LogradouroId } = userData;
+
+      // Preparar os dados para inserção
+      const data = {
+        NomeCompleto,
+        Email,
+        SenhaHash: Senha, // Já deve estar com hash
+        Telefone: Telefone || null,
+        DataNascimento: DataNascimento ? moment(DataNascimento).format('YYYY-MM-DD') : null,
+        LogradouroId: LogradouroId || null
+      };
+
+      // Construir a query dinamicamente
+      const fields = Object.keys(data).filter(key => data[key] !== null);
+      const values = fields.map(field => data[field]);
+      const placeholders = fields.map(() => '?').join(', ');
+      
+      const query = `INSERT INTO Usuarios (${fields.join(', ')}) VALUES (${placeholders})`;
+      
+      const [result] = await pool.query(query, values);
+      return result.insertId;
+    } catch (error) {
+      console.error("Erro ao criar usuário:", error);
+      throw error;
+    }
+  },
+
+  // Atualizar usuário
+  atualizar: async (id, userData) => {
+    try {
+      const { nome_completo, email, telefone, data_nascimento, logradouro_id } = userData;
+
+      // Preparar os dados para atualização
+      const data = {
+        NomeCompleto: nome_completo,
+        Email: email,
+        Telefone: telefone || null,
+        DataNascimento: data_nascimento ? moment(data_nascimento).format('YYYY-MM-DD') : null,
+        LogradouroId: logradouro_id || null
+      };
+
+      // Construir a query dinamicamente
+      const updates = Object.entries(data)
+        .filter(([_, value]) => value !== undefined)
+        .map(([key, _]) => `${key} = ?`);
+      
+      const values = Object.entries(data)
+        .filter(([_, value]) => value !== undefined)
+        .map(([_, value]) => value);
+      
+      // Adicionar o ID no final dos valores
+      values.push(id);
+      
+      const query = `UPDATE Usuarios SET ${updates.join(', ')} WHERE id = ?`;
+      
+      const [result] = await pool.query(query, values);
+      return result.affectedRows > 0;
+    } catch (error) {
+      console.error("Erro ao atualizar usuário:", error);
+      throw error;
+    }
+  },
+
+  // Excluir usuário
+  excluir: async (id) => {
+    try {
+      const query = "DELETE FROM Usuarios WHERE id = ?";
+      const [result] = await pool.query(query, [id]);
+      return result.affectedRows > 0;
+    } catch (error) {
+      console.error("Erro ao excluir usuário:", error);
+      throw error;
+    }
+  },
+
+  // Listar usuários com paginação
+  listarComPaginacao: async (offset, limite) => {
+    try {
+      // Consulta para obter os usuários com paginação
+      const queryUsuarios = `
+        SELECT * FROM Usuarios
+        ORDER BY NomeCompleto
+        LIMIT ? OFFSET ?
+      `;
+      
+      // Consulta para obter o total de usuários
+      const queryTotal = "SELECT COUNT(*) as total FROM Usuarios";
+      
+      // Executar as consultas
+      const [usuarios] = await pool.query(queryUsuarios, [limite, offset]);
+      const [totalResult] = await pool.query(queryTotal);
+      
+      return {
+        usuarios,
+        total: totalResult[0].total
+      };
+    } catch (error) {
+      console.error("Erro ao listar usuários:", error);
+      throw error;
+    }
+  },
+
+  // Alterar senha do usuário
+  alterarSenha: async (id, novaSenha) => {
+    try {
+      // Hash da nova senha
+      const senhaHash = await bcrypt.hash(novaSenha, 10);
+      
+      const query = "UPDATE Usuarios SET SenhaHash = ? WHERE id = ?";
+      const [result] = await pool.query(query, [senhaHash, id]);
+      
+      return result.affectedRows > 0;
+    } catch (error) {
+      console.error("Erro ao alterar senha:", error);
+      throw error;
+    }
+  }
 };
 
-module.exports = usuarioModel;
+module.exports = UsuarioModel;
