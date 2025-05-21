@@ -81,7 +81,7 @@ const usuariosController = {
         const novoUsuarioId = await UsuarioModel.create({
             NomeCompleto: nome_completo,
             Email: email,
-             senha: await bcrypt.hash(senha, 10), // Note que seu model parece usar 'senha' em vez de 'Senha'
+            Senha: await bcrypt.hash(senha, 10),  // Note que seu model parece usar 'senha' em vez de 'Senha'
         });
 
         // Redireciona para login com mensagem de sucesso

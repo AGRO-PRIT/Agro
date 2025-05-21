@@ -287,7 +287,7 @@ router.post('finalizar-carrinho-cartao', function(req, res) {
 });
 
 
-router.post('/cadastrar', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
+router.post('/login', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
 
 
 // No seu arquivo de rotas (routes.js ou similar)
