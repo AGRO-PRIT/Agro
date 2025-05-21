@@ -4,7 +4,12 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
   // Cadastrar novo usuário
-  cadastrarUsuarioNormal: async (req, res) => {
+  // Atualize o método cadastrarUsuarioNormal
+
+
+
+
+cadastrarUsuarioNormal: async (req, res) => {
     try {
       const { nome_completo, email, senha } = req.body;
       
@@ -22,15 +27,22 @@ module.exports = {
       const senhaHash = await bcrypt.hash(senha, 10);
       
       // Criar o usuário
-      const novoUsuarioId = await UsuarioModel.create({
+      const novoUsuario = await UsuarioModel.create({
         NomeCompleto: nome_completo,
         Email: email,
         Senha: senhaHash
       });
       
-      // Redirecionar para login com mensagem de sucesso
-      req.flash("sucesso", "Cadastro realizado com sucesso! Faça login para continuar.");
-      res.redirect("/login");
+      // AUTOLOGIN: Criar sessão diretamente após cadastro
+      req.session.usuario = {
+        id: novoUsuario.insertId, // ID do novo usuário
+        email: email,
+        nome: nome_completo
+      };
+      
+      // Redirecionar para contaConsumidor
+      res.redirect("/contaConsumidor");
+      
     } catch (e) {
       console.error(e);
       res.render("pages/cadastre-se", {

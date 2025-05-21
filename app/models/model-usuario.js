@@ -5,6 +5,8 @@ const bcrypt = require("bcryptjs");
 const { body, validationResult } = require("express-validator");
 
 
+
+
 const UsuarioModel = {
   // Regras de validação
   regrasValidacao: [
