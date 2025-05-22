@@ -90,7 +90,7 @@ const UsuarioModel = {
   // Atualizar usuário
   atualizar: async (id, userData) => {
     try {
-      const { nome_completo, email, telefone, data_nascimento, logradouro_id } = userData;
+      const { nome_completo, email, telefone, data_nascimento, logradouro_id, cpf } = userData;
 
       // Preparar os dados para atualização
       const data = {
@@ -98,7 +98,8 @@ const UsuarioModel = {
         Email: email,
         Telefone: telefone || null,
         DataNascimento: data_nascimento ? moment(data_nascimento).format('YYYY-MM-DD') : null,
-        LogradouroId: logradouro_id || null
+        LogradouroId: logradouro_id || null,
+        Cpf: cpf ? formatCPF(cpf) : null
       };
 
       // Construir a query dinamicamente
