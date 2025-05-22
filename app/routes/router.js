@@ -652,6 +652,8 @@ router.post("/contaConsumidor", verificarAutenticacao, (req, res) => {
 // Rota de logout
 router.get("/logout", usuariosController.logout);
 
+router.post("/logout", usuariosController.logout);
+
 // REMOVIDO: Código comentado no final do arquivo
 
 module.exports = router;
