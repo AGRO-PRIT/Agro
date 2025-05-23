@@ -631,11 +631,21 @@ router.get("/cadastre-se", guestMiddleware, (req, res) => {
 
 router.post("/cadastre-se", guestMiddleware, usuariosController.cadastrarUsuarioNormal);
 
-router.get("/login", guestMiddleware, (req, res) => {
-  res.render("pages/login", { 
-    erro: null,
-    sucesso: req.flash('sucesso')
-  });
+// router.get("/login", guestMiddleware, (req, res) => {
+//   res.render("pages/login", { 
+//     erro: null,
+//     sucesso: req.flash('sucesso')
+//   });
+// });
+
+// router.post("/login", usuariosController.autenticarUsuario);
+
+
+router.get("/login", (req, res) => {
+    res.render("pages/login", {
+        erro: null, // Inicializa sem erro
+        sucesso: null
+    });
 });
 
 router.post("/login", usuariosController.autenticarUsuario);

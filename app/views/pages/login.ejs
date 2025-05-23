@@ -28,6 +28,11 @@
 
                     <h1>Fazer login</h1>
                     
+                    <% if (erro) { %>
+                    <div class="error-message-login">
+                        <p><%= erro %></p>
+                    </div>
+                    <% } %>
 
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
@@ -62,9 +67,18 @@
                 <a href="/"><img src="imagens/logo.png" alt="logo da agroBox"></a>
             </section>
 
+            
+
             <section class="cantinhoLogo">
                 <form class="cadastro-form" action="/contaConsumidor" method="POST">
                     <h1>Login</h1>
+
+                    <% if (erro) { %>
+                    <div class="error-message-login">
+                        <p><%= erro %></p>
+                    </div>
+                    <% } %>
+                   
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Entre com e-mail ou usuário</h3>
