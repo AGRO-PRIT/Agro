@@ -23,6 +23,14 @@ cadastrarUsuarioNormal: async (req, res) => {
         });
       }
       
+      if (!nome_completo || nome_completo.trim().split(' ').length < 2) {
+        return res.render("pages/cadastre-se", {
+            dados: req.body,
+            erros: [{ msg: "Por favor, insira seu nome completo (nome e sobrenome)." }],
+            sucesso: null
+        });
+    }
+
       // Hash da senha
       const senhaHash = await bcrypt.hash(senha, 10);
       
@@ -33,6 +41,14 @@ cadastrarUsuarioNormal: async (req, res) => {
         Senha: senhaHash
       });
       
+    //   if (senha !== req.body['confirm-senha']) {
+    //     return res.render("pages/cadastre-se", {
+    //         dados: req.body,
+    //         erros: [{ msg: "As senhas não coincidem" }],
+    //         sucesso: null
+    //     });
+    // }
+
       // AUTOLOGIN: Criar sessão diretamente após cadastro
       req.session.usuario = {
         id: novoUsuario.insertId, // ID do novo usuário
@@ -141,7 +157,7 @@ autenticarUsuario: async (req, res) => {
   // Logout
   logout: (req, res) => {
     req.session.destroy(() => {
-      res.redirect("/login");
+      res.redirect("pages/home");
     });
   }
 };
