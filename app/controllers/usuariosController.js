@@ -41,7 +41,9 @@ cadastrarUsuarioNormal: async (req, res) => {
       };
       
       // Redirecionar para contaConsumidor
+      req.session.save(() => {
       res.redirect("/contaConsumidor");
+      });
       
     } catch (e) {
       console.error(e);
@@ -54,46 +56,87 @@ cadastrarUsuarioNormal: async (req, res) => {
   },
   
   // Autenticar usuário (login)
+// autenticarUsuario: async (req, res) => {
+//     try {
+//       const { email, senha } = req.body;
+      
+//       // Buscar usuário pelo email
+//       const usuario = await UsuarioModel.buscarPorEmail(email);
+      
+//       if (!usuario) {
+//         return res.render("pages/login", {
+//           erro: "Email ou senha incorretos",
+//           sucesso: null
+//         });
+//       }
+      
+//       // Verificar se a senha está correta
+//       const senhaCorreta = await bcrypt.compare(senha, usuario.SenhaHash);
+      
+//       if (!senhaCorreta) {
+//         return res.render("pages/login", {
+//           erro: "Email ou senha incorretos",
+//           sucesso: null
+//         });
+//       }
+      
+//       // Criar a sessão do usuário
+//       req.session.usuario = {
+//         id: usuario.id,
+//         email: usuario.Email,
+//         nome: usuario.NomeCompleto
+//       };
+      
+//        res.redirect("/contaConsumidor");
+//     } catch (error) {
+//       console.error(error);
+//       res.render("pages/login", {
+//         erro: "Ocorreu um erro ao fazer login. Tente novamente.",
+//         sucesso: null
+//       });
+//     }
+//   },
+
+
 autenticarUsuario: async (req, res) => {
     try {
-      const { email, senha } = req.body;
-      
-      // Buscar usuário pelo email
-      const usuario = await UsuarioModel.buscarPorEmail(email);
-      
-      if (!usuario) {
-        return res.render("pages/login", {
-          erro: "Email ou senha incorretos",
-          sucesso: null
-        });
-      }
-      
-      // Verificar se a senha está correta
-      const senhaCorreta = await bcrypt.compare(senha, usuario.SenhaHash);
-      
-      if (!senhaCorreta) {
-        return res.render("pages/login", {
-          erro: "Email ou senha incorretos",
-          sucesso: null
-        });
-      }
-      
-      // Criar a sessão do usuário
-      req.session.usuario = {
-        id: usuario.id,
-        email: usuario.Email,
-        nome: usuario.NomeCompleto
-      };
-      
-       res.redirect("/contaConsumidor");
+        const { email, senha } = req.body;
+        
+        const usuario = await UsuarioModel.buscarPorEmail(email);
+        
+        if (!usuario) {
+            return res.render("pages/login", {
+                erro: "Email ou senha incorretos",
+                sucesso: null
+            });
+        }
+        
+        const senhaCorreta = await bcrypt.compare(senha, usuario.SenhaHash);
+        
+        if (!senhaCorreta) {
+            return res.render("pages/login", {
+                erro: "Email ou senha incorretos",
+                sucesso: null
+            });
+        }
+
+        // Se chegou aqui, login foi bem-sucedido
+        req.session.usuario = {
+            id: usuario.id,
+            email: usuario.Email,
+            nome: usuario.NomeCompleto
+        };
+
+        res.redirect("/contaConsumidor");
+
     } catch (error) {
-      console.error(error);
-      res.render("pages/login", {
-        erro: "Ocorreu um erro ao fazer login. Tente novamente.",
-        sucesso: null
-      });
+        console.error("Erro no login:", error);
+        res.render("pages/login", {
+            erro: "Erro interno. Tente novamente mais tarde.",
+            sucesso: null
+        });
     }
-  },
+},
 
   // Logout
   logout: (req, res) => {
