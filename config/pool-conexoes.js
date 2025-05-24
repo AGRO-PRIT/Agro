@@ -1,36 +1,26 @@
-// Esse codigo é uma base e previa do que vai ter esse ano no banco :o omg
-// Além disso é necessario colocar alguns comandos no terminal que são: 
-// - tenho que pesquisar ainda rsrsrs
-// -
-// -
-// -
-// -
-// -
+const mysql = require('mysql2');
+require('dotenv').config();
 
-const mysql = require('mysql2')
 const pool = mysql.createPool({
-    host: process.env.BD_HOST,
-    user: process.env.BD_USER,
-    password: process.env.BD_PASSWORD,
-    database: process.env.BD_DATABASE,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     port: process.env.BD_PORT,
     waitForConnections: true,
-    connectionLimit: 10,
+    connectionLimit: 5,
     queueLimit: 0
-})
+});
 
-
-pool.getConnection((err, conn) => { 
-    // Se ocorrer um erro ao obter a conexão, ele será tratado e registrado
-    if(err){
-        console.log(err)
-        console.log("Erro :(")
+// Teste de conexão (opcional)
+pool.getConnection((err, conn) => {
+    if(err) {
+        console.error("Erro ao conectar:", err);
+    } else {
+        console.log("Conectado ao SGBD! ;)");
+        conn.release(); // Libera a conexão de teste
     }
-    else{
-        console.log("Conectado ao SGBD! ;)")
-    }
-})
+});
 
-module.exports = pool.promise()
-// conexão obtida é exportada como uma promessa
-// Agora pode-se usar a promessa para executar consultas SQL e receber os resultados como promessas assíncronas
+// Exporte o pool com Promise API
+module.exports = pool.promise();

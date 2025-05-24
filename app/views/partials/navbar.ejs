@@ -27,12 +27,33 @@
 
          <!-- Botão Login e Cadastro/Perfil -->
 
-         <section class="perfil">
+         <!-- <section class="perfil">
             <a class="links-nav" href="/contaEscolha">
             <img src="imagens/icon_conta.png" alt="Icone de usuario">
             <p class="text-perfil"> Minha Conta </p>
             </a>
-        </section>
+
+            <form action="/logout" method="POST" class="form-logout">
+                <button type="submit" class="btn-logout">Sair</button>
+              </form>
+        </section> -->
+
+         <section class="perfil">
+    <a class="links-nav" href="/contaEscolha">
+        <img src="imagens/icon_conta.png" alt="Icone de usuario">
+        <p class="text-perfil">  <%= (usuario && usuario.id) ? 'Minha Conta' : 'Entrar' %>  </p>
+    </a>
+
+    <% if (usuario && usuario.id) { %>
+        <form action="/logout" method="POST" class="form-logout">
+            <button type="submit" class="btn-logout">Sair</button>
+        </form>
+    <% } %>
+</section>
+
+
+        
+
 
         <!-- Botão Carrinho -->
 
@@ -71,10 +92,22 @@
                 <article class="mobileInterior">
                     <p class="TextMobile">Bem-vindo à AgroBox</p>
                     <span class="Mobileclose" onclick="menuShow()">×</span>
-                    <article class="btnsMobiles">
+                    <!-- <article class="btnsMobiles">
                         <a href="/login"><button class="BTNmEntrar">Entrar</button></a>
                         <a href="/cadastre-se"><button class="BTNmCriarConta">Criar conta</button></a>
-                    </article>
+                    </article> -->
+                    <article class="btnsMobiles">
+                <% if (usuario && usuario.id) { %>
+                    <!-- Usuário LOGADO - Mostra botão SAIR -->
+                    <form action="/logout" method="POST" style="display: inline;">
+                        <button type="submit" class="BTNmEntrar">Sair</button>
+                    </form>
+                <% } else { %>
+                    <!-- Usuário NÃO logado - Mostra ENTRAR e CRIAR CONTA -->
+                    <a href="/login"><button class="BTNmEntrar">Entrar</button></a>
+                    <a href="/cadastre-se"><button class="BTNmCriarConta">Criar conta</button></a>
+                <% } %>
+            </article>
                 </article>
             </article>   
 

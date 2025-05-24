@@ -26,4 +26,4 @@
     showSlides();
 
 
-/*Carrosel JS*/
+

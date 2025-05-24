@@ -1,24 +1,392 @@
+// var express = require('express');
+// var router = express.Router();
+// const path = require('path');
+// const guestMiddleware = require('../middlewares/guestMiddleware');
+// const autenticar = require('../models/autenticator-middleware');
+// const usuariosController = require("../controllers/usuariosController")
+
+// // Rota para servir o arquivo JavaScript
+// router.get('/js/menuMobile.js', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../app/public/js/menuMobile.js'));
+// });
+
+
+// /* Pagina TESTES*/
+
+// router.get('/testes', function(req, res) {
+//     res.render('pages/testes');
+// });
+
+// /* Pagina Nav*/
+
+// router.get('/', function(req, res) {
+//     res.render('pages/home');
+// });
+
+// router.get('/carrinho', function(req, res) {
+//     res.render('pages/carrinho');
+// });
+
+// /* subnav */
+
+// router.get('/home', function(req, res) {
+//     res.render('pages/home');
+// });
+
+// router.get('/cadastre-se', function(req, res) {
+//     res.render('pages/cadastre-se');
+// });
+
+// router.get('/cadastre-seV', function(req, res) {
+//     res.render('pages/cadastre-seV');
+// });
+
+// router.get('/login', function(req, res) {
+//     res.render('pages/login');
+// });
+
+// router.post('/login', function(req, res) {
+//     res.redirect('/login');
+// });
+
+// router.get('/loginV', function(req, res) {
+//     res.render('pages/loginV');
+// });
+
+// router.post('/loginV', function(req, res) {
+//     res.redirect('/loginV');
+// });
+
+
+// /* menudropDown */
+
+
+// router.get('/produtos', function(req, res) {
+//     res.render('pages/produtos');
+// });
+
+// router.get('/box', function(req, res) {
+//     res.render('pages/box');
+// });
+
+// router.get('/premium', function(req, res) {
+//     res.render('pages/premium');
+    
+// });
+
+// router.get('/eventos', function(req, res) {
+//     res.render('pages/eventos');
+// });
+
+// router.get('/evento1', function(req, res) {
+//     res.render('pages/evento1');
+// });
+
+// router.get('/evento2', function(req, res) {
+//     res.render('pages/evento2');
+// });
+
+
+// /* BOX */
+
+// router.get('/faca-box', function(req, res) {
+//     res.render('pages/faca-box');
+// });
+
+// router.get('/faca-box2', function(req, res) {
+//     res.render('pages/faca-box2');
+// });
+
+// router.get('/faca-box3', function(req, res) {
+//     res.render('pages/faca-box3');
+// });
+
+// router.get('/faca-box4', function(req, res) {
+//     res.render('pages/faca-box4');
+// });
+
+// /* menudropDown sub */
+
+// router.get('/legumes', function(req, res) {
+//     res.render('pages/legumes');
+// });
+
+// router.get('/verduras', function(req, res) {
+//     res.render('pages/verduras');
+// });
+
+// router.get('/frutas', function(req, res) {
+//     res.render('pages/frutas');
+// });
+
+// router.get('/cereais', function(req, res) {
+//     res.render('pages/cereais');
+// });
+
+// router.get('/laticionios', function(req, res) {
+//     res.render('pages/laticionios');
+// });
+
+// router.get('/suplemetos', function(req, res) {
+//     res.render('pages/suplemetos');
+// });
+
+// router.get('/graos', function(req, res) {
+//     res.render('pages/graos');
+// });
+
+// router.get('/chas', function(req, res) {
+//     res.render('pages/chas');
+// });
+
+// router.get('/proteinas', function(req, res) {
+//     res.render('pages/proteinas');
+// });
+
+
+// /* PERFIL*/  /* VENDEDOR!*/
+
+// router.get('/contaVendedor', function(req, res) {
+//     res.render('pages/Conta-vendedor/contaVendedor');
+// });
+
+// router.post('/contaVendedor', function(req, res) {
+//     res.redirect('/contaVendedor');
+// });
+
+
+// router.get('/avaliacoes', function(req, res) {
+//     res.render('pages/Conta-vendedor/avaliacoes'); 
+// });
+
+
+// router.get('/configuracoesV', function(req, res) {
+//     res.render('pages/Conta-vendedor/configuracoesV'); 
+// });
+
+
+// router.get('/produtosContaV', function(req, res) {
+//     res.render('pages/Conta-vendedor/produtosContaV'); 
+// });
+
+// router.get('/vendas', function(req, res) {
+//     res.render('pages/Conta-vendedor/vendas'); 
+// });
+
+// // vendas!
+
+// router.get('/concluido', function(req, res) {
+//     res.render('pages/Conta-vendedor/Status-vendas/concluido'); // Verifique o caminho correto
+// });
+
+// router.get('/emtransito', function(req, res) {
+//     res.render('pages/Conta-vendedor/Status-vendas/emtransito'); // Verifique o caminho correto
+// });
+// router.get('/enviarV', function(req, res) {
+//     res.render('pages/Conta-vendedor/Status-vendas/enviar'); // Verifique o caminho correto
+// });
+
+
+// /* CONSUMIDOR!*/
+
+// router.get('/contaEscolha', function(req, res) {
+//     res.render('pages/contaEscolha');
+// });
+
+// router.get('/detalhesVendedor', function(req, res) {
+//     res.render('pages/detalhesVendedor');
+// });
+
+
+// router.get('/contaConsumidor', function(req, res) {
+//     res.render('pages/Conta-consumidor/contaConsumidor');
+// });
+
+// router.post('/contaConsumidor', function(req, res) {
+//     res.redirect('/contaConsumidor');
+// });
+
+// router.get('/pedidos', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); 
+// });
+
+// router.get('/cartoes', function(req, res) {
+//     res.render('pages/Conta-consumidor/cartoes'); 
+// });
+
+// router.get('/enderecos', function(req, res) {
+//     res.render('pages/Conta-consumidor/enderecos'); 
+// });
+
+// router.get('/configuracoes', function(req, res) {
+//     res.render('pages/Conta-consumidor/configuracoes');
+// });
+
+// // pedidos
+
+// router.get('/aPagar', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/aPagar'); // Verifique o caminho correto
+// });
+
+// router.get('/cancelado', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/cancelado'); // Verifique o caminho correto
+// });
+// router.get('/emAndamento', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/emAndamento'); // Verifique o caminho correto
+// });
+// router.get('/tudo', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/tudo'); // Verifique o caminho correto
+// });
+
+// router.get('/finalizado', function(req, res) {
+//     res.render('pages/Conta-consumidor/Status-pedidos/finalizado'); // Verifique o caminho correto
+// });
+
+
+
+// /* Produto */
+
+// router.get('/produto', function(req, res) {
+//     res.render('pages/produto');
+// });
+
+// /* Evento */
+
+// router.get('/evento', function(req, res) {
+//     res.render('pages/evento');
+// });
+
+// /* Sobre Nós */
+
+// router.get('/sobre', function(req, res) {
+//     res.render('pages/sobre');
+// });
+
+// /* Vendedor Perfil para ver*/
+
+// router.get('/vendedor', function(req, res) {
+//     res.render('pages/vendedor');
+// });
+
+// // carrinho
+
+// router.get('/finalizar-carrinho-endereco', function(req, res) {
+//     res.render('pages/finalizar-carrinho-endereco');
+// });
+
+// router.get('/finalizar-carrinho-cartao', function(req, res) {
+//     res.render('pages/finalizar-carrinho-cartao');
+// });
+
+// router.post('/finalizar-carrinho-endereco', function(req, res) {
+//     res.redirect('/finalizar-carrinho-endereco');
+// });
+
+// router.post('finalizar-carrinho-cartao', function(req, res) {
+//     res.redirect('finalizar-carrinho-cartao');
+// });
+
+
+
+
+// // Rotas de cadastro
+// router.get("/cadastre-se", (req, res) => {
+//   // Adicionando a variável sucesso para mensagens de sucesso
+//   res.render("cadastre-se", { 
+//     erros: null, 
+//     dados: {},
+//     sucesso: req.flash('sucesso') // Adicione isso se estiver usando flash messages
+//   })
+// })
+// router.post("/cadastre-se", usuariosController.cadastrarUsuarioNormal)
+
+// // Rotas de login
+// router.get("/login", (req, res) => {
+//   // Adicionando a variável sucesso para mensagens de sucesso
+//   res.render("login", { 
+//     erro: null,
+//     sucesso: req.flash('sucesso') // Adicione isso se estiver usando flash messages
+//   })
+// })
+// router.post("/login", usuariosController.autenticarUsuario)
+
+// // Rota de perfil (protegida)
+// router.get("/contaConsumidor", verificarAutenticacao, (req, res) => {
+//   res.render("contaConsumidor", { usuario: req.session.usuario })
+// })
+
+// // Middleware para verificar se o usuário está autenticado
+// function verificarAutenticacao(req, res, next) {
+//   if (req.session && req.session.usuario) {
+//     return next()
+//   }
+//   res.redirect("/login")
+// }
+
+// // Rota de logout
+// router.get("/logout", usuariosController.logout)
+
+// module.exports = router
+
+
+// // router.post('/login', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
+
+
+// // // No seu arquivo de rotas (routes.js ou similar)
+// // router.get('/cadastre-se', guestMiddleware, usuariosController.exibirFormCadastro);
+// // router.post('/cadastre-se', guestMiddleware, usuariosController.cadastrarUsuarioNormal);
+
+// // Rotas protegidas (requer login)
+// // router.get('/perfil', autenticar, usuariosController.mostrarPerfil);
+
+
+
+// // /* Rotas Públicas */
+// // router.get('/', (req, res) => res.render('pages/home'));
+// // router.get('/home', (req, res) => res.render('pages/home'));
+// // router.get('/login', (req, res) => res.render('pages/login'));
+// // router.get('/cadastre-se', (req, res) => res.render('pages/cadastre-se'));
+
+// // /* Rotas de Autenticação */
+// // router.post('/registrar', usuarioController.cadastrarUsuario); // Corrigido para usar cadastrarUsuario
+// // router.post('/login', usuarioController.login);
+
+// // /* Rotas Protegidas */
+// // router.get('/perfil', autenticar, usuarioController.obterPerfil);
+// // router.put('/atualizar', autenticar, usuarioController.atualizarUsuario);
+// // router.delete('/deletar', autenticar, usuarioController.excluirUsuario);
+// // // Rota de admin
+// // router.get('/listar', autenticar, usuarioController.listar);
+
+// module.exports = router;
+
+
 var express = require('express');
 var router = express.Router();
 const path = require('path');
-// const { registerUser } = require('../controllers/controller');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const autenticar = require('../models/autenticator-middleware');
+const usuariosController = require("../controllers/usuariosController")
 
-// const todoController = require('../controllers/todoController');
+// Middleware para verificar se o usuário está autenticado
+function verificarAutenticacao(req, res, next) {
+  if (req.session && req.session.usuario) {
+    return next();
+  }
+  res.redirect("/login");
+}
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
     res.sendFile(path.join(__dirname, '../app/public/js/menuMobile.js'));
 });
 
-
 /* Pagina TESTES*/
-
 router.get('/testes', function(req, res) {
     res.render('pages/testes');
 });
 
 /* Pagina Nav*/
-
 router.get('/', function(req, res) {
     res.render('pages/home');
 });
@@ -28,26 +396,17 @@ router.get('/carrinho', function(req, res) {
 });
 
 /* subnav */
-
 router.get('/home', function(req, res) {
     res.render('pages/home');
 });
 
-router.get('/cadastre-se', function(req, res) {
-    res.render('pages/cadastre-se');
-});
+// REMOVIDO: Rota duplicada para /cadastre-se
 
 router.get('/cadastre-seV', function(req, res) {
     res.render('pages/cadastre-seV');
 });
 
-router.get('/login', function(req, res) {
-    res.render('pages/login');
-});
-
-router.post('/login', function(req, res) {
-    res.redirect('/login');
-});
+// REMOVIDO: Rota duplicada para /login
 
 router.get('/loginV', function(req, res) {
     res.render('pages/loginV');
@@ -57,10 +416,7 @@ router.post('/loginV', function(req, res) {
     res.redirect('/loginV');
 });
 
-
 /* menudropDown */
-
-
 router.get('/produtos', function(req, res) {
     res.render('pages/produtos');
 });
@@ -71,7 +427,6 @@ router.get('/box', function(req, res) {
 
 router.get('/premium', function(req, res) {
     res.render('pages/premium');
-    
 });
 
 router.get('/eventos', function(req, res) {
@@ -86,9 +441,7 @@ router.get('/evento2', function(req, res) {
     res.render('pages/evento2');
 });
 
-
 /* BOX */
-
 router.get('/faca-box', function(req, res) {
     res.render('pages/faca-box');
 });
@@ -106,7 +459,6 @@ router.get('/faca-box4', function(req, res) {
 });
 
 /* menudropDown sub */
-
 router.get('/legumes', function(req, res) {
     res.render('pages/legumes');
 });
@@ -143,9 +495,7 @@ router.get('/proteinas', function(req, res) {
     res.render('pages/proteinas');
 });
 
-
 /* PERFIL*/  /* VENDEDOR!*/
-
 router.get('/contaVendedor', function(req, res) {
     res.render('pages/Conta-vendedor/contaVendedor');
 });
@@ -154,16 +504,13 @@ router.post('/contaVendedor', function(req, res) {
     res.redirect('/contaVendedor');
 });
 
-
 router.get('/avaliacoes', function(req, res) {
     res.render('pages/Conta-vendedor/avaliacoes'); 
 });
 
-
 router.get('/configuracoesV', function(req, res) {
     res.render('pages/Conta-vendedor/configuracoesV'); 
 });
-
 
 router.get('/produtosContaV', function(req, res) {
     res.render('pages/Conta-vendedor/produtosContaV'); 
@@ -174,21 +521,19 @@ router.get('/vendas', function(req, res) {
 });
 
 // vendas!
-
 router.get('/concluido', function(req, res) {
-    res.render('pages/Conta-vendedor/Status-vendas/concluido'); // Verifique o caminho correto
+    res.render('pages/Conta-vendedor/Status-vendas/concluido');
 });
 
 router.get('/emtransito', function(req, res) {
-    res.render('pages/Conta-vendedor/Status-vendas/emtransito'); // Verifique o caminho correto
-});
-router.get('/enviarV', function(req, res) {
-    res.render('pages/Conta-vendedor/Status-vendas/enviar'); // Verifique o caminho correto
+    res.render('pages/Conta-vendedor/Status-vendas/emtransito');
 });
 
+router.get('/enviarV', function(req, res) {
+    res.render('pages/Conta-vendedor/Status-vendas/enviar');
+});
 
 /* CONSUMIDOR!*/
-
 router.get('/contaEscolha', function(req, res) {
     res.render('pages/contaEscolha');
 });
@@ -197,14 +542,7 @@ router.get('/detalhesVendedor', function(req, res) {
     res.render('pages/detalhesVendedor');
 });
 
-
-router.get('/contaConsumidor', function(req, res) {
-    res.render('pages/Conta-consumidor/contaConsumidor');
-});
-
-router.post('/contaConsumidor', function(req, res) {
-    res.redirect('/contaConsumidor');
-});
+// REMOVIDO: Rota duplicada para /contaConsumidor
 
 router.get('/pedidos', function(req, res) {
     res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); 
@@ -223,53 +561,47 @@ router.get('/configuracoes', function(req, res) {
 });
 
 // pedidos
-
 router.get('/aPagar', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/aPagar'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/aPagar');
 });
 
 router.get('/cancelado', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/cancelado'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/cancelado');
 });
+
 router.get('/emAndamento', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/emAndamento'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/emAndamento');
 });
+
 router.get('/tudo', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/tudo'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/tudo');
 });
 
 router.get('/finalizado', function(req, res) {
-    res.render('pages/Conta-consumidor/Status-pedidos/finalizado'); // Verifique o caminho correto
+    res.render('pages/Conta-consumidor/Status-pedidos/finalizado');
 });
 
-
-
 /* Produto */
-
 router.get('/produto', function(req, res) {
     res.render('pages/produto');
 });
 
 /* Evento */
-
 router.get('/evento', function(req, res) {
     res.render('pages/evento');
 });
 
 /* Sobre Nós */
-
 router.get('/sobre', function(req, res) {
     res.render('pages/sobre');
 });
 
 /* Vendedor Perfil para ver*/
-
 router.get('/vendedor', function(req, res) {
     res.render('pages/vendedor');
 });
 
 // carrinho
-
 router.get('/finalizar-carrinho-endereco', function(req, res) {
     res.render('pages/finalizar-carrinho-endereco');
 });
@@ -282,120 +614,54 @@ router.post('/finalizar-carrinho-endereco', function(req, res) {
     res.redirect('/finalizar-carrinho-endereco');
 });
 
-router.post('finalizar-carrinho-cartao', function(req, res) {
-    res.redirect('finalizar-carrinho-cartao');
+// CORRIGIDO: Adicionada a barra no início do caminho
+router.post('/finalizar-carrinho-cartao', function(req, res) {
+    res.redirect('/finalizar-carrinho-cartao');
+});
+
+// Rotas de autenticação (mantidas apenas uma vez)
+router.get("/cadastre-se", guestMiddleware, (req, res) => {
+  res.render("pages/cadastre-se", { 
+    erros: null, 
+    dados: {},
+    sucesso: req.flash('sucesso')
+  });
 });
 
 
+router.post("/cadastre-se", guestMiddleware, usuariosController.cadastrarUsuarioNormal);
 
-// Routes
-// router.get('/', todoController.getAllTodos);
-// router.get('/:id', todoController.getTodoById);
-// router.post('/', todoController.createTodo);
-// router.put('/:id', todoController.updateTodo);
-// router.delete('/:id', todoController.deleteTodo);
+// router.get("/login", guestMiddleware, (req, res) => {
+//   res.render("pages/login", { 
+//     erro: null,
+//     sucesso: req.flash('sucesso')
+//   });
+// });
+
+// router.post("/login", usuariosController.autenticarUsuario);
+
+
+router.get("/login", (req, res) => {
+    res.render("pages/login", {
+        erro: null, // Inicializa sem erro
+        sucesso: null
+    });
+});
+
+router.post("/login", usuariosController.autenticarUsuario);
+
+// Rota de perfil (protegida)
+router.get("/contaConsumidor", verificarAutenticacao, (req, res) => {
+  res.render("pages/Conta-consumidor/contaConsumidor", { usuario: req.session.usuario });
+});
+
+router.post("/contaConsumidor", verificarAutenticacao, (req, res) => {
+  res.redirect("/contaConsumidor");
+});
+
+// Rota de logout
+router.get("/logout", usuariosController.logout);
+router.post("/logout", usuariosController.logout);
+
 
 module.exports = router;
-
-// Talvez podemos utilizar alguma coisa daqui: var express = require('express');
-// var router = express.Router();
-
-// // Listar produtos
-// router.get('/', function (req, res, next) {
-//     pool.getConnection(function (err, connection) {
-//         connection.query("SELECT * FROM produtos", function (err, rows) {
-//             if (!err && rows.length > 0) {
-//                 res.json(rows);
-//             } else {
-//                 res.json([]);
-//             }
-//         });
-//     });
-// });
-
-// // Buscar produto pelo id
-// router.get('/:id', function (req, res, next) {
-//     pool.getConnection(function (err, connection) {
-//         var id = req.params.id;
-//         connection.query("SELECT * FROM produtos WHERE id='"
-//             + id + "' LIMIT 1", function (err, rows) {
-//                 if (!err && rows.length > 0) {
-//                     res.json(rows);
-//                 } else {
-//                     res.json([]);
-//                 }
-//             });
-//     });
-// });
-
-// // Cadastrar produtos
-// router.post('/', function (req, res, next) {
-//     pool.getConnection(function (err, connection) {
-//         var dados = req.body;
-//         var nome = dados.nome;
-//         var quant = dados.quant;
-
-//         connection.query(
-//             "INSERT INTO produtos (nome, quant) VALUES ('"
-//             + nome + "','"
-//             + quant +
-//             "')", function (err, rows) {
-
-//                 if (rows.affectedRows) {
-//                     connection.query("SELECT * FROM produtos WHERE id='" + rows.insertId
-//                         + "' LIMIT 1", function (err, rows) {
-//                             if (!err && rows.length > 0) {
-//                                 res.json(rows);
-//                             } else {
-//                                 res.json([]);
-//                             }
-//                         });
-//                 }
-//             });
-//     });
-// });
-
-// // Excluir produto
-// router.delete('/:id', function (req, res, next) {
-//     pool.getConnection(function (err, connection) {
-//         var id = req.params.id;
-//         connection.query("DELETE FROM produtos WHERE id='" + id +
-//             "'", function (err, rows) {
-//                 if (!err) {
-//                     res.json({
-//                         "Excluído": true
-//                     });
-//                 } else {
-//                     res.json([]);
-//                 }
-//             });
-//     });
-// });
-
-// // Modificar produto
-// router.put('/:id', function (req, res, next) {
-//     pool.getConnection(function (err, connection) {
-//         var dados = req.body;
-//         var id = req.params.id;
-//         var nome = dados.nome;
-//         var quant = dados.quant;
-
-//         connection.query(
-//             "UPDATE produtos SET nome='" + nome +
-//             "', quant='" + quant +
-//             "'WHERE id='" + id +
-//             "'", function (err, rows) {
-
-//                 if (rows.affectedRows) {
-//                     connection.query("SELECT * FROM produtos WHERE id='" + id
-//                         + "' LIMIT 1", function (err, rows) {
-//                             if (!err && rows.length > 0) {
-//                                 res.json(rows[0]);
-//                             } else {
-//                                 res.json([]);
-//                             }
-//                         });
-//                 }
-//             });
-//     });
-// });
