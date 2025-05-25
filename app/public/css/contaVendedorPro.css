@@ -85,13 +85,16 @@
 /* formulário adicionar produto */
 
 .edit-button2 {
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-   border: none;
-   background-color: #4CAF50;
+   background-color: var(--corprincipal);
    color: white;
-   margin-top: 20px;
+   font-size: 1.1em;
+   font-weight: 500;
+   height: 40px;
+   width: 250px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   white-space: nowrap;
 }
 
 .modal-Produto {
@@ -243,19 +246,6 @@
    white-space: nowrap;
 }
 
-.edit-button2 {
-   background-color: var(--corprincipal);
-   color: white;
-   font-size: 1.1em;
-   font-weight: 500;
-   height: 40px;
-   width: 250px;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   white-space: nowrap;
-}
-
 .carousel-containerFiltro {
    position: relative;
    overflow: hidden; 
@@ -365,9 +355,7 @@
    background-color: #57a337;
 }
 
-.menu a.ativo {
-   color: #26a726;
-}
+
 
 .menu a.ativo + img {
    filter: brightness(0.5) sepia(1) hue-rotate(90deg); 

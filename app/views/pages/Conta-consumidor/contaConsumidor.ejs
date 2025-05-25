@@ -7,7 +7,7 @@
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/conta.css">
-
+       <link rel="stylesheet" href="css/produtos.css">
     
 </head>
 
@@ -22,55 +22,121 @@
 
     <%- include('../../partials/conta'); %>
     
-    <section class="page-container">
-        <section name="minhaConta" class="minhaConta">
+
+        <section class="page-container">
+           <section name="minhaConta" class="minhaConta">
+             <article class="section-flex">
             <h1>Minha Conta</h1>
-            <form name="form-dados">
-                <article class="box-container">
-                    <article class="box-dados-pessoais">
-                        <h3>Dados Pessoais</h3>
-                        <article class="input-wrapper">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" name="nome" placeholder="Digite seu nome completo">
-                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                            <span class="error-message" name="nome-error"></span>
-                        </article>
-                        <article class="input-wrapper">
-                            <label for="cpf">CPF</label>
-                            <input type="text" name="cpf" placeholder="Digite seu CPF">
-                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                            <span class="error-message" name="cpf-error"></span>
-                        </article>
-                        <article class="input-wrapper">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" name="telefone" placeholder="Digite seu telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}">
-                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                            <span class="error-message" name="telefone-error"></span>
-                        </article>
+
+            <button id="adicionarProduto" class="edit-button2">EDITAR PERFIL</button>
+            <section id="formularioProduto" class="modal-Produto" style="display: none;">
+                <section class="modal-content-Produto">
+                    
+                    <span class="close">&times;</span>
+                    <form id="novoProdutoForm" class="novoProdutoForm">
+                    <article class="produtoFlex">
+                        <label for="nomeProduto">Nome do Produto</label> <br>
+                        <input type="text" id="nomeProduto" placeholder="Digite aqui..."><br>
+                   
+                        <label for="precoProduto">Preço</label><br>
+                        <input type="text" id="precoProduto" placeholder="Digite aqui..."><br>
+        
+                        <label for="quantityProduto">Quantidade disponível</label>
+                        <input type="number" id="quantityProduto" value="50"><br>
+        
+                        <label for="descriptionboxProduto">Insira uma descrição do seu produto</label><br>
+                        <textarea id="descriptionboxProduto" placeholder="Digite aqui..."></textarea>
                     </article>
                     
-                    <article class="box-dados-acesso">
-                        <h3>Dados de Acesso</h3>
-                        <article class="input-wrapper">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" placeholder="Digite seu email">
-                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                            <span class="error-message" name="email-error"></span>
+                    <article class="produtoFlex2">
+                        <label for="imageProduto">Imagem do Produto</label>
+                        <article class="image-preview">
+                            <img src="imagens/imagemNaoLoad.png" id="imageProduto" alt="Imagem do Produto">
                         </article>
-                        <article class="input-wrapper">
-                            <label for="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Digite sua senha">
-                            <img src="imagens/icon_lapis.png" class="edit-icon" alt="Editar">
-                            <span class="error-message" name="senha-error"></span>
-                        </article>
+                        <button type="submit" class="publicar">Publicar</button>
+                        <button type="button" class="rascunho">Salvar Rascunho</button>
                     </article>
-                </article>
-                <button class="botao-enviar" type="submit">Salvar</button>
-            </form>
-        </section>
+                    </form>
         
-        </main>
+                </section>
+            </section>  
+            </article>
 
+             <main class="geral-perfil">
+        <h3 class="DetailsVendedorMobile">AgroBox / Vendedor</h3>
+       
+        <section class="details-perfil">
+          
+            <article class="tudo-perfil">
+                <article class="imagem-perfil">
+                    <img src="imagens/kawan.png">
+                </article>
+                <article class="details">
+                    <h1>Kawan Barreto</h1>
+                    <p class="p-title">Perfil AgroBox desde: 18 meses atrás</p>
+                    <p class="p-avaliacao"><strong>★★★★★</strong><span> 4,9 </span>Avaliação geral do Vendedor (14 mil avaliações)</p>
+                </article>
+            </article>
+        </section>
+     
+        <section class="sobre-perfil">
+            <h1>Sobre Kawan</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <br>
+                accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes,<br>
+                nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc<br>
+                accuan eget.</p>
+        </section>
+        <h1 class="tituloProduto">Todos os seus Produtos</h1>
+        <article class="todos-produtos-p">
+            <article class="itens-produto">
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/beterraba.png" alt="Produto 1 Imagem de uma Beterraba">
+                    <p class="nome-produto">Beterraba Vermelha (330g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                    <button class="botao-adicionar">ADICIONAR</button>
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/maça.png" alt="Produto 2 Imagem de uma Maçã Fuji">
+                    <p class="nome-produto">Maçã Fuji (300g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                    <button class="botao-adicionar">ADICIONAR</button>
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/laranja.png" alt="Produto 3 Imagem de uma Laranja">
+                    <p class="nome-produto">Laranja Lima (160g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                    <button class="botao-adicionar">ADICIONAR</button>
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/abacaxi.png" alt="Produto 4 Imagem de um Abacaxi">
+                    <p class="nome-produto">Abacaxi Pérola (200g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                    <button class="botao-adicionar">ADICIONAR</button>
+                    </a>
+                </article>
+            </article>
+        
+           
+        </article>
+
+    </main>
+    
+            </section>
+        </section>
+
+
+    </main>
         
     <!-- Rodapé -->
 
@@ -83,6 +149,7 @@
 
         <!-- Script -->
 
+<script src="js/formularioProduto.js"> </script>
 <script src="js/perfil.js" defer></script>
 <script src="js/validacaoConta.js" defer></script>
 <script src="js/darkmode.js" defer> </script>

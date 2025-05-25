@@ -15,7 +15,174 @@
 
             /* CONTA CONSUMIDOR */
 
+/* PERFIL */
 
+
+
+.details-perfil{
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.imagem-perfil{
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.35);
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-perfil img{
+    padding: 10px;
+    width: 230px;
+    height: 230px;
+    display: block;
+    object-fit: contain;
+}
+
+.tudo-perfil{
+    display: flex;
+}
+
+.details{
+    margin-left: 60px;
+}
+
+.details h1{
+    color: var(--marrom);
+    font-size: 2.5em;
+    font: bold;
+}
+
+.details .p-title{
+    color: var(--marrom);
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+.details .p-avaliacao{
+    color: var(--marrom);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.details strong{
+    color: #f5a83c;
+    font-size: 1.8em;
+    font-weight: 450;
+}
+
+.details span{
+    margin-left: 4px;
+    color: #f5a83c;
+    font-weight: 500;
+    font-size: 0.92em;
+}
+
+.btn-chat{
+    margin-top: 20px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    padding: 2px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #5aa504;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-chat:hover {
+    opacity: 0.8;
+}
+
+
+.sobre-perfil h1{
+    color: var(--marrom);
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre-perfil p{
+    color: var(--marrom);
+    font-size: 1.4em;
+    font-weight: 450;
+    line-height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tituloProduto{
+    margin-left: 170px;
+    margin-top: 90px;
+    margin-bottom: 55px;
+    font-size: 35px;
+    color: var(--marrom);
+    text-align: left;
+}
+
+.todos-produtos-p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.DetailsVendedor {
+    color: var(--marrom);
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 3%;
+}
+
+.geral-perfil .DetailsVendedorMobile{
+    display: none;
+}
+
+
+
+.edit-button2 {
+   background-color: var(--corprincipal);
+   color: white;
+   font-size: 1.1em;
+   font-weight: 500;
+   height: 40px;
+   width: 250px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   white-space: nowrap;
+}
+
+
+.section-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/*  */
 
 .modal-content-endereco .close:hover,
 .modal-content-endereco .close:focus {
@@ -59,33 +226,41 @@
     width: 250px;
     padding: 20px;
 }   
-
 .profile {
     display: flex;
-    text-align: center;
+    justify-content: center;
     margin-bottom: 40px;
+    text-align: left;
+}
+
+.profile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px; 
 }
 
 .profile img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
-.profile h3 {
-    margin-top: 15px;
-    margin-left: 5px;
+.menuOperador {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     font-size: 18px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.usuarioOne {
     color: #333;
 }
 
-.profile h3 a{
-    color: #333;
-}
-
-.profile strong {
-    margin-left: 10px;
+.usuarioTwo {
     font-weight: 600;
     opacity: 0.9;
     font-size: 14px;
@@ -121,11 +296,15 @@
 }
 
 .menu li a:hover {
-    color: #71b21e
+    color: #71b21e;
 }
 
-.menu a.hover {
-    color: var(--corprincipal);
+
+#link1, #link2, #link3, #link4, #link5, #link6, #link7 {
+  display: flex;
+  align-items: center;  
+  gap: 6px;            
+  text-decoration: none;
 }
 
 .edit-icon{
@@ -1037,6 +1216,100 @@
 
 @media(max-width: 767px){
 
+/* PERFIL CELULAR */
+
+
+.geral-perfil{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.DetailsVendedor {
+    display: none;    
+}
+
+.geral-perfil .DetailsVendedorMobile{
+    margin-left: 5%;
+    display: block;
+    color: var(--marrom);
+    font-size: 1em;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+.imagem-perfil{
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.imagem-perfil img{
+    margin: 0 auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.tudo-perfil{
+    margin: 20px 0;
+    flex-direction: column;
+}
+
+.details-perfil{
+    margin: 0 auto 20px auto;
+    width: 100%;
+    padding: 0;
+}
+
+.details .p-title{
+    font-size: 1em;
+}
+
+.details{
+    margin: 20px auto;
+}
+
+.btn-chat{
+    margin: 15px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details strong{
+    font-size: x-large;
+}
+
+.details .p-avaliacao{
+    font-size: 1em;
+}
+
+.details h1{
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.sobre-perfil{
+    margin-left: 5%;
+}
+
+.sobre-perfil h1{
+    font-size: 1.5em;
+}
+
+.sobre-perfil p{
+    font-size: 1.2em;
+}
+
+.tituloProduto{
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+/*  */
 .sidebar{
     margin: 0 auto;
     width: 100%;
@@ -1118,6 +1391,22 @@
 
 @media(min-width: 768px) and (max-width: 1024px){
 
+/* PERFIL TABLET */
+
+
+.details-perfil{
+    margin: 20px auto;
+}
+
+.sobre-perfil{
+    margin: 20px 5%;
+}
+
+.geral-perfil .DetailsVendedorMobile{
+    display: none;
+}
+
+/*  */
 .container{
     width: 100%;    
 }
@@ -1176,7 +1465,7 @@
 }
 
 .menu a.ativo {
-    color: #26a726;
+    color: #71b21e;
  }
  
  .menu a.ativo + img {
@@ -1188,4 +1477,11 @@
 
 @media(min-width: 1024px){
     
+/* PERFIL DESKTOP */
+
+.todos-produtos-p{
+    overflow: hidden;    
+}
+
+
 }

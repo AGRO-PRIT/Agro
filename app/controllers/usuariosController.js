@@ -157,7 +157,7 @@ autenticarUsuario: async (req, res) => {
   // Logout
   logout: (req, res) => {
     req.session.destroy(() => {
-      res.redirect("pages/home");
+      res.redirect("/");
     });
   }
 };

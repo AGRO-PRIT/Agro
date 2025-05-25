@@ -4,8 +4,13 @@
         <article class="profile">
             <a href="#" onclick="mostrarSeção('minhaConta')">
             <img src="imagens/icon_user.png" alt="Imagem do perfil">
-            <h3><%= usuario.nome %><br></a><strong>Consumidor</strong> </h3>
+                <ul class="menuOperador">
+                    <li class="usuarioOne"><%= usuario.nome %></li>
+                    <li class="usuarioTwo">Consumidor</li>
+                </ul>
+                 </a>
         </article>
+       
         <ul class="menu">
     <li>
         <a href="/contaConsumidor" id="link1">
