@@ -1,364 +1,3 @@
-// var express = require('express');
-// var router = express.Router();
-// const path = require('path');
-// const guestMiddleware = require('../middlewares/guestMiddleware');
-// const autenticar = require('../models/autenticator-middleware');
-// const usuariosController = require("../controllers/usuariosController")
-
-// // Rota para servir o arquivo JavaScript
-// router.get('/js/menuMobile.js', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../app/public/js/menuMobile.js'));
-// });
-
-
-// /* Pagina TESTES*/
-
-// router.get('/testes', function(req, res) {
-//     res.render('pages/testes');
-// });
-
-// /* Pagina Nav*/
-
-// router.get('/', function(req, res) {
-//     res.render('pages/home');
-// });
-
-// router.get('/carrinho', function(req, res) {
-//     res.render('pages/carrinho');
-// });
-
-// /* subnav */
-
-// router.get('/home', function(req, res) {
-//     res.render('pages/home');
-// });
-
-// router.get('/cadastre-se', function(req, res) {
-//     res.render('pages/cadastre-se');
-// });
-
-// router.get('/cadastre-seV', function(req, res) {
-//     res.render('pages/cadastre-seV');
-// });
-
-// router.get('/login', function(req, res) {
-//     res.render('pages/login');
-// });
-
-// router.post('/login', function(req, res) {
-//     res.redirect('/login');
-// });
-
-// router.get('/loginV', function(req, res) {
-//     res.render('pages/loginV');
-// });
-
-// router.post('/loginV', function(req, res) {
-//     res.redirect('/loginV');
-// });
-
-
-// /* menudropDown */
-
-
-// router.get('/produtos', function(req, res) {
-//     res.render('pages/produtos');
-// });
-
-// router.get('/box', function(req, res) {
-//     res.render('pages/box');
-// });
-
-// router.get('/premium', function(req, res) {
-//     res.render('pages/premium');
-    
-// });
-
-// router.get('/eventos', function(req, res) {
-//     res.render('pages/eventos');
-// });
-
-// router.get('/evento1', function(req, res) {
-//     res.render('pages/evento1');
-// });
-
-// router.get('/evento2', function(req, res) {
-//     res.render('pages/evento2');
-// });
-
-
-// /* BOX */
-
-// router.get('/faca-box', function(req, res) {
-//     res.render('pages/faca-box');
-// });
-
-// router.get('/faca-box2', function(req, res) {
-//     res.render('pages/faca-box2');
-// });
-
-// router.get('/faca-box3', function(req, res) {
-//     res.render('pages/faca-box3');
-// });
-
-// router.get('/faca-box4', function(req, res) {
-//     res.render('pages/faca-box4');
-// });
-
-// /* menudropDown sub */
-
-// router.get('/legumes', function(req, res) {
-//     res.render('pages/legumes');
-// });
-
-// router.get('/verduras', function(req, res) {
-//     res.render('pages/verduras');
-// });
-
-// router.get('/frutas', function(req, res) {
-//     res.render('pages/frutas');
-// });
-
-// router.get('/cereais', function(req, res) {
-//     res.render('pages/cereais');
-// });
-
-// router.get('/laticionios', function(req, res) {
-//     res.render('pages/laticionios');
-// });
-
-// router.get('/suplemetos', function(req, res) {
-//     res.render('pages/suplemetos');
-// });
-
-// router.get('/graos', function(req, res) {
-//     res.render('pages/graos');
-// });
-
-// router.get('/chas', function(req, res) {
-//     res.render('pages/chas');
-// });
-
-// router.get('/proteinas', function(req, res) {
-//     res.render('pages/proteinas');
-// });
-
-
-// /* PERFIL*/  /* VENDEDOR!*/
-
-// router.get('/contaVendedor', function(req, res) {
-//     res.render('pages/Conta-vendedor/contaVendedor');
-// });
-
-// router.post('/contaVendedor', function(req, res) {
-//     res.redirect('/contaVendedor');
-// });
-
-
-// router.get('/avaliacoes', function(req, res) {
-//     res.render('pages/Conta-vendedor/avaliacoes'); 
-// });
-
-
-// router.get('/configuracoesV', function(req, res) {
-//     res.render('pages/Conta-vendedor/configuracoesV'); 
-// });
-
-
-// router.get('/produtosContaV', function(req, res) {
-//     res.render('pages/Conta-vendedor/produtosContaV'); 
-// });
-
-// router.get('/vendas', function(req, res) {
-//     res.render('pages/Conta-vendedor/vendas'); 
-// });
-
-// // vendas!
-
-// router.get('/concluido', function(req, res) {
-//     res.render('pages/Conta-vendedor/Status-vendas/concluido'); // Verifique o caminho correto
-// });
-
-// router.get('/emtransito', function(req, res) {
-//     res.render('pages/Conta-vendedor/Status-vendas/emtransito'); // Verifique o caminho correto
-// });
-// router.get('/enviarV', function(req, res) {
-//     res.render('pages/Conta-vendedor/Status-vendas/enviar'); // Verifique o caminho correto
-// });
-
-
-// /* CONSUMIDOR!*/
-
-// router.get('/contaEscolha', function(req, res) {
-//     res.render('pages/contaEscolha');
-// });
-
-// router.get('/detalhesVendedor', function(req, res) {
-//     res.render('pages/detalhesVendedor');
-// });
-
-
-// router.get('/contaConsumidor', function(req, res) {
-//     res.render('pages/Conta-consumidor/contaConsumidor');
-// });
-
-// router.post('/contaConsumidor', function(req, res) {
-//     res.redirect('/contaConsumidor');
-// });
-
-// router.get('/pedidos', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/pedidos'); 
-// });
-
-// router.get('/cartoes', function(req, res) {
-//     res.render('pages/Conta-consumidor/cartoes'); 
-// });
-
-// router.get('/enderecos', function(req, res) {
-//     res.render('pages/Conta-consumidor/enderecos'); 
-// });
-
-// router.get('/configuracoes', function(req, res) {
-//     res.render('pages/Conta-consumidor/configuracoes');
-// });
-
-// // pedidos
-
-// router.get('/aPagar', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/aPagar'); // Verifique o caminho correto
-// });
-
-// router.get('/cancelado', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/cancelado'); // Verifique o caminho correto
-// });
-// router.get('/emAndamento', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/emAndamento'); // Verifique o caminho correto
-// });
-// router.get('/tudo', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/tudo'); // Verifique o caminho correto
-// });
-
-// router.get('/finalizado', function(req, res) {
-//     res.render('pages/Conta-consumidor/Status-pedidos/finalizado'); // Verifique o caminho correto
-// });
-
-
-
-// /* Produto */
-
-// router.get('/produto', function(req, res) {
-//     res.render('pages/produto');
-// });
-
-// /* Evento */
-
-// router.get('/evento', function(req, res) {
-//     res.render('pages/evento');
-// });
-
-// /* Sobre Nós */
-
-// router.get('/sobre', function(req, res) {
-//     res.render('pages/sobre');
-// });
-
-// /* Vendedor Perfil para ver*/
-
-// router.get('/vendedor', function(req, res) {
-//     res.render('pages/vendedor');
-// });
-
-// // carrinho
-
-// router.get('/finalizar-carrinho-endereco', function(req, res) {
-//     res.render('pages/finalizar-carrinho-endereco');
-// });
-
-// router.get('/finalizar-carrinho-cartao', function(req, res) {
-//     res.render('pages/finalizar-carrinho-cartao');
-// });
-
-// router.post('/finalizar-carrinho-endereco', function(req, res) {
-//     res.redirect('/finalizar-carrinho-endereco');
-// });
-
-// router.post('finalizar-carrinho-cartao', function(req, res) {
-//     res.redirect('finalizar-carrinho-cartao');
-// });
-
-
-
-
-// // Rotas de cadastro
-// router.get("/cadastre-se", (req, res) => {
-//   // Adicionando a variável sucesso para mensagens de sucesso
-//   res.render("cadastre-se", { 
-//     erros: null, 
-//     dados: {},
-//     sucesso: req.flash('sucesso') // Adicione isso se estiver usando flash messages
-//   })
-// })
-// router.post("/cadastre-se", usuariosController.cadastrarUsuarioNormal)
-
-// // Rotas de login
-// router.get("/login", (req, res) => {
-//   // Adicionando a variável sucesso para mensagens de sucesso
-//   res.render("login", { 
-//     erro: null,
-//     sucesso: req.flash('sucesso') // Adicione isso se estiver usando flash messages
-//   })
-// })
-// router.post("/login", usuariosController.autenticarUsuario)
-
-// // Rota de perfil (protegida)
-// router.get("/contaConsumidor", verificarAutenticacao, (req, res) => {
-//   res.render("contaConsumidor", { usuario: req.session.usuario })
-// })
-
-// // Middleware para verificar se o usuário está autenticado
-// function verificarAutenticacao(req, res, next) {
-//   if (req.session && req.session.usuario) {
-//     return next()
-//   }
-//   res.redirect("/login")
-// }
-
-// // Rota de logout
-// router.get("/logout", usuariosController.logout)
-
-// module.exports = router
-
-
-// // router.post('/login', usuariosController.regrasValidacao, usuariosController.cadastrarUsuarioNormal);
-
-
-// // // No seu arquivo de rotas (routes.js ou similar)
-// // router.get('/cadastre-se', guestMiddleware, usuariosController.exibirFormCadastro);
-// // router.post('/cadastre-se', guestMiddleware, usuariosController.cadastrarUsuarioNormal);
-
-// // Rotas protegidas (requer login)
-// // router.get('/perfil', autenticar, usuariosController.mostrarPerfil);
-
-
-
-// // /* Rotas Públicas */
-// // router.get('/', (req, res) => res.render('pages/home'));
-// // router.get('/home', (req, res) => res.render('pages/home'));
-// // router.get('/login', (req, res) => res.render('pages/login'));
-// // router.get('/cadastre-se', (req, res) => res.render('pages/cadastre-se'));
-
-// // /* Rotas de Autenticação */
-// // router.post('/registrar', usuarioController.cadastrarUsuario); // Corrigido para usar cadastrarUsuario
-// // router.post('/login', usuarioController.login);
-
-// // /* Rotas Protegidas */
-// // router.get('/perfil', autenticar, usuarioController.obterPerfil);
-// // router.put('/atualizar', autenticar, usuarioController.atualizarUsuario);
-// // router.delete('/deletar', autenticar, usuarioController.excluirUsuario);
-// // // Rota de admin
-// // router.get('/listar', autenticar, usuarioController.listar);
-
-// module.exports = router;
 
 
 var express = require('express');
@@ -366,7 +5,8 @@ var router = express.Router();
 const path = require('path');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const autenticar = require('../models/autenticator-middleware');
-const usuariosController = require("../controllers/usuariosController")
+const usuariosController = require("../controllers/usuariosController");
+const vendedoresController = require("../controllers/vendedoresController")
 
 // Middleware para verificar se o usuário está autenticado
 function verificarAutenticacao(req, res, next) {
@@ -375,6 +15,19 @@ function verificarAutenticacao(req, res, next) {
   }
   res.redirect("/login");
 }
+function verificarVendedor(req, res, next) {
+    if (req.session.usuario && req.session.usuario.isVendedor) {
+        return next();
+    }
+    res.redirect("/loginV");
+}
+
+
+// Middleware para adicionar usuário às variáveis locais
+router.use((req, res, next) => {
+  res.locals.usuario = req.session.usuario || null;
+  next();
+});
 
 // Rota para servir o arquivo JavaScript
 router.get('/js/menuMobile.js', (req, res) => {
@@ -412,9 +65,9 @@ router.get('/loginV', function(req, res) {
     res.render('pages/loginV');
 });
 
-router.post('/loginV', function(req, res) {
-    res.redirect('/loginV');
-});
+// router.post('/loginV', function(req, res) {
+//     res.redirect('/loginV');
+// });
 
 /* menudropDown */
 router.get('/produtos', function(req, res) {
@@ -620,33 +273,27 @@ router.post('/finalizar-carrinho-cartao', function(req, res) {
 });
 
 // Rotas de autenticação (mantidas apenas uma vez)
-router.get("/cadastre-se", guestMiddleware, (req, res) => {
-  res.render("pages/cadastre-se", { 
-    erros: null, 
-    dados: {},
-    sucesso: req.flash('sucesso')
-  });
+router.get('/cadastre-se', guestMiddleware, (req, res) => {
+    res.render('pages/cadastre-se');
 });
 
+router.post('/cadastrarVendedor', vendedoresController.cadastrarVendedor);
 
-router.post("/cadastre-se", guestMiddleware, usuariosController.cadastrarUsuarioNormal);
-
-// router.get("/login", guestMiddleware, (req, res) => {
-//   res.render("pages/login", { 
-//     erro: null,
-//     sucesso: req.flash('sucesso')
-//   });
-// });
-
-// router.post("/login", usuariosController.autenticarUsuario);
-
+router.post('/cadastrar', usuariosController.cadastrarUsuarioNormal); // Sem autologin
 
 router.get("/login", (req, res) => {
     res.render("pages/login", {
-        erro: null, // Inicializa sem erro
-        sucesso: null
+        erro: null,
+        sucesso: req.flash('sucesso') // Adiciona esta linha para mostrar mensagens de sucesso
     });
 });
+
+// router.get("/login", (req, res) => {
+//     res.render("pages/login", {
+//         erro: null, // Inicializa sem erro
+//         sucesso: null
+//     });
+// });
 
 router.post("/login", usuariosController.autenticarUsuario);
 
@@ -662,6 +309,44 @@ router.post("/contaConsumidor", verificarAutenticacao, (req, res) => {
 // Rota de logout
 router.get("/logout", usuariosController.logout);
 router.post("/logout", usuariosController.logout);
+
+
+
+router.get('/loginV', (req, res) => {
+    res.render("pages/loginV", {
+        erro: null,
+        sucesso: req.flash('sucesso') || null
+    });
+});
+
+router.post('/loginV', vendedoresController.autenticarVendedor);
+
+router.get('/cadastre-seV', (req, res) => {
+    res.render("pages/cadastre-seV", {
+        dados: {},
+        erros: null,
+        sucesso: null
+    });
+});
+
+router.get("/contaVendedor", verificarVendedor, (req, res) => {
+    res.render("pages/Conta-vendedor/contaVendedor");
+});
+
+
+router.post('/cadastrarVendedor', vendedoresController.cadastrarVendedor);
+
+// Proteja a rota contaVendedor
+// router.get("/contaVendedor", (req, res) => {
+//     if (!req.session.usuario || !req.session.usuario.isVendedor) {
+//         return res.redirect("/loginV");
+//     }
+//     res.render("pages/Conta-vendedor/contaVendedor", { 
+//         usuario: req.session.usuario 
+//     });
+// });
+
+
 
 
 module.exports = router;

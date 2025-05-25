@@ -73,6 +73,12 @@
                 <form class="cadastro-form" action="/contaConsumidor" method="POST">
                     <h1>Login</h1>
 
+<% if (sucesso) { %>
+    <div class="alert alert-success">
+        <%= sucesso %>
+    </div>
+<% } %>
+
                     <% if (erro) { %>
                     <div class="error-message-login">
                         <p><%= erro %></p>

@@ -9,6 +9,62 @@ module.exports = {
 
 
 
+// cadastrarUsuarioNormal: async (req, res) => {
+//     try {
+//       const { nome_completo, email, senha } = req.body;
+      
+//       // Verificar se email já existe
+//       const usuarioExistente = await UsuarioModel.findByEmail(email);
+//       if (usuarioExistente) {
+//         return res.render("pages/cadastre-se", {
+//           dados: req.body,
+//           erros: [{ msg: "Este email já está cadastrado" }],
+//           sucesso: null
+//         });
+//       }
+      
+//       if (!nome_completo || nome_completo.trim().split(' ').length < 2) {
+//         return res.render("pages/cadastre-se", {
+//             dados: req.body,
+//             erros: [{ msg: "Por favor, insira seu nome completo (nome e sobrenome)." }],
+//             sucesso: null
+//         });
+//     }
+
+//       // Hash da senha
+//       const senhaHash = await bcrypt.hash(senha, 10);
+      
+//       // Criar o usuário
+//       const novoUsuario = await UsuarioModel.create({
+//         NomeCompleto: nome_completo,
+//         Email: email,
+//         Senha: senhaHash
+//       });
+      
+
+//       // AUTOLOGIN: Criar sessão diretamente após cadastro
+//       req.session.usuario = {
+//         id: novoUsuario.insertId, // ID do novo usuário
+//         email: email,
+//         nome: nome_completo
+//       };
+      
+//       // Redirecionar para contaConsumidor
+//       req.session.save(() => {
+//       res.redirect("/contaConsumidor");
+//       });
+      
+//     } catch (e) {
+//       console.error(e);
+//       res.render("pages/cadastre-se", {
+//         dados: req.body,
+//         erros: [{ msg: "Erro ao cadastrar usuário. Tente novamente." }],
+//         sucesso: null
+//       });
+//     }
+//   },
+  
+
 cadastrarUsuarioNormal: async (req, res) => {
     try {
       const { nome_completo, email, senha } = req.body;
@@ -29,38 +85,22 @@ cadastrarUsuarioNormal: async (req, res) => {
             erros: [{ msg: "Por favor, insira seu nome completo (nome e sobrenome)." }],
             sucesso: null
         });
-    }
+      }
 
       // Hash da senha
       const senhaHash = await bcrypt.hash(senha, 10);
       
       // Criar o usuário
-      const novoUsuario = await UsuarioModel.create({
+      await UsuarioModel.create({
         NomeCompleto: nome_completo,
         Email: email,
         Senha: senhaHash
       });
       
-    //   if (senha !== req.body['confirm-senha']) {
-    //     return res.render("pages/cadastre-se", {
-    //         dados: req.body,
-    //         erros: [{ msg: "As senhas não coincidem" }],
-    //         sucesso: null
-    //     });
-    // }
-
-      // AUTOLOGIN: Criar sessão diretamente após cadastro
-      req.session.usuario = {
-        id: novoUsuario.insertId, // ID do novo usuário
-        email: email,
-        nome: nome_completo
-      };
-      
-      // Redirecionar para contaConsumidor
-      req.session.save(() => {
-      res.redirect("/contaConsumidor");
-      });
-      
+      // Redirecionar para login com mensagem de sucesso
+      // Após criar o usuário:
+      req.flash('sucesso', 'Cadastro realizado com sucesso! Faça login para continuar.');
+      res.redirect("/login");
     } catch (e) {
       console.error(e);
       res.render("pages/cadastre-se", {
@@ -70,49 +110,6 @@ cadastrarUsuarioNormal: async (req, res) => {
       });
     }
   },
-  
-  // Autenticar usuário (login)
-// autenticarUsuario: async (req, res) => {
-//     try {
-//       const { email, senha } = req.body;
-      
-//       // Buscar usuário pelo email
-//       const usuario = await UsuarioModel.buscarPorEmail(email);
-      
-//       if (!usuario) {
-//         return res.render("pages/login", {
-//           erro: "Email ou senha incorretos",
-//           sucesso: null
-//         });
-//       }
-      
-//       // Verificar se a senha está correta
-//       const senhaCorreta = await bcrypt.compare(senha, usuario.SenhaHash);
-      
-//       if (!senhaCorreta) {
-//         return res.render("pages/login", {
-//           erro: "Email ou senha incorretos",
-//           sucesso: null
-//         });
-//       }
-      
-//       // Criar a sessão do usuário
-//       req.session.usuario = {
-//         id: usuario.id,
-//         email: usuario.Email,
-//         nome: usuario.NomeCompleto
-//       };
-      
-//        res.redirect("/contaConsumidor");
-//     } catch (error) {
-//       console.error(error);
-//       res.render("pages/login", {
-//         erro: "Ocorreu um erro ao fazer login. Tente novamente.",
-//         sucesso: null
-//       });
-//     }
-//   },
-
 
 autenticarUsuario: async (req, res) => {
     try {
