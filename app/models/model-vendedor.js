@@ -21,7 +21,7 @@ const VendedorModel = {
 
       const query = `
         INSERT INTO Vendedores (UsuarioId, CNPJ)
-        VALUES (?, ?, ?)
+        VALUES (?, ?)
       `;
       
       const [result] = await pool.query(query, [UsuarioId, CNPJ]);
