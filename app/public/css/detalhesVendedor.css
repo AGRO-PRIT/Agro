@@ -32,6 +32,7 @@
 }
 
 .banner {
+    position: relative;
     color: var(--marrom);
     text-align: center;
     font-size: 30px;
@@ -59,7 +60,7 @@
 }
 
 .banner img {
-    width: 100%;
+    width: 85%;
     height: auto;
 }
 
@@ -128,35 +129,30 @@ color: var(--marrom);
 
 .cadastro-form .text-cadastro, .text-cadastroMobile{
     font-weight: bold;
-    color: var(--laranja);
-    margin-left: 195px;
+    color: var(--corNeutra);
+    margin-left: 100px;
     font-size: 24px;
     text-align: center;
 }
 
 .voltar, .voltarMobile{
-    width: 280px;
-    height: 70px;
-    padding: 2px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--corprincipal);
-    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    padding: 4px 8px;
     font-size: 22px;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    line-height: normal;
+    color: var(--laranja);
+    text-decoration: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-right: 50px;
-    margin-top: auto;
     transition: background-color 0.3s ease;
 }
 
 .voltar:hover{
-    border: 3px solid var(--corprincipal);
-    background-color: white;
-    color: var(--corprincipal);
+opacity: 0.5;
 }
 
 
@@ -180,7 +176,12 @@ color: var(--marrom);
     color: var(--marrom);
     text-align: start;
 }
-    
+
+.cadastro-form p strong{
+    color: var(--laranja);
+    font-weight: 450;
+}
+
 .cantinhoLogoMobile h1{
     font-size: larger;
     color: var(--corprincipal);

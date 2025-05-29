@@ -21,7 +21,10 @@
     display: none;
 }
 
-
+.imagemSetaVoltar{
+    width: 55px !important;
+    height: 55px !important;
+}
 
 
 /*             RESPONSIVIDADE             */
@@ -39,6 +42,10 @@
 
  /*  MOBILE LOGIN */
 
+.imagemSetaVoltar{
+    width: 40px !important;
+    height: 40px !important;
+}
 
  .bodydoPerfil{
     width: 100%;
@@ -121,11 +128,6 @@
 
 .voltarMobile{
     display: block;
-    width: 50%;
-    margin: 0 auto;
-    font-size: 15px;
-    height: 45px;
-    margin-top: 15%;
 }
 
 .cadastro-form .texto-entrar{

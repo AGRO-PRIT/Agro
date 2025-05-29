@@ -42,6 +42,7 @@
 }
 
 .banner {
+    position: relative;
     color: var(--marrom);
     text-align: center;
     font-size: 30px;
@@ -68,7 +69,7 @@
 }
 
 .banner img{
-    width: 100%;
+    width: 85%;
     height: auto;
 }
 
@@ -172,37 +173,30 @@
     margin: 3px;
 }
 
-.voltar, .voltarMobileC{
-    width: 280px;
-    height: 70px;
-    padding: 2px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--corprincipal);
-    box-sizing: border-box;
+.voltar, .voltarMobile{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    padding: 4px 8px;
     font-size: 22px;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    line-height: normal;
+    color: var(--laranja);
+    text-decoration: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-right: 50px;
-    margin-top: auto;
     transition: background-color 0.3s ease;
 }
 
 .voltar:hover{
-    border: 3px solid var(--corprincipal);
-    background-color: white;
-    color: var(--corprincipal);
+opacity: 0.5;
 }
 
+
 @media (max-width: 767px){
-    .voltarMobileC{
-        display: block;
-        width: 50%;
-        margin: 0 auto;
-        font-size: 15px;
-        height: 45px;
+
+    .text-cadastro{
+        color: var(--laranja);
     }
 }

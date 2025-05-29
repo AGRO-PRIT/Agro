@@ -7,7 +7,6 @@
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/conta.css">
-       <link rel="stylesheet" href="css/produtos.css">
     
 </head>
 
@@ -28,28 +27,22 @@
              <article class="section-flex">
             <h1>Minha Conta</h1>
 
-            <button id="adicionarProduto" class="edit-button2">EDITAR PERFIL</button>
-            <section id="formularioProduto" class="modal-Produto" style="display: none;">
-                <section class="modal-content-Produto">
+            <button id="editarPerfil" class="edit-button2">EDITAR PERFIL</button>
+            <section id="formularioPerfil" class="modal-content-EditPerfil" style="display: none;">
+                <section class="modal-content-Perfil">
                     
                     <span class="close">&times;</span>
-                    <form id="novoProdutoForm" class="novoProdutoForm">
-                    <article class="produtoFlex">
-                        <label for="nomeProduto">Nome do Produto</label> <br>
-                        <input type="text" id="nomeProduto" placeholder="Digite aqui..."><br>
-                   
-                        <label for="precoProduto">Preço</label><br>
-                        <input type="text" id="precoProduto" placeholder="Digite aqui..."><br>
+                    <form id="editPerfilForm" class="editPerfilForm">
+                    <article class="perfilFlex">
+                        <label for="nomeUsuario">Nome de Usuário</label> <br>
+                        <input type="text" id="nomeUsuario" placeholder="Digite aqui..."><br>
         
-                        <label for="quantityProduto">Quantidade disponível</label>
-                        <input type="number" id="quantityProduto" value="50"><br>
-        
-                        <label for="descriptionboxProduto">Insira uma descrição do seu produto</label><br>
-                        <textarea id="descriptionboxProduto" placeholder="Digite aqui..."></textarea>
+                        <label for="descriptionboxPerfil">Descrição do Perfil</label><br>
+                        <textarea id="descriptionboxPerfil" placeholder="Digite aqui..."></textarea>
                     </article>
                     
-                    <article class="produtoFlex2">
-                        <label for="imageProduto">Imagem do Produto</label>
+                    <article class="perfilFlex2">
+                        <label for="imageProduto">Imagem Perfil</label>
                         <article class="image-preview">
                             <img src="imagens/imagemNaoLoad.png" id="imageProduto" alt="Imagem do Produto">
                         </article>
@@ -62,7 +55,7 @@
             </section>  
             </article>
 
-             <main class="geral-perfil">
+             <section class="geral-perfil">
         <h3 class="DetailsVendedorMobile">AgroBox / Vendedor</h3>
        
         <section class="details-perfil">
@@ -72,7 +65,7 @@
                     <img src="imagens/kawan.png">
                 </article>
                 <article class="details">
-                    <h1>Kawan Barreto</h1>
+                    <h2>Kawan Barreto</h2>
                     <p class="p-title">Perfil AgroBox desde: 18 meses atrás</p>
                     <p class="p-avaliacao"><strong>★★★★★</strong><span> 4,9 </span>Avaliação geral do Vendedor (14 mil avaliações)</p>
                 </article>
@@ -80,13 +73,14 @@
         </section>
      
         <section class="sobre-perfil">
-            <h1>Sobre Kawan</h1>
+            <h2>Sobre Kawan</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <br>
                 accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes,<br>
                 nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc<br>
                 accuan eget.</p>
         </section>
-        <h1 class="tituloProduto">Todos os seus Produtos</h1>
+
+        <h2 class="tituloProduto">Histórico de compras</h2>
         <article class="todos-produtos-p">
             <article class="itens-produto">
                 <article class="box-produto">
@@ -95,7 +89,7 @@
                     <p class="nome-produto">Beterraba Vermelha (330g)</p>
                     <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
                     <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
-                    <button class="botao-adicionar">ADICIONAR</button>
+                    
                     </a>
                 </article>
                 <article class="box-produto">
@@ -104,7 +98,7 @@
                     <p class="nome-produto">Maçã Fuji (300g)</p>
                     <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
                     <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
-                    <button class="botao-adicionar">ADICIONAR</button>
+                  
                     </a>
                 </article>
                 <article class="box-produto">
@@ -113,7 +107,7 @@
                     <p class="nome-produto">Laranja Lima (160g)</p>
                     <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
                     <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
-                    <button class="botao-adicionar">ADICIONAR</button>
+                  
                     </a>
                 </article>
                 <article class="box-produto">
@@ -122,18 +116,55 @@
                     <p class="nome-produto">Abacaxi Pérola (200g)</p>
                     <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
                     <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
-                    <button class="botao-adicionar">ADICIONAR</button>
+                  
                     </a>
                 </article>
             </article>
-        
+            <article class="itens-produto">
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/beterraba.png" alt="Produto 1 Imagem de uma Beterraba">
+                    <p class="nome-produto">Beterraba Vermelha (330g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                    
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/maça.png" alt="Produto 2 Imagem de uma Maçã Fuji">
+                    <p class="nome-produto">Maçã Fuji (300g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                  
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/laranja.png" alt="Produto 3 Imagem de uma Laranja">
+                    <p class="nome-produto">Laranja Lima (160g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                  
+                    </a>
+                </article>
+                <article class="box-produto">
+                    <a  class="link-produto" href="/produto">
+                    <img src="imagens/Frutas/abacaxi.png" alt="Produto 4 Imagem de um Abacaxi">
+                    <p class="nome-produto">Abacaxi Pérola (200g)</p>
+                    <p class="nome-vendedor"><a href="/vendedor">NomedoVendedor</a></p>
+                    <p class="valor-produto"><strong class="current-price">R$ 10,00</strong></p>
+                  
+                    </a>
+                </article>
+            </article>
            
         </article>
 
-    </main>
+</section>
     
-            </section>
-        </section>
+</section>
+</section>
 
 
     </main>
@@ -149,7 +180,7 @@
 
         <!-- Script -->
 
-<script src="js/formularioProduto.js"> </script>
+<script src="js/formularioPerfil.js"> </script>
 <script src="js/perfil.js" defer></script>
 <script src="js/validacaoConta.js" defer></script>
 <script src="js/darkmode.js" defer> </script>

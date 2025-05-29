@@ -4,35 +4,35 @@
         <!-- Seção de Perfil -->
         <section class="sidebar">
             <article class="profile">
-                <a href="#" onclick="mostrarSeção('minhaConta')">
+                <a href="/contaVendedor" onclick="mostrarSeção('minhaConta')">
                 <img src="imagens/icon_user.png" alt="Imagem do perfil">
-                   <ul class="menuOperador">
-                    <li class="usuarioOne"></li>
-                    <li class="usuarioTwo">Consumidor</li>
+                <ul class="menuOperador">
+                   <li class="usuarioOne"> <!-- <%= usuario.nome %>--></li> 
+                    <li class="usuarioTwo">Vendedor</li>
                 </ul>
                  </a>
             </article>
 
             <ul class="menu">
-                <li>
+                <li> <a href="/contaVendedor" id="link1">
                     <img id="image1" src="imagens/icon_user-consumidor.png" alt="Imagem Icone Usuario">
-                    <a href="/contaVendedor" id="link1">Minha Conta</a>
+                   Minha Conta</a>
                 </li>
-                <li>
+                <li><a href="/produtosContaV" id="link2">
                     <img id="image2" src="imagens/icon_pedidos.png" alt="Imagem Icone Pedidos">
-                    <a href="/produtosContaV" id="link2" >Produtos</a>
+                    Produtos</a>
                 </li>
-                <li>
+                <li><a href="/vendas" id="link3">
                     <img id="image3" src="imagens/icon_vendas.png" alt="Imagem Icone Vendas"> 
-                    <a href="/vendas" id="link3" >Vendas</a>
+                    Vendas</a>
                 </li>
-                <li>
+                <li><a href="/avaliacoes" id="link4">
                     <img id="image4" src="imagens/icon_comentario.png" alt="Imagem Icone Comentarios">
-                    <a href="/avaliacoes" id="link4" >Avaliações</a>
+                    Avaliações</a>
                 </li>
-                <li>
+                <li><a href="/configuracoesV" id="link5">
                     <img id="image5" src="imagens/icone_consumidor-config.png" alt="Configurações">
-                    <a href="/configuracoesV" id="link5">Configurações</a>
+                    Configurações</a>
                 </li>
             </ul>
         </section>

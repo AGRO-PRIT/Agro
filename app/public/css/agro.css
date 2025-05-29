@@ -22,6 +22,23 @@
   margin-top: 70px;
 }
 
+.botãolinkPremium{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--branco);
+    color: #006837;
+    border: 2px solid #006837;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.2s ease;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .agro-content {
   margin-left: 200px;  
   max-width: 60%; /* Limita o espaço ocupado pelo texto */
