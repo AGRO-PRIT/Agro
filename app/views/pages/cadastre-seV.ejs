@@ -27,20 +27,28 @@
                 <a href="/"><img src="imagens/logo.png" alt="logo da agroBox"></a>
             </section>
             <section class="cantinhoLogo">
-                <form class="cadastro-form" action="/loginV" method="POST">
+                <form class="cadastro-form" action="/cadastrarVendedor" method="POST">
                     <h1>Cadastre-se</h1>
+
+                     <section class="input-group">
+                         <h3>Nome Completo</h3>
+                        <input type="text" name="nome_completo" placeholder="Ex: João da Silva">
+                         <p class="error-message" name="nome-error">O nome deve ter até 100 caracteres</p>
+                         </section>
+
+
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu CNPJ</h3>
                         <input type="text" name="cnpj" placeholder="Ex: 00000000000000">
                         <p class="error-message" name="cnpj-error">Por favor, insira um CNPJ válido.</p>
                     </section>
-                    <section class="input-group">
+                    <!-- <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu CPF</h3>
                         <input type="text" name="cpf" placeholder="Ex: 00000000000">
                         <p class="error-message" name="cpf-error">Por favor, insira um CPF válido.</p>
-                    </section>
+                    </section> -->
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu e-mail</h3>
@@ -73,20 +81,28 @@
             </section>
 
             <section class="cantinhoLogo">
-                <form action="/loginV" method="POST">
+                <form class="cadastro-form" action="/cadastrarVendedor" method="POST">
                     <h1>Cadastre-se</h1>
+
+                    <section class="input-group">
+                         <h3>Nome Completo</h3>
+                        <input type="text" name="nome_completo" placeholder="Ex: João da Silva">
+                         <p class="error-message" name="nome-error">O nome deve ter até 100 caracteres</p>
+                         </section>
+
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu CNPJ</h3>
                         <input type="text" name="cnpj" placeholder="Ex: 00000000000000">
                         <p class="error-message" name="cnpj-error">Por favor, insira um CNPJ válido.</p>
                     </section>
-                    <section class="input-group">
+                    <!-- <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu CPF</h3>
                         <input type="text" name="cpf" placeholder="Ex: 00000000000">
                         <p class="error-message" name="cpf-error">Por favor, insira um CPF válido.</p>
-                    </section>
+                    </section> -->
+
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                         <h3>Seu e-mail</h3>

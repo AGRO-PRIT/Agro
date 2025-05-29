@@ -26,17 +26,10 @@
                 <a href="/"><img src="imagens/logo.png" class="imagem" alt="logo da agroBox"></a>
             </section>
             <section class="cantinhoLogo">
-                <form class="cadastro-form" action="/cadastre-se" method="POST">
+                <form class="cadastro-form" action="/cadastrar" method="POST">
                     <h1>Cadastre-se</h1>
                      
-                    <% if (erros && erros.length > 0) { %>
-                        <div class="error-message-cadastro">
-                            <% erros.forEach(erro => { %>
-                                <p><%= erro.msg %></p>
-                            <% }); %>
-                        </div>
-                    <% } %>
-
+                    
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
                          <section class="input-group">
@@ -74,19 +67,20 @@
             </section>
 
             <section class="cantinhoLogo">
-                <form action="/cadastre-se" method="POST">
+                <form action="/cadastrar" method="POST">
                     <h1>Cadastre-se</h1>
 
-                    <% if (erros && erros.length > 0) { %>
-                        <div class="error-message-cadastro">
-                            <% erros.forEach(erro => { %>
-                                <p><%= erro.msg %></p>
-                            <% }); %>
-                        </div>
-                    <% } %>
+
 
                     <section class="input-group">
                         <i class="fas far-enveloper"></i>
+
+                         <section class="input-group">
+                         <h3>Nome Completo</h3>
+                        <input type="text" name="nome_completo" placeholder="Ex: João da Silva">
+                         <p class="error-message" name="nome-error">O nome deve ter até 100 caracteres</p>
+                         </section>
+                         
                         <h3>Seu e-mail</h3>
                         <input type="email" name="email" placeholder="Ex: seuemail@gmail.com">
                         <p class="error-message" name="email-error">Por favor, insira um email válido.</p>

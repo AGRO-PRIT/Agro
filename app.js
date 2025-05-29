@@ -41,11 +41,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // IMPORTANTE: Configuração da sessão ANTES das rotas
+// app.use(session({
+//   secret: 'agrobox_secret_key',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { maxAge: 24 * 60 * 60 * 1000 } // 24 horas
+// }));
+
+
 app.use(session({
   secret: 'agrobox_secret_key',
   resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 24 * 60 * 60 * 1000 } // 24 horas
+  saveUninitialized: false, // ⚠️ Altere para FALSE!
+  cookie: { 
+    maxAge: 24 * 60 * 60 * 1000,
+    secure: false // ⚠️ Defina como true em produção (HTTPS)
+  }
 }));
 
 // Configuração do flash messages (após a sessão)

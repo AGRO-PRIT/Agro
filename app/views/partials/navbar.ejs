@@ -20,25 +20,13 @@
 
         <section class="barradepesquisa">
             <input type="text" class="barra-texto-pesquisa" placeholder="Busque pela AgroBox">
-            <a hrfe="#" class="botao-pesquisa"> 
+            <a href="#" class="botao-pesquisa"> 
             <img src="imagens/lupa.png" alt="icone de uma lupa"> 
             </a>
         </section>
 
-         <!-- Botão Login e Cadastro/Perfil -->
 
          <!-- <section class="perfil">
-            <a class="links-nav" href="/contaEscolha">
-            <img src="imagens/icon_conta.png" alt="Icone de usuario">
-            <p class="text-perfil"> Minha Conta </p>
-            </a>
-
-            <form action="/logout" method="POST" class="form-logout">
-                <button type="submit" class="btn-logout">Sair</button>
-              </form>
-        </section> -->
-
-         <section class="perfil">
     <a class="links-nav" href="/contaEscolha">
         <img src="imagens/icon_conta.png" alt="Icone de usuario">
         <p class="text-perfil">  <%= (usuario && usuario.id) ? 'Minha Conta' : 'Entrar' %>  </p>
@@ -49,9 +37,24 @@
             <button type="submit" class="btn-logout">Sair</button>
         </form>
     <% } %>
+</section> -->
+
+<section class="perfil">
+    <a class="links-nav" href="<%= (usuario && usuario.id) ? '/contaConsumidor' : '/contaEscolha' %>">
+        <img src="imagens/icon_conta.png" alt="Icone de usuario">
+        <p class="text-perfil"><%= (usuario && usuario.id) ? 'Minha Conta' : 'Entrar' %></p>
+    </a>
+
+     <form action="/logout" method="POST" class="form-logout">
+            <button type="submit" class="btn-logout">Sair</button>
+        </form>
+
+    <% if (usuario && usuario.id) { %>
+        <form action="/logout" method="POST" class="form-logout">
+            <button type="submit" class="btn-logout">Sair</button>
+        </form>
+    <% } %>
 </section>
-
-
         
 
 
