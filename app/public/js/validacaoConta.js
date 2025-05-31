@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
-        const nomeInput = form.querySelector('input[name="nome"]');
+        const nomeInput = form.querySelector('input[name="nome_completo"]');
         const cpfInput = form.querySelector('input[name="cpf"]');
         const telefoneInput = form.querySelector('input[name="telefone"]');
         const emailInput = form.querySelector('input[name="email"]');

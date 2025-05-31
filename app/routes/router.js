@@ -274,7 +274,12 @@ router.post('/finalizar-carrinho-cartao', function(req, res) {
 
 // Rotas de autenticação (mantidas apenas uma vez)
 router.get('/cadastre-se', guestMiddleware, (req, res) => {
-    res.render('pages/cadastre-se');
+  res.render("pages/cadastre-se", {
+  dados: null,
+  erro: null
+});
+
+
 });
 
 router.post('/cadastrarVendedor', vendedoresController.cadastrarVendedor);
