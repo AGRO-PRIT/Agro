@@ -27,7 +27,18 @@
 }
 
 
-/* titilo e orientação*/
+/* titulo e orientação*/
+
+#secaoProdutos > section:first-child {
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.ocultar {
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .titulo-faca-box {
         background-color: rgba(255, 255, 255, 0);
@@ -77,6 +88,10 @@
     font-weight: 600;
 }
 
+.titulos-sectionBox2:hover, .titulos-sectionBox:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
 /* carrosel Box */
 
 .carousel-containerBox {
@@ -286,21 +301,22 @@
 }
 
 .pagina {
-    opacity: 0; /* Inicialmente invisível */
-    animation: fadeIn 1.5s ease-out;
-    transition: opacity 0.8s ease-in-out;
-    visibility: hidden; /* O elemento está invisível mas mantém a posição */
-    position: absolute; /* Para manter a posição no container sem mudar */
-    top: 0;
-    left: 0;
-    width: 100%; /* Certifica que o elemento ocupe toda a largura do container */
-    height: 100%; /* Certifica que o elemento ocupe toda a altura do container */
+  display: block;               /* Continua ocupando espaço */
+  opacity: 0;                   /* Invisível mas ainda presente */
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease;
 }
 
 .pagina.active {
-    opacity: 1; /* Visível */
-    visibility: visible; /* Torna o elemento visível */
-    position: relative; /* Volta a ficar no fluxo normal do layout */
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
+.container-das-paginas {
+    position: relative;
+    width: 100%;
+    height: 100%; /* ou altura fixa conforme seu layout */
 }
 
 /* resumo Box */
@@ -395,7 +411,7 @@
 
 /* resumo BOx */
 
-.resumoBox{
+.resumoBox {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -446,7 +462,7 @@
     color: var(--marrom);
 }
 
-.geralResumo{
+.geralResumo, .boxEscolhida{
     align-items: center;
     text-align: center;
 }
