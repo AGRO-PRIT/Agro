@@ -526,6 +526,15 @@
    margin-right: auto;
 }
 
+.menuOperador{
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   font-size: 18px;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
 
 /* part 2 *enviar* */
 

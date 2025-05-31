@@ -12,7 +12,7 @@ function updateCartSummary() {
         let totalPrice = 0;
 
         cartItems.forEach((item, index) => {
-            const itemElement = document.createElement('div');
+            const itemElement = document.createElement('section');
             itemElement.style.display = 'flex';
             itemElement.style.alignItems = 'center';
             itemElement.style.marginBottom = '10px';
@@ -28,7 +28,7 @@ function updateCartSummary() {
             imgElement.style.marginRight = '10px';
 
             // Nome do produto e preço unitário
-            const infoElement = document.createElement('div');
+            const infoElement = document.createElement('section');
             const nameElement = document.createElement('p');
             nameElement.textContent = item.name;
             nameElement.style.margin = '0'; 
@@ -94,7 +94,7 @@ function updateCartSummary() {
             totalPrice += itemTotalPrice;
 
             // Alinha os elementos à direita
-            const controlsContainer = document.createElement('div');
+            const controlsContainer = document.createElement('section');
             controlsContainer.style.display = 'flex';
             controlsContainer.style.alignItems = 'center';
             controlsContainer.style.marginLeft = 'auto'; // Faz o container ocupar o espaço restante
@@ -110,7 +110,7 @@ function updateCartSummary() {
         });
 
         // Exibir o preço total e o botão "Ir para o Carrinho" lado a lado
-        const totalAndButtonContainer = document.createElement('div');
+        const totalAndButtonContainer = document.createElement('section');
         totalAndButtonContainer.style.display = 'flex';
         totalAndButtonContainer.style.alignItems = 'center'; // Alinha verticalmente
         totalAndButtonContainer.style.justifyContent = 'space-between'; // Espaço entre os elementos

@@ -27,7 +27,76 @@
         <section class="page-container">
             <section id="configuracoes" class="configuracoes" >
                 <h1>Configurações</h1>
-                <p>Conteúdo da seção Configurações</p>
+
+            <form>
+      <section class="box-container">
+
+        <section class="box-dados-pessoais">
+          <h3>Dados Pessoais</h3>
+
+          <article class="input-wrapper">
+            <label for="nome">Nome Completo</label>
+            <section class="input-icon-wrapper">
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" readonly>
+              <button type="button" class="edit-icon" aria-label="Editar nome">
+                <img src="imagens/icon_lapis.png" alt="Ícone de edição">
+              </button>
+            </section>
+            <span class="error-message" id="nome-error"></span>
+          </article>
+
+          <article class="input-wrapper">
+            <label for="cnpj">CNPJ</label>
+            <section class="input-icon-wrapper">
+              <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ" readonly>
+              <button type="button" class="edit-icon" aria-label="Editar CNPJ">
+                <img src="imagens/icon_lapis.png" alt="Ícone de edição">
+              </button>
+            </section>
+            <span class="error-message" id="cnpj-error"></span>
+          </article>
+
+          <article class="input-wrapper">
+            <label for="telefone">Telefone</label>
+            <section class="input-icon-wrapper">
+              <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" readonly pattern="\(\d{2}\) \d{4,5}-\d{4}">
+              <button type="button" class="edit-icon" aria-label="Editar telefone">
+                <img src="imagens/icon_lapis.png" alt="Ícone de edição">
+              </button>
+            </section>
+            <span class="error-message" id="telefone-error"></span>
+          </article>
+        </section>
+
+        <section class="box-dados-acesso">
+          <h3>Dados de Acesso</h3>
+
+          <article class="input-wrapper">
+            <label for="email">Email</label>
+            <section class="input-icon-wrapper">
+              <input type="email" id="email" name="email" placeholder="Digite seu email" readonly>
+              <button type="button" class="edit-icon" aria-label="Editar email">
+                <img src="imagens/icon_lapis.png" alt="Ícone de edição">
+              </button>
+            </section>
+            <span class="error-message" id="email-error"></span>
+          </article>
+
+          <article class="input-wrapper">
+            <label for="senha">Senha</label>
+            <section class="input-icon-wrapper">
+              <input type="password" id="senha" name="senha" placeholder="Digite sua senha" readonly>
+              <button type="button" class="edit-icon" aria-label="Editar senha">
+                <img src="imagens/icon_lapis.png" alt="Ícone de edição">
+              </button>
+            </section>
+            <span class="error-message" id="senha-error"></span>
+          </article>
+        </section>
+
+      </section>
+      <button class="botao-enviar" type="submit">Salvar</button>
+    </form>
             </section>
         </section>
 

@@ -17,11 +17,130 @@
 
 /* PERFIL */
 
+/* formulário EDIT perfil */
 
+.modal-content-EditPerfil {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+}
+
+.modal-content-Perfil {
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   width: 60%;
+   height: 60%;
+   text-align: left;
+   position: relative;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+   position: absolute;
+   right: 15px;
+   top: 10px;
+   font-size: 60px;
+   cursor: pointer;
+   z-index: 10;
+   color: #aaa;
+}
+
+ .close:hover, .close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}    
+
+#nomeUsuario {
+   width: 70%;
+   height: 40px;
+   margin-bottom: 15px;
+   border-color: var(--marrom);
+   border-radius: 5px;
+   font-size: 20px;
+   padding-left: 5px;
+}
+
+#descriptionboxPerfil{
+   width: 80%;
+   height: 60%;
+   border-color: var(--marrom);
+   border-radius: 5px;
+   font-size: 20px;
+   padding-left: 5px;
+}
+
+.editPerfilForm{
+   display: flex;
+   width: 100%;
+   color: #333; 
+   font-size: 1.5em;
+}
+
+.perfilFlex{
+   width: 60%;
+}
+
+.perfilFlex2{
+   width: 40%;
+}
+
+.image-preview img {
+   width: 85%;
+   height: auto;
+   margin-top: 10px;
+   border-radius: 8px;
+}
+
+.publicar {
+   background-color: var(--corprincipal);
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 20px;
+   transition: 0.3s;
+}
+
+.publicar, .rascunho{
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px
+}
+
+.publicar:hover {
+   opacity: 0.7;
+}
+
+.rascunho {
+   background-color: white;
+   color: var(--corprincipal);
+   border: 1px solid var(--corprincipal);
+   padding: 10px 15px;
+   font-size: 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.rascunho:hover {
+   background-color: #e8f5e9;
+}
+
+/*  */
 
 .details-perfil{
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -50,18 +169,18 @@
 }
 
 .details{
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
-.details h1{
+.details h2{
     color: var(--marrom);
-    font-size: 2.5em;
+    font-size: 2.4em;
     font: bold;
 }
 
 .details .p-title{
     color: var(--marrom);
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: 500;
 }
 
@@ -69,7 +188,7 @@
     color: var(--marrom);
     font-size: 1.5em;
     font-weight: 500;
-    line-height: auto;
+    line-height: 0.9;
     align-items: center;
     justify-content: center;
 }
@@ -109,8 +228,7 @@
     opacity: 0.8;
 }
 
-
-.sobre-perfil h1{
+.sobre-perfil h2{
     color: var(--marrom);
     font-size: 1.75em;
     font-weight: bold;
@@ -132,7 +250,6 @@
 
 
 .tituloProduto{
-    margin-left: 170px;
     margin-top: 90px;
     margin-bottom: 55px;
     font-size: 35px;
@@ -143,7 +260,7 @@
 .todos-produtos-p{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
     margin-bottom: 100px;
 }
 
@@ -158,13 +275,11 @@
     display: none;
 }
 
-
-
 .edit-button2 {
    background-color: var(--corprincipal);
    color: white;
    font-size: 1.1em;
-   font-weight: 500;
+   font-weight: bold;
    height: 40px;
    width: 250px;
    border: none;
@@ -173,16 +288,100 @@
    white-space: nowrap;
 }
 
-
 .section-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* PRODUTOS PERFIL HISTORICO CONSUMIDOR */
+
+   /*  ESTILIZAÇÃO GERAL PRODUTOS */
+
+.antes-produtos{
+    margin-bottom: 60px;
+    margin-left: 40px;
+}
+
+.TudoFiltroMobile{
+    display: none;
+}
+
+.todos-produtos {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itens-produto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: auto;
+}
+
+.box-produto {
+    width: 255px;
+    background-color: var(--corlayouts);    
+    padding: 13px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 18px;
+    margin-bottom: 20px; /* Espaçamento entre os produtos na vertical */
+}
+
+.box-produto img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: contain; /* Assegura que a imagem seja ajustada sem cortar */
+}
+
+.nome-produto {
+    color:  rgba(98, 78, 66, 0.99);
+    font-weight: 500;   
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+   
+}
+
+.nome-vendedor {
+    font-size: 18px;
+    text-align: left;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.valor-produto {
+    text-align: left;
+    color: var(--verdeescuro);
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+.botao-adicionar {
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+    color: var(--verdeescuro);
+    border: 3px solid #297f57;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 19px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-adicionar:hover {
+    background-color: var(--verdeescuro);
+    color: var(--cortexto);
+}
 
 
-/*  */
 
 .modal-content-endereco .close:hover,
 .modal-content-endereco .close:focus {
@@ -314,6 +513,9 @@
     object-fit: contain;
 }
 
+
+
+
 /* Segunda parte seção MINHA CONTA */
 
 
@@ -353,28 +555,53 @@
     border-left: 1px solid rgba(121, 121, 121, 0.24);
 }
 
-.input-wrapper input{
-    width: calc(100% - 40px);
-    padding: 12px;
+.input-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.input-wrapper label {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 450;
+    color: #493a31;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 42px 12px 12px; 
     margin-top: 10px;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 17px;
-    align-items: center;
-    justify-content: center;
-}
-
-.input-wrapper {
-    position: relative;
+    box-sizing: border-box;
 }
 
 .input-wrapper .edit-icon {
     position: absolute;
-    right: 20px;
-    top: 60%;
+    right: 14px;
+    top: calc(100% - 30px); 
     transform: translateY(-50%);
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.input-wrapper .edit-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: block;
 }
 
 /* Alinhamento de textos e espaçamentos */
@@ -392,20 +619,13 @@
     margin-bottom: 30px;
     color: var(--marrom);
 }
-.input-wrapper label {
-    display: block;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 450;
-    color: #493a31;
-    line-height: normal;
-}
+
 
 .botao-enviar{
     border: 2px solid var(--corlayouts);
     margin-top: 20px;
     border-radius: 8px;
-    background-color: var(--marrom);
+    background-color: var(--corprincipal);
     color: var(--branco);
     font-size: 16px;
     font-weight: 570;
@@ -433,8 +653,6 @@
     display: flex;
     margin-top: 30px;
     gap: 80px;
-    
-
 }
 
 .menu2 li{
@@ -1075,7 +1293,7 @@
 }
 
 .modal-content-cartao {
-    background-color:var(--corlayouts);
+    background-color: var(--corlayouts);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);

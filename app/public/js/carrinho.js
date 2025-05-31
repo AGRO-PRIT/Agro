@@ -292,7 +292,7 @@ addToCartButtons.forEach(button => {
 
 
 function showAddedMessage(productName, productImage) {
-    const message = document.createElement('div');
+    const message = document.createElement('section');
 
     // Configurações padrão para telas maiores
     message.style.position = 'fixed';
